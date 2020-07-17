@@ -1,0 +1,92 @@
+h1{
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.header{
+    background-image: url("../assets/header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sidebar img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+/*******************************/
+/*********Carousel**************/
+/*******************************/
+
+/* Carousel base class */
+/*.carousel {
+    margin-bottom: 4rem;
+}*/
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+   /* bottom: 3rem;*/
+    z-index: 10;
+    height: auto;
+}
+
+
+.carousel img{
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+}
+
+.carousel .col-md-4{
+    padding: unset;
+    padding: 0.5em;
+}
+
+
+
+
+
+/*
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+    content: '>';
+    font-size: 30px;
+    color: black;
+}
+
+.carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 30px;
+    color: black;
+}*/
+
+/* Declare heights because of positioning of img element
+.carousel-item {
+    height: 32rem;
+}
+.carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+}
+*/
+
+
+/************Neuauprojekte**********/
+
+.neubauprojekte img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+

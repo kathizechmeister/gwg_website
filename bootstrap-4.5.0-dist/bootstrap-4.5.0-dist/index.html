@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Clickdummy ohne Design und Funktion</title>
+</head>
+
+
+<body>
+
+<div class="container-fluid header p-0">
+    <!--NAVIGATION-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample04">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown04">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-md-0">
+                <input class="form-control" type="text" placeholder="Search">
+            </form>
+        </div>
+    </nav>
+
+    <!--<nav class="navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Always expand</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-md-0">
+                <input class="form-control" type="text" placeholder="Search">
+            </form>
+        </div>
+    </nav>-->
+    <!--SUCHE-->
+    <div class="p-5 header-content">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <h1>Leben in Linz</h1>
+            </div>
+
+        </div>
+        <div class="row searchform">
+            <div class="col-lg-8 col-md-10 mx-auto bg-white p-5 rounded">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-9">
+                            <!-- <label for="search">Email</label>-->
+                            <input type="search" class="form-control" id="search" placeholder="Suchbegriff eingeben"
+                                   aria-label="Suchbegriff">
+                        </div>
+                        <div class="form-group col-md-3" aria-label="Immobilienfilter">
+                            <div class="input-group mb-3">
+                                <select class="custom-select" id="immobilien" name="immobilien">
+                                    <option selected>Alle Immobilien</option>
+                                    <option value="1">Wohnung</option>
+                                    <option value="2">Haus</option>
+                                    <option value="3">Weiteres..</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <div class="input-group mb-3">
+                                <select class="custom-select" id="maxMiete" name="maxMiete" aria-label="Maximale Miete">
+                                    <option selected>max. Miete</option>
+                                    <option value="1">500</option>
+                                    <option value="2">1000</option>
+                                    <option value="3">5000</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <select class="custom-select" id="mingroese" name="mingroese" aria-label="Minimale Größe">
+                                <option selected>min. Größe</option>
+                                <option value="1">80</option>
+                                <option value="2">100</option>
+                                <option value="3">300</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <select class="custom-select" id="minZimmer" name="minZimmer"
+                                    aria-label="Minimale Anzahl der Zimmer">
+                                <option selected>min. Anzahl Zimmer</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Suchen</button>
+                </form>
+            </div>
+            <div class="col-lg-8 col-md-10 mx-auto pt-2">
+                <a href=#>Bild:Projekt</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container-fluid main-content my-5">
+
+
+    <div class="row">
+
+        <!--SIDEBAR-->
+        <div class="col-md-3  d-none d-md-block bg-light sidebar bg-secondary">
+            <h2 class="pb-5 border-bottom">Neuigkeiten</h2>
+            <div class="item news border-bottom">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h3>Text</h3>
+                        <p>Text</p>
+                    </div>
+                    <div class="col-md-3">
+                        <img class="rounded" src="assets/ID22179999_10107247871154952_3_fl@2x.png" alt="Bild für News">
+                    </div>
+                </div>
+            </div>
+            <div class="item news border-bottom">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h3>Text</h3>
+                        <p>Text</p>
+                    </div>
+                    <div class="col-md-3">
+                        <img class="rounded" src="assets/ID22179999_10107247871154952_3_fl@2x.png" alt="Bild für News">
+                    </div>
+                </div>
+            </div>
+            <div class="item news border-bottom">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h3>Text</h3>
+                        <p>Text</p>
+                    </div>
+                    <div class="col-md-3">
+                        <img class="rounded" src="assets/ID22179999_10107247871154952_3_fl@2x.png" alt="Bild für News">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--HAUPTINHALT-->
+        <div role="main" class="col-md-9 ml-sm-auto px-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Immobilien entdecken</h2>
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-flat-tab" data-toggle="tab" href="#nav-flat"
+                               role="tab" aria-controls="nav-flat" aria-selected="true">Wohnungen</a>
+                            <a class="nav-item nav-link" id="nav-business-tab" data-toggle="tab" href="#nav-business"
+                               role="tab" aria-controls="nav-business" aria-selected="false">Gewerbeimmobilien</a>
+
+                        </div>
+                    </nav>
+                    <div class="tab-content border" id="nav-tabContent">
+                        <!--TAB Wohnungen -->
+                        <div class="tab-pane fade show active" id="nav-flat" role="tabpanel"
+                             aria-labelledby="nav-flat-tab">
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner p-4">
+                                    <div class="carousel-item active">
+                                        <div class="container">
+                                            <div class="row px-5">
+                                                <div class="col-lg-4">
+                                                    <div class="card mb-4 shadow-sm">
+                                                        <img src="./assets/Image.png" alt="Bild">
+                                                        <div class="card-body">
+                                                            <p class="card-text">This is a wider card with supporting
+                                                                text below as a natural lead-in to additional content.
+                                                                This content is a little bit longer.</p>
+                                                            <div class="d-flex justify-content-between align-items-center">
+                                                                <div class="btn-group">
+                                                                    <button type="button"
+                                                                            class="btn btn-sm btn-outline-secondary">
+                                                                        View
+                                                                    </button>
+                                                                    <button type="button"
+                                                                            class="btn btn-sm btn-outline-secondary">
+                                                                        Edit
+                                                                    </button>
+                                                                </div>
+                                                                <small class="text-muted">9 mins</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="card mb-4 shadow-sm">
+                                                        <img src="./assets/Image.png" alt="Bild">
+                                                        <div class="card-body">
+                                                            <p class="card-text">This is a wider card with supporting
+                                                                text below as a natural lead-in to additional content.
+                                                                This content is a little bit longer.</p>
+                                                            <div class="d-flex justify-content-between align-items-center">
+                                                                <div class="btn-group">
+                                                                    <button type="button"
+                                                                            class="btn btn-sm btn-outline-secondary">
+                                                                        View
+                                                                    </button>
+                                                                    <button type="button"
+                                                                            class="btn btn-sm btn-outline-secondary">
+                                                                        Edit
+                                                                    </button>
+                                                                </div>
+                                                                <small class="text-muted">9 mins</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="card mb-4 shadow-sm">
+                                                        <img src="./assets/Image.png" alt="Bild">
+                                                        <div class="card-body">
+                                                            <p class="card-text">This is a wider card with supporting
+                                                                text below as a natural lead-in to additional content.
+                                                                This content is a little bit longer.</p>
+                                                            <div class="d-flex justify-content-between align-items-center">
+                                                                <div class="btn-group">
+                                                                    <button type="button"
+                                                                            class="btn btn-sm btn-outline-secondary">
+                                                                        View
+                                                                    </button>
+                                                                    <button type="button"
+                                                                            class="btn btn-sm btn-outline-secondary">
+                                                                        Edit
+                                                                    </button>
+                                                                </div>
+                                                                <small class="text-muted">9 mins</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="container">
+                                            <div class="row px-5">
+                                                <div class="col-lg-4">
+                                                    <div class="card mb-4 shadow-sm">
+                                                        <img src="./assets/Image.png" alt="Bild">
+                                                        <div class="card-body">
+                                                            <p class="card-text">This is a wider card with supporting
+                                                                text below as a natural lead-in to additional content.
+                                                                This content is a little bit longer.</p>
+                                                            <div class="d-flex justify-content-between align-items-center">
+                                                                <div class="btn-group">
+                                                                    <button type="button"
+                                                                            class="btn btn-sm btn-outline-secondary">
+                                                                        View
+                                                                    </button>
+                                                                    <button type="button"
+                                                                            class="btn btn-sm btn-outline-secondary">
+                                                                        Edit
+                                                                    </button>
+                                                                </div>
+                                                                <small class="text-muted">9 mins</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="card mb-4 shadow-sm">
+                                                        <img src="./assets/Image.png" alt="Bild">
+                                                        <div class="card-body">
+                                                            <p class="card-text">This is a wider card with supporting
+                                                                text below as a natural lead-in to additional content.
+                                                                This content is a little bit longer.</p>
+                                                            <div class="d-flex justify-content-between align-items-center">
+                                                                <div class="btn-group">
+                                                                    <button type="button"
+                                                                            class="btn btn-sm btn-outline-secondary">
+                                                                        View
+                                                                    </button>
+                                                                    <button type="button"
+                                                                            class="btn btn-sm btn-outline-secondary">
+                                                                        Edit
+                                                                    </button>
+                                                                </div>
+                                                                <small class="text-muted">9 mins</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="card mb-4 shadow-sm">
+                                                        <img src="./assets/Image.png" alt="Bild">
+                                                        <div class="card-body">
+                                                            <p class="card-text">This is a wider card with supporting
+                                                                text below as a natural lead-in to additional content.
+                                                                This content is a little bit longer.</p>
+                                                            <div class="d-flex justify-content-between align-items-center">
+                                                                <div class="btn-group">
+                                                                    <button type="button"
+                                                                            class="btn btn-sm btn-outline-secondary">
+                                                                        View
+                                                                    </button>
+                                                                    <button type="button"
+                                                                            class="btn btn-sm btn-outline-secondary">
+                                                                        Edit
+                                                                    </button>
+                                                                </div>
+                                                                <small class="text-muted">9 mins</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+
+
+                            </div>
+                            <!--TAB Gewerbeimmobilien -->
+                            <div class="tab-pane fade" id="nav-business" role="tabpanel"
+                                 aria-labelledby="nav-business-tab">...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--NEUBAUPROJEKTE-->
+            <div class="container neubauprojekte my-3">
+                <div class=" row bg-dark p-3">
+                    <div class="col-md-12 ">
+                        <h2 class="pb-5 text-white">Neubauprojekte</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row p-3">
+                            <div class="col-md-4 col-sm-12 bg-white p-2">
+                                <img class="rounded" src="./assets/Image.png" alt="">
+                            </div>
+                            <div class=" bg-white col-md-8 col-sm-12 p-2">
+                                <h3>Text</h3>
+                                <p>Text
+                                    <br>Text</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row p-3">
+                            <div class="col-md-4 col-sm-12 bg-white p-2">
+                                <img class="rounded" src="./assets/Image.png" alt="">
+                            </div>
+                            <div class=" bg-white col-md-8 col-sm-12 p-2">
+                                <h3>Text</h3>
+                                <p>Text
+                                    <br>Text</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row p-3">
+                            <div class="col-md-4 col-sm-12 bg-white p-2">
+                                <img class="rounded" src="./assets/Image.png" alt="">
+                            </div>
+                            <div class=" bg-white col-md-8 col-sm-12 p-2">
+                                <h3>Text</h3>
+                                <p>Text
+                                    <br>Text</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row p-3">
+                            <div class="col-md-4 col-sm-12 bg-white p-2">
+                                <img class="rounded" src="./assets/Image.png" alt="">
+                            </div>
+                            <div class=" bg-white col-md-8 col-sm-12 p-2">
+                                <h3>Text</h3>
+                                <p>Text
+                                    <br>Text</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+<footer class="bg-light p-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Text</h2>
+                <p>Text</p>
+            </div>
+            <div class="col-md-3">
+                <h2>Text</h2>
+                <p>Text</p>
+            </div>
+            <div class="col-md-3">
+                <h2>Text</h2>
+                <p>Text</p>
+            </div>
+            <div class="col-md-3">
+                <h2>Text</h2>
+                <p>Text</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

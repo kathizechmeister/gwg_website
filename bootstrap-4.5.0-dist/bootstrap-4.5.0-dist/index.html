@@ -1,13 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Clickdummy ohne Design und Funktion</title>
 </head>
@@ -15,17 +14,97 @@
 
 <body>
 
+
 <div class="container-fluid header p-0">
     <!--NAVIGATION-->
-    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Logo</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Main">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/Logo_ng.png" height="88" alt="Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column align-items-end" id="navbarCollapse">
+                <!-- navbar1 -->
+                <ul class="navbar-nav mb-lg-0 font-weight-bold">
+                    <li>
+                        <a class="nav-item nav-link" href="#">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                      d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                <path fill-rule="evenodd"
+                                      d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                            </svg>
+                            Suche
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-item nav-link" href="#">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-lock-fill"
+                                 fill="currentColor"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.5 9a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9z"/>
+                                <path fill-rule="evenodd"
+                                      d="M4.5 4a3.5 3.5 0 1 1 7 0v3h-1V4a2.5 2.5 0 0 0-5 0v3h-1V4z"/>
+                            </svg>
+                            Login
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-item nav-link" href="#">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-key-fill" fill="currentColor"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                      d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                            </svg>
+                            Anmeldung für Wohnung
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-item nav-link text-primary" href="#">
+                            Wichtige Kontakte
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- navbar2 -->
+                <ul class="navbar-nav mt-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Immobiliensuche</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bauprojekte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rund ums Wohnen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Team</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--<nav class="navbar navbar-expand-md navbar-light bg-white-fade border-bottom border-secondary text-gray-dark
+d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="#">
+            <img class="d-inline-block align-top" id="logo" src="assets/Logo_ng.png" alt="Logo">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
-                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarsExample04">
-            <ul class="navbar-nav mr-auto">
+        <div class="collapse navbar-collapse text-black-50">
+
+            <ul class="navbar-nav my-md-0 mr-0 font-weight-bold">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
@@ -45,11 +124,8 @@
                     </div>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-md-0">
-                <input class="form-control" type="text" placeholder="Search">
-            </form>
         </div>
-    </nav>
+    </nav>-->
 
     <!--<nav class="navbar navbar-expand navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Always expand</a>
@@ -72,26 +148,29 @@
         </div>
     </nav>-->
     <!--SUCHE-->
-    <div class="p-5 header-content">
+    <div class="p-5 header-content" role="banner">
         <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-                <h1>Leben in Linz</h1>
+            <div class="col-lg-8 col-xl-7 col-md-10 col-sm-12 mx-auto">
+                <h1 class="text-white">Leben in Linz</h1>
             </div>
 
         </div>
         <div class="row searchform">
-            <div class="col-lg-8 col-md-10 mx-auto bg-white p-5 rounded">
-                <form>
+            <div class="col-xl-7 col-lg-10 mx-auto bg-white p-md-5 p-sm-1 rounded">
+                <form class="my-3">
                     <div class="form-row">
-                        <div class="form-group col-md-9">
-                            <!-- <label for="search">Email</label>-->
-                            <input type="search" class="form-control" id="search" placeholder="Suchbegriff eingeben"
+                        <div class="form-group form-group-lg col-md-9">
+                            <div class="input-group-lg">
+                             <label for="search" class="text-hide">Suche</label>
+                            <input type="search" class="form-control form-control-lg" id="search" placeholder="Suchbegriff eingeben"
                                    aria-label="Suchbegriff">
+                            </div>
                         </div>
-                        <div class="form-group col-md-3" aria-label="Immobilienfilter">
-                            <div class="input-group mb-3">
-                                <select class="custom-select" id="immobilien" name="immobilien">
-                                    <option selected>Alle Immobilien</option>
+                        <div class="form-group col-md-3" aria-label="Immobilien-Filter">
+                            <div class="input-group-lg">
+                                <label for="immobilien" class="text-hide">Immobilienfilter</label>
+                                <select class="custom-select " id="immobilien" name="immobilien" aria-label="Immobilienfilter">
+                                    <option selected class="dropdown-item">Alle Immobilien</option>
                                     <option value="1">Wohnung</option>
                                     <option value="2">Haus</option>
                                     <option value="3">Weiteres..</option>
@@ -100,8 +179,9 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <div class="input-group mb-3">
+                        <div class="form-group form-group-lg col-md-4">
+                            <div class="input-group-lg mb-3">
+                                <label for="maxMiete" class="text-hide">Maximale Miete</label>
                                 <select class="custom-select" id="maxMiete" name="maxMiete" aria-label="Maximale Miete">
                                     <option selected>max. Miete</option>
                                     <option value="1">500</option>
@@ -110,15 +190,20 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group col-md-4">
+                        <div class="form-group form-group-lg col-md-4">
+                            <div class="input-group-lg mb-3">
+                                <label for="mingroese" class="text-hide">Minimale Größe</label>
                             <select class="custom-select" id="mingroese" name="mingroese" aria-label="Minimale Größe">
                                 <option selected>min. Größe</option>
                                 <option value="1">80</option>
                                 <option value="2">100</option>
                                 <option value="3">300</option>
                             </select>
+                            </div>
                         </div>
                         <div class="form-group col-md-4">
+                            <div class="input-group-lg mb-3">
+                                <label for="minZimmer" class="text-hide">Minimale Anzahl der Zimmer</label>
                             <select class="custom-select" id="minZimmer" name="minZimmer"
                                     aria-label="Minimale Anzahl der Zimmer">
                                 <option selected>min. Anzahl Zimmer</option>
@@ -126,13 +211,22 @@
                                 <option value="2">2</option>
                                 <option value="3">4</option>
                             </select>
+                            </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Suchen</button>
+                    <div>
+                        <p class="text-right"><a href="#">
+                            <small>erweiterte Suche</small>
+                        </a></p>
+                    </div>
+                    <button type="submit" class="btn btn-primary px-5">Suchen</button>
                 </form>
             </div>
-            <div class="col-lg-8 col-md-10 mx-auto pt-2">
-                <a href=#>Bild:Projekt</a>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto col-xl-7 pt-2 ">
+                <a class="text-white underline" href=#>Bild:Projekt</a>
             </div>
         </div>
     </div>
@@ -140,147 +234,130 @@
 </div>
 
 <div class="container-fluid main-content my-5">
-
-
     <div class="row">
 
         <!--SIDEBAR-->
-        <div class="col-md-3  d-none d-md-block bg-light sidebar bg-secondary">
-            <h2 class="pb-5 border-bottom">Neuigkeiten</h2>
-            <div class="item news border-bottom">
+        <div class="col-md-3 d-none d-md-block sidebar bg-light-red border-left" role="complementary">
+            <h2 class="py-5 px-4 border-bottom  ">Neuigkeiten</h2>
+            <div class="item news border-bottom py-2" tabindex="0">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-9 pl-5">
                         <h3>Text</h3>
                         <p>Text</p>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 pr-3 pl-0">
                         <img class="rounded" src="assets/ID22179999_10107247871154952_3_fl@2x.png" alt="Bild für News">
                     </div>
                 </div>
             </div>
-            <div class="item news border-bottom">
+            <div class="item news border-bottom py-2" tabindex="0">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-9 pl-5">
                         <h3>Text</h3>
                         <p>Text</p>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 pr-3 pl-0">
                         <img class="rounded" src="assets/ID22179999_10107247871154952_3_fl@2x.png" alt="Bild für News">
                     </div>
                 </div>
             </div>
-            <div class="item news border-bottom">
+            <div class="item news border-bottom py-2" tabindex="0">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-9 pl-5">
                         <h3>Text</h3>
                         <p>Text</p>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 pr-3 pl-0">
                         <img class="rounded" src="assets/ID22179999_10107247871154952_3_fl@2x.png" alt="Bild für News">
                     </div>
                 </div>
             </div>
         </div>
         <!--HAUPTINHALT-->
-        <div role="main" class="col-md-9 ml-sm-auto px-4">
+        <div role="main" class="col-md-9 px-4">
             <div class="row">
-                <div class="col-md-12">
-                    <h2>Immobilien entdecken</h2>
+                <!--IMMOBILIEN-->
+                <div class="col-md-12 m-1">
+                    <h2 class="py-5">Immobilien entdecken</h2>
                     <nav>
-                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <div class="nav nav-tabs d-flex" id="nav-tab" role="tablist">
                             <a class="nav-item nav-link active" id="nav-flat-tab" data-toggle="tab" href="#nav-flat"
                                role="tab" aria-controls="nav-flat" aria-selected="true">Wohnungen</a>
                             <a class="nav-item nav-link" id="nav-business-tab" data-toggle="tab" href="#nav-business"
                                role="tab" aria-controls="nav-business" aria-selected="false">Gewerbeimmobilien</a>
-
+                            <p class="ml-auto"><a href="#" class="text-primary">
+                                <small>alle ansehen</small>
+                            </a></p>
                         </div>
+
                     </nav>
                     <div class="tab-content border" id="nav-tabContent">
-                        <!--TAB Wohnungen -->
+                        <!--TAB Wohnungen Carousel -->
                         <div class="tab-pane fade show active" id="nav-flat" role="tabpanel"
                              aria-labelledby="nav-flat-tab">
                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner p-4">
+                                <div class="carousel-inner p-5">
                                     <div class="carousel-item active">
                                         <div class="container">
-                                            <div class="row px-5">
+                                            <div class="row  d-flex justify-content-between">
+                                                <!--Item-->
                                                 <div class="col-lg-4">
-                                                    <div class="card mb-4 shadow-sm">
+                                                    <div class="card mb-4" tabindex="0">
                                                         <img src="./assets/Image.png" alt="Bild">
                                                         <div class="card-body">
                                                             <p class="card-text">This is a wider card with supporting
                                                                 text below as a natural lead-in to additional content.
                                                                 This content is a little bit longer.</p>
-                                                            <div class="d-flex justify-content-between align-items-center">
-                                                                <div class="btn-group">
-                                                                    <button type="button"
-                                                                            class="btn btn-sm btn-outline-secondary">
-                                                                        View
-                                                                    </button>
-                                                                    <button type="button"
-                                                                            class="btn btn-sm btn-outline-secondary">
-                                                                        Edit
-                                                                    </button>
-                                                                </div>
-                                                                <small class="text-muted">9 mins</small>
+                                                            <div class="d-flex justify-content-end align-items-md-end">
+                                                                <p class="compare">
+                                                                    <label for="vergleichen1">vergleichen</label>
+                                                                    <input type="checkbox" tabindex="0" aria-label="compare" id="vergleichen1">
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
-                                                    <div class="card mb-4 shadow-sm">
+                                                    <div class="card mb-4" tabindex="0">
                                                         <img src="./assets/Image.png" alt="Bild">
                                                         <div class="card-body">
                                                             <p class="card-text">This is a wider card with supporting
                                                                 text below as a natural lead-in to additional content.
                                                                 This content is a little bit longer.</p>
-                                                            <div class="d-flex justify-content-between align-items-center">
-                                                                <div class="btn-group">
-                                                                    <button type="button"
-                                                                            class="btn btn-sm btn-outline-secondary">
-                                                                        View
-                                                                    </button>
-                                                                    <button type="button"
-                                                                            class="btn btn-sm btn-outline-secondary">
-                                                                        Edit
-                                                                    </button>
-                                                                </div>
-                                                                <small class="text-muted">9 mins</small>
+                                                            <div class="d-flex justify-content-end align-items-md-end">
+                                                                <p class="compare">
+                                                                    <label for="vergleichen2">vergleichen</label>
+                                                                    <input type="checkbox" tabindex="0" aria-label="compare" id="vergleichen2">
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
-                                                    <div class="card mb-4 shadow-sm">
+                                                    <div class="card mb-4" tabindex="0">
                                                         <img src="./assets/Image.png" alt="Bild">
                                                         <div class="card-body">
                                                             <p class="card-text">This is a wider card with supporting
                                                                 text below as a natural lead-in to additional content.
                                                                 This content is a little bit longer.</p>
-                                                            <div class="d-flex justify-content-between align-items-center">
-                                                                <div class="btn-group">
-                                                                    <button type="button"
-                                                                            class="btn btn-sm btn-outline-secondary">
-                                                                        View
-                                                                    </button>
-                                                                    <button type="button"
-                                                                            class="btn btn-sm btn-outline-secondary">
-                                                                        Edit
-                                                                    </button>
-                                                                </div>
-                                                                <small class="text-muted">9 mins</small>
+                                                            <div class="d-flex justify-content-end align-items-md-end">
+                                                                <p class="compare">
+                                                                    <label for="vergleichen3">vergleichen</label>
+                                                                    <input type="checkbox" tabindex="0" aria-label="compare" id="vergleichen3">
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="container">
-                                            <div class="row px-5">
+                                            <div class="row  ">
                                                 <div class="col-lg-4">
-                                                    <div class="card mb-4 shadow-sm">
+                                                    <div class="card mb-4">
                                                         <img src="./assets/Image.png" alt="Bild">
                                                         <div class="card-body">
                                                             <p class="card-text">This is a wider card with supporting
@@ -303,7 +380,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
-                                                    <div class="card mb-4 shadow-sm">
+                                                    <div class="card mb-4">
                                                         <img src="./assets/Image.png" alt="Bild">
                                                         <div class="card-body">
                                                             <p class="card-text">This is a wider card with supporting
@@ -326,7 +403,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
-                                                    <div class="card mb-4 shadow-sm">
+                                                    <div class="card mb-4">
                                                         <img src="./assets/Image.png" alt="Bild">
                                                         <div class="card-body">
                                                             <p class="card-text">This is a wider card with supporting
@@ -351,6 +428,7 @@
                                             </div>
                                         </div>
                                     </div>
+
 
                                     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -364,70 +442,173 @@
 
 
                             </div>
-                            <!--TAB Gewerbeimmobilien -->
-                            <div class="tab-pane fade" id="nav-business" role="tabpanel"
-                                 aria-labelledby="nav-business-tab">...
-                            </div>
+
+                        </div>
+
+                        <div class="tab-pane fade show" id="nav-business" role="tabpanel"
+                             aria-labelledby="nav-flat-tab">
+                            ...
                         </div>
                     </div>
+
+
                 </div>
             </div>
             <!--NEUBAUPROJEKTE-->
-            <div class="container neubauprojekte my-3">
-                <div class=" row bg-dark p-3">
-                    <div class="col-md-12 ">
-                        <h2 class="pb-5 text-white">Neubauprojekte</h2>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row p-3">
-                            <div class="col-md-4 col-sm-12 bg-white p-2">
-                                <img class="rounded" src="./assets/Image.png" alt="">
+            <div class="row bg-dark m-1 mt-4 neubauprojekte p-lg-5 p-md-2">
+                <div class="col-md-12 d-flex p-3 mx-3 my-2">
+                    <h2 class="py-3 text-white">Neubauprojekte</h2>
+                    <p class="py-3 ml-auto"><a href="#" class="text-white">
+                        <small><br>alle ansehen</small>
+                    </a></p>
+                </div>
+
+                <!-- <div class="col-md-6">
+                     <div class="card flex-row flex-wrap bg-white">
+                         <div class="card-header border-0 p-1">
+                             <img src="//placehold.it/100" alt="">
+                         </div>
+                         <div class="card-block p-1">
+                             <h3 class="card-title">Title</h3>
+                             <p class="card-text">I„Auhirschgasse“ entstehen.</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-6">
+                     <div class="row p-3">
+                         <a href="#">
+                             <div class="col-md-4 col-sm-12 bg-white p-2">
+                                 <img class="rounded" src="./assets/Image.png" alt="">
+                             </div>
+                             <div class=" bg-white col-md-8 col-sm-12 p-2">
+                                 <h3>Text</h3>
+                                 <p>Text
+                                     <br>Text</p>
+                             </div>
+                         </a>
+                     </div>
+                 </div>
+                 <div class="col-md-6 mt-3">
+                     <div class="card p-2">
+                         <div class="card-horizontal">
+                             <div class="img-square-wrapper">
+                                 <img class="" src="http://via.placeholder.com/200" alt="Auhirschgasse">
+                             </div>
+                             <div class="card-body">
+                                 <h3 class="card-title">Card title</h3>
+                                 <p class="card-text">Some quick example text to build on the card title and make up the
+                                     bulk of the card's content.</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-6" >
+                     <div class="row p-3">
+                         <a href="#" class="text-black-50">
+                         <div class="col-md-4 col-sm-12 bg-white p-2">
+                             <img class="rounded" src="./assets/Image.png" alt="">
+                         </div>
+                         <div class=" bg-white col-md-8 col-sm-12 p-2">
+                             <h3>Text</h3>
+                             <p>Im zweiten Bauabschnitt des 16 Gebäude umfassenden Bauprojektes „Auhirschgasse“ entstehen
+                                 in Pichling in grüner Ruhelage 69 geförderte Mietwohnungen mit Wohnflächen von 50 bis
+                                 104 m².</p>
+                         </div>
+                         </a>
+                     </div>
+                 </div>
+
+                 <div class="col-lg-6 col-md-12" tabindex="4" aria-label="Neubauprojekt">
+                     <div class="card mb-3">
+                         <div class="row no-gutters m-0">
+                             <div class="col-md-4">
+                                 <img src="assets/Image.png" alt="">
+                             </div>
+                             <div class="col-md-8">
+                                 <div class="card-body">
+                                     <h5 class="card-title">Card title</h5>
+                                     <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
+                                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>-->
+                <div class="col-lg-6 col-md-12" tabindex="0" aria-label="Neubauprojekt">
+                    <div class="card m-lg-3 p-lg-3 ">
+                        <div class="row no-gutters">
+                            <div class="col-xl-4  col-md-12">
+                                <img class="rounded" src="assets/Image.png" alt="Picture">
                             </div>
-                            <div class=" bg-white col-md-8 col-sm-12 p-2">
-                                <h3>Text</h3>
-                                <p>Text
-                                    <br>Text</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row p-3">
-                            <div class="col-md-4 col-sm-12 bg-white p-2">
-                                <img class="rounded" src="./assets/Image.png" alt="">
-                            </div>
-                            <div class=" bg-white col-md-8 col-sm-12 p-2">
-                                <h3>Text</h3>
-                                <p>Text
-                                    <br>Text</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row p-3">
-                            <div class="col-md-4 col-sm-12 bg-white p-2">
-                                <img class="rounded" src="./assets/Image.png" alt="">
-                            </div>
-                            <div class=" bg-white col-md-8 col-sm-12 p-2">
-                                <h3>Text</h3>
-                                <p>Text
-                                    <br>Text</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row p-3">
-                            <div class="col-md-4 col-sm-12 bg-white p-2">
-                                <img class="rounded" src="./assets/Image.png" alt="">
-                            </div>
-                            <div class=" bg-white col-md-8 col-sm-12 p-2">
-                                <h3>Text</h3>
-                                <p>Text
-                                    <br>Text</p>
+                            <div class="col-md-12  col-xl-8">
+                                <div class="card-body">
+                                    <h3 class="card-title font-weight-bold">Derflingerstraße</h3>
+                                    <p class="card-text">Das Projekt umfasst 83 Wohnungen im ersten Bauabschnitt, wofür
+                                        die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll. Ergänzt wird
+                                        das Bauvorhaben um 63 weitere …. Wohnungen des zweiten Bauabschnittes. Hier
+                                        sehen die Planungen eine Übergabe der Wohnungen zu Jahresende 2021 vor</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-6 col-md-12" tabindex="0" aria-label="Neubauprojekt">
+                    <div class="card m-lg-3 p-lg-3 m-md-1 p-md-1">
+                        <div class="row no-gutters">
+                            <div class="col-xl-4  col-md-12">
+                                <img class="rounded" src="assets/Image.png" alt="Picture">
+                            </div>
+                            <div class="col-md-12  col-xl-8">
+                                <div class="card-body">
+                                    <h3 class="card-title font-weight-bold">Derflingerstraße</h3>
+                                    <p class="card-text">Das Projekt umfasst 83 Wohnungen im ersten Bauabschnitt, wofür
+                                        die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll. Ergänzt wird
+                                        das Bauvorhaben um 63 weitere …. Wohnungen des zweiten Bauabschnittes. Hier
+                                        sehen die Planungen eine Übergabe der Wohnungen zu Jahresende 2021 vor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12" tabindex="0" aria-label="Neubauprojekt">
+                    <div class="card m-lg-3 p-lg-3 m-md-1 p-md-1">
+                        <div class="row no-gutters">
+                            <div class="col-xl-4  col-md-12">
+                                <img class="rounded" src="assets/Image.png" alt="Picture">
+                            </div>
+                            <div class="col-md-12  col-xl-8">
+                                <div class="card-body">
+                                    <h3 class="card-title font-weight-bold">Derflingerstraße</h3>
+                                    <p class="card-text">Das Projekt umfasst 83 Wohnungen im ersten Bauabschnitt, wofür
+                                        die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll. Ergänzt wird
+                                        das Bauvorhaben um 63 weitere …. Wohnungen des zweiten Bauabschnittes. Hier
+                                        sehen die Planungen eine Übergabe der Wohnungen zu Jahresende 2021 vor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12" tabindex="0" aria-label="Neubauprojekt">
+                    <div class="card m-lg-3 p-lg-3 m-md-1 p-md-1">
+                        <div class="row no-gutters">
+                            <div class="col-xl-4  col-md-12">
+                                <img class="rounded" src="assets/Image.png" alt="Picture">
+                            </div>
+                            <div class="col-md-12  col-xl-8">
+                                <div class="card-body">
+                                    <h3 class="card-title font-weight-bold">Derflingerstraße</h3>
+                                    <p class="card-text">Das Projekt umfasst 83 Wohnungen im ersten Bauabschnitt, wofür
+                                        die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll. Ergänzt wird
+                                        das Bauvorhaben um 63 weitere …. Wohnungen des zweiten Bauabschnittes. Hier
+                                        sehen die Planungen eine Übergabe der Wohnungen zu Jahresende 2021 vor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </div>
 </div>
@@ -443,28 +624,31 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-    <script src="./js/function.js"></script>
-</body>
-<footer class="bg-light p-5">
+<script src="./js/function.js"></script>
+<footer class="bg-dark p-5 text-white">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <h2>Text</h2>
+                <h2 class="text-uppercase">Text</h2>
                 <p>Text</p>
             </div>
             <div class="col-md-3">
-                <h2>Text</h2>
+                <h2 class="text-uppercase">Text</h2>
                 <p>Text</p>
             </div>
             <div class="col-md-3">
-                <h2>Text</h2>
+                <h2 class="text-uppercase">Text</h2>
                 <p>Text</p>
             </div>
             <div class="col-md-3">
-                <h2>Text</h2>
+                <h2 class="text-uppercase">Text</h2>
+                <p>Text</p>
+            </div>
+            <div class="col-12">
                 <p>Text</p>
             </div>
         </div>
     </div>
 </footer>
+</body>
 </html>

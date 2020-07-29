@@ -17,10 +17,10 @@
 
 <div class="container-fluid header p-0">
     <!--NAVIGATION-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Main">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white-fade mainnavigation" aria-label="Main">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="assets/Logo_ng.png" height="88" alt="Logo">
+                <img src="assets/Logo.png" height="110" alt="Logo">
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -30,9 +30,9 @@
 
             <div class="collapse navbar-collapse flex-column align-items-end" id="navbarCollapse">
                 <!-- navbar1 -->
-                <ul class="navbar-nav mb-lg-0 font-weight-bold">
+                <ul class="navbar-nav pb-2 font-weight-bold">
                     <li>
-                        <a class="nav-item nav-link" href="#">
+                        <a class="nav-item nav-link px-3" href="#">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -44,7 +44,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-item nav-link" href="#">
+                        <a class="nav-item nav-link px-3" href="#">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-lock-fill"
                                  fill="currentColor"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +56,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-item nav-link" href="#">
+                        <a class="nav-item nav-link px-3" href="#">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-key-fill" fill="currentColor"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -66,7 +66,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-item nav-link text-primary" href="#">
+                        <a class="nav-item nav-link px-3 text-primary" href="#">
                             Wichtige Kontakte
                         </a>
                     </li>
@@ -74,18 +74,18 @@
                 </ul>
 
                 <!-- navbar2 -->
-                <ul class="navbar-nav mt-0">
+                <ul class="navbar-nav pt-2">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Immobiliensuche</a>
+                        <a class="nav-link px-3" href="#">Immobiliensuche</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Bauprojekte</a>
+                        <a class="nav-link px-3" href="#">Bauprojekte</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Rund ums Wohnen</a>
+                        <a class="nav-link px-3" href="#">Rund ums Wohnen</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Team</a>
+                        <a class="nav-link px-3" href="#">Team</a>
                     </li>
                 </ul>
             </div>
@@ -148,27 +148,27 @@ d-flex justify-content-between align-items-center">
         </div>
     </nav>-->
     <!--SUCHE-->
-    <div class="p-5 header-content" role="banner">
+    <div class="p-6 header-content bg-ie-dark" role="banner">
         <div class="row">
-            <div class="col-lg-8 col-xl-7 col-md-10 col-sm-12 mx-auto">
-                <h1 class="text-white">Leben in Linz</h1>
+            <div class="col-lg-10 col-xl-7 mx-auto ">
+                <h1 class="text-white ">Leben in Linz</h1>
             </div>
 
         </div>
-        <div class="row searchform">
+        <div class="row searchform ">
             <div class="col-xl-7 col-lg-10 mx-auto bg-white p-md-5 p-sm-1 rounded">
                 <form class="my-3">
                     <div class="form-row">
                         <div class="form-group form-group-lg col-md-9">
                             <div class="input-group-lg">
-                             <label for="search" class="text-hide">Suche</label>
+                             <label for="search" class="sr-only">Suche</label>
                             <input type="search" class="form-control form-control-lg" id="search" placeholder="Suchbegriff eingeben"
                                    aria-label="Suchbegriff">
                             </div>
                         </div>
                         <div class="form-group col-md-3" aria-label="Immobilien-Filter">
                             <div class="input-group-lg">
-                                <label for="immobilien" class="text-hide">Immobilienfilter</label>
+                                <label for="immobilien" class="sr-only">Immobilienfilter</label>
                                 <select class="custom-select " id="immobilien" name="immobilien" aria-label="Immobilienfilter">
                                     <option selected class="dropdown-item">Alle Immobilien</option>
                                     <option value="1">Wohnung</option>
@@ -181,7 +181,7 @@ d-flex justify-content-between align-items-center">
                     <div class="form-row">
                         <div class="form-group form-group-lg col-md-4">
                             <div class="input-group-lg mb-3">
-                                <label for="maxMiete" class="text-hide">Maximale Miete</label>
+                                <label for="maxMiete" class="sr-only">Maximale Miete</label>
                                 <select class="custom-select" id="maxMiete" name="maxMiete" aria-label="Maximale Miete">
                                     <option selected>max. Miete</option>
                                     <option value="1">500</option>
@@ -192,7 +192,7 @@ d-flex justify-content-between align-items-center">
                         </div>
                         <div class="form-group form-group-lg col-md-4">
                             <div class="input-group-lg mb-3">
-                                <label for="mingroese" class="text-hide">Minimale Größe</label>
+                                <label for="mingroese" class="sr-only">Minimale Größe</label>
                             <select class="custom-select" id="mingroese" name="mingroese" aria-label="Minimale Größe">
                                 <option selected>min. Größe</option>
                                 <option value="1">80</option>
@@ -203,7 +203,7 @@ d-flex justify-content-between align-items-center">
                         </div>
                         <div class="form-group col-md-4">
                             <div class="input-group-lg mb-3">
-                                <label for="minZimmer" class="text-hide">Minimale Anzahl der Zimmer</label>
+                                <label for="minZimmer" class="sr-only">Minimale Anzahl der Zimmer</label>
                             <select class="custom-select" id="minZimmer" name="minZimmer"
                                     aria-label="Minimale Anzahl der Zimmer">
                                 <option selected>min. Anzahl Zimmer</option>
@@ -216,17 +216,17 @@ d-flex justify-content-between align-items-center">
                     </div>
                     <div>
                         <p class="text-right"><a href="#">
-                            <small>erweiterte Suche</small>
+                            <small class="underline">erweiterte Suche</small>
                         </a></p>
                     </div>
-                    <button type="submit" class="btn btn-primary px-5">Suchen</button>
+                    <button type="submit" class="btn btn-primary px-5 text-uppercase">Suchen</button>
                 </form>
             </div>
 
         </div>
-        <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto col-xl-7 pt-2 ">
-                <a class="text-white underline" href=#>Bild:Projekt</a>
+        <div class="row ">
+            <div class="col-lg-10 mx-auto col-xl-7 pt-2  ">
+                <a class="text-white underline bg-transparent-gray" href=#>Bild:Projekt</a>
             </div>
         </div>
     </div>
@@ -277,7 +277,7 @@ d-flex justify-content-between align-items-center">
         <div role="main" class="col-md-9 px-4">
             <div class="row">
                 <!--IMMOBILIEN-->
-                <div class="col-md-12 m-1">
+                <div class="col-md-12 m-1 immobilienentdecken">
                     <h2 class="py-5">Immobilien entdecken</h2>
                     <nav>
                         <div class="nav nav-tabs d-flex" id="nav-tab" role="tablist">
@@ -286,7 +286,7 @@ d-flex justify-content-between align-items-center">
                             <a class="nav-item nav-link" id="nav-business-tab" data-toggle="tab" href="#nav-business"
                                role="tab" aria-controls="nav-business" aria-selected="false">Gewerbeimmobilien</a>
                             <p class="ml-auto"><a href="#" class="text-primary">
-                                <small>alle ansehen</small>
+                                <small class="underline">alle ansehen</small>
                             </a></p>
                         </div>
 
@@ -311,7 +311,7 @@ d-flex justify-content-between align-items-center">
                                                             <div class="d-flex justify-content-end align-items-md-end">
                                                                 <p class="compare">
                                                                     <label for="vergleichen1">vergleichen</label>
-                                                                    <input type="checkbox" tabindex="0" aria-label="compare" id="vergleichen1">
+                                                                    <input type="checkbox" tabindex="0" aria-label="compare"  role="checkbox" aria-checked="false" id="vergleichen1">
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -327,7 +327,7 @@ d-flex justify-content-between align-items-center">
                                                             <div class="d-flex justify-content-end align-items-md-end">
                                                                 <p class="compare">
                                                                     <label for="vergleichen2">vergleichen</label>
-                                                                    <input type="checkbox" tabindex="0" aria-label="compare" id="vergleichen2">
+                                                                    <input type="checkbox" tabindex="0" aria-label="compare" role="checkbox" aria-checked="false" id="vergleichen2">
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -343,7 +343,7 @@ d-flex justify-content-between align-items-center">
                                                             <div class="d-flex justify-content-end align-items-md-end">
                                                                 <p class="compare">
                                                                     <label for="vergleichen3">vergleichen</label>
-                                                                    <input type="checkbox" tabindex="0" aria-label="compare" id="vergleichen3">
+                                                                    <input type="checkbox" tabindex="0" aria-label="compare" role="checkbox" aria-checked="false" id="vergleichen3">
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -459,7 +459,7 @@ d-flex justify-content-between align-items-center">
                 <div class="col-md-12 d-flex p-3 mx-3 my-2">
                     <h2 class="py-3 text-white">Neubauprojekte</h2>
                     <p class="py-3 ml-auto"><a href="#" class="text-white">
-                        <small><br>alle ansehen</small>
+                        <small class="underline">alle ansehen</small>
                     </a></p>
                 </div>
 
@@ -534,80 +534,70 @@ d-flex justify-content-between align-items-center">
                          </div>
                      </div>
                  </div>-->
-                <div class="col-lg-6 col-md-12" tabindex="0" aria-label="Neubauprojekt">
+                <div class="col-lg-6 col-md-12 py-3" tabindex="0" aria-label="Neubauprojekt">
                     <div class="card m-lg-3 p-lg-3 ">
                         <div class="row no-gutters">
                             <div class="col-xl-4  col-md-12">
                                 <img class="rounded" src="assets/Image.png" alt="Picture">
                             </div>
-                            <div class="col-md-12  col-xl-8">
+                            <div class="col-md-12 col-xl-8">
                                 <div class="card-body">
                                     <h3 class="card-title font-weight-bold">Derflingerstraße</h3>
                                     <p class="card-text">Das Projekt umfasst 83 Wohnungen im ersten Bauabschnitt, wofür
-                                        die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll. Ergänzt wird
-                                        das Bauvorhaben um 63 weitere …. Wohnungen des zweiten Bauabschnittes. Hier
-                                        sehen die Planungen eine Übergabe der Wohnungen zu Jahresende 2021 vor</p>
+                                        die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12" tabindex="0" aria-label="Neubauprojekt">
-                    <div class="card m-lg-3 p-lg-3 m-md-1 p-md-1">
+                <div class="col-lg-6 col-md-12 py-3" tabindex="0" aria-label="Neubauprojekt">
+                    <div class="card m-lg-3 p-lg-3 ">
                         <div class="row no-gutters">
                             <div class="col-xl-4  col-md-12">
                                 <img class="rounded" src="assets/Image.png" alt="Picture">
                             </div>
-                            <div class="col-md-12  col-xl-8">
+                            <div class="col-md-12 col-xl-8">
                                 <div class="card-body">
                                     <h3 class="card-title font-weight-bold">Derflingerstraße</h3>
                                     <p class="card-text">Das Projekt umfasst 83 Wohnungen im ersten Bauabschnitt, wofür
-                                        die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll. Ergänzt wird
-                                        das Bauvorhaben um 63 weitere …. Wohnungen des zweiten Bauabschnittes. Hier
-                                        sehen die Planungen eine Übergabe der Wohnungen zu Jahresende 2021 vor</p>
+                                        die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12" tabindex="0" aria-label="Neubauprojekt">
-                    <div class="card m-lg-3 p-lg-3 m-md-1 p-md-1">
+                <div class="col-lg-6 col-md-12 py-3" tabindex="0" aria-label="Neubauprojekt">
+                    <div class="card m-lg-3 p-lg-3 ">
                         <div class="row no-gutters">
                             <div class="col-xl-4  col-md-12">
                                 <img class="rounded" src="assets/Image.png" alt="Picture">
                             </div>
-                            <div class="col-md-12  col-xl-8">
+                            <div class="col-md-12 col-xl-8">
                                 <div class="card-body">
                                     <h3 class="card-title font-weight-bold">Derflingerstraße</h3>
                                     <p class="card-text">Das Projekt umfasst 83 Wohnungen im ersten Bauabschnitt, wofür
-                                        die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll. Ergänzt wird
-                                        das Bauvorhaben um 63 weitere …. Wohnungen des zweiten Bauabschnittes. Hier
-                                        sehen die Planungen eine Übergabe der Wohnungen zu Jahresende 2021 vor</p>
+                                        die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12" tabindex="0" aria-label="Neubauprojekt">
-                    <div class="card m-lg-3 p-lg-3 m-md-1 p-md-1">
+                <div class="col-lg-6 col-md-12 py-3" tabindex="0" aria-label="Neubauprojekt">
+                    <div class="card m-lg-3 p-lg-3 ">
                         <div class="row no-gutters">
                             <div class="col-xl-4  col-md-12">
                                 <img class="rounded" src="assets/Image.png" alt="Picture">
                             </div>
-                            <div class="col-md-12  col-xl-8">
+                            <div class="col-md-12 col-xl-8">
                                 <div class="card-body">
                                     <h3 class="card-title font-weight-bold">Derflingerstraße</h3>
                                     <p class="card-text">Das Projekt umfasst 83 Wohnungen im ersten Bauabschnitt, wofür
-                                        die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll. Ergänzt wird
-                                        das Bauvorhaben um 63 weitere …. Wohnungen des zweiten Bauabschnittes. Hier
-                                        sehen die Planungen eine Übergabe der Wohnungen zu Jahresende 2021 vor</p>
+                                        die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-            </div>
 
         </div>
     </div>

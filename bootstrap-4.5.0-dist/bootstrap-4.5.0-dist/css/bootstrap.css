@@ -32,7 +32,7 @@
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
+  --breakpoint-xl: 1500px;
   --font-family-sans-serif: Arial, sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -135,7 +135,7 @@ strong {
 }
 
 small {
-  font-size: 95%;
+  font-size: 100%;
 }
 
 sub,
@@ -430,7 +430,7 @@ hr {
 
 small,
 .small {
-  font-size: 95%;
+  font-size: 100%;
   font-weight: 400;
 }
 
@@ -1495,7 +1495,7 @@ pre code {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .col-xl {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -2586,14 +2586,12 @@ fieldset:disabled a.btn {
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #CD1719;
-  font-weight: bold;
-  text-decoration: underline #fff;
+  background-color: #E14849;
 }
 
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #AA1719;
+  background-color: #E14849;
   border-color: #AA1719;
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
@@ -2607,7 +2605,7 @@ fieldset:disabled a.btn {
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #0062cc;
+  background-color: #E14849;
   border-color: #005cbf;
 }
 
@@ -4282,7 +4280,8 @@ input[type="button"].btn-block {
 }
 
 .nav-tabs .nav-link {
-  border: 1px solid transparent;
+  border: 1px solid rgba(112,112,112,0.3);
+
 }
 
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
@@ -4299,7 +4298,7 @@ input[type="button"].btn-block {
 .nav-tabs .nav-item.show .nav-link {
   color: #fff;
   background-color: #CD1719;
-  border-color: #dee2e6 #dee2e6 #fff;
+  border-color: rgba(112,112,112,0.3);
 }
 
 .nav-tabs .dropdown-menu {
@@ -6538,7 +6537,7 @@ a.close.disabled {
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 10%;
+  width: 7%;
   color: #fff;
   text-align: center;
   opacity: 0.5;
@@ -8435,6 +8434,10 @@ button.bg-dark:focus {
 
 .p-5 {
   padding: 3rem !important;
+}
+
+.p-6 {
+  padding: 6rem;
 }
 
 .pt-5,

@@ -291,6 +291,7 @@ input[type="radio"],
 input[type="checkbox"] {
   box-sizing: border-box;
   padding: 0;
+
 }
 
 textarea {
@@ -366,7 +367,6 @@ h1, h2, h3, h4, h5, h6,
 
 h1, .h1 {
   font-size: 3rem;
-  text-shadow: 2px 2px 2px #707070C4;
   text-transform: uppercase;
 }
 
@@ -428,10 +428,14 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-small,
-.small {
+small{
   font-size: 100%;
   font-weight: 400;
+}
+
+.small{
+    font-size: 70%;
+    font-weight: 300;
 }
 
 mark,
@@ -4280,12 +4284,12 @@ input[type="button"].btn-block {
 }
 
 .nav-tabs .nav-link {
-  border: 1px solid rgba(112,112,112,0.3);
+  border: 1px solid rgba(112,112,112,0.7);
 
 }
 
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  border-color: #e9ecef #e9ecef #dee2e6;
+  border-color: rgba(112,112,112,0.4);
 }
 
 .nav-tabs .nav-link.disabled {
@@ -6752,7 +6756,7 @@ button.bg-primary:focus {
 }
 
 .bg-light-gray{
-  background-color: #989898 !important;
+  background-color: #F0F0F0 !important;
 }
 
 
@@ -8436,29 +8440,32 @@ button.bg-dark:focus {
   padding: 3rem !important;
 }
 
+
+
 .p-6 {
-  padding: 6rem;
+  padding: 6rem !important;
 }
 
-.pt-5,
-.py-5 {
-  padding-top: 3rem !important;
+.pt-6,
+.py-6 {
+  padding-top: 6rem !important;
 }
 
-.pr-5,
-.px-5 {
-  padding-right: 3rem !important;
+.pr-6,
+.px-6 {
+  padding-right: 6rem !important;
 }
 
-.pb-5,
-.py-5 {
-  padding-bottom: 3rem !important;
+.pb-6,
+.py-6 {
+  padding-bottom: 6rem !important;
 }
 
-.pl-5,
-.px-5 {
-  padding-left: 3rem !important;
+.pl-6,
+.px-6 {
+  padding-left: 6rem !important;
 }
+
 
 .m-n1 {
   margin: -0.25rem !important;
@@ -8833,6 +8840,27 @@ button.bg-dark:focus {
   .px-sm-5 {
     padding-left: 3rem !important;
   }
+
+  .p-sm-6 {
+    padding: 6rem !important;
+  }
+  .pt-sm-6,
+  .py-sm-6 {
+    padding-top: 6rem !important;
+  }
+  .pr-sm-6,
+  .px-sm-6 {
+    padding-right: 6rem !important;
+  }
+  .pb-sm-6,
+  .py-sm-6 {
+    padding-bottom: 6rem !important;
+  }
+  .pl-sm-6,
+  .px-sm-6 {
+    padding-left: 6rem !important;
+  }
+
   .m-sm-n1 {
     margin: -0.25rem !important;
   }
@@ -10127,7 +10155,7 @@ button.bg-dark:focus {
 }
 
 a.text-primary:hover, a.text-primary:focus {
-  color: #AA1719 !important;
+  /*color: #AA1719 !important;*/
 }
 
 .text-secondary {

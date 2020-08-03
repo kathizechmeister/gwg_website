@@ -17,7 +17,7 @@
 
 <div class="container-fluid header p-0">
     <!--NAVIGATION-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white-fade mainnavigation" aria-label="Main">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white-fade mainnavigation fixed-top" aria-label="Main">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="assets/Logo.png" height="110" alt="Logo">
@@ -92,125 +92,70 @@
         </div>
     </nav>
 
-    <!--<nav class="navbar navbar-expand-md navbar-light bg-white-fade border-bottom border-secondary text-gray-dark
-d-flex justify-content-between align-items-center">
-        <a class="navbar-brand" href="#">
-            <img class="d-inline-block align-top" id="logo" src="assets/Logo_ng.png" alt="Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
-                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse text-black-50">
-
-            <ul class="navbar-nav my-md-0 mr-0 font-weight-bold">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown04">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>-->
-
-    <!--<nav class="navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Always expand</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarsExample02">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-md-0">
-                <input class="form-control" type="text" placeholder="Search">
-            </form>
-        </div>
-    </nav>-->
     <!--SUCHE-->
     <div class="p-6 header-content bg-ie-dark" role="banner">
         <div class="row">
             <div class="col-lg-10 col-xl-7 mx-auto ">
-                <h1 class="text-white ">Leben in Linz</h1>
+                <h1 class="text-white shadow">Leben in Linz</h1>
             </div>
 
         </div>
         <div class="row searchform ">
-            <div class="col-xl-7 col-lg-10 mx-auto bg-white p-md-5 p-sm-1 rounded">
+            <div class="col-xl-7 col-lg-10 mx-auto bg-white p-md-5 p-sm-2 rounded">
                 <form class="my-3">
                     <div class="form-row">
-                        <div class="form-group form-group-lg col-md-9">
-                            <div class="input-group-lg">
-                             <label for="search" class="sr-only">Suche</label>
-                            <input type="search" class="form-control form-control-lg" id="search" placeholder="Suchbegriff eingeben"
-                                   aria-label="Suchbegriff">
-                            </div>
-                        </div>
                         <div class="form-group col-md-3" aria-label="Immobilien-Filter">
                             <div class="input-group-lg">
                                 <label for="immobilien" class="sr-only">Immobilienfilter</label>
-                                <select class="custom-select " id="immobilien" name="immobilien" aria-label="Immobilienfilter">
-                                    <option selected class="dropdown-item">Alle Immobilien</option>
-                                    <option value="1">Wohnung</option>
-                                    <option value="2">Haus</option>
-                                    <option value="3">Weiteres..</option>
+                                <select class="custom-select " id="immobilien" name="immobilien"
+                                        aria-label="Immobilienfilter">
+                                    <option selected class="dropdown-item">Filter </option>
+                                    <option value="1">Wohnung mieten</option>
+                                    <option value="2">Wohnung kaufen</option>
+                                    <option value="3">Lokal / Gewerbe mieten</option>
+                                    <option value="4">Lokal / Gewerbe kaufen</option>
+                                    <option value="5">Parkplatz mieten</option>
+                                    <option value="6">Parkplatz kaufen</option>
                                 </select>
                             </div>
                         </div>
+
+                        <div class="form-group form-group-lg col-md-9">
+                            <div class="input-group-lg">
+                                <label for="search" class="sr-only">Suchbegriff</label>
+                                <input type="search" class="form-control form-control-lg" id="search"
+                                       placeholder="Ort, Plz, Projektname (Volltextsuche)"
+                                       aria-label="Suchbegriff">
+                            </div>
+                        </div>
+
                     </div>
                     <div class="form-row">
                         <div class="form-group form-group-lg col-md-4">
-                            <div class="input-group-lg mb-3">
-                                <label for="maxMiete" class="sr-only">Maximale Miete</label>
-                                <select class="custom-select" id="maxMiete" name="maxMiete" aria-label="Maximale Miete">
-                                    <option selected>max. Miete</option>
-                                    <option value="1">500</option>
-                                    <option value="2">1000</option>
-                                    <option value="3">5000</option>
-                                </select>
+                            <div class="input-group input-group-lg mb-3">
+
+                                <label for="mingroese" class="sr-only">Fläche ab</label>
+                                <input id="mingroese" type="text" class="form-control" placeholder="Fläche ab" aria-label="Flaeche" aria-describedby="Minimale Fläche">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">m²</span>
+                                </div>
                             </div>
+                        </div>
+
+
+                        <div class="form-group form-group-lg col-md-4">
+                        <div class="input-group input-group-lg mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">€</span>
+                            </div>
+                            <label for="maxpreis" class="sr-only">Maximaler Preis</label>
+                            <input id="maxpreis" type="text" class="form-control" placeholder="Preis bis" aria-label="Preis" aria-describedby="Maximalpreis">
+                        </div>
                         </div>
                         <div class="form-group form-group-lg col-md-4">
-                            <div class="input-group-lg mb-3">
-                                <label for="mingroese" class="sr-only">Minimale Größe</label>
-                            <select class="custom-select" id="mingroese" name="mingroese" aria-label="Minimale Größe">
-                                <option selected>min. Größe</option>
-                                <option value="1">80</option>
-                                <option value="2">100</option>
-                                <option value="3">300</option>
-                            </select>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <div class="input-group-lg mb-3">
-                                <label for="minZimmer" class="sr-only">Minimale Anzahl der Zimmer</label>
-                            <select class="custom-select" id="minZimmer" name="minZimmer"
-                                    aria-label="Minimale Anzahl der Zimmer">
-                                <option selected>min. Anzahl Zimmer</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">4</option>
-                            </select>
+                            <div class="input-group input-group-lg mb-3">
+                                <button  width="100%" type="submit" class="btn btn-lg btn-block btn-primary px-5 text-uppercase">Suchen <span class="small text">(0)</span></button>
                             </div>
                         </div>
                     </div>
@@ -219,7 +164,7 @@ d-flex justify-content-between align-items-center">
                             <small class="underline">erweiterte Suche</small>
                         </a></p>
                     </div>
-                    <button type="submit" class="btn btn-primary px-5 text-uppercase">Suchen</button>
+
                 </form>
             </div>
 
@@ -233,42 +178,53 @@ d-flex justify-content-between align-items-center">
 
 </div>
 
-<div class="container-fluid main-content my-5">
+<div class="container-fluid my-5">
     <div class="row">
 
         <!--SIDEBAR-->
-        <div class="col-md-3 d-none d-md-block sidebar bg-light-red border-left" role="complementary">
+        <div class="col-md-3 mt-sm-5 mt-md-1 pt-3 px-0 sidebar bg-light-red border-left order-sm-last order-md-first" role="complementary">
             <h2 class="py-5 px-4 border-bottom  ">Neuigkeiten</h2>
-            <div class="item news border-bottom py-2" tabindex="0">
-                <div class="row">
-                    <div class="col-md-9 pl-5">
-                        <h3>Text</h3>
-                        <p>Text</p>
+            <div class="item news border-bottom py-4 pl-4 pr-2" tabindex="0">
+                <div class="row d-flex justify-content-between align-items-center ">
+                    <div class="col-md-8">
+                        <h3 class="font-weight-bold">Derflingerstraße</h3>
+                        <p>Das Projekt umfasst 83 Wohnungen im ersten Bauabschnitt, wofür die Übergabe</p>
                     </div>
-                    <div class="col-md-3 pr-3 pl-0">
+                    <div class="col-md-4 d-none d-lg-block">
+                        <img class="rounded" src="assets/lindsay_eu@2x.png" alt="Bild für News">
+                    </div>
+                </div>
+            </div>
+            <div class="item news border-bottom py-4 pl-4 pr-2" tabindex="0">
+                <div class="row d-flex justify-content-between align-items-center ">
+                    <div class="col-md-8">
+                        <h3 class="font-weight-bold">Leben in Linz - Dez 2019</h3>
+                        <p>Das Kundenmagazin unserer Bewohnerinnen</p>
+                    </div>
+                    <div class="col-md-4 d-none d-lg-block">
                         <img class="rounded" src="assets/ID22179999_10107247871154952_3_fl@2x.png" alt="Bild für News">
                     </div>
                 </div>
             </div>
-            <div class="item news border-bottom py-2" tabindex="0">
-                <div class="row">
-                    <div class="col-md-9 pl-5">
-                        <h3>Text</h3>
-                        <p>Text</p>
+            <div class="item news border-bottom py-4 pl-4 pr-2" tabindex="0">
+                <div class="row d-flex justify-content-between align-items-center ">
+                    <div class="col-md-8">
+                        <h3 class="font-weight-bold">Schlossblick - Ebelsberg</h3>
+                        <p>Das Projekt umfasst 83 Wohnungen im ersten Bauabschnitt, wofür die Übergabe</p>
                     </div>
-                    <div class="col-md-3 pr-3 pl-0">
+                    <div class="col-md-4 d-none d-lg-block">
                         <img class="rounded" src="assets/ID22179999_10107247871154952_3_fl@2x.png" alt="Bild für News">
                     </div>
                 </div>
             </div>
-            <div class="item news border-bottom py-2" tabindex="0">
-                <div class="row">
-                    <div class="col-md-9 pl-5">
-                        <h3>Text</h3>
-                        <p>Text</p>
+            <div class="item news border-bottom py-4 pl-4 pr-2" tabindex="0">
+                <div class="row d-flex justify-content-between align-items-center ">
+                    <div class="col-md-8">
+                        <h3 class="font-weight-bold">Schlossblick - Ebelsberg</h3>
+                        <p>Das Projekt umfasst 83 Wohnungen im ersten Bauabschnitt, wofür die Übergabe</p>
                     </div>
-                    <div class="col-md-3 pr-3 pl-0">
-                        <img class="rounded" src="assets/ID22179999_10107247871154952_3_fl@2x.png" alt="Bild für News">
+                    <div class="col-md-4 d-none d-lg-block">
+                        <img class="rounded" src="assets/ID22179999_10107247871154952_3_f@2x.png" alt="Bild für News">
                     </div>
                 </div>
             </div>
@@ -302,129 +258,156 @@ d-flex justify-content-between align-items-center">
                                             <div class="row  d-flex justify-content-between">
                                                 <!--Item-->
                                                 <div class="col-lg-4">
-                                                    <div class="card mb-4" tabindex="0">
+                                                    <div class="card clickable mb-4" tabindex="0">
                                                         <img src="./assets/Image.png" alt="Bild">
                                                         <div class="card-body">
-                                                            <p class="card-text">This is a wider card with supporting
-                                                                text below as a natural lead-in to additional content.
-                                                                This content is a little bit longer.</p>
+                                                            <small class="card-text">Wohnung mieten</small>
+                                                            <h3 class="font-weight-bold">Dauphinestraße 194a</h3>
+                                                            <p class="card-text">
+                                                                <span>Zimmer: 2</span><br>
+                                                                <span> Nutzfläche: 57 m²</span><br>
+                                                                <span>verfügbar ab: sofort</span>
+
+                                                            </p>
                                                             <div class="d-flex justify-content-end align-items-md-end">
                                                                 <p class="compare">
                                                                     <label for="vergleichen1">vergleichen</label>
-                                                                    <input type="checkbox" tabindex="0" aria-label="compare"  role="checkbox" aria-checked="false" id="vergleichen1">
+                                                                    <input type="checkbox" tabindex="0"
+                                                                           aria-label="compare" role="checkbox"
+                                                                           aria-checked="false" id="vergleichen1">
                                                                 </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
-                                                    <div class="card mb-4" tabindex="0">
-                                                        <img src="./assets/Image.png" alt="Bild">
+                                                    <div class="card clickable mb-4" tabindex="0">
+                                                        <img src="./assets/Image_gp.png" alt="Bild">
                                                         <div class="card-body">
-                                                            <p class="card-text">This is a wider card with supporting
-                                                                text below as a natural lead-in to additional content.
-                                                                This content is a little bit longer.</p>
+                                                            <small class="card-text">Wohnung mieten</small>
+                                                            <h3 class="font-weight-bold">Garnisonstraße 37/02/9</h3>
+                                                            <p class="card-text">
+                                                                <span>Zimmer: 2</span><br>
+                                                                <span> Nutzfläche: 54 m²</span><br>
+                                                                <span>verfügbar ab: sofort</span>
+
+                                                            </p>
                                                             <div class="d-flex justify-content-end align-items-md-end">
                                                                 <p class="compare">
                                                                     <label for="vergleichen2">vergleichen</label>
-                                                                    <input type="checkbox" tabindex="0" aria-label="compare" role="checkbox" aria-checked="false" id="vergleichen2">
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <div class="card mb-4" tabindex="0">
-                                                        <img src="./assets/Image.png" alt="Bild">
-                                                        <div class="card-body">
-                                                            <p class="card-text">This is a wider card with supporting
-                                                                text below as a natural lead-in to additional content.
-                                                                This content is a little bit longer.</p>
-                                                            <div class="d-flex justify-content-end align-items-md-end">
-                                                                <p class="compare">
-                                                                    <label for="vergleichen3">vergleichen</label>
-                                                                    <input type="checkbox" tabindex="0" aria-label="compare" role="checkbox" aria-checked="false" id="vergleichen3">
+                                                                    <input type="checkbox" tabindex="0"
+                                                                           aria-label="compare" role="checkbox"
+                                                                           aria-checked="false" id="vergleichen2">
                                                                 </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
+                                                <div class="col-lg-4">
+                                                    <div class="card clickable mb-4" tabindex="0">
+                                                        <img src="./assets/Image_gv.png" alt="Bild">
+                                                        <div class="card-body">
+                                                            <small class="card-text">Wohnung mieten</small>
+                                                            <h3 class="font-weight-bold">Hallestraße 45</h3>
+                                                            <p class="card-text">
+                                                                Zimmer: <span>3</span><br>
+                                                                Nutzfläche:<span>  45,9 m²</span><br>
+                                                                verfügbar ab: <span> sofort</span>
+
+                                                            </p>
+                                                            <div class="d-flex justify-content-end align-items-md-end">
+                                                                <p class="compare">
+                                                                    <label for="vergleichen3">vergleichen</label>
+                                                                    <input type="checkbox" tabindex="0"
+                                                                           aria-label="compare" role="checkbox"
+                                                                           aria-checked="false" id="vergleichen3">
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
                                             </div>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="container">
-                                            <div class="row  ">
+                                            <div class="row  d-flex justify-content-between">
+                                                <!--Item-->
                                                 <div class="col-lg-4">
-                                                    <div class="card mb-4">
+                                                    <div class="card clickable mb-4" tabindex="0">
                                                         <img src="./assets/Image.png" alt="Bild">
                                                         <div class="card-body">
-                                                            <p class="card-text">This is a wider card with supporting
-                                                                text below as a natural lead-in to additional content.
-                                                                This content is a little bit longer.</p>
-                                                            <div class="d-flex justify-content-between align-items-center">
-                                                                <div class="btn-group">
-                                                                    <button type="button"
-                                                                            class="btn btn-sm btn-outline-secondary">
-                                                                        View
-                                                                    </button>
-                                                                    <button type="button"
-                                                                            class="btn btn-sm btn-outline-secondary">
-                                                                        Edit
-                                                                    </button>
-                                                                </div>
-                                                                <small class="text-muted">9 mins</small>
+                                                            <small class="card-text">Wohnung mieten</small>
+                                                            <h3 class="font-weight-bold">Dauphinestraße 194a</h3>
+                                                            <p class="card-text">
+                                                                <span>Zimmer: 2</span><br>
+                                                                <span> Nutzfläche: 57 m²</span><br>
+                                                                <span>verfügbar ab: sofort</span>
+
+                                                            </p>
+                                                            <div class="d-flex justify-content-end align-items-md-end">
+                                                                <p class="compare">
+                                                                    <label for="vergleichen4">vergleichen</label>
+                                                                    <input type="checkbox" tabindex="0"
+                                                                           aria-label="compare" role="checkbox"
+                                                                           aria-checked="false" id="vergleichen4">
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
-                                                    <div class="card mb-4">
-                                                        <img src="./assets/Image.png" alt="Bild">
+                                                    <div class="card clickable mb-4" tabindex="0">
+                                                        <img src="./assets/Image_gp.png" alt="Bild">
                                                         <div class="card-body">
-                                                            <p class="card-text">This is a wider card with supporting
-                                                                text below as a natural lead-in to additional content.
-                                                                This content is a little bit longer.</p>
-                                                            <div class="d-flex justify-content-between align-items-center">
-                                                                <div class="btn-group">
-                                                                    <button type="button"
-                                                                            class="btn btn-sm btn-outline-secondary">
-                                                                        View
-                                                                    </button>
-                                                                    <button type="button"
-                                                                            class="btn btn-sm btn-outline-secondary">
-                                                                        Edit
-                                                                    </button>
-                                                                </div>
-                                                                <small class="text-muted">9 mins</small>
+                                                            <small class="card-text">Wohnung mieten</small>
+                                                            <h3 class="font-weight-bold">Garnisonstraße 37/02/9</h3>
+                                                            <p class="card-text">
+                                                                <span>Zimmer: 2</span><br>
+                                                                <span> Nutzfläche: 54 m²</span><br>
+                                                                <span>verfügbar ab: sofort</span>
+
+                                                            </p>
+                                                            <div class="d-flex justify-content-end align-items-md-end">
+                                                                <p class="compare">
+                                                                    <label for="vergleichen5">vergleichen</label>
+                                                                    <input type="checkbox" tabindex="0"
+                                                                           aria-label="compare" role="checkbox"
+                                                                           aria-checked="false" id="vergleichen5">
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="col-lg-4">
-                                                    <div class="card mb-4">
-                                                        <img src="./assets/Image.png" alt="Bild">
+                                                    <div class="card clickable mb-4" tabindex="0">
+                                                        <img src="./assets/Image_gv.png" alt="Bild">
                                                         <div class="card-body">
-                                                            <p class="card-text">This is a wider card with supporting
-                                                                text below as a natural lead-in to additional content.
-                                                                This content is a little bit longer.</p>
-                                                            <div class="d-flex justify-content-between align-items-center">
-                                                                <div class="btn-group">
-                                                                    <button type="button"
-                                                                            class="btn btn-sm btn-outline-secondary">
-                                                                        View
-                                                                    </button>
-                                                                    <button type="button"
-                                                                            class="btn btn-sm btn-outline-secondary">
-                                                                        Edit
-                                                                    </button>
-                                                                </div>
-                                                                <small class="text-muted">9 mins</small>
+                                                            <small class="card-text">Wohnung mieten</small>
+                                                            <h3 class="font-weight-bold">Hallestraße 45</h3>
+                                                            <p class="card-text">
+                                                                Zimmer: <span>3</span><br>
+                                                                Nutzfläche:<span>  45,9 m²</span><br>
+                                                                verfügbar ab: <span> sofort</span>
+
+                                                            </p>
+                                                            <div class="d-flex justify-content-end align-items-md-end">
+                                                                <p class="compare">
+                                                                    <label for="vergleichen6">vergleichen</label>
+                                                                    <input type="checkbox" tabindex="0"
+                                                                           aria-label="compare" role="checkbox"
+                                                                           aria-checked="false" id="vergleichen6">
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -455,7 +438,9 @@ d-flex justify-content-between align-items-center">
                 </div>
             </div>
             <!--NEUBAUPROJEKTE-->
-            <div class="row bg-dark m-1 mt-4 neubauprojekte p-lg-5 p-md-2">
+
+
+            <div class="row bg-dark m-1 mt-4 neubauprojekte p-xl-5 p-lg-0">
                 <div class="col-md-12 d-flex p-3 mx-3 my-2">
                     <h2 class="py-3 text-white">Neubauprojekte</h2>
                     <p class="py-3 ml-auto"><a href="#" class="text-white">
@@ -463,141 +448,62 @@ d-flex justify-content-between align-items-center">
                     </a></p>
                 </div>
 
-                <!-- <div class="col-md-6">
-                     <div class="card flex-row flex-wrap bg-white">
-                         <div class="card-header border-0 p-1">
-                             <img src="//placehold.it/100" alt="">
-                         </div>
-                         <div class="card-block p-1">
-                             <h3 class="card-title">Title</h3>
-                             <p class="card-text">I„Auhirschgasse“ entstehen.</p>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-6">
-                     <div class="row p-3">
-                         <a href="#">
-                             <div class="col-md-4 col-sm-12 bg-white p-2">
-                                 <img class="rounded" src="./assets/Image.png" alt="">
-                             </div>
-                             <div class=" bg-white col-md-8 col-sm-12 p-2">
-                                 <h3>Text</h3>
-                                 <p>Text
-                                     <br>Text</p>
-                             </div>
-                         </a>
-                     </div>
-                 </div>
-                 <div class="col-md-6 mt-3">
-                     <div class="card p-2">
-                         <div class="card-horizontal">
-                             <div class="img-square-wrapper">
-                                 <img class="" src="http://via.placeholder.com/200" alt="Auhirschgasse">
-                             </div>
-                             <div class="card-body">
-                                 <h3 class="card-title">Card title</h3>
-                                 <p class="card-text">Some quick example text to build on the card title and make up the
-                                     bulk of the card's content.</p>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-6" >
-                     <div class="row p-3">
-                         <a href="#" class="text-black-50">
-                         <div class="col-md-4 col-sm-12 bg-white p-2">
-                             <img class="rounded" src="./assets/Image.png" alt="">
-                         </div>
-                         <div class=" bg-white col-md-8 col-sm-12 p-2">
-                             <h3>Text</h3>
-                             <p>Im zweiten Bauabschnitt des 16 Gebäude umfassenden Bauprojektes „Auhirschgasse“ entstehen
-                                 in Pichling in grüner Ruhelage 69 geförderte Mietwohnungen mit Wohnflächen von 50 bis
-                                 104 m².</p>
-                         </div>
-                         </a>
-                     </div>
-                 </div>
 
-                 <div class="col-lg-6 col-md-12" tabindex="4" aria-label="Neubauprojekt">
-                     <div class="card mb-3">
-                         <div class="row no-gutters m-0">
-                             <div class="col-md-4">
-                                 <img src="assets/Image.png" alt="">
-                             </div>
-                             <div class="col-md-8">
-                                 <div class="card-body">
-                                     <h5 class="card-title">Card title</h5>
-                                     <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
-                                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>-->
-                <div class="col-lg-6 col-md-12 py-3" tabindex="0" aria-label="Neubauprojekt">
-                    <div class="card m-lg-3 p-lg-3 ">
-                        <div class="row no-gutters">
-                            <div class="col-xl-4  col-md-12">
-                                <img class="rounded" src="assets/Image.png" alt="Picture">
-                            </div>
-                            <div class="col-md-12 col-xl-8">
-                                <div class="card-body">
-                                    <h3 class="card-title font-weight-bold">Derflingerstraße</h3>
-                                    <p class="card-text">Das Projekt umfasst 83 Wohnungen im ersten Bauabschnitt, wofür
-                                        die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll.</p>
-                                </div>
-                            </div>
+                <div class="col-md-6">
+                    <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative item"
+                         tabindex="0" aria-label="Neubauprojekt">
+                        <div class="col-lg-8 col-md-12 p-4 d-flex flex-column position-static bg-white">
+                            <h3 class="mb-0 font-weight-bold">Derflingerstraße</h3>
+                            <p class="card-text mb-auto">Das Projekt umfasst 83 Wohnungen im ersten Bauabschnitt, wofür
+                                die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll.</p>
+                        </div>
+                        <div class="col-lg-4 d-none d-lg-block order-first">
+                            <img class="rounded" width="150" height="150" src="assets/lindsay_eu@2x.png" alt="Picture">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 py-3" tabindex="0" aria-label="Neubauprojekt">
-                    <div class="card m-lg-3 p-lg-3 ">
-                        <div class="row no-gutters">
-                            <div class="col-xl-4  col-md-12">
-                                <img class="rounded" src="assets/Image.png" alt="Picture">
-                            </div>
-                            <div class="col-md-12 col-xl-8">
-                                <div class="card-body">
-                                    <h3 class="card-title font-weight-bold">Derflingerstraße</h3>
-                                    <p class="card-text">Das Projekt umfasst 83 Wohnungen im ersten Bauabschnitt, wofür
-                                        die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll.</p>
-                                </div>
-                            </div>
+
+                <div class="col-md-6">
+                    <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative item"
+                         tabindex="0" aria-label="Neubauprojekt">
+                        <div class="col-lg-8 col-md-12 p-4 d-flex flex-column position-static bg-white">
+                            <h3 class="mb-0 font-weight-bold">Stadtblick II</h3>
+                            <p class="card-text mb-auto">In einer der beliebtesten Wohngegenden in Linz-St. Magdalena
+                                entstehen 12 Eigentumswohnungen mit traumhaftem Ausblick.</p>
+                        </div>
+                        <div class="col-lg-4 d-none d-lg-block order-first">
+                            <img class="rounded" width="150" height="150" src="assets/lindsay@2x.png" alt="Picture">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 py-3" tabindex="0" aria-label="Neubauprojekt">
-                    <div class="card m-lg-3 p-lg-3 ">
-                        <div class="row no-gutters">
-                            <div class="col-xl-4  col-md-12">
-                                <img class="rounded" src="assets/Image.png" alt="Picture">
-                            </div>
-                            <div class="col-md-12 col-xl-8">
-                                <div class="card-body">
-                                    <h3 class="card-title font-weight-bold">Derflingerstraße</h3>
-                                    <p class="card-text">Das Projekt umfasst 83 Wohnungen im ersten Bauabschnitt, wofür
-                                        die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll.</p>
-                                </div>
-                            </div>
+                <div class="col-md-6">
+                    <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative item"
+                         tabindex="0" aria-label="Neubauprojekt">
+                        <div class="col-lg-8 col-md-12 p-4 d-flex flex-column position-static bg-white">
+                            <h3 class="mb-0 font-weight-bold">Auhirschgasse 2</h3>
+                            <p class="card-text mb-auto">Im zweiten Bauabschnitt des 16 Gebäude umfassenden Bauprojektes
+                                „Auhirschgasse“ entstehen in Pichling in grüner Ruhelage </p>
+                        </div>
+                        <div class="col-lg-4 d-none d-lg-block order-first">
+                            <img class="rounded" width="150" height="150" src="assets/lindsay_eo@2x.png" alt="Picture">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 py-3" tabindex="0" aria-label="Neubauprojekt">
-                    <div class="card m-lg-3 p-lg-3 ">
-                        <div class="row no-gutters">
-                            <div class="col-xl-4  col-md-12">
-                                <img class="rounded" src="assets/Image.png" alt="Picture">
-                            </div>
-                            <div class="col-md-12 col-xl-8">
-                                <div class="card-body">
-                                    <h3 class="card-title font-weight-bold">Derflingerstraße</h3>
-                                    <p class="card-text">Das Projekt umfasst 83 Wohnungen im ersten Bauabschnitt, wofür
-                                        die Übergabe an die MieterInnen Ende des Jahres 2020 erfolgen soll.</p>
-                                </div>
-                            </div>
+                <div class="col-md-6">
+                    <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative item"
+                         tabindex="0" aria-label="Neubauprojekt">
+                        <div class="col-lg-8 col-md-12 p-4 d-flex flex-column position-static bg-white">
+                            <h3 class="mb-0 font-weight-bold">Stadtblick II</h3>
+                            <p class="card-text mb-auto">In einer der beliebtesten Wohngegenden in Linz-St. Magdalena
+                                entstehen 12 Eigentumswohnungen mit traumhaftem Ausblick.</p>
+                        </div>
+                        <div class="col-lg-4 d-none d-lg-block order-first">
+                            <img class="rounded" width="150" height="150" src="assets/lindsay@2x.png" alt="Picture">
                         </div>
                     </div>
                 </div>
+
+            </div>
 
         </div>
     </div>
@@ -617,27 +523,27 @@ d-flex justify-content-between align-items-center">
 <script src="./js/function.js"></script>
 <footer class="bg-dark p-5 text-white">
     <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <h2 class="text-uppercase">Text</h2>
-                <p>Text</p>
-            </div>
-            <div class="col-md-3">
-                <h2 class="text-uppercase">Text</h2>
-                <p>Text</p>
-            </div>
-            <div class="col-md-3">
-                <h2 class="text-uppercase">Text</h2>
-                <p>Text</p>
-            </div>
-            <div class="col-md-3">
-                <h2 class="text-uppercase">Text</h2>
-                <p>Text</p>
-            </div>
-            <div class="col-12">
-                <p>Text</p>
-            </div>
-        </div>
+        <!-- <div class="row">
+             <div class="col-md-3">
+                 <h2 class="text-uppercase">Text</h2>
+                 <p>Text</p>
+             </div>
+             <div class="col-md-3">
+                 <h2 class="text-uppercase">Text</h2>
+                 <p>Text</p>
+             </div>
+             <div class="col-md-3">
+                 <h2 class="text-uppercase">Text</h2>
+                 <p>Text</p>
+             </div>
+             <div class="col-md-3">
+                 <h2 class="text-uppercase">Text</h2>
+                 <p>Text</p>
+             </div>
+             <div class="col-12">
+                 <p>Text</p>
+             </div>
+         </div>-->
     </div>
 </footer>
 </body>

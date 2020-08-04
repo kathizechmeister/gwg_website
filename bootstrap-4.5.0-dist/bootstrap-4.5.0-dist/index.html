@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <title>Clickdummy ohne Design und Funktion</title>
 </head>
 
@@ -19,7 +19,7 @@
     <!--NAVIGATION-->
     <nav class="navbar navbar-expand-lg navbar-light bg-white-fade mainnavigation fixed-top" aria-label="Main">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="assets/Logo.png" height="110" alt="Logo">
             </a>
 
@@ -75,7 +75,7 @@
 
                 <!-- navbar2 -->
                 <ul class="navbar-nav pt-2">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link px-3" href="#">Immobiliensuche</a>
                     </li>
                     <li class="nav-item">
@@ -94,14 +94,14 @@
 
 
     <!--SUCHE-->
-    <div class="px-6 pb-6 header-content bg-ie-dark" role="banner">
-        <div class="row">
+    <div class=" header-content bg-ie-dark" role="banner">
+        <div class="row px-md-6 pb-md-6 p-sm-2 mx-2">
             <div class="col-lg-10 col-xl-7 mx-auto ">
                 <h1 class="text-white shadow">Leben in Linz</h1>
             </div>
 
         </div>
-        <div class="row searchform ">
+        <div class="row searchform px-md-6 pb-md-6 p-sm-2 mx-2">
             <div class="col-xl-7 col-lg-10 mx-auto bg-white p-md-5 p-sm-2 rounded">
                 <form class="my-3">
                     <div class="form-row">
@@ -110,7 +110,7 @@
                                 <label for="immobilien" class="sr-only">Immobilienfilter</label>
                                 <select class="custom-select " id="immobilien" name="immobilien"
                                         aria-label="Immobilienfilter">
-                                    <option selected class="dropdown-item">Filter </option>
+                                    <option selected class="dropdown-item">Alle Immobilien</option>
                                     <option value="1">Wohnung mieten</option>
                                     <option value="2">Wohnung kaufen</option>
                                     <option value="3">Lokal / Gewerbe mieten</option>
@@ -136,7 +136,8 @@
                             <div class="input-group input-group-lg mb-3">
 
                                 <label for="mingroese" class="sr-only">Fläche ab</label>
-                                <input id="mingroese" type="text" class="form-control" placeholder="Fläche ab" aria-label="Flaeche" aria-describedby="Minimale Fläche">
+                                <input id="mingroese" type="text" class="form-control" placeholder="Fläche ab"
+                                       aria-label="Flaeche" aria-describedby="Minimale Fläche">
                                 <div class="input-group-append">
                                     <span class="input-group-text">m²</span>
                                 </div>
@@ -145,32 +146,35 @@
 
 
                         <div class="form-group form-group-lg col-md-4">
-                        <div class="input-group input-group-lg mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">€</span>
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">€</span>
+                                </div>
+                                <label for="maxpreis" class="sr-only">Maximaler Preis</label>
+                                <input id="maxpreis" type="text" class="form-control" placeholder="Preis bis"
+                                       aria-label="Preis" aria-describedby="Maximalpreis">
                             </div>
-                            <label for="maxpreis" class="sr-only">Maximaler Preis</label>
-                            <input id="maxpreis" type="text" class="form-control" placeholder="Preis bis" aria-label="Preis" aria-describedby="Maximalpreis">
-                        </div>
                         </div>
                         <div class="form-group form-group-lg col-md-4">
                             <div class="input-group input-group-lg mb-3">
-                                <button  width="100%" type="submit" class="btn btn-lg btn-block btn-primary px-5 text-uppercase">Suchen <span class="small text">(0)</span></button>
+                                <button width="100%" type="submit"
+                                        class="btn btn-lg btn-block btn-primary px-5 text-uppercase">Suchen
+                                    <span>(0)</span></button>
                             </div>
                         </div>
                     </div>
                     <div>
                         <p class="text-right">
                             <a href="search.html">
-                            <small class="underline">erweiterte Suche</small>
-                        </a></p>
+                                <small class="underline">erweiterte Suche</small>
+                            </a></p>
                     </div>
 
                 </form>
             </div>
 
         </div>
-        <div class="row ">
+        <div class="row pb-4 mx-2">
             <div class="col-lg-10 mx-auto col-xl-7 pt-2  ">
                 <a class="text-white underline bg-transparent-gray" href=#>Bild:Projekt</a>
             </div>
@@ -183,7 +187,8 @@
     <div class="row">
 
         <!--SIDEBAR-->
-        <div class="col-md-3 mt-sm-5 mt-md-1 pt-3 px-0 sidebar bg-light-red border-left order-sm-last order-md-first" role="complementary">
+        <div class="col-md-3 mt-sm-5 mt-md-1 pt-3 px-0 sidebar bg-light-red border-left order-sm-last order-md-first"
+             role="complementary">
             <h2 class="py-5 px-4 border-bottom  ">Neuigkeiten</h2>
             <div class="item news border-bottom py-4 pl-4 pr-2" tabindex="0">
                 <div class="row d-flex justify-content-between align-items-center ">
@@ -522,29 +527,57 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 <script src="./js/function.js"></script>
+
+
 <footer class="bg-dark p-5 text-white">
-    <div class="container">
-        <!-- <div class="row">
-             <div class="col-md-3">
-                 <h2 class="text-uppercase">Text</h2>
-                 <p>Text</p>
-             </div>
-             <div class="col-md-3">
-                 <h2 class="text-uppercase">Text</h2>
-                 <p>Text</p>
-             </div>
-             <div class="col-md-3">
-                 <h2 class="text-uppercase">Text</h2>
-                 <p>Text</p>
-             </div>
-             <div class="col-md-3">
-                 <h2 class="text-uppercase">Text</h2>
-                 <p>Text</p>
-             </div>
-             <div class="col-12">
-                 <p>Text</p>
-             </div>
-         </div>-->
+    <div class="container-fluid">
+
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-5 row-cols-md-3">
+            <div class="col mb-3">
+                <h2 class="text-transform-none">GWG - Gemeinnützige Wohnungsgesellschaft der Stadt Linz GmbH</h2>
+                <p>
+                    Eisenhandstraße 30
+                    <br>
+                    4021 Linz <br>
+                    Telefon: 07327613 <br>
+                    FAX: 07327613 33314 <br>
+                    Email: gwginfo@gwg-linz.at
+                </p>
+            </div>
+            <div class="col mb-3">
+                <h2>Untenehmen</h2>
+                <ul>
+                    <li><a href="#">Über uns</a></li>
+                    <li><a href="#">Karriere</a></li>
+                    <li><a href="#">Neuigkeiten & Presse</a></li>
+                </ul>
+            </div>
+            <div class="col mb-3">
+                <h2>Baumanagement</h2>
+                <ul>
+                    <li><a href="#">Baumanagement</a></li>
+                    <li><a href="#">Architektenwettbewerb</a></li>
+                    <li><a href="#">Ausschreibungen</a></li>
+                </ul>
+            </div>
+            <div class="col mb-3">
+                <h2>Kontakt</h2>
+                <ul>
+                    <li><a href="#">Anfahrt</a></li>
+                    <li><a href="#">Ansprechpersonen</a></li>
+                    <li><a href="#">Anmeldung für Wohnung</a></li>
+                </ul>
+            </div>
+            <div class="col mb-3">
+                <img src="assets/LINZ_LOGO_NEU---2m_weiss_magenta_neu.png" width="80%" height="auto" alt="Linz verändert"
+                class="mb-2"
+                >
+                <p class="font-weight-bold">Unternehmensgruppe Stadt Linz <br>
+                    innovationshauptplatz.linz.at
+                </p>
+            </div>
+
+        </div>
     </div>
 </footer>
 </body>

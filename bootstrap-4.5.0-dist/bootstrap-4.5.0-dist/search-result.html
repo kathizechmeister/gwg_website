@@ -8,7 +8,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/lightbox.css">
     <title>Clickdummy ohne Design und Funktion</title>
 </head>
 
@@ -19,7 +18,7 @@
     <!--NAVIGATION-->
     <nav class="navbar navbar-expand-lg navbar-light bg-white mainnavigation fixed-top" aria-label="Main">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="assets/Logo.png" height="110" alt="Logo">
             </a>
 
@@ -96,8 +95,8 @@
 
 <div class="container main-content ">
     <div class="row d-flex mb-3">
-        <a href="#" class=" p-2 mr-auto" aria-label="zurück zum Suchergebnis">
-            <small class="underline">
+        <a href="#" class=" p-2 mr-auto text-decoration-none" aria-label="zurück zum Suchergebnis">
+            <small >
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle" fill="currentColor"
                      xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
@@ -106,21 +105,22 @@
                           d="M8.354 11.354a.5.5 0 0 0 0-.708L5.707 8l2.647-2.646a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708 0z"/>
                     <path fill-rule="evenodd" d="M11.5 8a.5.5 0 0 0-.5-.5H6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5z"/>
                 </svg>
-                zurück zum Suchergebnis
+                <span class="underline">zurück zum Suchergebnis</span>
             </small>
         </a>
-        <a href="#" class="p-2 " aria-label="vergleichen">
-            <small class="underline">
+        <a href="#" class="p-2 text-decoration-none " aria-label="vergleichen">
+            <small >
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-square" fill="currentColor"
                      xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
                           d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
                 </svg>
-                vergleichen
+                <span class="underline">vergleichen</span>
+
             </small>
         </a>
-        <a class="p-2 " aria-label="teilen" href="#">
-            <small class="underline">
+        <a class="p-2 text-decoration-none " aria-label="teilen" href="#" >
+            <small >
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-share" fill="currentColor"
                      xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
@@ -128,82 +128,111 @@
                     <path fill-rule="evenodd"
                           d="M13.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 10a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm-11-6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
                 </svg>
-                teilen
+                <span class="underline" >teilen</span>
+
             </small>
         </a>
 
     </div>
 </div>
 
-<div class="container bg-white px-lg-5 px-md-3 py-4">
+<div class="container bg-white px-lg-5 px-md-3 py-5">
     <div class="row  pt-2">
-        <h1>Ruheoase mit einem Schlafzimmer Loggia und Tiefgaragenplatz</h1>
+        <h1>Ruhe&shyoase mit einem Schlaf&shyzimmer Loggia und Tief&shygaragen&shyplatz</h1>
     </div>
-    <div class="row bg-dark">
-        Lightbox
+    <!--<div class="row bg-dark">
+        <button class="image">img</button>
+    </div>-->
+
+   <!-- <div class="row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 d-flex justify-content-between">
+        <img class="col p-0 " src="./assets/lindsay_eq@2x.png">
+        <img class="col p-0 " src="https://source.unsplash.com/400x400?nature">
+        <img class="col p-0" src="https://source.unsplash.com/400x400?valley">
+        <img class="col p-0" src="https://source.unsplash.com/400x400?beach">
+        <img class="col p-0" src="https://source.unsplash.com/400x400?ocean">
+        <img class="col p-0" src="https://source.unsplash.com/400x400?ocean">
+       <!-- <img src="https://source.unsplash.com/400x400?water">
+        <img src="https://source.unsplash.com/400x400?trees">
+        <img src="https://source.unsplash.com/400x400?lake">
+        <img src="https://source.unsplash.com/400x400?cliff">
+    </div>-->
+
+    <div class="lightbox">
+        <ul>
+            <li>
+                <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05466_kwlv0n.jpg" alt="A Toyota Previa covered in graffiti" loading="lazy">
+            </li>
+            <li>
+                <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05621_zgtcco.jpg" alt="Interesting living room light through a window" loading="lazy">
+            </li>
+            <li>
+                <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05513_gfbiwi.jpg" alt="Sara on a red bike" loading="lazy">
+            </li>
+            <li>
+                <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05588_nb0dma.jpg" alt="XOXO venue in between talks" loading="lazy">
+            </li>
+            <li>
+                <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05459_ziuomy.jpg" alt="Trees lit by green light during dusk" loading="lazy">
+            </li>
+            <li>
+                <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05586_oj8jfo.jpg" alt="Portrait of Justin Pervorse" loading="lazy">
+            </li>
+
+        </ul>
     </div>
+
+
     <div class="row mt-4">
         <div class="col-lg-8 order-sm-first order-md-first">
-            <div class="objektinformationen">
+            <div class="objektinformationen my-4">
                 <h2>Objektinformationen</h2>
-                <div class="row  d-flex justify-content-between">
-                    <div class="col-lg-4 px-0 pr-lg-3">
-                        <table class="font-weight-bold table table-borderless">
-                            <tbody>
-                            <tr>
-                                <td>Objekttyp:</td>
-                                <td><span class="objekttyp">Wohung</span></td>
-                            </tr>
-                            <tr>
-                                <td>Zimmer:</td>
-                                <td><span class="zimmer">2</span></td>
-                            </tr>
-                            <tr>
-                                <td>Verfügbar:</td>
-                                <td><span class="verfuegbar">ab sofort</span></td>
-                            </tr>
-                            <tr>
-                                <td>Wohnfläche:</td>
-                                <td><span class="wohnflaeche">57</span>m²</td>
-                            </tr>
-                            <tr>
-                                <td>Stockwerk:</td>
-                                <td><span class="stockwerk">1</span></td>
-                            </tr>
-                            <tr>
-                                <td>Keller:</td>
-                                <td><span class="keller">ja</span></td>
-                            </tr>
-                            </tbody>
-                        </table>
+                <div class="row font-weight-bold mx-sm-2 mx-mg-2">
+                    <div class="col-lg-6 px-3 d-flex justify-content-between border-bottom">
+                        <p class="my-1">Objekttyp:</p>
+                        <p  class="my-1"><span class="objekttyp">Wohung</span></p>
                     </div>
-                    <div class="col-lg-4 px-0">
-                        <table class="font-weight-bold table table-borderless">
-                            <tbody>
-                            <tr>
-                                <td>Befristung:</td>
-                                <td><span class="befristung">nein</span></td>
-                            </tr>
-                            <tr>
-                                <td>Heizung:</td>
-                                <td><span class="heizung">Fernwärme</span></td>
-                            </tr>
-                            <tr>
-                                <td>Bautyp:</td>
-                                <td><span class="bautyp">Neubau</span></td>
-                            </tr>
-                            <tr>
-                                <td>Freifläche:</td>
-                                <td><span class="freiflaeche">Loggia (4 m²) </span></td>
-                            </tr>
-                            <tr>
-                                <td>Parkplatz:</td>
-                                <td><span class="parkplatz">Tiefgarage (inkl.)</span></td>
-                            </tr>
 
+                    <div class="col-lg-6 px-3  d-flex justify-content-between border-bottom">
+                        <p  class="my-1">Zimmer:</p>
+                        <p class="my-1" ><span class="zimmer">2</span></p>
+                    </div>
+                    <div class="col-lg-6 px-3  d-flex justify-content-between border-bottom">
+                        <p  class="my-1">Verfügbar:</p>
+                        <p class="my-1"><span class="verfuegbar">ab sofort</span></p>
 
-                            </tbody>
-                        </table>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-between border-bottom">
+                        <p class="my-1">Wohnfläche:</p>
+                        <p class="my-1"> <span class="wohnflaeche">57</span>m²</p>
+                    </div>
+                    <div class="col-lg-6 px-3  d-flex justify-content-between border-bottom">
+                        <p class="my-1">Stockwerk:</p>
+                        <p class="my-1"><span class="stockwerk">1</span></p>
+
+                    </div>
+                    <div class="col-lg-6 px-3  d-flex justify-content-between border-bottom">
+                        <p class="my-1">Keller:</p>
+                        <p class="my-1"><span class="keller">ja</span></p>
+                    </div>
+                    <div class="col-lg-6  px-3 d-flex justify-content-between border-bottom">
+                        <p class="my-1">Befristung:</p>
+                        <p class="my-1"><span class="befristung">nein</span></p>
+                    </div>
+                    <div class="col-lg-6  px-3 d-flex justify-content-between border-bottom">
+                        <p class="my-1">Heizung:</p>
+                        <p class="my-1"><span class="heizung">Fernwärme</span></p>
+                    </div>
+                    <div class="col-lg-6 px-3  d-flex justify-content-between border-bottom">
+                        <p class="my-1">Bautyp:</p>
+                        <p class="my-1"><span class="bautyp">Neubau</span></p>
+                    </div>
+                    <div class="col-lg-6 px-3  d-flex justify-content-between border-bottom">
+                        <p class="my-1">Freifläche:</p>
+                        <p class="my-1"><span class="freiflaeche">Loggia (4 m²) </span></p>
+                    </div>
+                    <div class="col-lg-6 px-3  d-flex justify-content-between border-bottom">
+                        <p class="my-1">Parkplatz:</p>
+                        <p class="my-1"><span class="parkplatz">Tiefgarage (inkl.)</span></p>
                     </div>
                 </div>
             </div>
@@ -224,7 +253,7 @@
         </div>
 
         <div class="col-lg-4 order-sm-last order-md-last">
-            <div class="bg-light-red p-2">
+            <div class="bg-light-red p-2 mb-3">
                 <h2>Kosten</h2>
                 <div>
                     <p class="text-primary font-weight-bold d-flex justify-content-between">
@@ -241,7 +270,7 @@
                     </p>
                 </div>
             </div>
-            <div>
+            <div class="mb-4">
                 <p>Bei Interesse melden Sie sich bitte bei: <br>
                     <span>Paulina Wessela</span><br>
                     <span>0664 222 3333 444</span> <br>
@@ -249,7 +278,7 @@
                     <button class="btn btn-primary text-uppercase">Wohnungsanfrage</button>
                 </p>
             </div>
-            <div>
+            <div class="map my-3">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2656.5802205053287!2d14.28936961590652!3d48.25320767923286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773963c8b11b297%3A0x83566ada65ed96c6!2sDauphinestra%C3%9Fe%20194a%2C%204030%20Linz!5e0!3m2!1sde!2sat!4v1596447076349!5m2!1sde!2sat"
                         width="100%" height="70%" frameborder="0" style="border:0;" allowfullscreen=""
                         aria-hidden="false" tabindex="0"></iframe>
@@ -416,6 +445,60 @@
 
 </div>
 
+</body>
+
+<footer class="bg-dark py-4 px-sm-1 px-md-3 px-lg-5 text-white">
+    <div class="container-fluid">
+
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-5 row-cols-md-3">
+            <div class="col mb-3">
+                <h2 class="text-transform-none pb-3">GWG - Gemeinnützige Wohnungsgesellschaft der Stadt Linz GmbH</h2>
+                <p>
+                    Eisenhandstraße 30
+                    <br>
+                    4021 Linz <br>
+                    Telefon: 07327613 <br>
+                    FAX: 07327613 33314 <br>
+                    Email: gwginfo@gwg-linz.at
+                </p>
+            </div>
+            <div class="col mb-3">
+                <h3 class="pb-3">Unternehmen</h3>
+                <ul>
+                    <li><a href="#">Über uns</a></li>
+                    <li><a href="#">Karriere</a></li>
+                    <li><a href="#">Neuigkeiten & Presse</a></li>
+                </ul>
+            </div>
+            <div class="col mb-3">
+                <h3 class="pb-3">Baumanagement</h3>
+                <ul>
+                    <li><a href="#">Baumanagement</a></li>
+                    <li><a href="#">Architektenwettbewerb</a></li>
+                    <li><a href="#">Ausschreibungen</a></li>
+                </ul>
+            </div>
+            <div class="col mb-3">
+                <h3 class="pb-3">Kontakt</h3>
+                <ul>
+                    <li><a href="#">Anfahrt</a></li>
+                    <li><a href="#">Ansprechpersonen</a></li>
+                    <li><a href="#">Anmeldung für Wohnung</a></li>
+                </ul>
+            </div>
+            <div class="col mb-3">
+                <img src="assets/LINZ_LOGO_NEU---2m_weiss_magenta_neu.png" width="80%" height="auto" alt="Linz verändert"
+                     class="mb-2"
+                >
+                <p class="font-weight-bold">Unternehmensgruppe Stadt Linz <br>
+                    innovationshauptplatz.linz.at
+                </p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -428,31 +511,6 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 <script src="./js/function.js"></script>
-<script src="./js/lightbox.js"></script>
-<footer class="bg-dark p-5 text-white">
-    <div class="container">
-        <!-- <div class="row">
-             <div class="col-md-3">
-                 <h2 class="text-uppercase">Text</h2>
-                 <p>Text</p>
-             </div>
-             <div class="col-md-3">
-                 <h2 class="text-uppercase">Text</h2>
-                 <p>Text</p>
-             </div>
-             <div class="col-md-3">
-                 <h2 class="text-uppercase">Text</h2>
-                 <p>Text</p>
-             </div>
-             <div class="col-md-3">
-                 <h2 class="text-uppercase">Text</h2>
-                 <p>Text</p>
-             </div>
-             <div class="col-12">
-                 <p>Text</p>
-             </div>
-         </div>-->
-    </div>
-</footer>
-</body>
+
+
 </html>

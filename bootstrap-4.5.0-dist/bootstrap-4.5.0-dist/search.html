@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/multirange.css">
+    <link rel="stylesheet" href="css/deque-patterns.css">
     <title>Clickdummy ohne Design und Funktion</title>
 </head>
 
@@ -19,7 +21,7 @@
     <!--NAVIGATION-->
     <nav class="navbar navbar-expand-lg navbar-light bg-white mainnavigation fixed-top" aria-label="Main">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="assets/Logo.png" height="110" alt="Logo">
             </a>
 
@@ -94,8 +96,8 @@
 </div>
 
 
-<div class="container main-content ">
-    <div class="row d-flex mb-3">
+<div class="container-fluid main-content ">
+    <div class="row d-flex mb-3 px-lg-4 px-sm-1">
         <a href="#" class=" p-2 mr-auto" aria-label="zurück zum Suchergebnis">
             <small class="underline">
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle" fill="currentColor"
@@ -135,9 +137,9 @@
     </div>
 </div>
 
-<div class="container bg-white px-lg-5 px-md-3 py-lg-4">
+<div class="container-fluid bg-white px-lg-5 px-md-3 py-lg-4">
     <div class="row mt-md-4">
-        <div class="col-lg-8 order-sm-first order-lg-last">
+        <div class="col-lg-8">
             <div class="bg-light-gray p-3 mb-3 row">
 
                 <h1>Immobilien suchen</h1>
@@ -148,7 +150,7 @@
                                 <label for="immobilien" class="sr-only">Immobilienfilter</label>
                                 <select class="custom-select " id="immobilien" name="immobilien"
                                         aria-label="Immobilienfilter">
-                                    <option selected class="dropdown-item">Filter</option>
+                                    <option selected class="dropdown-item">Alle Immobilien</option>
                                     <option value="1">Wohnung mieten</option>
                                     <option value="2">Wohnung kaufen</option>
                                     <option value="3">Lokal / Gewerbe mieten</option>
@@ -170,13 +172,13 @@
                         <div class="form-group form-group-md col-md-3">
                             <div class="input-group input-group-md mb-3">
                                 <button width="100%" type="submit" class="btn btn-block btn-primary text-uppercase">
-                                    Suchen <span class="small text">(0)</span></button>
+                                    Suchen <span class="">(5)</span></button>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="row">
+            <div class="row p-2">
                 <div class="col-lg-12 px-md-0 d-flex justify-content-around ">
                     <div class="col-lg-8 px-md-0 d-flex justify-content-between px-md-0">
                         <h2><span>5</span> Immobilien gefunden</h2>
@@ -200,13 +202,12 @@
                         </div>
                     </div>
                     <div class="px-md-0 col-lg-4 d-flex align-items-end justify-content-end" id="toggleMaps">
-                    <!--    <a onclick="toggleMaps()" data-toggle="collapse" href="#maps" role="button" aria-expanded="false" aria-controls="maps">-->
+                        <!--    <a onclick="toggleMaps()" data-toggle="collapse" href="#maps" role="button" aria-expanded="false" aria-controls="maps">-->
                         <a onclick="toggleMaps()" href="#">
                             <small class="underline small">Karte ausblenden</small>
                         </a>
                     </div>
                 </div>
-
 
 
                 <div class="col-lg-8 px-md-0" id="filterergebnisse">
@@ -235,7 +236,7 @@
                         <div class="col-12 filterergebnis mb-2" onclick="window.location = 'search-result.html'">
                             <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
                                  tabindex="0" aria-label="Neubauprojekt">
-                                <div class="col-lg-8 col-md-12 py-2 px-2 d-flex flex-column position-static bg-white">
+                                <div class="col-md-8 py-2 px-2 d-flex flex-column position-static bg-white">
                                     <small class="card-text">Wohnung mieten</small>
                                     <h3 class="font-weight-bold">Dauphinestraße 194a</h3>
                                     <p class="card-text">
@@ -254,7 +255,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 d-none d-lg-block order-first">
+                                <div class="col-md-4 d-none d-md-block order-first">
                                     <img class="rounded" width="100%" height="100%" src="assets/lindsay_eu@2x.png"
                                          alt="Picture">
                                 </div>
@@ -390,7 +391,7 @@
         </div>
 
         <!--Suchfilter-->
-        <div class="col-lg-4 order-sm-last order-md-first">
+        <div class="col-lg-4 order-first">
             <div class="bg-light-red p-3 pt-4 mb-3">
                 <h2>Gewählte Filter</h2>
                 <p>
@@ -501,7 +502,37 @@
                     <fieldset class="form-group">
                         <div class="row">
                             <legend class="col-form-label col-sm-12 pt-0 text-uppercase">Fläche</legend>
-                            <!--<input id="multi" class="multi-range" type="range" />-->
+                            <!---NEUER SLIDER--->
+                            <div class="deque-slider-multirange horizontal">
+                                <h4 class="neutral">Search for house by price</h4>
+                                <span id="label"></span>
+                                <div>
+                                    <label>
+                                        min
+                                        <input>
+                                    </label>
+                                    <div class="slider" style="height: 2px; width: 200px;">
+                                        <button class="minPrice" role="slider" aria-valuemin="150000"
+                                                aria-valuemax="450000" aria-orientation="horizontal"
+                                                aria-label="Min Price" aria-valuenow="220000" data-increment="10000"
+                                                aria-valuetext="$220,000" style="left: 46.6667px;">
+                                        </button>
+                                        <button class="maxPrice" role="slider" aria-valuemin="1500"
+                                                aria-valuemax="450000" aria-orientation="horizontal"
+                                                aria-label="Max Price" aria-valuenow="320000" data-increment="10000"
+                                                aria-valuetext="$320,000" style="left: 143.333px;">
+                                        </button>
+                                    </div>
+                                    <label>
+                                        max
+                                        <input>
+                                    </label>
+                                </div>
+                                <div id="alertRegion"></div>
+                            </div>
+
+<!--
+                            <input type="range" class="multirange" data-drag-middle multiple value="100,80"/>
                             <div class="selector">
                                 <div class="price-slider">
                                     <div id="slider-range"
@@ -515,7 +546,7 @@
                                         class="seperator">-</span> <span id="max-area" data-currency="m²" data-max="500"
                                                                          class="slider-price">500</span>
                                 </div>
-                            </div>
+                            </div>-->
 
 
                         </div>
@@ -613,14 +644,16 @@
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="ausstattung" id="Seniorenwohung"
+                                    <input class="form-check-input" type="checkbox" name="ausstattung"
+                                           id="Seniorenwohung"
                                            value="option1">
                                     <label class="form-check-label" for="Seniorenwohung">
                                         Seniorenwohung
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="ausstattung" id="PKW-Abestellplatz"
+                                    <input class="form-check-input" type="checkbox" name="ausstattung"
+                                           id="PKW-Abestellplatz"
                                            value="option1">
                                     <label class="form-check-label" for="PKW-Abestellplatz">
                                         PKW-Abestellplatz
@@ -669,17 +702,7 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-<script src="./js/function.js"></script>
-<script src="./js/lightbox.js"></script>
+
 <footer class="bg-dark p-5 text-white">
     <div class="container">
         <!-- <div class="row">
@@ -706,4 +729,18 @@
     </div>
 </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+<script src="./js/function.js"></script>
+<script src="./js/lightbox.js"></script>
+<scirpt src="./js/mulitrange.js"></scirpt>
+<scirpt src="./js/deque-patterns.min.js"></scirpt>
+<scirpt type="text/javascript" src="./js/slider-mulitrange.js"></scirpt>
 </html>

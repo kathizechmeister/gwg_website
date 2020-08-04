@@ -20,6 +20,42 @@
 }
 
 
+/***FOOTER***/
+.text-transform-none {
+    text-transform: none;
+}
+
+footer a {
+    color: #ffffff;
+    font-weight: bold;
+}
+footer li {
+    list-style: none ;
+}
+
+footer li::before
+{
+    content: "--";
+    padding-right: 10px;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer h2{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+footer h3 {
+    text-transform: uppercase;
+}
+
+
+/*******Sidebar********/
+
+
 
 .sidebar img{
     width: 100%;
@@ -479,6 +515,280 @@ input[type="checkbox"]:checked+label::before {
     box-sizing: border-box;
 }
 
+
+
+/*******/
+
+[slider] {
+    position: relative;
+    height: 14px;
+    border-radius: 10px;
+    text-align: left;
+    margin: 45px 0 10px 0;
+}
+
+[slider] > div {
+    position: absolute;
+    left: 13px;
+    right: 15px;
+    height: 14px;
+}
+
+[slider] > div > [inverse-left] {
+    position: absolute;
+    left: 0;
+    height: 14px;
+    border-radius: 10px;
+    background-color: #CCC;
+    margin: 0 7px;
+}
+
+[slider] > div > [inverse-right] {
+    position: absolute;
+    right: 0;
+    height: 14px;
+    border-radius: 10px;
+    background-color: #CCC;
+    margin: 0 7px;
+}
+
+[slider] > div > [range] {
+    position: absolute;
+    left: 0;
+    height: 14px;
+    border-radius: 14px;
+    background-color: #1ABC9C;
+}
+
+[slider] > div > [thumb] {
+    position: absolute;
+    top: -7px;
+    z-index: 2;
+    height: 28px;
+    width: 28px;
+    text-align: left;
+    margin-left: -11px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    background-color: #FFF;
+    border-radius: 50%;
+    outline: none;
+}
+
+[slider] > input[type=range] {
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 3;
+    height: 14px;
+    top: -2px;
+    width: 100%;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+
+div[slider] > input[type=range]::-ms-track {
+    -webkit-appearance: none;
+    background: transparent;
+    color: transparent;
+}
+
+div[slider] > input[type=range]::-moz-range-track {
+    -moz-appearance: none;
+    background: transparent;
+    color: transparent;
+}
+
+div[slider] > input[type=range]:focus::-webkit-slider-runnable-track {
+    background: transparent;
+    border: transparent;
+}
+
+div[slider] > input[type=range]:focus {
+    outline: none;
+}
+
+div[slider] > input[type=range]::-ms-thumb {
+    pointer-events: all;
+    width: 28px;
+    height: 28px;
+    border-radius: 0px;
+    border: 0 none;
+    background: red;
+}
+
+div[slider] > input[type=range]::-moz-range-thumb {
+    pointer-events: all;
+    width: 28px;
+    height: 28px;
+    border-radius: 0px;
+    border: 0 none;
+    background: red;
+}
+
+div[slider] > input[type=range]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 28px;
+    height: 28px;
+    border-radius: 0px;
+    border: 0 none;
+    background: red;
+    -webkit-appearance: none;
+}
+
+div[slider] > input[type=range]::-ms-fill-lower {
+    background: transparent;
+    border: 0 none;
+}
+
+div[slider] > input[type=range]::-ms-fill-upper {
+    background: transparent;
+    border: 0 none;
+}
+
+div[slider] > input[type=range]::-ms-tooltip {
+    display: none;
+}
+
+[slider] > div > [sign] {
+    opacity: 0;
+    position: absolute;
+    margin-left: -11px;
+    top: -39px;
+    z-index:3;
+    background-color: #1ABC9C;
+    color: #fff;
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+    -webkit-border-radius: 28px;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+[slider] > div > [sign]:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    border-radius: 16px;
+    top: 19px;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top-width: 16px;
+    border-top-style: solid;
+    border-top-color: #1ABC9C;
+}
+
+[slider] > div > [sign] > span {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+[slider]:hover > div > [sign] {
+    opacity: 1;
+}
+
+
+/**************************/
+#lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+}
+
+#lightbox img {
+    max-width: 50%;
+    max-height: 80%;
+    padding: 4px;
+    background-color: black;
+    border: 2px solid white;
+
+}
+
+
+
+/*************************/
+/*BASIC*/
+
+  .lightbox ul {
+       display: flex;
+       flex-wrap: wrap;
+      list-style: none;
+      padding-left: 0;
+   }
+
+.lightbox li {
+    height: 40vh;
+    flex-grow: 1;
+    cursor: zoom-in;
+}
+
+.lightbox li:last-child {
+/* There's no science in using "10" here. In all my testing, this delivered the best results.*/
+flex-grow: 10;
+}
+
+.lightbox img {
+    max-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+/* ADVANCED*/
+
+/* Portrait*/
+
+@media (max-aspect-ratio: 1/1) {
+   .lightbox li {
+        height: 30vh;
+    }
+}
+
+/* Short screens*/
+
+@media (max-height: 480px) {
+    .lightbox li {
+        height: 80vh;
+    }
+}
+
+/* Smaller screens in portrait*/
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+    .lightbox  ul {
+        flex-direction: row;
+    }
+
+    .lightbox  li {
+        height: auto;
+        width: 100%;
+    }
+    .lightbox  img {
+        width: 100%;
+        max-height: 75vh;
+        min-width: 0;
+    }
+}
 
 
 

@@ -2751,6 +2751,26 @@ html {
   .px-sm-5 {
     padding-left: 3rem !important;
   }
+  .p-sm-6 {
+    padding: 6rem !important;
+  }
+  .pt-sm-6,
+  .py-sm-6 {
+    padding-top: 6rem !important;
+  }
+  .pr-sm-6,
+  .px-sm-6 {
+    padding-right: 6rem !important;
+  }
+  .pb-sm-6,
+  .py-sm-6 {
+    padding-bottom: 6rem !important;
+  }
+  .pl-sm-6,
+  .px-sm-6 {
+    padding-left: 6rem !important;
+  }
+
   .m-sm-n1 {
     margin: -0.25rem !important;
   }

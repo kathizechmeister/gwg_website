@@ -112,7 +112,7 @@ function toggleMaps() {
         filterergebnisse.classList.add("col-lg-12");
         filterergebnisse.classList.remove("col-lg-8");
         /**Buttontext**/
-        toggleMaps.innerHTML = "<a onclick=\"toggleMaps()\" href=\"#\">" +
+        toggleMaps.innerHTML = "<a onclick=\"toggleMaps()\" href=\"#\" aria-label='Karte wieder anzeigen'>" +
             "                            <small class=\"underline small\">Karte anzeigen</small>" +
             "                        </a>";
 
@@ -196,3 +196,8 @@ lightbox.addEventListener('click', e => {
 
 /**************************************/
 
+/*
+$(".slidercss").prepend(" <script src=\"//code.jquery.com/jquery-1.11.1.min.js\"></script>\n" +
+    "    <link rel=\"stylesheet\" href=\"https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css\"  media=\"screen\">\n" +
+    "    <script src=\"https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js\"></script>\n" +
+    "    <script src=\"js/codejquery.js\"></script>");*/

@@ -1,3 +1,4 @@
+
 /*h1{
     text-transform: uppercase;
     color: #ffffff;
@@ -19,6 +20,19 @@
     padding-top: 200px;
 }
 
+.neubauprojekte h3 {
+    line-height: 3rem;
+}
+
+.neubauprojekte img{
+    object-fit: cover;
+    min-height: 150px;
+}
+
+.neubauprojekte .clickable{
+    min-height: 200px;
+}
+
 
 /***FOOTER***/
 .text-transform-none {
@@ -31,6 +45,7 @@ footer a {
 }
 footer li {
     list-style: none ;
+    line-height: 2rem;
 }
 
 footer li::before
@@ -46,10 +61,12 @@ footer ul {
 footer h2{
     font-size: 1rem;
     font-weight: bold;
+    line-height: 1.4rem;
 }
 
 footer h3 {
     text-transform: uppercase;
+
 }
 
 
@@ -66,13 +83,8 @@ footer h3 {
     background-color: #ffffff;
 }
 
-.neubauprojekte .item:hover
-{
-    box-shadow: #CD1719;
-}
-
 .clickable:hover {
-    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.075) !important;
+    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.75) !important;
     cursor: pointer;
 }
 
@@ -229,6 +241,9 @@ input[type="checkbox"]:checked+label::before {
     object-fit: cover;
 }
 
+.neubauprojekte .item:hover{
+    box-shadow: #CD1719;
+}
 
 /*****Columns for Lightbox*****/
 .column {
@@ -304,7 +319,15 @@ input[type="checkbox"]:checked+label::before {
 }
 .filterergebnisse img{
     object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
 }
+
+.filterergebnisse p, .filterergebnisse label{
+    margin: 0;
+}
+
 
 
 #alleBezirksfilter {display: none;}
@@ -718,9 +741,6 @@ div[slider] > input[type=range]::-ms-tooltip {
     max-width: 50%;
     max-height: 80%;
     padding: 4px;
-    background-color: black;
-    border: 2px solid white;
-
 }
 
 
@@ -732,13 +752,14 @@ div[slider] > input[type=range]::-ms-tooltip {
        display: flex;
        flex-wrap: wrap;
       list-style: none;
-      padding-left: 0;
+      padding-inline-start: 0;
    }
 
 .lightbox li {
     height: 40vh;
     flex-grow: 1;
     cursor: zoom-in;
+
 }
 
 .lightbox li:last-child {
@@ -752,6 +773,7 @@ flex-grow: 10;
     max-width: 100%;
     object-fit: cover;
     vertical-align: bottom;
+    padding: 0.5rem;
 }
 
 /* ADVANCED*/
@@ -762,6 +784,10 @@ flex-grow: 10;
    .lightbox li {
         height: 30vh;
     }
+}
+
+.slidercss{
+    width: 100%;
 }
 
 /* Short screens*/
@@ -789,6 +815,7 @@ flex-grow: 10;
         min-width: 0;
     }
 }
+
 
 
 

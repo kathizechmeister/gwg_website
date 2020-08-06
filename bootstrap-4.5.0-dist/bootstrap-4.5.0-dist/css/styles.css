@@ -16,6 +16,10 @@
             url('../assets/Asset-61@2x.png');
 }
 
+.line-height-more{
+    line-height: 1.7rem;
+}
+
 .header-content{
     padding-top: 200px;
 }
@@ -27,6 +31,10 @@
 .neubauprojekte img{
     object-fit: cover;
     min-height: 150px;
+}
+
+.item img{
+    object-fit: cover;
 }
 
 .neubauprojekte .clickable{
@@ -84,7 +92,7 @@ footer h3 {
 }
 
 .clickable:hover {
-    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.75) !important;
+    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3) !important;
     cursor: pointer;
 }
 
@@ -188,10 +196,7 @@ h1.shadow{
     padding: 0.5em;
 }
 
-input[type="checkbox"]:checked+label::before {
-    box-shadow: inset 0px 0px 0px 3px #fff;
-    background-color: #8cad2d;
-}
+
 
 
 
@@ -326,6 +331,11 @@ input[type="checkbox"]:checked+label::before {
 
 .filterergebnisse p, .filterergebnisse label{
     margin: 0;
+}
+
+.filterergebnisse label{
+    float: right;
+    padding-left: 0.5rem;
 }
 
 
@@ -816,8 +826,45 @@ flex-grow: 10;
     }
 }
 
+/*******erweiterte Suchfilter*****/
+
+.filter-erweitert legend{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+/********Mulitrangeslider**********/
+.ui-mobile [data-role=page], .ui-mobile [data-role=dialog], .ui-page {
+    position: relative;
+}
+#page1 {
+    min-height: 50px !important;
+}
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    background-color: transparent;
+}
 
 
+
+.ui-page-theme-a .ui-slider-track .ui-btn-active{
+    background-color: #CD1719;
+    border-color: #CD1719;
+    text-shadow: 0 1px 0 #CD1719;
+}
+
+.ui-page-theme-a .ui-bar-inherit {
+    background-color: #707070;
+    border: 0;
+}
+
+.ui-slider-track.ui-mini{
+    height: 5px;
+}
+
+.ui-shadow-inset{
+    box-shadow: none;
+}
 
 
 

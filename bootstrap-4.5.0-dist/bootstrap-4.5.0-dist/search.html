@@ -7,15 +7,43 @@
 
     <!-- Bootstrap CSS -->
 
-<!--
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!--
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/codejquery.js"></script>-->
+
+    <!--   <link rel="stylesheet" href="css/lightbox.css">
+       <link rel="stylesheet" href="css/multirange.css">
+       <link rel="stylesheet" href="css/deque-patterns.css">-->
+   <!-- <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+
+        $( function() {
+            $( "#slider-range" ).slider({
+                range: true,
+                min: 0,
+                max: 500,
+                values: [ 75, 300 ],
+                slide: function( event, ui ) {
+                    $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                }
+            });
+            $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+                " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+        } );
+    </script>-->
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="js/codejquery.js"></script>-->
+
+
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
- <!--   <link rel="stylesheet" href="css/lightbox.css">
-    <link rel="stylesheet" href="css/multirange.css">
-    <link rel="stylesheet" href="css/deque-patterns.css">-->
 
 
     <title>Clickdummy ohne Design und Funktion</title>
@@ -102,698 +130,767 @@
     </nav>
 </div>
 
+<div role="main">
+    <div class="container-fluid main-content mb-md-3 ">
+        <div class="row d-flex mx-lg-4 px-sm-1 ">
+            <a href="#" class=" p-2 mr-auto" aria-label="zurück zum Suchergebnis">
+                <small>
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle"
+                         fill="currentColor"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path fill-rule="evenodd"
+                              d="M8.354 11.354a.5.5 0 0 0 0-.708L5.707 8l2.647-2.646a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708 0z"/>
+                        <path fill-rule="evenodd" d="M11.5 8a.5.5 0 0 0-.5-.5H6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5z"/>
+                    </svg>
+                    <span class="underline">zurück zum Suchergebnis</span>
 
-<div class="container-fluid main-content mb-md-3 ">
-    <div class="row d-flex mx-lg-4 px-sm-1 ">
-        <a href="#" class=" p-2 mr-auto" aria-label="zurück zum Suchergebnis">
-            <small class="underline">
-                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle" fill="currentColor"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                          d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                    <path fill-rule="evenodd"
-                          d="M8.354 11.354a.5.5 0 0 0 0-.708L5.707 8l2.647-2.646a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708 0z"/>
-                    <path fill-rule="evenodd" d="M11.5 8a.5.5 0 0 0-.5-.5H6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5z"/>
-                </svg>
-                zurück zum Suchergebnis
-            </small>
-        </a>
-        <a href="#" class="p-2 " aria-label="vergleichen">
-            <small class="underline">
-                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-square" fill="currentColor"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                          d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                </svg>
-                vergleichen
-            </small>
-        </a>
-        <a class="p-2 " aria-label="teilen" href="#">
-            <small class="underline">
-                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-share" fill="currentColor"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                          d="M11.724 3.947l-7 3.5-.448-.894 7-3.5.448.894zm-.448 9l-7-3.5.448-.894 7 3.5-.448.894z"/>
-                    <path fill-rule="evenodd"
-                          d="M13.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 10a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm-11-6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
-                </svg>
-                teilen
-            </small>
-        </a>
-
-    </div>
-</div>
-
-<div class="container-fluid bg-white px-lg-5 p-4">
-    <div class="row mt-md-4 d-flex align-items-stretch">
-
-        <div class="col-lg-8  ">
-            <div class="bg-light-gray p-3 row">
-
-                <h1>Immobilien suchen</h1>
-                <form class="my-3 col-lg-12">
-                    <div class="form-row d-flex justify-content-between">
-                        <div class="form-group col-md-3" aria-label="Immobilien-Filter">
-                            <div class="input-group-md">
-                                <label for="immobilien" class="sr-only">Immobilienfilter</label>
-                                <select class="custom-select " id="immobilien" name="immobilien"
-                                        aria-labelledby="Immobilien nach Art filtern">
-                                    <option aria-selected="true" selected class="dropdown-item">Alle Immobilien</option>
-                                    <option aria-selected="false" value="1">Wohnung mieten</option>
-                                    <option aria-selected="false" value="2">Wohnung kaufen</option>
-                                    <option aria-selected="false" value="3">Lokal / Gewerbe mieten</option>
-                                    <option aria-selected="false" value="4">Lokal / Gewerbe kaufen</option>
-                                    <option aria-selected="false" value="5">Parkplatz mieten</option>
-                                    <option aria-selected="false" value="6">Parkplatz kaufen</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-group-md col-md-6">
-                            <div class="input-group-md">
-                                <label for="search" class="sr-only">Suchbegriff</label>
-                                <input type="search" class="form-control form-control-md" id="search"
-                                       placeholder="Ort, Plz, Projektname (Volltextsuche)" aria-placeholder="Ort, Plz, Projektname (Volltextsuche)"
-                                       aria-labelledby="Suchbegriff">
-                            </div>
-                        </div>
-                        <div class="form-group form-group-md col-md-3">
-                            <div class="input-group input-group-md mb-3">
-                                <button type="submit" class="btn btn-block btn-primary text-uppercase" aria-labelledby="Suchen
-                                        ">
-                                    Suchen <span class="">(5)</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="col-lg-4 order-lg-first">
-            <div class="bg-light-red p-3 pt-4 mb-3 mt-md-3 mt-lg-0">
-                <h2>Gewählte Filter</h2>
-                <div class="row">
-                    <div class="col-6" tabindex="0" aria-label="gewählter Filter" >
-                        <p>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                      d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                <path fill-rule="evenodd" fill="#CD1719"
-                                      d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
-                                <path fill-rule="evenodd" fill="#CD1719"
-                                      d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
-                            </svg>
-                            Alle Viertel
-                        </p>
-                    </div>
-
-                    <div class="col-6" tabindex="0" aria-label="gewählter Filter" >
-                        <p>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                      d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                <path fill-rule="evenodd" fill="#CD1719"
-                                      d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
-                                <path fill-rule="evenodd" fill="#CD1719"
-                                      d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
-                            </svg>
-                            Alle Viertel
-                        </p>
-                    </div>
-
-                    <div class="col-6" tabindex="0" aria-label="gewählter Filter" >
-                        <p>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                      d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                <path fill-rule="evenodd" fill="#CD1719"
-                                      d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
-                                <path fill-rule="evenodd" fill="#CD1719"
-                                      d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
-                            </svg>
-                            35 m² - 85 m²
-                        </p>
-                    </div>
-
-                    <div class="col-6" tabindex="0" aria-label="gewählter Filter" >
-                        <p>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                      d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                <path fill-rule="evenodd" fill="#CD1719"
-                                      d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
-                                <path fill-rule="evenodd" fill="#CD1719"
-                                      d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
-                            </svg>
-                            €150 - €760
-                        </p>
-                    </div>
-
-                    <div class="col-6" tabindex="0" aria-label="gewählter Filter" >
-                        <p>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                      d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                <path fill-rule="evenodd" fill="#CD1719"
-                                      d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
-                                <path fill-rule="evenodd" fill="#CD1719"
-                                      d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
-                            </svg>
-                            Lift
-                        </p>
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
+                </small>
+            </a>
+            <a href="#" class="p-2 " aria-label="vergleichen">
+                <small>
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-square" fill="currentColor"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                              d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                    </svg>
+                    <span class="underline">vergleichen</span>
+                </small>
+            </a>
+            <a class="p-2 " aria-label="teilen" href="#">
+                <small>
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-share" fill="currentColor"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                              d="M11.724 3.947l-7 3.5-.448-.894 7-3.5.448.894zm-.448 9l-7-3.5.448-.894 7 3.5-.448.894z"/>
+                        <path fill-rule="evenodd"
+                              d="M13.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 10a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm-11-6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                    </svg>
+                    <span class="underline">teilen</span>
+                </small>
+            </a>
 
         </div>
     </div>
-</div>
 
-<div class="container-fluid bg-white px-lg-5 px-md-3 py-lg-1">
-    <div class="row">
-        <div class="col-lg-8">
+    <div class="container-fluid bg-white px-lg-5 px-md-3">
+        <div class="row mt-md-4 d-flex align-items-stretch">
 
-            <div class="row p-2">
-                <div class="col-lg-12 px-md-0 d-lg-flex justify-content-between mb-3">
-                    <div class=" px-md-0 d-flex px-md-0">
-                        <h2><span>5</span> Immobilien gefunden</h2>
-                    </div>
-                    <div class=" text-lg-right align-items-center d-flex justify-content-end">
-                        <form>
-                            <div class="form-group mb-0" aria-label="Ergebnis-Filter">
-                                <div class="input-group-sm ">
-                                    <label for="filter" class="sr-only">Filter</label>
-                                    <select class="custom-select " id="filter" name="filter"
-                                            aria-labelledby="Ergebnisfilter">
-                                        <option aria-selected="true" selected class="dropdown-item">Aktualität</option>
-                                        <option aria-selected="false" value="1">Preis</option>
-                                        <option aria-selected="false" value="2">Bewertung</option>
+            <div class="col-lg-8 mt-2 ">
+                <div class="bg-light-gray p-3 row mb-2">
+
+                    <h1>Immobilien suchen</h1>
+                    <form class="my-3 col-lg-12">
+                        <div class="form-row d-flex justify-content-between">
+                            <div class="form-group col-md-3" aria-label="Immobilien-Filter">
+                                <div class="input-group-md">
+                                    <label for="immobilien" class="sr-only">Immobilienfilter</label>
+                                    <select class="custom-select " id="immobilien" name="immobilien"
+                                            aria-label="Immobilien nach Art filtern">
+                                        <option selected class="dropdown-item">Alle Immobilien</option>
+                                        <option value="1">Wohnung mieten</option>
+                                        <option value="2">Wohnung kaufen</option>
+                                        <option value="3">Lokal / Gewerbe mieten</option>
+                                        <option value="4">Lokal / Gewerbe kaufen</option>
+                                        <option value="5">Parkplatz mieten</option>
+                                        <option value="6">Parkplatz kaufen</option>
                                     </select>
                                 </div>
                             </div>
-                        </form>
+
+                            <div class="form-group form-group-md col-md-6">
+                                <div class="input-group-md">
+                                    <label for="Suchbegriff" class="sr-only">Suchbegriff</label>
+                                    <input type="search" class="form-control form-control-md" id="Suchbegriff"
+                                           placeholder="Ort, Plz, Projektname (Volltextsuche)"
+                                           aria-placeholder="Ort, Plz, Projektname (Volltextsuche)"
+                                           aria-labelledby="Suchbegriff">
+                                </div>
+                            </div>
+                            <div class="form-group form-group-md col-md-3">
+                                <div class="input-group input-group-md mb-3">
+                                    <button type="submit" class="btn btn-block btn-primary text-uppercase" aria-label="Immobilien Suchen
+                                        ">
+                                        Suchen <span class="">(5)</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4 order-lg-first mt-2">
+                <div class="bg-light-red p-lg-5 p-4 mb-3 mt-md-3 mt-lg-0">
+                    <h2>Gewählte Filter</h2>
+                    <div class="row">
+                        <div class="col-6" tabindex="0" aria-label="gewählter Filter">
+                            <p>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
+                                     fill="currentColor"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                          d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path fill-rule="evenodd" fill="#CD1719"
+                                          d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+                                    <path fill-rule="evenodd" fill="#CD1719"
+                                          d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+                                </svg>
+                                Alle Viertel
+                            </p>
+                        </div>
+
+                        <div class="col-6" tabindex="0" aria-label="gewählter Filter">
+                            <p>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
+                                     fill="currentColor"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                          d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path fill-rule="evenodd" fill="#CD1719"
+                                          d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+                                    <path fill-rule="evenodd" fill="#CD1719"
+                                          d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+                                </svg>
+                                Alle Viertel
+                            </p>
+                        </div>
+
+                        <div class="col-6" tabindex="0" aria-label="gewählter Filter">
+                            <p>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
+                                     fill="currentColor"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                          d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path fill-rule="evenodd" fill="#CD1719"
+                                          d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+                                    <path fill-rule="evenodd" fill="#CD1719"
+                                          d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+                                </svg>
+                                35 m² - 85 m²
+                            </p>
+                        </div>
+
+                        <div class="col-6" tabindex="0" aria-label="gewählter Filter">
+                            <p>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
+                                     fill="currentColor"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                          d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path fill-rule="evenodd" fill="#CD1719"
+                                          d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+                                    <path fill-rule="evenodd" fill="#CD1719"
+                                          d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+                                </svg>
+                                €150 - €760
+                            </p>
+                        </div>
+
+                        <div class="col-6" tabindex="0" aria-label="gewählter Filter">
+                            <p>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
+                                     fill="currentColor"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                          d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path fill-rule="evenodd" fill="#CD1719"
+                                          d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+                                    <path fill-rule="evenodd" fill="#CD1719"
+                                          d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+                                </svg>
+                                Lift
+                            </p>
+                        </div>
+
+
                     </div>
-                    <div class="px-md-0  d-flex justify-content-end align-items-end">
-                        <a href="#" aria-label="gewählte Wohnungen vergleichen">
-                            <small class="underline small">ausgewählte Wohnungen vergleichen</small>
-                        </a>
-                    </div>
-                    <div class="px-md-0  d-flex justify-content-end align-items-end " id="toggleMaps">
-                        <!--    <a onclick="toggleMaps()" data-toggle="collapse" href="#maps" role="button" aria-expanded="false" aria-controls="maps">-->
-                        <a onclick="toggleMaps()" href="#" aria-label="Karte ausblenden">
-                            <small class="underline small">Karte ausblenden</small>
-                        </a>
-                    </div>
+
+
                 </div>
 
 
-                <div class="col-lg-8 px-md-0" id="filterergebnisse">
-                    <!--<div class="d-flex justify-content-between">
-                        <h2><span>5</span> Immobilien gefunden</h2>
-                        <div class="text-right">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-white px-lg-5 px-md-3">
+        <div class="row">
+            <div class="col-lg-8">
+
+                <div class="row p-2">
+                    <div class="col-lg-12 px-md-0 d-lg-flex justify-content-between mb-3">
+                        <div class=" px-md-0 d-flex px-md-0">
+                            <h2><span>5</span> Immobilien gefunden</h2>
+                        </div>
+                        <div class=" ml-auto text-lg-right align-items-center d-flex justify-content-end">
                             <form>
                                 <div class="form-group mb-0" aria-label="Ergebnis-Filter">
                                     <div class="input-group-sm ">
                                         <label for="filter" class="sr-only">Filter</label>
                                         <select class="custom-select " id="filter" name="filter"
                                                 aria-label="Ergebnisfilter">
-                                            <option selected class="dropdown-item">Aktualität</option>
-                                            <option value="1">Preis</option>
-                                            <option value="2">Bewertung</option>
+                                            <option selected class="dropdown-item" value="aktualitaet">Aktualität
+                                            </option>
+                                            <option value="preis">Preis</option>
+                                            <option value="bewertung">Bewertung</option>
                                         </select>
                                     </div>
                                 </div>
                             </form>
-                            <a href="#">
+                        </div>
+                        <div class="px-md-0 ml-auto pr-lg-3  d-flex justify-content-end align-items-end">
+                            <a href="#" aria-label="gewählte Wohnungen vergleichen">
                                 <small class="underline small">ausgewählte Wohnungen vergleichen</small>
                             </a>
                         </div>
-                    </div>-->
-                    <div class="row filterergebnisse">
-                        <div class="col-12 filterergebnis mb-4" >
-                            <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
-                                 tabindex="0" aria-label="Filterergebnis">
-                                <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
-                                    <div onclick="window.location = 'search-result.html'">
-                                        <small class="card-text">Wohnung mieten</small>
-                                    <h3  class="font-weight-bold">Dauphinestraße 194a</h3>
-                                    <p class="card-text">
-                                        <span>Zimmer: 2</span><br>
-                                        <span> Nutzfläche: 57 m²</span><br>
-                                        <span>verfügbar ab: sofort</span>
+                        <div class="px-md-0  d-flex justify-content-end align-items-end " id="toggleMaps">
+                            <!--    <a onclick="toggleMaps()" data-toggle="collapse" href="#maps" role="button" aria-expanded="false" aria-controls="maps">-->
+                            <a onclick="toggleMaps()" href="#" aria-label="Karte ausblenden">
+                                <small class="underline small">Karte ausblenden</small>
+                            </a>
+                        </div>
+                    </div>
 
-                                    </p>
-                                    </div>
-                                    <div class="d-flex justify-content-end align-items-md-end pt-2 mt-auto">
-                                        <p class="compare">
-                                            <input type="checkbox" tabindex="0"
-                                                   aria-label="compare" role="checkbox"
-                                                   aria-checked="false" id="vergleichen1">
-                                            <label for="vergleichen1">Wohnung vergleichen</label>
 
-                                        </p>
+                    <div class="col-lg-8 px-md-0" id="filterergebnisse">
+                        <!--<div class="d-flex justify-content-between">
+                            <h2><span>5</span> Immobilien gefunden</h2>
+                            <div class="text-right">
+                                <form>
+                                    <div class="form-group mb-0" aria-label="Ergebnis-Filter">
+                                        <div class="input-group-sm ">
+                                            <label for="filter" class="sr-only">Filter</label>
+                                            <select class="custom-select " id="filter" name="filter"
+                                                    aria-label="Ergebnisfilter">
+                                                <option selected class="dropdown-item">Aktualität</option>
+                                                <option value="1">Preis</option>
+                                                <option value="2">Bewertung</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div onclick="window.location = 'search-result.html'" class="col-md-4 d-none d-md-block order-first">
-                                    <img class="rounded" width="100%" height="100%" src="assets/DERFFLINGERSTRASSE_BAUTAFEL_GELB_bearb-se_wiese%20grün_kl.jpg"
-                                         alt="Picture">
+                                </form>
+                                <a href="#">
+                                    <small class="underline small">ausgewählte Wohnungen vergleichen</small>
+                                </a>
+                            </div>
+                        </div>-->
+                        <div class="row filterergebnisse">
+                            <div class="col-12 filterergebnis mb-4">
+                                <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
+                                     tabindex="0" aria-label="Filterergebnis">
+                                    <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
+                                        <div onclick="window.location = 'search-result.html'">
+                                            <small class="card-text">Wohnung mieten</small>
+                                            <h3 class="font-weight-bold">Dauphinestraße 194a</h3>
+                                            <p class="card-text">
+                                                <span>Zimmer: 2</span><br>
+                                                <span> Nutzfläche: 57 m²</span><br>
+                                                <span>verfügbar ab: sofort</span>
+
+                                            </p>
+                                        </div>
+                                        <div class="d-flex justify-content-end align-items-md-end pt-2 mt-auto">
+                                            <p class="compare">
+                                                <input type="checkbox" tabindex="0"
+                                                       aria-label="compare" role="checkbox"
+                                                       aria-checked="false" id="vergleichen1">
+                                                <label for="vergleichen1">Wohnung vergleichen</label>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div onclick="window.location = 'search-result.html'"
+                                         class="col-md-4 d-none d-md-block order-first">
+                                        <img class="rounded" width="100%" height="100%"
+                                             src="assets/DERFFLINGERSTRASSE_BAUTAFEL_GELB_bearb-se_wiese%20grün_kl.jpg"
+                                             alt="Picture">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-12 filterergebnis mb-4" >
-                            <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
-                                 tabindex="0" aria-label="Filterergebnis">
-                                <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
-                                    <div onclick="window.location = 'search-result.html'">
-                                        <small class="card-text">Wohnung mieten</small>
-                                        <h3  class="font-weight-bold">Dauphinestraße 194a</h3>
-                                        <p class="card-text">
-                                            <span>Zimmer: 2</span><br>
-                                            <span> Nutzfläche: 57 m²</span><br>
-                                            <span>verfügbar ab: sofort</span>
+                            <div class="col-12 filterergebnis mb-4">
+                                <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
+                                     tabindex="0" aria-label="Filterergebnis">
+                                    <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
+                                        <div onclick="window.location = 'search-result.html'">
+                                            <small class="card-text">Wohnung mieten</small>
+                                            <h3 class="font-weight-bold">Dauphinestraße 194a</h3>
+                                            <p class="card-text">
+                                                <span>Zimmer: 2</span><br>
+                                                <span> Nutzfläche: 57 m²</span><br>
+                                                <span>verfügbar ab: sofort</span>
 
-                                        </p>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex justify-content-end align-items-md-end pt-2 mt-auto">
+                                            <p class="compare">
+                                                <input type="checkbox" tabindex="0"
+                                                       aria-label="compare" role="checkbox"
+                                                       aria-checked="false" id="vergleichen2">
+                                                <label for="vergleichen2">Wohnung vergleichen</label>
+
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="d-flex justify-content-end align-items-md-end pt-2 mt-auto">
-                                        <p class="compare">
-                                            <input type="checkbox" tabindex="0"
-                                                   aria-label="compare" role="checkbox"
-                                                   aria-checked="false" id="vergleichen2">
-                                            <label for="vergleichen1">Wohnung vergleichen</label>
-
-                                        </p>
+                                    <div onclick="window.location = 'search-result.html'"
+                                         class="col-md-4 d-none d-md-block order-first">
+                                        <img class="rounded" width="100%" height="100%"
+                                             src="assets/Visualisierung%20Schubertstraße%2022_18_04%202019%20%2011%2014%20PoEG%20Neu%20Gwg%20-%20Bild21_rgb_web.jpg"
+                                             alt="Picture">
                                     </div>
-                                </div>
-                                <div onclick="window.location = 'search-result.html'" class="col-md-4 d-none d-md-block order-first">
-                                    <img class="rounded" width="100%" height="100%" src="assets/Visualisierung%20Schubertstraße%2022_18_04%202019%20%2011%2014%20PoEG%20Neu%20Gwg%20-%20Bild21_rgb_web.jpg"
-                                         alt="Picture">
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12 filterergebnis mb-4" >
-                            <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
-                                 tabindex="0" aria-label="Filterergebnis">
-                                <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
-                                    <div onclick="window.location = 'search-result.html'">
-                                        <small class="card-text">Wohnung mieten</small>
-                                        <h3  class="font-weight-bold">Dauphinestraße 194a</h3>
-                                        <p class="card-text">
-                                            <span>Zimmer: 2</span><br>
-                                            <span> Nutzfläche: 57 m²</span><br>
-                                            <span>verfügbar ab: sofort</span>
+                            <div class="col-12 filterergebnis mb-4">
+                                <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
+                                     tabindex="0" aria-label="Filterergebnis">
+                                    <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
+                                        <div onclick="window.location = 'search-result.html'">
+                                            <small class="card-text">Wohnung mieten</small>
+                                            <h3 class="font-weight-bold">Dauphinestraße 194a</h3>
+                                            <p class="card-text">
+                                                <span>Zimmer: 2</span><br>
+                                                <span> Nutzfläche: 57 m²</span><br>
+                                                <span>verfügbar ab: sofort</span>
 
-                                        </p>
-                                    </div>
-                                    <div class="d-flex justify-content-end align-items-md-end pt-2 mt-auto">
-                                        <p class="compare">
-                                            <input type="checkbox" tabindex="0"
-                                                   aria-label="compare" role="checkbox"
-                                                   aria-checked="false" id="vergleichen3">
-                                            <label for="vergleichen1">Wohnung vergleichen</label>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex justify-content-end align-items-md-end pt-2 mt-auto">
+                                            <p class="compare">
+                                                <input type="checkbox" tabindex="0"
+                                                       aria-label="compare" role="checkbox"
+                                                       aria-checked="false" id="vergleichen3">
+                                                <label for="vergleichen3">Wohnung vergleichen</label>
 
-                                        </p>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div onclick="window.location = 'search-result.html'" class="col-md-4 d-none d-md-block order-first">
-                                    <img class="rounded" width="100%" height="100%" src="assets/stadtblick-ll_b3d-magdalena_cam01-03_06.04.2017_web.jpg"
-                                         alt="Picture">
+                                    <div onclick="window.location = 'search-result.html'"
+                                         class="col-md-4 d-none d-md-block order-first">
+                                        <img class="rounded" width="100%" height="100%"
+                                             src="assets/stadtblick-ll_b3d-magdalena_cam01-03_06.04.2017_web.jpg"
+                                             alt="Picture">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12 filterergebnis mb-4" >
-                            <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
-                                 tabindex="0" aria-label="Filterergebnis">
-                                <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
-                                    <div onclick="window.location = 'search-result.html'">
-                                        <small class="card-text">Wohnung mieten</small>
-                                        <h3  class="font-weight-bold">Dauphinestraße 194a</h3>
-                                        <p class="card-text">
-                                            <span>Zimmer: 2</span><br>
-                                            <span> Nutzfläche: 57 m²</span><br>
-                                            <span>verfügbar ab: sofort</span>
+                            <div class="col-12 filterergebnis mb-4">
+                                <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
+                                     tabindex="0" aria-label="Filterergebnis Nr 4">
+                                    <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
+                                        <div onclick="window.location = 'search-result.html'">
+                                            <small class="card-text">Wohnung mieten</small>
+                                            <h3 class="font-weight-bold">Dauphinestraße 194a</h3>
+                                            <p class="card-text">
+                                                <span>Zimmer: 2</span><br>
+                                                <span> Nutzfläche: 57 m²</span><br>
+                                                <span>verfügbar ab: sofort</span>
 
-                                        </p>
-                                    </div>
-                                    <div class="d-flex justify-content-end align-items-md-end pt-2 mt-auto">
-                                        <p class="compare">
-                                            <input type="checkbox" tabindex="0"
-                                                   aria-label="compare" role="checkbox"
-                                                   aria-checked="false" id="vergleichen4">
-                                            <label for="vergleichen1">Wohnung vergleichen</label>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex justify-content-end align-items-md-end pt-2 mt-auto">
+                                            <p class="compare">
+                                                <input type="checkbox" tabindex="0"
+                                                       aria-labell="vergleichen" role="checkbox"
+                                                       aria-checked="false" id="vergleichen4">
+                                                <label for="vergleichen4">Wohnung vergleichen</label>
 
-                                        </p>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div onclick="window.location = 'search-result.html'" class="col-md-4 d-none d-md-block order-first">
-                                    <img class="rounded" width="100%" height="100%" src="assets/161010_GWG-AUHIRSCHGASSE-M.jpg"
-                                         alt="Picture">
+                                    <div onclick="window.location = 'search-result.html'"
+                                         class="col-md-4 d-none d-md-block order-first">
+                                        <img class="rounded" width="100%" height="100%"
+                                             src="assets/161010_GWG-AUHIRSCHGASSE-M.jpg"
+                                             alt="Picture">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 pr-md-0" id="maps">
+                        <iframe title="Google Maps"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2656.5802205053287!2d14.28936961590652!3d48.25320767923286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773963c8b11b297%3A0x83566ada65ed96c6!2sDauphinestra%C3%9Fe%20194a%2C%204030%20Linz!5e0!3m2!1sde!2sat!4v1596449451427!5m2!1sde!2sat"
+                                width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
+                                aria-hidden="false" tabindex="0" class="rounded"></iframe>
 
                     </div>
-                </div>
-                <div class="col-lg-4 pr-md-0" id="maps">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2656.5802205053287!2d14.28936961590652!3d48.25320767923286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773963c8b11b297%3A0x83566ada65ed96c6!2sDauphinestra%C3%9Fe%20194a%2C%204030%20Linz!5e0!3m2!1sde!2sat!4v1596449451427!5m2!1sde!2sat"
-                            width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
-                            aria-hidden="false" tabindex="0" class="rounded"></iframe>
 
                 </div>
 
             </div>
 
-        </div>
-
-        <!--Suchfilter-->
-        <div class="col-lg-4 order-first">
-            <div class="bg-light-red p-3">
-                <form>
-                    <fieldset class="form-group px-2">
-                        <div class="row">
-                            <legend class="col-form-label col-sm-12 pt-0 px-0 text-uppercase">Bezirk / Viertel</legend>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bezirke" id="alleStadtteile"
-                                       value="bezirk1" checked>
-                                <label class="form-check-label" for="alleStadtteile">
-                                    Alle Stadtteile
-                                </label>
-                            </div>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bezirke" id="Auwiesen"
-                                       value="bezirk2">
-                                <label class="form-check-label" for="Auwiesen">
-                                    Auwiesen
-                                </label>
-                            </div>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bezirke" id="Ebelsberg"
-                                       value="bezirk3">
-                                <label class="form-check-label" for="Ebelsberg">
-                                    Ebelsberg
-                                </label>
-                            </div>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bezirke" id="Franckviertel"
-                                       value="bezirk4">
-                                <label class="form-check-label" for="Franckviertel">
-                                    Franckviertel
-                                </label>
-                            </div>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bezirke" id="Kleinmünchen"
-                                       value="bezirk5">
-                                <label class="form-check-label" for="Kleinmünchen">
-                                    Kleinmünchen
-                                </label>
-                            </div>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bezirke" id="Innenstadt"
-                                       value="bezirk6">
-                                <label class="form-check-label" for="Innenstadt">
-                                    Innenstadt
-                                </label>
-                            </div>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bezirke" id="Neue Heimat"
-                                       value="bezirk7">
-                                <label class="form-check-label" for="Neue Heimat">
-                                    Neue Heimat
-                                </label>
-                            </div>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bezirke" id="Pichling"
-                                       value="bezirk8">
-                                <label class="form-check-label" for="Pichling">
-                                    Pichling
-                                </label>
-                            </div>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bezirke" id="Urfahr"
-                                       value="bezirk9">
-                                <label class="form-check-label" for="Urfahr">
-                                    Urfahr
-                                </label>
-                            </div>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bezirke" id="Zöhrdorf"
-                                       value="bezirk10">
-                                <label class="form-check-label" for="Zöhrdorf">
-                                    Zöhrdorf
-                                </label>
-                            </div>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bezirke" id="auserhalb"
-                                       value="bezirk10">
-                                <label class="form-check-label" for="auserhalb">
-                                    Außerhalb Linz
-                                </label>
-                            </div>
-
-                        </div>
-                    </fieldset>
-
-
-                    <fieldset class="form-group px-2">
-                        <div class="row">
-                            <legend class="col-form-label col-sm-12 pt-0 px-0 text-uppercase"
-                            aria-labelledby="Miete und Kaufpreis bestimmen">Miete / Kaufpreis</legend>
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="form-group px-2">
-                        <div class="row">
-                            <legend class="col-form-label col-sm-12 pt-0 px-0 text-uppercase"
-                            aria-labelledby="Minimale und Maximale Fläche angeben">Fläche</legend>
-                            <!---NEUER SLIDER--->
-                                     <div class="slidercss">
-                            <div data-role="rangeslider">
-                                <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
-                                <label for="price-max">Price:</label>
-                                <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000">
-                            </div>
-                                     </div>
-
-                            <!--
-                                                        <input type="range" class="multirange" data-drag-middle multiple value="100,80"/>
-                                                        <div class="selector">
-                                                            <div class="price-slider">
-                                                                <div id="slider-range"
-                                                                     class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
-                                                                    <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
-                                                                    <span tabindex="0"
-                                                                          class="ui-slider-handle ui-corner-all ui-state-default"></span><span
-                                                                        tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
-                                                                </div>
-                                                                <span id="min-area" data-currency="€" class="slider-area">0</span> <span
-                                                                    class="seperator">-</span> <span id="max-area" data-currency="m²" data-max="500"
-                                                                                                     class="slider-price">500</span>
-                                                            </div>
-                                                        </div>-->
-
-
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="form-group px-2">
-                        <div class="row">
-                            <legend class="col-form-label col-sm-12 pt-0 px-0 text-uppercase"
-                            aria-labelledby="Raumanzahl bestimmen">Raumanzahl</legend>
-                        </div>
-                    </fieldset>
-                    <fieldset class="form-group px-2">
-                        <div class="row">
-                            <legend class="col-form-label col-sm-12 pt-0 px-0 text-uppercase"
-                            aria-labelledby="Bautyp angeben">Bautyp</legend>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bautyp" id="Altbau"
-                                       value="bautyp1" aria-labelledby="Altbau">
-                                <label class="form-check-label" for="Altbau">
-                                    Altbau
-                                </label>
-                            </div>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bautyp" id="Neubau"
-                                       value="bautyp2" aria-labelledby="Neubau">
-                                <label class="form-check-label" for="Neubau">
-                                    Neubau
-                                </label>
-                            </div>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bautyp" id="Erstbezug"
-                                       value="bautyp3" aria-labelledby="Erstbezug">
-                                <label class="form-check-label" for="Erstbezug">
-                                    Erstbezug
-                                </label>
-                            </div>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bautyp" id="Reihenhaus"
-                                       value="bautyp4">
-                                <label class="form-check-label" for="Reihenhaus">
-                                    Reihenhaus
-                                </label>
-                            </div>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bautyp" id="Maisonette"
-                                       value="bautyp5" aria-labelledby="Maisonette">
-                                <label class="form-check-label" for="Maisonette">
-                                    Maisonette
-                                </label>
-                            </div>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bautyp" id="Oberstesgeschoss"
-                                       value="bautyp6" aria-labelledby="Oberstes Geschoß">
-                                <label class="form-check-label" for="Oberstesgeschoss">
-                                    Oberstes Geschoß
-                                </label>
-                            </div>
-                            <div class="form-check col-6 py-1">
-                                <input class="form-check-input" type="checkbox" name="bautyp" id="Mansarde"
-                                       value="bautyp7" aria-labelledby="Mansarde oder Dachgeschoß">
-                                <label class="form-check-label" for="Mansarde" >
-                                    Mansarde/Dachgeschoß
-                                </label>
-                            </div>
-
-
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="form-group px-2">
-                        <div class="row">
-                            <legend class="col-form-label col-sm-12 pt-0 px-0 text-uppercase">Freifläche</legend>
-                            <div class="col-sm-12">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="freiflaeche" id="Balkon"
-                                           value="freiflaeche1" aria-labelledby="Balkon">
-                                    <label class="form-check-label" for="Balkon">
-                                        Balkon
+            <!--Suchfilter-->
+            <div class="col-lg-4 order-first">
+                <div class="bg-light-red p-lg-5 p-4 filter-erweitert">
+                    <form >
+                        <fieldset class="form-group py-1">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-12 px-lg-0 text-uppercase">Bezirk / Viertel
+                                </legend>
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bezirke" id="alleStadtteile"
+                                           value="bezirk1" checked>
+                                    <label class="form-check-label" for="alleStadtteile">
+                                        Alle Stadtteile
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="freiflaeche" id="Loggia"
-                                           value="freiflaeche2" aria-labelledby="Loggia">
-                                    <label class="form-check-label" for="Loggia">
-                                        Loggia
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bezirke" id="Auwiesen"
+                                           value="bezirk2">
+                                    <label class="form-check-label" for="Auwiesen">
+                                        Auwiesen
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="freiflaeche" id="Garten"
-                                           value="freiflaeche3" aria-labelledby="Garten">
-                                    <label class="form-check-label" for="Garten">
-                                        Garten
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bezirke" id="Ebelsberg"
+                                           value="bezirk3">
+                                    <label class="form-check-label" for="Ebelsberg">
+                                        Ebelsberg
                                     </label>
                                 </div>
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bezirke" id="Franckviertel"
+                                           value="bezirk4">
+                                    <label class="form-check-label" for="Franckviertel">
+                                        Franckviertel
+                                    </label>
+                                </div>
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bezirke" id="Kleinmünchen"
+                                           value="bezirk5">
+                                    <label class="form-check-label" for="Kleinmünchen">
+                                        Kleinmünchen
+                                    </label>
+                                </div>
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bezirke" id="Innenstadt"
+                                           value="bezirk6">
+                                    <label class="form-check-label" for="Innenstadt">
+                                        Innenstadt
+                                    </label>
+                                </div>
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bezirke" id="Neue Heimat"
+                                           value="bezirk7">
+                                    <label class="form-check-label" for="Neue Heimat">
+                                        Neue Heimat
+                                    </label>
+                                </div>
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bezirke" id="Pichling"
+                                           value="bezirk8">
+                                    <label class="form-check-label" for="Pichling">
+                                        Pichling
+                                    </label>
+                                </div>
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bezirke" id="Urfahr"
+                                           value="bezirk9">
+                                    <label class="form-check-label" for="Urfahr">
+                                        Urfahr
+                                    </label>
+                                </div>
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bezirke" id="Zöhrdorf"
+                                           value="bezirk10">
+                                    <label class="form-check-label" for="Zöhrdorf">
+                                        Zöhrdorf
+                                    </label>
+                                </div>
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bezirke" id="auserhalb"
+                                           value="bezirk10">
+                                    <label class="form-check-label" for="auserhalb">
+                                        Außerhalb Linz
+                                    </label>
+                                </div>
+
                             </div>
+                        </fieldset>
 
 
-                        </div>
-                    </fieldset>
+                        <fieldset class="form-group px-2">
+                           <!-- <div class="row">
+                                <legend class="col-form-label col-sm-12 pt-0 px-0 text-uppercase"
+                                        aria-label="Miete und Kaufpreis bestimmen">Miete / Kaufpreis
+                                </legend>
+                                <input type="range" name="price-min" id="kaufpreis" value="200" min="0" max="1000">
+                            </div>-->
+                        </fieldset>
 
-                    <fieldset class="form-group px-2">
-                        <div class="row">
-                            <legend class="col-form-label col-sm-12 pt-0 px-0 text-uppercase">Ausstattung</legend>
-                            <div class="col-sm-12">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="ausstattung" id="lift"
-                                           value="ausstattung1" aria-labelledby="Lift">
-                                    <label class="form-check-label" for="lift">
-                                        Lift
-                                    </label>
+                        <fieldset class="form-group px-2">
+                            <div class="row">
+                                <div data-role="page" id="page1">
+                                <legend class="col-form-label col-sm-12 px-0 text-uppercase"
+                                        aria-label="Minimalen und maximalen Preis angeben">Preis (in €)
+                                </legend>
+
+                                    <div data-role="rangeslider" data-mini="true" >
+                                        <label for="minpreis" class="sr-only">Angabe für minimalen Preis </label>
+                                        <input name="minpreis" id="minpreis" min="100" max="5000" value="150" type="range">
+                                        <label for="maxpreis" class="sr-only">Angabe für maximalen Preis</label>
+                                        <input name="maxpreis" id="maxpreis" min="100" max="5000" value="3000" type="range">
+                                    </div>
+
+
+                                <legend class="col-form-label col-sm-12 px-0 text-uppercase"
+                                        aria-label="Minimale und Maximale Fläche angeben">Fläche
+                                </legend>
+
+
+                                    <div data-role="rangeslider" data-mini="true" >
+                                        <label for="range-1a" class="sr-only">Angabe für minimale Fläche </label>
+                                        <input name="range-1a" id="range-1a" min="0" max="500" value="50" type="range">
+                                        <label for="range-1b" class="sr-only">Angabe für maximale Fläche</label>
+                                        <input name="range-1b" id="range-1b" min="0" max="500" value="450" type="range">
+                                    </div>
+
+
+
+                                <!---NEUER SLIDER--->
+                               <!-- <div class="slidercss">
+                                    <div data-role="rangeslider">
+                                        <input type="range" name="price-min" id="price-min" value="200" min="0"
+                                               max="1000">
+                                        <label for="price-max">Price:</label>
+                                        <input type="range" name="price-max" id="price-max" value="800" min="0"
+                                               max="1000">
+                                    </div>
+                                </div>-->
+                               <!-- <p>
+                                    <label for="amount">Price range:</label>
+                                    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                                </p>
+
+                                <div id="slider-range"></div>-->
+
+                                <legend class="col-form-label col-sm-12 px-0 text-uppercase"
+                                        aria-label="Minimale und Maximale Fläche angeben">Raumanzahl
+                                </legend>
+                                    <div data-role="rangeslider" data-mini="true" >
+                                        <label for="range-2a" class="sr-only">Angabe für minimale Raumanzahl</label>
+                                        <input name="range-1a" id="range-2a" min="0" max="10" value="2" type="range">
+                                        <label for="range-2b" class="sr-only">Angabe für Maximale Raumanzahl</label>
+                                        <input name="range-1b" id="range-2b" min="0" max="10" value="9" type="range">
+                                    </div>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="ausstattung"
-                                           id="Seniorenwohung"
-                                           value="ausstattung2" aria-labelledby="Seniorenwohung">
-                                    <label class="form-check-label" for="Seniorenwohung">
-                                        Seniorenwohung
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="ausstattung"
-                                           id="PKW-Abestellplatz"
-                                           value="ausstattung3" aria-labelledby="PKW-Abestellplatz">
-                                    <label class="form-check-label" for="PKW-Abestellplatz">
-                                        PKW-Abestellplatz
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="ausstattung" id="Kueche"
-                                           value="ausstattung4" aria-labelledby="Küche">
-                                    <label class="form-check-label" for="Kueche">
-                                        Küche möbliert
-                                    </label>
-                                </div>
+
                             </div>
-
-
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="form-group">
-                        <div class="row">
-                            <legend class="col-form-label col-sm-12 pt-0 text-uppercase">Verfügbarkeit</legend>
-                            <div class="col-sm-12">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="verfuegbarkeit" id="jemonat"
-                                           value="verfügbar" aria-labelledby="Verfügbarkeit je Monat">
-                                    <label class="form-check-label" for="jemonat">
-                                        je Monat
+                        </fieldset>
+                        <fieldset class="form-group px-2">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-12 px-0 text-uppercase">Bautyp</legend>
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bautyp" id="Altbau"
+                                           value="bautyp1" aria-label="Altbau">
+                                    <label class="form-check-label" for="Altbau">
+                                        Altbau
                                     </label>
                                 </div>
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bautyp" id="Neubau"
+                                           value="bautyp2" aria-labelledby="Neubau">
+                                    <label class="form-check-label" for="Neubau">
+                                        Neubau
+                                    </label>
+                                </div>
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bautyp" id="Erstbezug"
+                                           value="bautyp3" aria-labelledby="Erstbezug">
+                                    <label class="form-check-label" for="Erstbezug">
+                                        Erstbezug
+                                    </label>
+                                </div>
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bautyp" id="Reihenhaus"
+                                           value="bautyp4">
+                                    <label class="form-check-label" for="Reihenhaus">
+                                        Reihenhaus
+                                    </label>
+                                </div>
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bautyp" id="Maisonette"
+                                           value="bautyp5" aria-labelledby="Maisonette">
+                                    <label class="form-check-label" for="Maisonette">
+                                        Maisonette
+                                    </label>
+                                </div>
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bautyp" id="Oberstesgeschoss"
+                                           value="bautyp6" aria-label="Oberstes Geschoß">
+                                    <label class="form-check-label" for="Oberstesgeschoss">
+                                        Oberstes Geschoß
+                                    </label>
+                                </div>
+                                <div class="form-check col-6 py-1">
+                                    <input class="form-check-input" type="checkbox" name="bautyp" id="Mansarde"
+                                           value="bautyp7" aria-label="Mansarde oder Dachgeschoß">
+                                    <label class="form-check-label" for="Mansarde">
+                                        Mansarde/Dachgeschoß
+                                    </label>
+                                </div>
+
+
                             </div>
+                        </fieldset>
+
+                        <fieldset class="form-group px-2">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-12 px-0 text-uppercase">Freifläche</legend>
+                                <div class="col-sm-12 px-0">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="freiflaeche" id="Balkon"
+                                               value="freiflaeche1" aria-labelledby="Balkon">
+                                        <label class="form-check-label" for="Balkon">
+                                            Balkon
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="freiflaeche" id="Loggia"
+                                               value="freiflaeche2" aria-labelledby="Loggia">
+                                        <label class="form-check-label" for="Loggia">
+                                            Loggia
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="freiflaeche" id="Garten"
+                                               value="freiflaeche3" aria-labelledby="Garten">
+                                        <label class="form-check-label" for="Garten">
+                                            Garten
+                                        </label>
+                                    </div>
+                                </div>
 
 
-                        </div>
-                    </fieldset>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-group px-2">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-12 px-0 text-uppercase">Ausstattung</legend>
+                                <div class="col-sm-12 px-0">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="ausstattung" id="Lift"
+                                               value="ausstattung1" aria-labelledby="Lift">
+                                        <label class="form-check-label" for="Lift">
+                                            Lift
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="ausstattung"
+                                               id="Seniorenwohung"
+                                               valuere="ausstattung2" aria-labelledby="Seniorenwohung">
+                                        <label class="form-check-label" for="Seniorenwohung">
+                                            Seniorenwohung
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="ausstattung"
+                                               id="PKW-Abestellplatz"
+                                               value="ausstattung3" aria-labelledby="PKW-Abestellplatz">
+                                        <label class="form-check-label" for="PKW-Abestellplatz">
+                                            PKW-Abestellplatz
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="ausstattung" id="Kueche"
+                                               value="ausstattung4" aria-label="Küche">
+                                        <label class="form-check-label" for="Kueche">
+                                            Küche möbliert
+                                        </label>
+                                    </div>
+                                </div>
 
 
-                </form>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-12 px-0 text-uppercase">Verfügbarkeit</legend>
+                                <div class="col-sm-12 px-0">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="verfuegbarkeit"
+                                               id="jemonat"
+                                               value="verfügbar" aria-label="Verfügbarkeit je Monat">
+                                        <label class="form-check-label" for="jemonat">
+                                            je Monat
+                                        </label>
+                                    </div>
+                                </div>
 
 
+                            </div>
+                        </fieldset>
+
+
+                    </form>
+
+
+                </div>
             </div>
         </div>
+
+
     </div>
-
-
 </div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-<footer class="bg-dark p-5 text-white">
-    <div class="container">
-        <!-- <div class="row">
-             <div class="col-md-3">
-                 <h2 class="text-uppercase">Text</h2>
-                 <p>Text</p>
-             </div>
-             <div class="col-md-3">
-                 <h2 class="text-uppercase">Text</h2>
-                 <p>Text</p>
-             </div>
-             <div class="col-md-3">
-                 <h2 class="text-uppercase">Text</h2>
-                 <p>Text</p>
-             </div>
-             <div class="col-md-3">
-                 <h2 class="text-uppercase">Text</h2>
-                 <p>Text</p>
-             </div>
-             <div class="col-12">
-                 <p>Text</p>
-             </div>
-         </div>-->
+<footer class="bg-dark py-4 px-sm-1 px-md-3 px-lg-5 text-white">
+    <div class="container-fluid">
+
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-5 row-cols-md-3">
+            <div class="col mb-3">
+                <h2 class="text-transform-none pb-3">GWG - Gemeinnützige Wohnungsgesellschaft <br> der Stadt Linz GmbH
+                </h2>
+                <p>
+                    Eisenhandstraße 30
+                    <br>
+                    4021 Linz <br>
+                    Telefon: 07327613 <br>
+                    FAX: 07327613 33314 <br>
+                    gwginfo@gwg-linz.at
+                </p>
+            </div>
+            <div class="col mb-3">
+                <h3 class="pb-3">Unternehmen</h3>
+                <ul>
+                    <li><a href="#">Über uns</a></li>
+                    <li><a href="#">Karriere</a></li>
+                    <li><a href="#">Neuigkeiten & Presse</a></li>
+                </ul>
+            </div>
+            <div class="col mb-3">
+                <h3 class="pb-3">Baumanagement</h3>
+                <ul>
+                    <li><a href="#">Baumanagement</a></li>
+                    <li><a href="#">Architekten&shynwettbewerb</a></li>
+                    <li><a href="#">Ausschreibungen</a></li>
+                </ul>
+            </div>
+            <div class="col mb-3">
+                <h3 class="pb-3">Kontakt</h3>
+                <ul>
+                    <li><a href="#">Anfahrt</a></li>
+                    <li><a href="#">Ansprechpersonen</a></li>
+                    <li><a href="#">Anmeldung für Wohnung</a></li>
+                </ul>
+            </div>
+            <div class="col mb-3">
+                <img src="assets/LINZ_LOGO_NEU---2m_weiss_magenta_neu.png" width="auto" height="65px"
+                     alt="Linz verändert"
+                     class="mb-3"
+                >
+                <p class="font-weight-bold">Unternehmensgruppe Stadt Linz <br>
+                    innovationshauptplatz.linz.at
+                </p>
+            </div>
+
+        </div>
     </div>
 </footer>
 </body>

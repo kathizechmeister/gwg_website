@@ -131,50 +131,9 @@
 </div>
 
 <div role="main">
-    <div class="container-fluid main-content mb-md-3 ">
-        <div class="row d-flex mx-lg-4 px-sm-1 ">
-            <a href="#" class=" p-2 mr-auto" aria-label="zurück zum Suchergebnis">
-                <small>
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle"
-                         fill="currentColor"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                        <path fill-rule="evenodd"
-                              d="M8.354 11.354a.5.5 0 0 0 0-.708L5.707 8l2.647-2.646a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708 0z"/>
-                        <path fill-rule="evenodd" d="M11.5 8a.5.5 0 0 0-.5-.5H6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5z"/>
-                    </svg>
-                    <span class="underline">zurück zum Suchergebnis</span>
 
-                </small>
-            </a>
-            <a href="#" class="p-2 " aria-label="vergleichen">
-                <small>
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-square" fill="currentColor"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                              d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                    </svg>
-                    <span class="underline">vergleichen</span>
-                </small>
-            </a>
-            <a class="p-2 " aria-label="teilen" href="#">
-                <small>
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-share" fill="currentColor"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                              d="M11.724 3.947l-7 3.5-.448-.894 7-3.5.448.894zm-.448 9l-7-3.5.448-.894 7 3.5-.448.894z"/>
-                        <path fill-rule="evenodd"
-                              d="M13.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 10a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm-11-6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
-                    </svg>
-                    <span class="underline">teilen</span>
-                </small>
-            </a>
 
-        </div>
-    </div>
-
-    <div class="container-fluid bg-white px-lg-5 px-md-3">
+    <div class="container-fluid bg-white main-content px-lg-5 px-md-3">
         <div class="row mt-md-4 d-flex align-items-stretch">
 
             <div class="col-lg-8 mt-2 ">
@@ -222,8 +181,8 @@
             <div class="col-lg-4 order-lg-first mt-2">
                 <div class="bg-light-red p-lg-5 p-4 mb-3 mt-md-3 mt-lg-0">
                     <h2>Gewählte Filter</h2>
-                    <div class="row">
-                        <div class="col-6" tabindex="0" aria-label="gewählter Filter">
+                    <div class="row choosenfilter">
+                       <!-- <div class="col-6 filter" tabindex="0" aria-label="gewählter Filter">
                             <p>
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
                                      fill="currentColor"
@@ -235,11 +194,11 @@
                                     <path fill-rule="evenodd" fill="#CD1719"
                                           d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
                                 </svg>
-                                Alle Viertel
+                                <span class="labelText">Alle Viertel</span>
                             </p>
                         </div>
 
-                        <div class="col-6" tabindex="0" aria-label="gewählter Filter">
+                        <div class="col-6 filter" tabindex="0" aria-label="gewählter Filter">
                             <p>
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
                                      fill="currentColor"
@@ -251,11 +210,11 @@
                                     <path fill-rule="evenodd" fill="#CD1719"
                                           d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
                                 </svg>
-                                Alle Viertel
+                                <span class="labelText">Zöhrdorf</span>
                             </p>
                         </div>
 
-                        <div class="col-6" tabindex="0" aria-label="gewählter Filter">
+                        <div class="col-6 filter" tabindex="0" aria-label="gewählter Filter">
                             <p>
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
                                      fill="currentColor"
@@ -271,7 +230,7 @@
                             </p>
                         </div>
 
-                        <div class="col-6" tabindex="0" aria-label="gewählter Filter">
+                        <div class="col-6 filter" tabindex="0" aria-label="gewählter Filter">
                             <p>
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
                                      fill="currentColor"
@@ -287,7 +246,7 @@
                             </p>
                         </div>
 
-                        <div class="col-6" tabindex="0" aria-label="gewählter Filter">
+                        <div class="col-6 filter" tabindex="0" aria-label="gewählter Filter">
                             <p>
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
                                      fill="currentColor"
@@ -301,7 +260,7 @@
                                 </svg>
                                 Lift
                             </p>
-                        </div>
+                        </div>-->
 
 
                     </div>
@@ -524,82 +483,82 @@
             <!--Suchfilter-->
             <div class="col-lg-4 order-first">
                 <div class="bg-light-red p-lg-5 p-4 filter-erweitert">
-                    <form >
+                    <form id="erweiterteFilter" >
                         <fieldset class="form-group py-1">
                             <div class="row">
                                 <legend class="col-form-label col-sm-12 px-lg-0 text-uppercase">Bezirk / Viertel
                                 </legend>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="alleStadtteile"
                                            value="bezirk1" checked>
                                     <label class="form-check-label" for="alleStadtteile">
                                         Alle Stadtteile
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Auwiesen"
                                            value="bezirk2">
                                     <label class="form-check-label" for="Auwiesen">
                                         Auwiesen
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Ebelsberg"
                                            value="bezirk3">
                                     <label class="form-check-label" for="Ebelsberg">
                                         Ebelsberg
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Franckviertel"
                                            value="bezirk4">
                                     <label class="form-check-label" for="Franckviertel">
                                         Franckviertel
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Kleinmünchen"
                                            value="bezirk5">
                                     <label class="form-check-label" for="Kleinmünchen">
                                         Kleinmünchen
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Innenstadt"
                                            value="bezirk6">
                                     <label class="form-check-label" for="Innenstadt">
                                         Innenstadt
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Neue Heimat"
                                            value="bezirk7">
                                     <label class="form-check-label" for="Neue Heimat">
                                         Neue Heimat
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Pichling"
                                            value="bezirk8">
                                     <label class="form-check-label" for="Pichling">
                                         Pichling
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Urfahr"
                                            value="bezirk9">
                                     <label class="form-check-label" for="Urfahr">
                                         Urfahr
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Zöhrdorf"
                                            value="bezirk10">
                                     <label class="form-check-label" for="Zöhrdorf">
                                         Zöhrdorf
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="auserhalb"
                                            value="bezirk10">
                                     <label class="form-check-label" for="auserhalb">
@@ -640,7 +599,7 @@
                                 </legend>
 
 
-                                    <div data-role="rangeslider" data-mini="true" >
+                                    <div data-role="rangeslider" data-mini="true" class="filter">
                                         <label for="range-1a" class="sr-only">Angabe für minimale Fläche </label>
                                         <input name="range-1a" id="range-1a" min="0" max="500" value="50" type="range">
                                         <label for="range-1b" class="sr-only">Angabe für maximale Fläche</label>
@@ -649,27 +608,10 @@
 
 
 
-                                <!---NEUER SLIDER--->
-                               <!-- <div class="slidercss">
-                                    <div data-role="rangeslider">
-                                        <input type="range" name="price-min" id="price-min" value="200" min="0"
-                                               max="1000">
-                                        <label for="price-max">Price:</label>
-                                        <input type="range" name="price-max" id="price-max" value="800" min="0"
-                                               max="1000">
-                                    </div>
-                                </div>-->
-                               <!-- <p>
-                                    <label for="amount">Price range:</label>
-                                    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-                                </p>
-
-                                <div id="slider-range"></div>-->
-
                                 <legend class="col-form-label col-sm-12 px-0 text-uppercase"
                                         aria-label="Minimale und Maximale Fläche angeben">Raumanzahl
                                 </legend>
-                                    <div data-role="rangeslider" data-mini="true" >
+                                    <div data-role="rangeslider" data-mini="true" class="filter" >
                                         <label for="range-2a" class="sr-only">Angabe für minimale Raumanzahl</label>
                                         <input name="range-1a" id="range-2a" min="0" max="10" value="2" type="range">
                                         <label for="range-2b" class="sr-only">Angabe für Maximale Raumanzahl</label>
@@ -682,49 +624,49 @@
                         <fieldset class="form-group px-2">
                             <div class="row">
                                 <legend class="col-form-label col-sm-12 px-0 text-uppercase">Bautyp</legend>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Altbau"
                                            value="bautyp1" aria-label="Altbau">
                                     <label class="form-check-label" for="Altbau">
                                         Altbau
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Neubau"
                                            value="bautyp2" aria-labelledby="Neubau">
                                     <label class="form-check-label" for="Neubau">
                                         Neubau
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Erstbezug"
                                            value="bautyp3" aria-labelledby="Erstbezug">
                                     <label class="form-check-label" for="Erstbezug">
                                         Erstbezug
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Reihenhaus"
                                            value="bautyp4">
                                     <label class="form-check-label" for="Reihenhaus">
                                         Reihenhaus
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Maisonette"
                                            value="bautyp5" aria-labelledby="Maisonette">
                                     <label class="form-check-label" for="Maisonette">
                                         Maisonette
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Oberstesgeschoss"
                                            value="bautyp6" aria-label="Oberstes Geschoß">
                                     <label class="form-check-label" for="Oberstesgeschoss">
                                         Oberstes Geschoß
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1">
+                                <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Mansarde"
                                            value="bautyp7" aria-label="Mansarde oder Dachgeschoß">
                                     <label class="form-check-label" for="Mansarde">
@@ -740,21 +682,21 @@
                             <div class="row">
                                 <legend class="col-form-label col-sm-12 px-0 text-uppercase">Freifläche</legend>
                                 <div class="col-sm-12 px-0">
-                                    <div class="form-check">
+                                    <div class="form-check filter">
                                         <input class="form-check-input" type="checkbox" name="freiflaeche" id="Balkon"
                                                value="freiflaeche1" aria-labelledby="Balkon">
                                         <label class="form-check-label" for="Balkon">
                                             Balkon
                                         </label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check filter">
                                         <input class="form-check-input" type="checkbox" name="freiflaeche" id="Loggia"
                                                value="freiflaeche2" aria-labelledby="Loggia">
                                         <label class="form-check-label" for="Loggia">
                                             Loggia
                                         </label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check filter">
                                         <input class="form-check-input" type="checkbox" name="freiflaeche" id="Garten"
                                                value="freiflaeche3" aria-labelledby="Garten">
                                         <label class="form-check-label" for="Garten">
@@ -771,14 +713,14 @@
                             <div class="row">
                                 <legend class="col-form-label col-sm-12 px-0 text-uppercase">Ausstattung</legend>
                                 <div class="col-sm-12 px-0">
-                                    <div class="form-check">
+                                    <div class="form-check filter">
                                         <input class="form-check-input" type="checkbox" name="ausstattung" id="Lift"
                                                value="ausstattung1" aria-labelledby="Lift">
                                         <label class="form-check-label" for="Lift">
                                             Lift
                                         </label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check filter">
                                         <input class="form-check-input" type="checkbox" name="ausstattung"
                                                id="Seniorenwohung"
                                                valuere="ausstattung2" aria-labelledby="Seniorenwohung">
@@ -786,7 +728,7 @@
                                             Seniorenwohung
                                         </label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check filter">
                                         <input class="form-check-input" type="checkbox" name="ausstattung"
                                                id="PKW-Abestellplatz"
                                                value="ausstattung3" aria-labelledby="PKW-Abestellplatz">
@@ -794,7 +736,7 @@
                                             PKW-Abestellplatz
                                         </label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check filter">
                                         <input class="form-check-input" type="checkbox" name="ausstattung" id="Kueche"
                                                value="ausstattung4" aria-label="Küche">
                                         <label class="form-check-label" for="Kueche">
@@ -811,12 +753,12 @@
                             <div class="row">
                                 <legend class="col-form-label col-sm-12 px-0 text-uppercase">Verfügbarkeit</legend>
                                 <div class="col-sm-12 px-0">
-                                    <div class="form-check">
+                                    <div class="form-check filter">
                                         <input class="form-check-input" type="checkbox" name="verfuegbarkeit"
-                                               id="jemonat"
+                                               id="absofort"
                                                value="verfügbar" aria-label="Verfügbarkeit je Monat">
-                                        <label class="form-check-label" for="jemonat">
-                                            je Monat
+                                        <label class="form-check-label" for="absofort">
+                                            ab Sofort
                                         </label>
                                     </div>
                                 </div>
@@ -840,10 +782,10 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-<footer class="bg-dark py-4 px-sm-1 px-md-3 px-lg-5 text-white">
+<footer class="bg-dark py-4 pt-6 px-sm-1 px-md-3 px-lg-5 text-white">
     <div class="container-fluid">
 
-        <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-5 row-cols-md-3">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-5 row-cols-md-3 mb-4">
             <div class="col mb-3">
                 <h2 class="text-transform-none pb-3">GWG - Gemeinnützige Wohnungsgesellschaft <br> der Stadt Linz GmbH
                 </h2>
@@ -853,8 +795,9 @@
                     4021 Linz <br>
                     Telefon: 07327613 <br>
                     FAX: 07327613 33314 <br>
-                    gwginfo@gwg-linz.at
+                    <!--gwginfo@gwg-linz.at-->
                 </p>
+                <a href="#" class="text-white font-weight-normal underline">Kontaktformular</a>
             </div>
             <div class="col mb-3">
                 <h3 class="pb-3">Unternehmen</h3>
@@ -862,6 +805,9 @@
                     <li><a href="#">Über uns</a></li>
                     <li><a href="#">Karriere</a></li>
                     <li><a href="#">Neuigkeiten & Presse</a></li>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Geschäftsbedingung</a></li>
+
                 </ul>
             </div>
             <div class="col mb-3">
@@ -891,6 +837,9 @@
             </div>
 
         </div>
+        <div class="row">
+            <p>© GWG - Gemeinnützige Wohnungsgesellschaft der Stadt Linz GmbH</p>
+        </div>
     </div>
 </footer>
 </body>
@@ -904,5 +853,5 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 <script src="./js/function.js"></script>
-<script src="./js/lightbox.js"></script>
+
 </html>

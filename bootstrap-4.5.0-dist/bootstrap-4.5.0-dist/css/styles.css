@@ -53,7 +53,7 @@ footer a {
 }
 footer li {
     list-style: none ;
-    line-height: 2rem;
+    padding-top: 20px;
 }
 
 footer li::before
@@ -337,7 +337,9 @@ h1.shadow{
     float: right;
     padding-left: 0.5rem;
 }
-
+.choosenfilter .filter {
+    cursor: pointer;
+}
 
 
 #alleBezirksfilter {display: none;}
@@ -748,10 +750,12 @@ div[slider] > input[type=range]::-ms-tooltip {
 }
 
 #lightbox img {
-    max-width: 50%;
+    max-width: 80%;
     max-height: 80%;
     padding: 4px;
 }
+
+
 
 
 
@@ -766,7 +770,7 @@ div[slider] > input[type=range]::-ms-tooltip {
    }
 
 .lightbox li {
-    height: 40vh;
+    height: 200px;
     flex-grow: 1;
     cursor: zoom-in;
 
@@ -792,7 +796,7 @@ flex-grow: 10;
 
 @media (max-aspect-ratio: 1/1) {
    .lightbox li {
-        height: 30vh;
+        height: 200px;
     }
 }
 
@@ -804,7 +808,7 @@ flex-grow: 10;
 
 @media (max-height: 480px) {
     .lightbox li {
-        height: 80vh;
+        height: 200px;
     }
 }
 
@@ -867,5 +871,45 @@ flex-grow: 10;
 }
 
 
+/******ACCORDION *************/
+
+.accordion .card-header{
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+
+}
+
+.accordion .card {
+    border: 0;
+}
+.accordion .card:hover{
+    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0) !important;
+}
+
+.accordion button {
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    color: #000000;
+}
+
+.accordion button:hover{
+    border-bottom: 1px solid #CD1719;
+    color: #CD1719;
+}
+
+.accordion > .card > .card-header{
+    margin-bottom: 0;
+}
+
+.accordion button[aria-expanded="true"]{
+    color: #CD1719;
+    border-bottom: 1px solid #CD1719;
+}
+
+.accordion .btn:focus {
+    box-shadow: 0 0 0 0rem rgba(0, 0, 0, 0);
+}
 
 

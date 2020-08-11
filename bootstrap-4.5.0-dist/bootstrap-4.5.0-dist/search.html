@@ -4,39 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-
-    <!--
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <script src="js/codejquery.js"></script>-->
-
-    <!--   <link rel="stylesheet" href="css/lightbox.css">
-       <link rel="stylesheet" href="css/multirange.css">
-       <link rel="stylesheet" href="css/deque-patterns.css">-->
-   <!-- <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-    <script>
-
-        $( function() {
-            $( "#slider-range" ).slider({
-                range: true,
-                min: 0,
-                max: 500,
-                values: [ 75, 300 ],
-                slide: function( event, ui ) {
-                    $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-                }
-            });
-            $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-                " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-        } );
-    </script>-->
-
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -56,7 +23,7 @@
     <!--NAVIGATION-->
     <nav class="navbar navbar-expand-lg navbar-light bg-white mainnavigation " aria-label="Main">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.html" onclick="window.location = 'index.html'">
                 <img src="assets/Logo.png" height="110" alt="Logo">
             </a>
 
@@ -69,7 +36,7 @@
                 <!-- navbar1 -->
                 <ul class="navbar-nav pb-2 font-weight-bold">
                     <li>
-                        <a class="nav-item nav-link px-3" href="search.html">
+                        <a class="nav-item nav-link px-3" href="search.html" onclick="window.location = 'search.html'">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -113,13 +80,13 @@
                 <!-- navbar2 -->
                 <ul class="navbar-nav navbar-expand-sm pt-2">
                     <li class="nav-item active ">
-                        <a class="nav-item nav-link px-3" href="search.html">Immobiliensuche</a>
+                        <a class="nav-item nav-link px-3" href="search.html" onclick="window.location = 'search.html'">Immobiliensuche</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-3" href="#">Bauprojekte</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link px-3" href="info.html">Rund ums Wohnen</a>
+                        <a class="nav-link px-3" href="info.html" onclick="window.location = 'info.html'">Rund ums Wohnen</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-3" href="#">Team</a>
@@ -810,7 +777,7 @@
                 <ul>
                     <li><a href="#">Über uns</a></li>
                     <li><a href="#">Karriere</a></li>
-                    <li><a href="news.html">Neuigkeiten & Presse</a></li>
+                    <li><a href="news.html" onclick="window.location = 'news.html'">Neuigkeiten & Presse</a></li>
                     <li><a href="#">Impressum</a></li>
                     <li><a href="#">Geschäftsbedingung</a></li>
 

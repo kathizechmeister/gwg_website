@@ -112,13 +112,13 @@
 
                 <!-- navbar2 -->
                 <ul class="navbar-nav navbar-expand-sm pt-2">
-                    <li class="nav-item ">
+                    <li class="nav-item active ">
                         <a class="nav-item nav-link px-3" href="search.html">Immobiliensuche</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-3" href="#">Bauprojekte</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item ">
                         <a class="nav-link px-3" href="info.html">Rund ums Wohnen</a>
                     </li>
                     <li class="nav-item">
@@ -168,13 +168,12 @@
                                     <input type="search" class="form-control form-control-md" id="Suchbegriff"
                                            placeholder="Ort, Plz, Projektname (Volltextsuche)"
                                            aria-placeholder="Ort, Plz, Projektname (Volltextsuche)"
-                                           aria-labelledby="Suchbegriff">
+                                           aria-label="Suchbegriff">
                                 </div>
                             </div>
                             <div class="form-group form-group-md col-md-3">
                                 <div class="input-group input-group-md mb-3">
-                                    <button type="submit" class="btn btn-block btn-primary text-uppercase" aria-label="Immobilien Suchen
-                                        ">
+                                    <button type="submit" class="btn btn-block btn-primary text-uppercase" aria-label="Suchen (5)">
                                         Suchen <span class="">(5)</span></button>
                                 </div>
                             </div>
@@ -303,13 +302,13 @@
                             </form>
                         </div>
                         <div class="px-md-0 ml-auto pr-lg-3  d-flex justify-content-end align-items-end">
-                            <a href="#" aria-label="gewählte Wohnungen vergleichen">
+                            <a href="#" aria-label="ausgewählte Wohnungen vergleichen">
                                 <small class="underline small">ausgewählte Wohnungen vergleichen</small>
                             </a>
                         </div>
                         <div class="px-md-0  d-flex justify-content-end align-items-end " id="toggleMaps">
                             <!--    <a onclick="toggleMaps()" data-toggle="collapse" href="#maps" role="button" aria-expanded="false" aria-controls="maps">-->
-                            <a onclick="toggleMaps()" href="#" aria-label="Karte ausblenden">
+                            <a tabindex="0" onclick="toggleMaps()" onkeydown="toggleMaps()" href="#" aria-label="Karte ausblenden">
                                 <small class="underline small">Karte ausblenden</small>
                             </a>
                         </div>
@@ -343,7 +342,8 @@
                                 <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
                                      tabindex="0" aria-label="Filterergebnis">
                                     <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
-                                        <div onclick="window.location = 'search-result.html'">
+                                        <div tabindex="0" onclick="window.location = 'search-result.html'"
+                                             onkeydown="window.location = 'search-result.html'">
                                             <small class="card-text">Wohnung mieten</small>
                                             <h3 class="font-weight-bold">Dauphinestraße 194a</h3>
                                             <p class="card-text">
@@ -356,14 +356,15 @@
                                         <div class="d-flex justify-content-end align-items-md-end pt-2 mt-auto">
                                             <p class="compare">
                                                 <input type="checkbox" tabindex="0"
-                                                       aria-label="compare" role="checkbox"
+                                                       aria-label="Wohnung 1 vergleichen" role="checkbox"
                                                        aria-checked="false" id="vergleichen1">
                                                 <label for="vergleichen1">Wohnung vergleichen</label>
 
                                             </p>
                                         </div>
                                     </div>
-                                    <div onclick="window.location = 'search-result.html'"
+                                    <div tabindex="0" onclick="window.location = 'search-result.html'"
+                                         onkeydown="window.location = 'search-result.html'"
                                          class="col-md-4 d-none d-md-block order-first">
                                         <img class="rounded" width="100%" height="100%"
                                              src="assets/DERFFLINGERSTRASSE_BAUTAFEL_GELB_bearb-se_wiese%20grün_kl.jpg"
@@ -376,7 +377,8 @@
                                 <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
                                      tabindex="0" aria-label="Filterergebnis">
                                     <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
-                                        <div onclick="window.location = 'search-result.html'">
+                                        <div tabindex="0" onclick="window.location = 'search-result.html'"
+                                        onkeydown="window.location = 'search-result.html'">
                                             <small class="card-text">Wohnung mieten</small>
                                             <h3 class="font-weight-bold">Dauphinestraße 194a</h3>
                                             <p class="card-text">
@@ -389,14 +391,15 @@
                                         <div class="d-flex justify-content-end align-items-md-end pt-2 mt-auto">
                                             <p class="compare">
                                                 <input type="checkbox" tabindex="0"
-                                                       aria-label="compare" role="checkbox"
+                                                       aria-label="Wohnung 2 vergleichen" role="checkbox"
                                                        aria-checked="false" id="vergleichen2">
                                                 <label for="vergleichen2">Wohnung vergleichen</label>
 
                                             </p>
                                         </div>
                                     </div>
-                                    <div onclick="window.location = 'search-result.html'"
+                                    <div tabindex="0" onclick="window.location = 'search-result.html'"
+                                         onkeydown="window.location = 'search-result.html'"
                                          class="col-md-4 d-none d-md-block order-first">
                                         <img class="rounded" width="100%" height="100%"
                                              src="assets/Visualisierung%20Schubertstraße%2022_18_04%202019%20%2011%2014%20PoEG%20Neu%20Gwg%20-%20Bild21_rgb_web.jpg"
@@ -408,7 +411,8 @@
                                 <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
                                      tabindex="0" aria-label="Filterergebnis">
                                     <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
-                                        <div onclick="window.location = 'search-result.html'">
+                                        <div tabindex="0" onclick="window.location = 'search-result.html'"
+                                             onkeydown="window.location = 'search-result.html'">
                                             <small class="card-text">Wohnung mieten</small>
                                             <h3 class="font-weight-bold">Dauphinestraße 194a</h3>
                                             <p class="card-text">
@@ -421,14 +425,15 @@
                                         <div class="d-flex justify-content-end align-items-md-end pt-2 mt-auto">
                                             <p class="compare">
                                                 <input type="checkbox" tabindex="0"
-                                                       aria-label="compare" role="checkbox"
+                                                       aria-label="Wohnung 3 vergleichen" role="checkbox"
                                                        aria-checked="false" id="vergleichen3">
                                                 <label for="vergleichen3">Wohnung vergleichen</label>
 
                                             </p>
                                         </div>
                                     </div>
-                                    <div onclick="window.location = 'search-result.html'"
+                                    <div tabindex="0" onclick="window.location = 'search-result.html'"
+                                         onkeydown="window.location = 'search-result.html'"
                                          class="col-md-4 d-none d-md-block order-first">
                                         <img class="rounded" width="100%" height="100%"
                                              src="assets/stadtblick-ll_b3d-magdalena_cam01-03_06.04.2017_web.jpg"
@@ -440,7 +445,8 @@
                                 <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
                                      tabindex="0" aria-label="Filterergebnis Nr 4">
                                     <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
-                                        <div onclick="window.location = 'search-result.html'">
+                                        <div tabindex="0" onclick="window.location = 'search-result.html'"
+                                             onkeydown="window.location = 'search-result.html'">
                                             <small class="card-text">Wohnung mieten</small>
                                             <h3 class="font-weight-bold">Dauphinestraße 194a</h3>
                                             <p class="card-text">
@@ -453,14 +459,15 @@
                                         <div class="d-flex justify-content-end align-items-md-end pt-2 mt-auto">
                                             <p class="compare">
                                                 <input type="checkbox" tabindex="0"
-                                                       aria-labell="vergleichen" role="checkbox"
+                                                       aria-label="Wohnung 4 vergleichen" role="checkbox"
                                                        aria-checked="false" id="vergleichen4">
                                                 <label for="vergleichen4">Wohnung vergleichen</label>
 
                                             </p>
                                         </div>
                                     </div>
-                                    <div onclick="window.location = 'search-result.html'"
+                                    <div tabindex="0" onclick="window.location = 'search-result.html'"
+                                         onkeydown="window.location = 'search-result.html'"
                                          class="col-md-4 d-none d-md-block order-first">
                                         <img class="rounded" width="100%" height="100%"
                                              src="assets/161010_GWG-AUHIRSCHGASSE-M.jpg"
@@ -488,7 +495,10 @@
             <div class="col-lg-4 order-first px-sm-0 px-lg-2 pl-0">
                 <div class="bg-light-red p-lg-5 p-4 filter-erweitert">
                     <form id="erweiterteFilter" >
+                        <legend class="sr-only">Bezirk</legend>
                         <fieldset class="form-group py-1 px-2">
+                            <legend class=" sr-only">Bezirk / Viertel
+                            </legend>
                             <div class="row">
                                 <legend class="col-form-label col-sm-12 px-lg-0 text-uppercase">Bezirk / Viertel
                                 </legend>
@@ -521,9 +531,9 @@
                                     </label>
                                 </div>
                                 <div class="form-check col-6 py-1 filter">
-                                    <input class="form-check-input" type="checkbox" name="bezirke" id="Kleinmünchen"
+                                    <input class="form-check-input" type="checkbox" name="bezirke" id="Kleinmuenchen"
                                            value="bezirk5">
-                                    <label class="form-check-label" for="Kleinmünchen">
+                                    <label class="form-check-label" for="Kleinmuenchen">
                                         Kleinmünchen
                                     </label>
                                 </div>
@@ -556,9 +566,9 @@
                                     </label>
                                 </div>
                                 <div class="form-check col-6 py-1 filter">
-                                    <input class="form-check-input" type="checkbox" name="bezirke" id="Zöhrdorf"
+                                    <input class="form-check-input" type="checkbox" name="bezirke" id="Zoehrdorf"
                                            value="bezirk10">
-                                    <label class="form-check-label" for="Zöhrdorf">
+                                    <label class="form-check-label" for="Zoehrdorf">
                                         Zöhrdorf
                                     </label>
                                 </div>
@@ -573,17 +583,8 @@
                             </div>
                         </fieldset>
 
-
                         <fieldset class="form-group px-2">
-                           <!-- <div class="row">
-                                <legend class="col-form-label col-sm-12 pt-0 px-0 text-uppercase"
-                                        aria-label="Miete und Kaufpreis bestimmen">Miete / Kaufpreis
-                                </legend>
-                                <input type="range" name="price-min" id="kaufpreis" value="200" min="0" max="1000">
-                            </div>-->
-                        </fieldset>
-
-                        <fieldset class="form-group px-2">
+                            <legend class="sr-only">Preis</legend>
                             <div class="row">
                                 <div data-role="page" id="page1">
                                 <legend class="col-form-label col-sm-12 px-0 text-uppercase"
@@ -626,8 +627,9 @@
                             </div>
                         </fieldset>
                         <fieldset class="form-group px-2">
+
+                            <legend class="col-form-label col-sm-12 px-0 text-uppercase">Bautyp</legend>
                             <div class="row">
-                                <legend class="col-form-label col-sm-12 px-0 text-uppercase">Bautyp</legend>
                                 <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Altbau"
                                            value="bautyp1" aria-label="Altbau">
@@ -637,14 +639,14 @@
                                 </div>
                                 <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Neubau"
-                                           value="bautyp2" aria-labelledby="Neubau">
+                                           value="bautyp2" aria-label="Neubau">
                                     <label class="form-check-label" for="Neubau">
                                         Neubau
                                     </label>
                                 </div>
                                 <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Erstbezug"
-                                           value="bautyp3" aria-labelledby="Erstbezug">
+                                           value="bautyp3" aria-label="Erstbezug">
                                     <label class="form-check-label" for="Erstbezug">
                                         Erstbezug
                                     </label>
@@ -658,7 +660,7 @@
                                 </div>
                                 <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Maisonette"
-                                           value="bautyp5" aria-labelledby="Maisonette">
+                                           value="bautyp5" aria-label="Maisonette">
                                     <label class="form-check-label" for="Maisonette">
                                         Maisonette
                                     </label>
@@ -683,26 +685,26 @@
                         </fieldset>
 
                         <fieldset class="form-group px-2">
+                            <legend class="col-form-label col-sm-12 px-0 text-uppercase">Freifläche</legend>
                             <div class="row">
-                                <legend class="col-form-label col-sm-12 px-0 text-uppercase">Freifläche</legend>
                                 <div class="col-sm-12 px-0">
                                     <div class="form-check filter">
                                         <input class="form-check-input" type="checkbox" name="freiflaeche" id="Balkon"
-                                               value="freiflaeche1" aria-labelledby="Balkon">
+                                               value="freiflaeche1" aria-label="Balkon">
                                         <label class="form-check-label" for="Balkon">
                                             Balkon
                                         </label>
                                     </div>
                                     <div class="form-check filter">
                                         <input class="form-check-input" type="checkbox" name="freiflaeche" id="Loggia"
-                                               value="freiflaeche2" aria-labelledby="Loggia">
+                                               value="freiflaeche2" aria-label="Loggia">
                                         <label class="form-check-label" for="Loggia">
                                             Loggia
                                         </label>
                                     </div>
                                     <div class="form-check filter">
                                         <input class="form-check-input" type="checkbox" name="freiflaeche" id="Garten"
-                                               value="freiflaeche3" aria-labelledby="Garten">
+                                               value="freiflaeche3" aria-label="Garten">
                                         <label class="form-check-label" for="Garten">
                                             Garten
                                         </label>
@@ -714,12 +716,12 @@
                         </fieldset>
 
                         <fieldset class="form-group px-2">
+                            <legend class="col-form-label col-sm-12 px-0 text-uppercase">Ausstattung</legend>
                             <div class="row">
-                                <legend class="col-form-label col-sm-12 px-0 text-uppercase">Ausstattung</legend>
                                 <div class="col-sm-12 px-0">
                                     <div class="form-check filter">
                                         <input class="form-check-input" type="checkbox" name="ausstattung" id="Lift"
-                                               value="ausstattung1" aria-labelledby="Lift">
+                                               value="ausstattung1" aria-label="Lift">
                                         <label class="form-check-label" for="Lift">
                                             Lift
                                         </label>
@@ -727,7 +729,7 @@
                                     <div class="form-check filter">
                                         <input class="form-check-input" type="checkbox" name="ausstattung"
                                                id="Seniorenwohung"
-                                               valuere="ausstattung2" aria-labelledby="Seniorenwohung">
+                                               valuere="ausstattung2" aria-label="Seniorenwohung">
                                         <label class="form-check-label" for="Seniorenwohung">
                                             Seniorenwohung
                                         </label>
@@ -735,7 +737,7 @@
                                     <div class="form-check filter">
                                         <input class="form-check-input" type="checkbox" name="ausstattung"
                                                id="PKW-Abestellplatz"
-                                               value="ausstattung3" aria-labelledby="PKW-Abestellplatz">
+                                               value="ausstattung3" aria-label="PKW-Abestellplatz">
                                         <label class="form-check-label" for="PKW-Abestellplatz">
                                             PKW-Abestellplatz
                                         </label>
@@ -754,8 +756,8 @@
                         </fieldset>
 
                         <fieldset class="form-group px-2">
+                            <legend class="col-form-label col-sm-12 px-0 text-uppercase">Verfügbarkeit</legend>
                             <div class="row">
-                                <legend class="col-form-label col-sm-12 px-0 text-uppercase">Verfügbarkeit</legend>
                                 <div class="col-sm-12 px-0">
                                     <div class="form-check filter">
                                         <input class="form-check-input" type="checkbox" name="verfuegbarkeit"

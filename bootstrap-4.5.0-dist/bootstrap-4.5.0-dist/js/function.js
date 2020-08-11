@@ -3,99 +3,6 @@ $('.carousel').carousel({
 });
 
 
-/**
- * Lightbox*
- **/
-/**
- $(function () {
-    $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
-});**/
-
-
-/****Read more Filter****/
-
-
-/*
-function extendFilterBezirk() {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("alleBezirksfilter");
-    var btnText = document.getElementById("bezirksbutton");
-
-    if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Mehr anzeigen";
-        moreText.style.display = "none";
-    } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Weniger anzeigen";
-        moreText.style.display = "inline";
-    }
-}
-
-/***Range Slider***
-$('#multi').mdbRange({
-    width: '100%',
-    direction: 'vertical',
-    value: {
-        min: 0,
-        max: 100,
-    },
-    single: {
-        active: true,
-        value: {
-            step: 1,
-            symbol: ''
-        },
-        counting: false,
-        countingTarget: null,
-        bgThumbColor: '#4285F4',
-        textThumbColor: '#fff',
-        multi: {
-            active: true,
-            value: {
-                step: 1,
-                symbol: ''
-            },
-            counting: false,
-            rangeLength: 2,
-            countingTarget: null,
-            bgThumbColor: '#4285F4',
-            textThumbColor: '#fff'
-        },
-    }
-});
-$('#multi').mdbRange({
-    single: {
-        active: true,
-        multi: {
-            active: true,
-            rangeLength: 1
-        },
-    }
-});
-
-
-
-/***Range***
-$("#slider-range").slider({
-    range: true,
-    min: 0,
-    max: 3500,
-    step: 50,
-    slide: function( event, ui ) {
-        $( "#min-price").html(ui.values[ 0 ]);
-
-        console.log(ui.values[0])
-
-        suffix = '';
-        if (ui.values[ 1 ] == $( "#max-price").data('max') ){
-            suffix = ' +';
-        }
-        $( "#max-price").html(ui.values[ 1 ] + suffix);
-    }
-});*/
-
-
 /*****Toggle Maps****/
 function toggleMaps() {
     var toggleMaps = document.getElementById("toggleMaps");
@@ -210,26 +117,6 @@ $(document).ready(function () {
     var accordion = document.querySelector("#accordion");
     accordion.addEventListener("click", e => {
 
-       /* let cards = $("#accordion .card");
-        console.log(cards);
-        console.log(cards);
-        for(let card of cards){
-            console.log(card)
-        }
-        for(let i = 0; i < cards.length; i++){
-            console.log(cards.length);
-            console.log(i);
-            console.log(cards[i]);
-            if(card[i].hasClass("collapsing")){
-
-            }
-        }
-        for(let card of cards){
-            console.log(card)
-           /* card.prevObject[0].activeElement.children[0].innerHTML =("<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-minus\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">\\\\\\\\n\\\\\\' +\\\\n\\' +\\n' +\n" +
-                "                '            \\'            \\\\\\' <path fill-rule=\"evenodd\" d=\"M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z\"/>\\\\\\\\n\\\\\\' +\\\\n\\' +\\n' +\n" +
-                "                '            \\'            \\\\\\'</svg>")
-        }*/
        let card =$("#accordion span.accordion-icon");
         for(let icon of card){
             console.log(icon.innerHTML);
@@ -254,44 +141,6 @@ $(document).ready(function () {
             "                '                                                </svg>";
 
 
-
-
-        /*   var cards = $("#accordion .card");
-            for(let card of cards){
-                console.log(card)
-                if($(card).find("span.accordion-icon svg").hasClass("bi-minus")){
-                    $(card).find("span.accordion-icon").html('<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus"\n' +
-                        '                                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">\n' +
-                        '                                                    <path fill-rule="evenodd"\n' +
-                        '                                                          d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>\n' +
-                        '                                                    <path fill-rule="evenodd"\n' +
-                        '                                                          d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>\n' +
-                        '                                                </svg>');
-                }
-            }
-            console.log(card)
-        console.log($("#accordion .card"));
-
-
-        if ($(accordion).find("span.accordion-icon svg").hasClass("bi-minus")) {
-            console.log("minus");
-            $(accordion).find("span.accordion-icon").html('<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus"\n' +
-                '                                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">\n' +
-                '                                                    <path fill-rule="evenodd"\n' +
-                '                                                          d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>\n' +
-                '                                                    <path fill-rule="evenodd"\n' +
-                '                                                          d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>\n' +
-                '                                                </svg>');
-
-        }
-
-        else if ($(accordion).find("span.accordion-icon svg").hasClass("bi-plus")) {
-            console.log("minus");
-            $(accordion).find("span.accordion-icon").html('<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">\\\\n\\\' +\\n\' +\n' +
-                '            \'            \\\' <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"/>\\\\n\\\' +\\n\' +\n' +
-                '            \'            \\\'</svg>');
-
-        }*/
     })
 });
 
@@ -352,18 +201,9 @@ function changeAccordionIcon($e) {
 }
 
 
-/*********/
-/*
-document.querySelector('button.image').onclick = () => {
-
-    basicLightbox.create(`
-		<img width="1400" height="900" src="https://placehold.it/1400x900">
-	`).show()
-
-}*/
 
 
-/********************************************************************/
+/*****************LIGHTBOX*************************************/
 const lightbox = document.createElement('div');
 lightbox.id = 'lightbox';
 document.body.appendChild(lightbox);
@@ -386,31 +226,7 @@ lightbox.addEventListener('click', e => {
     lightbox.classList.remove('active')
 });
 
-/**************************************/
 
-/*
-$(".slidercss").prepend(" <script src=\"//code.jquery.com/jquery-1.11.1.min.js\"></script>\n" +
-    "    <link rel=\"stylesheet\" href=\"https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css\"  media=\"screen\">\n" +
-    "    <script src=\"https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js\"></script>\n" +
-    "    <script src=\"js/codejquery.js\"></script>");*/
-
-/*
-$( function() {
-    $( "#slider-range" ).slider({
-        range: true,
-        min: 0,
-        max: 500,
-        values: [ 75, 300 ],
-        slide: function( event, ui ) {
-            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-        }
-    });
-    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-} );*/
-
-//const filters = document.querySelectorAll('.choosenfilter .filter');
-//const filters = document.querySelectorAll('.choosenfilter');
 $(document).ready(function () {
     var filters = document.getElementsByClassName("choosenfilter");
 
@@ -434,18 +250,10 @@ $(document).ready(function () {
 
 });
 
-    /*filters.forEach(filter => {
-        filter.addEventListener('click', e => {
-           // filter.remove();
-            console.log(filter.getElementsByClassName("labelText"));
 
-
-        })
-    });*/
-
+/****FILTER****/
     var erweiterteFilter = document.querySelectorAll('.filter-erweitert .filter');
     var filterFormular = document.querySelector('#erweiterteFilter');
-    //console.log(erweiterteFilter)
 
     erweiterteFilter.forEach(filter => {
         filter.addEventListener('change', e => {

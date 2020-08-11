@@ -24,9 +24,9 @@
 
 <body>
 
-<div class="container-fluid">
+<div class="container-fluid sticky-top px-0">
     <!--NAVIGATION-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white mainnavigation fixed-top" aria-label="Main">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white mainnavigation " aria-label="Main">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="assets/Logo.png" height="110" alt="Logo">
@@ -41,7 +41,7 @@
                 <!-- navbar1 -->
                 <ul class="navbar-nav pb-2 font-weight-bold">
                     <li>
-                        <a class="nav-item nav-link px-3" href="#">
+                        <a class="nav-item nav-link px-3" href="search.html">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -83,31 +83,51 @@
                 </ul>
 
                 <!-- navbar2 -->
-                <ul class="navbar-nav pt-2">
+                <ul class="navbar-nav navbar-expand-sm pt-2">
                     <li class="nav-item ">
-                        <a class="nav-link px-3" href="#">Immobiliensuche</a>
+                        <a class="nav-item nav-link px-3" href="search.html">Immobiliensuche</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-3" href="#">Bauprojekte</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link px-3" href="#">Rund ums Wohnen</a>
+                        <a class="nav-link px-3" href="info.html">Rund ums Wohnen</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-3" href="#">Team</a>
                     </li>
                 </ul>
             </div>
+
         </div>
+
     </nav>
+    <div class="row bg-white px-4 pt-0 d-flex justify-content-end ">
+
+        <div class="navbar-expand-sm navbar px-4  pt-0">
+            <ul class="navbar-nav">
+                <li class="nav-item nav-link">
+                    <a href="#rundumswohnen">Rund ums Wohnen</a>
+                </li>
+                <li class="nav-item nav-link">
+                    <a href="#hausverwaltung">zuständige Hausverwaltung</a>
+                </li>
+                <li class="nav-item nav-link">
+                    <a href="#faq">FAQs</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
 </div>
 
-<div role="main" class="main-content">
+
+<div role="main" class="main-content" >
 
 
     <div class="container-fluid ">
         <div class="row d-flex">
-            <div class="col-lg-8 px-5">
+            <div class="col-lg-8 px-5" id="rundumswohnen">
                 <div class="container-fluid mb-md-3 ">
                     <div class="row d-flex">
                         <h1>Rund ums Wohnen</h1>
@@ -122,12 +142,12 @@
                             bitte.</p>
                     </div>
                 </div>
-                <div class="row p-5 bg-light-gray">
+                <div class="row p-2 p-lg-4 bg-light-gray" id="hausverwaltung">
                     <h2>Zuständige Hausverwaltung suchen</h2>
-                    <form class="my-5 col-lg-12 px-0">
-                        <div class="form-row d-flex justify-content-between">
+                    <form class="mt-5 mb-3 col-lg-12 px-0">
+                        <div class="form-row pb-0 d-flex justify-content-between">
 
-                            <div class="form-group form-group-md col-md-6">
+                            <div class="form-group form-group-md col-md-9">
                                 <div class="input-group-lg">
                                     <label for="Suchbegriff" class="sr-only">Suchbegriff</label>
                                     <input type="search" class="form-control form-control-md" id="Suchbegriff"
@@ -138,7 +158,7 @@
                             </div>
                             <div class="form-group form-group-md col-md-3">
                                 <button type="submit" class="btn btn-block btn-primary text-uppercase" aria-label="Immobilien Suchen
-                                        ">
+                                        " style="height: 100%;">
                                     Suchen
                                 </button>
                             </div>
@@ -148,16 +168,18 @@
                 </div>
 
 
-                <div class="row mx-lg-4 p-3 pt-4">
+                <div class="row mx-lg-4 p-3 pt-4" id="faq">
                     <div class="col-12">
                         <h2>FAQs - Häufige Fragen</h2>
                         <div id="accordion" class="accordion">
                             <div class="card">
                                 <div class="card-header" id="headingOne">
                                     <h5 class="mb-0">
-                                        <button class="btn btn-link btn-block text-left" data-toggle="collapse"
+                                        <button class="btn btn-link btn-block text-left collapsed"
+                                                aria-expanded="false"
+                                                data-toggle="collapse"
                                                 data-target="#collapseOne"
-                                                aria-expanded="true" aria-controls="collapseOne">
+                                                aria-controls="collapseOne">
                                             <!----onclick="changeAccordionIcon(this)"--->
                                             <span class="accordion-icon"></span>
                                             Abfallwirtschaft
@@ -165,8 +187,8 @@
                                     </h5>
                                 </div>
 
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                     data-parent="#accordion">
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                     data-parent="#accordion"><!--show-->
                                     <div class="card-body">
                                         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
                                         richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
@@ -243,6 +265,126 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="card">
+                                <div class="card-header" id="feuerpolizeilichehinweise">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed"
+                                                data-toggle="collapse"
+                                                data-target="#feuerpolizeilichehinweiseinhalt" aria-expanded="false"
+                                                aria-controls="feuerpolizeilichehinweiseinhalt">
+                                            <span class="accordion-icon"></span>
+                                            Feuerpolizeiliche Hinweise
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="feuerpolizeilichehinweiseinhalt" class="collapse" aria-labelledby="feuerpolizeilichehinweise"
+                                     data-parent="#accordion">
+                                    <div class="card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                        sunt
+                                        aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
+                                        et.
+                                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                        sapiente
+                                        ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of
+                                        them
+                                        accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="hausordnung">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed"
+                                                data-toggle="collapse"
+                                                data-target="#hausordnunginhalt" aria-expanded="false"
+                                                aria-controls="hausordnunginhalt">
+                                            <span class="accordion-icon"></span>
+                                            Hausordnung
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="hausordnunginhalt" class="collapse" aria-labelledby="hausordnung"
+                                     data-parent="#accordion">
+                                    <div class="card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                        sunt
+                                        aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
+                                        et.
+                                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                        sapiente
+                                        ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of
+                                        them
+                                        accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="lueftenundheizen">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed"
+                                                data-toggle="collapse"
+                                                data-target="#lueftenundheizeninhalt" aria-expanded="false"
+                                                aria-controls="lueftenundheizeninhalt">
+                                            <span class="accordion-icon"></span>
+                                            Richtig Lüften und Heizen
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="lueftenundheizeninhalt" class="collapse" aria-labelledby="lueftenundheizen"
+                                     data-parent="#accordion">
+                                    <div class="card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                        sunt
+                                        aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
+                                        et.
+                                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                        sapiente
+                                        ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of
+                                        them
+                                        accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="sicherheit">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed"
+                                                data-toggle="collapse"
+                                                data-target="#sicherheitinhalt" aria-expanded="false"
+                                                aria-controls="sicherheitinhalt">
+                                            <span class="accordion-icon"></span>
+                                            Sicherheit
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="sicherheitinhalt" class="collapse" aria-labelledby="sicherheit"
+                                     data-parent="#accordion">
+                                    <div class="card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                        sunt
+                                        aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
+                                        et.
+                                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                        sapiente
+                                        ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of
+                                        them
+                                        accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -250,7 +392,7 @@
             </div>
 
 
-            <div class="col-lg-4 order-lg-first">
+            <div class="col-lg-4 order-lg-first px-0 pr-lg-3">
                 <div class="bg-light-red p-5 mb-4">
                     <h2>Treffen Sie Ihre/n GWG-HausverwalterIn</h2>
                     <div class="col-lg-12 p-0  mb-4">
@@ -297,48 +439,7 @@
                         </p>
 
 
-
-
                     </div>
-                </div>
-
-                <div class="bg-light-red p-5">
-                    <h2>Pressematerial</h2>
-                    <p><a href="#">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-circle"
-                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                  d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path fill-rule="evenodd"
-                                  d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
-                            <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
-                        </svg>
-                        <span class="underline">Logo</span>
-                    </a></p>
-                    <p><a href="#">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-circle"
-                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                  d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path fill-rule="evenodd"
-                                  d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
-                            <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
-                        </svg>
-                        <span class="underline">Fotos Projekte</span>
-                    </a></p>
-                    <p><a href="#">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-circle"
-                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                  d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path fill-rule="evenodd"
-                                  d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
-                            <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
-                        </svg>
-                        <span class="underline">Fotos Mitarbeiter</span>
-                    </a></p>
-
-
                 </div>
             </div>
         </div>
@@ -372,7 +473,7 @@
                 <ul>
                     <li><a href="#">Über uns</a></li>
                     <li><a href="#">Karriere</a></li>
-                    <li><a href="#">Neuigkeiten & Presse</a></li>
+                    <li><a href="news.html">Neuigkeiten & Presse</a></li>
                     <li><a href="#">Impressum</a></li>
                     <li><a href="#">Geschäftsbedingung</a></li>
 
@@ -382,7 +483,7 @@
                 <h3 class="pb-3">Baumanagement</h3>
                 <ul>
                     <li><a href="#">Baumanagement</a></li>
-                    <li><a href="#">Architekten&shynwettbewerb</a></li>
+                    <li><a href="#">Architekten&shywettbewerb</a></li>
                     <li><a href="#">Ausschreibungen</a></li>
                 </ul>
             </div>

@@ -50,11 +50,11 @@
 </head>
 
 
-<body class="bg-light-gray">
+<body class="">
 
-<div class="container-fluid">
+<div class="container-fluid sticky-top px-0">
     <!--NAVIGATION-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white mainnavigation fixed-top" aria-label="Main">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white mainnavigation " aria-label="Main">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="assets/Logo.png" height="110" alt="Logo">
@@ -69,7 +69,7 @@
                 <!-- navbar1 -->
                 <ul class="navbar-nav pb-2 font-weight-bold">
                     <li>
-                        <a class="nav-item nav-link px-3" href="#">
+                        <a class="nav-item nav-link px-3" href="search.html">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -111,30 +111,34 @@
                 </ul>
 
                 <!-- navbar2 -->
-                <ul class="navbar-nav pt-2">
-                    <li class="nav-item active">
-                        <a class="nav-link px-3" href="#">Immobiliensuche</a>
+                <ul class="navbar-nav navbar-expand-sm pt-2">
+                    <li class="nav-item ">
+                        <a class="nav-item nav-link px-3" href="search.html">Immobiliensuche</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-3" href="#">Bauprojekte</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-3" href="#">Rund ums Wohnen</a>
+                    <li class="nav-item active">
+                        <a class="nav-link px-3" href="info.html">Rund ums Wohnen</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-3" href="#">Team</a>
                     </li>
                 </ul>
             </div>
+
         </div>
+
     </nav>
+    <div class="row bg-white px-4 pt-0 d-flex justify-content-end ">
+    </div>
 </div>
 
 <div role="main">
 
 
-    <div class="container-fluid bg-white main-content px-lg-5 px-md-3">
-        <div class="row mt-md-4 d-flex align-items-stretch">
+    <div class="container-fluid bg-white main-content pr-lg-5 pr-md-3 pl-03">
+        <div class="row mt-md-4 d-flex">
 
             <div class="col-lg-8 mt-2 ">
                 <div class="bg-light-gray p-3 row mb-2">
@@ -178,7 +182,7 @@
                     </form>
                 </div>
             </div>
-            <div class="col-lg-4 order-lg-first mt-2">
+            <div class="col-lg-4 order-lg-first mt-2 px-sm-0 px-lg-2 pl-0 ">
                 <div class="bg-light-red p-lg-5 p-4 mb-3 mt-md-3 mt-lg-0">
                     <h2>Gewählte Filter</h2>
                     <div class="row choosenfilter">
@@ -273,12 +277,12 @@
         </div>
     </div>
 
-    <div class="container-fluid bg-white px-lg-5 px-md-3">
+    <div class="container-fluid bg-white pr-lg-5 pr-md-3 pl-0">
         <div class="row">
             <div class="col-lg-8">
 
                 <div class="row p-2">
-                    <div class="col-lg-12 px-md-0 d-lg-flex justify-content-between mb-3">
+                    <div class="col-lg-12 px-md-0 d-lg-flex justify-content-between mb-3 order-first">
                         <div class=" px-md-0 d-flex px-md-0">
                             <h2><span>5</span> Immobilien gefunden</h2>
                         </div>
@@ -312,7 +316,7 @@
                     </div>
 
 
-                    <div class="col-lg-8 px-md-0" id="filterergebnisse">
+                    <div class="col-lg-8 px-md-0 order-sm-last order-lg-2" id="filterergebnisse">
                         <!--<div class="d-flex justify-content-between">
                             <h2><span>5</span> Immobilien gefunden</h2>
                             <div class="text-right">
@@ -468,7 +472,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-4 pr-md-0" id="maps">
+                    <div class="col-lg-4 pr-md-0 order-sm-2 order-lg-last mb-2" id="maps">
                         <iframe title="Google Maps"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2656.5802205053287!2d14.28936961590652!3d48.25320767923286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773963c8b11b297%3A0x83566ada65ed96c6!2sDauphinestra%C3%9Fe%20194a%2C%204030%20Linz!5e0!3m2!1sde!2sat!4v1596449451427!5m2!1sde!2sat"
                                 width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
@@ -481,10 +485,10 @@
             </div>
 
             <!--Suchfilter-->
-            <div class="col-lg-4 order-first">
+            <div class="col-lg-4 order-first px-sm-0 px-lg-2 pl-0">
                 <div class="bg-light-red p-lg-5 p-4 filter-erweitert">
                     <form id="erweiterteFilter" >
-                        <fieldset class="form-group py-1">
+                        <fieldset class="form-group py-1 px-2">
                             <div class="row">
                                 <legend class="col-form-label col-sm-12 px-lg-0 text-uppercase">Bezirk / Viertel
                                 </legend>
@@ -749,7 +753,7 @@
                             </div>
                         </fieldset>
 
-                        <fieldset class="form-group">
+                        <fieldset class="form-group px-2">
                             <div class="row">
                                 <legend class="col-form-label col-sm-12 px-0 text-uppercase">Verfügbarkeit</legend>
                                 <div class="col-sm-12 px-0">
@@ -804,7 +808,7 @@
                 <ul>
                     <li><a href="#">Über uns</a></li>
                     <li><a href="#">Karriere</a></li>
-                    <li><a href="#">Neuigkeiten & Presse</a></li>
+                    <li><a href="news.html">Neuigkeiten & Presse</a></li>
                     <li><a href="#">Impressum</a></li>
                     <li><a href="#">Geschäftsbedingung</a></li>
 
@@ -814,7 +818,7 @@
                 <h3 class="pb-3">Baumanagement</h3>
                 <ul>
                     <li><a href="#">Baumanagement</a></li>
-                    <li><a href="#">Architekten&shynwettbewerb</a></li>
+                    <li><a href="#">Architekten&shywettbewerb</a></li>
                     <li><a href="#">Ausschreibungen</a></li>
                 </ul>
             </div>

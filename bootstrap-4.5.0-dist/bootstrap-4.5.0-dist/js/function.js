@@ -158,7 +158,7 @@ function toggleMaps() {
 
 
 /******ACCORDION ICON****/
-/*
+
 $(".accordion button[aria-expanded='true']").click(function () {
     var accordion = document.querySelector(".accordion button[aria-expanded=\"true\"]");
     console.log("jetzt wirds klein");
@@ -182,8 +182,8 @@ $(document).ready(function(){
         $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
     });
 });
-*/
-/*
+
+
 $(document).ready(function () {
 
 
@@ -204,11 +204,59 @@ $(document).ready(function () {
         $(this).html('<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">\\n\' +\n' +
             '            \' <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"/>\\n\' +\n' +
             '            \'</svg>');
+        console.log("hi");
     });
 
     var accordion = document.querySelector("#accordion");
     accordion.addEventListener("click", e => {
-            var cards = $("#accordion .card");
+
+       /* let cards = $("#accordion .card");
+        console.log(cards);
+        console.log(cards);
+        for(let card of cards){
+            console.log(card)
+        }
+        for(let i = 0; i < cards.length; i++){
+            console.log(cards.length);
+            console.log(i);
+            console.log(cards[i]);
+            if(card[i].hasClass("collapsing")){
+
+            }
+        }
+        for(let card of cards){
+            console.log(card)
+           /* card.prevObject[0].activeElement.children[0].innerHTML =("<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-minus\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">\\\\\\\\n\\\\\\' +\\\\n\\' +\\n' +\n" +
+                "                '            \\'            \\\\\\' <path fill-rule=\"evenodd\" d=\"M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z\"/>\\\\\\\\n\\\\\\' +\\\\n\\' +\\n' +\n" +
+                "                '            \\'            \\\\\\'</svg>")
+        }*/
+       let card =$("#accordion span.accordion-icon");
+        for(let icon of card){
+            console.log(icon.innerHTML);
+            icon.innerHTML="<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-minus\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">\\\\\\\\n\\\\\\' +\\\\n\\' +\\n' +\n" +
+                "                '            \\'            \\\\\\' <path fill-rule=\"evenodd\" d=\"M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z\"/>\\\\\\\\n\\\\\\' +\\\\n\\' +\\n' +\n" +
+                "                '            \\'            \\\\\\'</svg>";
+            console.log(icon.innerHTML);
+
+        }
+
+
+
+        let showncard = $("#accordion .card button.show");
+        console.log(showncard);
+
+        showncard.prevObject[0].activeElement.children[0].innerHTML = "<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-plus\"\\n' +\n" +
+            "                '                                                     fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">\\n' +\n" +
+            "                '                                                    <path fill-rule=\"evenodd\"\\n' +\n" +
+            "                '                                                          d=\"M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z\"/>\\n' +\n" +
+            "                '                                                    <path fill-rule=\"evenodd\"\\n' +\n" +
+            "                '                                                          d=\"M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z\"/>\\n' +\n" +
+            "                '                                                </svg>";
+
+
+
+
+        /*   var cards = $("#accordion .card");
             for(let card of cards){
                 console.log(card)
                 if($(card).find("span.accordion-icon svg").hasClass("bi-minus")){
@@ -243,13 +291,13 @@ $(document).ready(function () {
                 '            \'            \\\' <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"/>\\\\n\\\' +\\n\' +\n' +
                 '            \'            \\\'</svg>');
 
-        }
+        }*/
     })
-});*/
+});
 
 
 
-/*function changeAccordionIcon($e) {
+function changeAccordionIcon($e) {
 
 
     if ($($e).find("span.accordion-icon svg").hasClass("bi-minus")) {
@@ -273,14 +321,14 @@ $(document).ready(function () {
     }
 
 
-    /* if($(".accordion button[aria-expanded ='true']")){
+     if($(".accordion button[aria-expanded ='true']")){
          var iconToMinus = document.querySelector(".accordion button[aria-expanded=\"false\"] span.accordion-icon");
          $(iconToMinus).html('<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">\n' +
              ' <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"/>\n' +
              '</svg>');
 
 
-        /* html("<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-arrows-collapse\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+         html("<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-arrows-collapse\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
              "  <path fill-rule=\"evenodd\" d=\"M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8zm6-7a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V1.5A.5.5 0 0 1 8 1z\"/>\n" +
              "  <path fill-rule=\"evenodd\" d=\"M10.354 3.646a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L8 5.293l1.646-1.647a.5.5 0 0 1 .708 0zM8 15a.5.5 0 0 0 .5-.5V10a.5.5 0 0 0-1 0v4.5a.5.5 0 0 0 .5.5z\"/>\n" +
              "  <path fill-rule=\"evenodd\" d=\"M10.354 12.354a.5.5 0 0 0 0-.708l-2-2a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 .708.708L8 10.707l1.646 1.647a.5.5 0 0 0 .708 0z\"/>\n" +
@@ -300,8 +348,8 @@ $(document).ready(function () {
              '                                                </svg>');
 
 
-     }*/
-/*}*/
+     }
+}
 
 
 /*********/

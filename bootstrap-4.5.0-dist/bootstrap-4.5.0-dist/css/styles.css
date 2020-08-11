@@ -114,6 +114,13 @@ nav svg{
     color: #CD1719;
 }
 
+
+.ankermenu {
+    padding-top: 120px;
+    margin-bottom: 50px;
+
+}
+
 .bg-transparent-gray {
     background-color: rgba(10,10,10,.5);
 }
@@ -146,7 +153,9 @@ h1.shadow{
 }
 
 .main-content{
-    padding-top: 150px;
+   /* padding-top: 150px;*/
+    position: relative;
+    display: block;
 }
 
 .searchform button {
@@ -770,7 +779,7 @@ div[slider] > input[type=range]::-ms-tooltip {
    }
 
 .lightbox li {
-    height: 200px;
+    height: 350px;
     flex-grow: 1;
     cursor: zoom-in;
 

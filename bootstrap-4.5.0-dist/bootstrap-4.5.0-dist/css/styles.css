@@ -6,8 +6,32 @@
 
     background-image:
             linear-gradient(to bottom, rgba(8, 8, 8, 0.4), rgba(8, 8, 8, 0)),
-            url('../assets/Asset-61@2x.png');
+            url('../assets/headerbild.png');
 }
+
+
+@media (min-width: 0px) {
+    #logo {
+        height: 70px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    #logo {
+        height: 110px;
+    }
+}
+
+.row{
+    margin: 0 !important;
+}
+
+.container-fluid{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 
 .line-height-more{
     line-height: 1.7rem;
@@ -42,17 +66,17 @@
 
 footer a {
     color: #ffffff;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 footer li {
     list-style: none ;
-    padding-top: 20px;
+    padding-top: 5px;
 }
 
 footer li::before
 {
-    content: "--";
-    padding-right: 10px;
+    /*content: "--";
+    padding-right: 10px;*/
 }
 
 footer ul {
@@ -77,6 +101,10 @@ footer h3 {
 
 .sidebar .news:hover{
     background-color: #ffffff;
+}
+
+.letter-spacing{
+    letter-spacing: 0.5px;
 }
 
 .clickable:hover {
@@ -149,7 +177,7 @@ h1.shadow{
 }
 
 .main-content{
-   /* padding-top: 150px;*/
+    padding-top: 150px;
     position: relative;
     display: block;
 }

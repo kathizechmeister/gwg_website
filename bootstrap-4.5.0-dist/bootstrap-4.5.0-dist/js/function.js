@@ -115,6 +115,7 @@ $(document).ready(function () {
     });
 
     var accordion = document.querySelector("#accordion");
+    if(accordion !=null){
     accordion.addEventListener("click", e => {
 
        let card =$("#accordion span.accordion-icon");
@@ -142,6 +143,7 @@ $(document).ready(function () {
 
 
     })
+    }
 });
 
 

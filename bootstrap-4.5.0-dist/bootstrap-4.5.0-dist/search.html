@@ -21,10 +21,10 @@
 
 <div class="container-fluid sticky-top px-0">
     <!--NAVIGATION-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white mainnavigation " aria-label="Main">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white-fade mainnavigation fixed-top" aria-label="Main">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html" onclick="window.location = 'index.html'">
-                <img src="assets/Logo.png" height="110" alt="Logo">
+                <img src="assets/Logo.png" height="110" alt="Logo" id="logo">
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -86,7 +86,8 @@
                         <a class="nav-link px-3" href="#">Bauprojekte</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link px-3" href="info.html" onclick="window.location = 'info.html'">Rund ums Wohnen</a>
+                        <a class="nav-link px-3" href="info.html" onclick="window.location = 'info.html'">Rund ums
+                            Wohnen</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-3" href="#">Team</a>
@@ -104,16 +105,25 @@
 <div role="main">
 
 
-    <div class="container-fluid bg-white main-content pr-lg-5 pr-md-3 pl-0">
-        <div class="row mt-md-4 d-flex">
+    <div class="container-fluid bg-white main-content mb-3">
+        <div class="row mt-md-4 d-flex bg-light-gray ">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8 mt-2 mx-auto">
+                <div class=" p-3 row mb-2">
 
-            <div class="col-lg-8 mt-2 ">
-                <div class="bg-light-gray p-3 row mb-2">
-
-                    <h1>Immobilien suchen</h1>
-                    <form class="my-3 col-lg-12">
-                        <div class="form-row d-flex justify-content-between">
-                            <div class="form-group col-md-3" aria-label="Immobilien-Filter">
+                    <h1 >Immobilien suchen</h1>
+                    <form class="px-lg-0 col-lg-12">
+                        <div class="form-row d-flex">
+                            <div class="form-group form-group-md col-lg-4 pl-lg-1">
+                                <div class="input-group-md">
+                                    <label for="Suchbegriff" class="sr-only">Suchbegriff</label>
+                                    <input type="search" class="form-control form-control-md" id="Suchbegriff"
+                                           placeholder="Ort, Plz, Projektname (Volltextsuche)"
+                                           aria-placeholder="Ort, Plz, Projektname (Volltextsuche)"
+                                           aria-label="Suchbegriff">
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-2" aria-label="Immobilien-Filter">
                                 <div class="input-group-md">
                                     <label for="immobilien" class="sr-only">Immobilienfilter</label>
                                     <select class="custom-select " id="immobilien" name="immobilien"
@@ -129,18 +139,11 @@
                                 </div>
                             </div>
 
-                            <div class="form-group form-group-md col-md-6">
-                                <div class="input-group-md">
-                                    <label for="Suchbegriff" class="sr-only">Suchbegriff</label>
-                                    <input type="search" class="form-control form-control-md" id="Suchbegriff"
-                                           placeholder="Ort, Plz, Projektname (Volltextsuche)"
-                                           aria-placeholder="Ort, Plz, Projektname (Volltextsuche)"
-                                           aria-label="Suchbegriff">
-                                </div>
-                            </div>
-                            <div class="form-group form-group-md col-md-3">
+
+                            <div class="form-group form-group-md col-lg-2 col-md-3 col-sm-6">
                                 <div class="input-group input-group-md mb-3">
-                                    <button type="submit" class="btn btn-block btn-primary text-uppercase" aria-label="Suchen (5)">
+                                    <button type="submit" class="btn btn-block btn-primary text-uppercase"
+                                            aria-label="Suchen (5)">
                                         Suchen <span class="">(5)</span></button>
                                 </div>
                             </div>
@@ -148,98 +151,7 @@
                     </form>
                 </div>
             </div>
-            <div class="col-lg-4 order-lg-first mt-2 px-sm-0 px-lg-2 pl-0 ">
-                <div class="bg-light-red p-lg-5 p-4 mb-3 mt-md-3 mt-lg-0">
-                    <h2>Gewählte Filter</h2>
-                    <div class="row choosenfilter">
-                       <!-- <div class="col-6 filter" tabindex="0" aria-label="gewählter Filter">
-                            <p>
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
-                                     fill="currentColor"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                          d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path fill-rule="evenodd" fill="#CD1719"
-                                          d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
-                                    <path fill-rule="evenodd" fill="#CD1719"
-                                          d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
-                                </svg>
-                                <span class="labelText">Alle Viertel</span>
-                            </p>
-                        </div>
 
-                        <div class="col-6 filter" tabindex="0" aria-label="gewählter Filter">
-                            <p>
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
-                                     fill="currentColor"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                          d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path fill-rule="evenodd" fill="#CD1719"
-                                          d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
-                                    <path fill-rule="evenodd" fill="#CD1719"
-                                          d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
-                                </svg>
-                                <span class="labelText">Zöhrdorf</span>
-                            </p>
-                        </div>
-
-                        <div class="col-6 filter" tabindex="0" aria-label="gewählter Filter">
-                            <p>
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
-                                     fill="currentColor"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                          d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path fill-rule="evenodd" fill="#CD1719"
-                                          d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
-                                    <path fill-rule="evenodd" fill="#CD1719"
-                                          d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
-                                </svg>
-                                35 m² - 85 m²
-                            </p>
-                        </div>
-
-                        <div class="col-6 filter" tabindex="0" aria-label="gewählter Filter">
-                            <p>
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
-                                     fill="currentColor"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                          d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path fill-rule="evenodd" fill="#CD1719"
-                                          d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
-                                    <path fill-rule="evenodd" fill="#CD1719"
-                                          d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
-                                </svg>
-                                €150 - €760
-                            </p>
-                        </div>
-
-                        <div class="col-6 filter" tabindex="0" aria-label="gewählter Filter">
-                            <p>
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
-                                     fill="currentColor"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                          d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path fill-rule="evenodd" fill="#CD1719"
-                                          d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
-                                    <path fill-rule="evenodd" fill="#CD1719"
-                                          d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
-                                </svg>
-                                Lift
-                            </p>
-                        </div>-->
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
         </div>
     </div>
 
@@ -248,7 +160,7 @@
             <div class="col-lg-8">
 
                 <div class="row p-2">
-                    <div class="col-lg-12 px-md-0 d-lg-flex justify-content-between mb-3 order-first">
+                    <div class="col-lg-12 px-md-3 d-lg-flex justify-content-between mb-3 order-first">
                         <div class=" px-md-0 d-flex px-md-0">
                             <h2><span>5</span> Immobilien gefunden</h2>
                         </div>
@@ -275,7 +187,8 @@
                         </div>
                         <div class="px-md-0  d-flex justify-content-end align-items-end " id="toggleMaps">
                             <!--    <a onclick="toggleMaps()" data-toggle="collapse" href="#maps" role="button" aria-expanded="false" aria-controls="maps">-->
-                            <a tabindex="0" onclick="toggleMaps()" onkeydown="toggleMaps()" href="#" aria-label="Karte ausblenden">
+                            <a tabindex="0" onclick="toggleMaps()" onkeydown="toggleMaps()" href="#"
+                               aria-label="Karte ausblenden">
                                 <small class="underline small">Karte ausblenden</small>
                             </a>
                         </div>
@@ -345,7 +258,7 @@
                                      tabindex="0" aria-label="Filterergebnis">
                                     <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
                                         <div tabindex="0" onclick="window.location = 'search-result.html'"
-                                        onkeydown="window.location = 'search-result.html'">
+                                             onkeydown="window.location = 'search-result.html'">
                                             <small class="card-text">Wohnung mieten</small>
                                             <h3 class="font-weight-bold">Dauphinestraße 194a</h3>
                                             <p class="card-text">
@@ -459,9 +372,99 @@
             </div>
 
             <!--Suchfilter-->
-            <div class="col-lg-4 order-first px-sm-0 px-lg-2 pl-0">
-                <div class="bg-light-red p-lg-5 p-4 filter-erweitert">
-                    <form id="erweiterteFilter" >
+
+            <div class="col-lg-4 order-first pr-0 pr-lg-2 px-lg-2 pl-0">
+
+                <div class="bg-light-red p-lg-5 p-4 mb-3 mt-md-3 mt-lg-0">
+                    <h2>Gewählte Filter</h2>
+                    <div class="row choosenfilter">
+                        <!-- <div class="col-6 filter" tabindex="0" aria-label="gewählter Filter">
+                             <p>
+                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
+                                      fill="currentColor"
+                                      xmlns="http://www.w3.org/2000/svg">
+                                     <path fill-rule="evenodd"
+                                           d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                     <path fill-rule="evenodd" fill="#CD1719"
+                                           d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+                                     <path fill-rule="evenodd" fill="#CD1719"
+                                           d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+                                 </svg>
+                                 <span class="labelText">Alle Viertel</span>
+                             </p>
+                         </div>
+
+                         <div class="col-6 filter" tabindex="0" aria-label="gewählter Filter">
+                             <p>
+                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
+                                      fill="currentColor"
+                                      xmlns="http://www.w3.org/2000/svg">
+                                     <path fill-rule="evenodd"
+                                           d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                     <path fill-rule="evenodd" fill="#CD1719"
+                                           d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+                                     <path fill-rule="evenodd" fill="#CD1719"
+                                           d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+                                 </svg>
+                                 <span class="labelText">Zöhrdorf</span>
+                             </p>
+                         </div>
+
+                         <div class="col-6 filter" tabindex="0" aria-label="gewählter Filter">
+                             <p>
+                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
+                                      fill="currentColor"
+                                      xmlns="http://www.w3.org/2000/svg">
+                                     <path fill-rule="evenodd"
+                                           d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                     <path fill-rule="evenodd" fill="#CD1719"
+                                           d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+                                     <path fill-rule="evenodd" fill="#CD1719"
+                                           d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+                                 </svg>
+                                 35 m² - 85 m²
+                             </p>
+                         </div>
+
+                         <div class="col-6 filter" tabindex="0" aria-label="gewählter Filter">
+                             <p>
+                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
+                                      fill="currentColor"
+                                      xmlns="http://www.w3.org/2000/svg">
+                                     <path fill-rule="evenodd"
+                                           d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                     <path fill-rule="evenodd" fill="#CD1719"
+                                           d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+                                     <path fill-rule="evenodd" fill="#CD1719"
+                                           d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+                                 </svg>
+                                 €150 - €760
+                             </p>
+                         </div>
+
+                         <div class="col-6 filter" tabindex="0" aria-label="gewählter Filter">
+                             <p>
+                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle"
+                                      fill="currentColor"
+                                      xmlns="http://www.w3.org/2000/svg">
+                                     <path fill-rule="evenodd"
+                                           d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                     <path fill-rule="evenodd" fill="#CD1719"
+                                           d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+                                     <path fill-rule="evenodd" fill="#CD1719"
+                                           d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+                                 </svg>
+                                 Lift
+                             </p>
+                         </div>-->
+
+
+                    </div>
+
+
+                </div>
+                <div class="bg-light-red  filter-erweitert"><!--p-lg-5 p-4-->
+                    <form id="erweiterteFilter">
                         <legend class="sr-only">Bezirk</legend>
                         <fieldset class="form-group py-1 px-2">
                             <legend class=" sr-only">Bezirk / Viertel
@@ -480,63 +483,63 @@
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Auwiesen"
                                            value="bezirk2">
                                     <label class="form-check-label" for="Auwiesen">
-                                        Auwiesen
+                                        Auwiesen, 4030
                                     </label>
                                 </div>
                                 <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Ebelsberg"
                                            value="bezirk3">
                                     <label class="form-check-label" for="Ebelsberg">
-                                        Ebelsberg
+                                        Ebelsberg, 4030
                                     </label>
                                 </div>
                                 <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Franckviertel"
                                            value="bezirk4">
                                     <label class="form-check-label" for="Franckviertel">
-                                        Franckviertel
+                                        Franckviertel, 4020
                                     </label>
                                 </div>
                                 <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Kleinmuenchen"
                                            value="bezirk5">
                                     <label class="form-check-label" for="Kleinmuenchen">
-                                        Kleinmünchen
+                                        Kleinmünchen, 4030
                                     </label>
                                 </div>
                                 <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Innenstadt"
                                            value="bezirk6">
                                     <label class="form-check-label" for="Innenstadt">
-                                        Innenstadt
+                                        Innenstadt, 4020
                                     </label>
                                 </div>
                                 <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Neue Heimat"
                                            value="bezirk7">
                                     <label class="form-check-label" for="Neue Heimat">
-                                        Neue Heimat
+                                        Neue Heimat, 4030
                                     </label>
                                 </div>
                                 <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Pichling"
                                            value="bezirk8">
                                     <label class="form-check-label" for="Pichling">
-                                        Pichling
+                                        Pichling, 4030
                                     </label>
                                 </div>
                                 <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Urfahr"
                                            value="bezirk9">
                                     <label class="form-check-label" for="Urfahr">
-                                        Urfahr
+                                        Urfahr, 4040
                                     </label>
                                 </div>
                                 <div class="form-check col-6 py-1 filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Zoehrdorf"
                                            value="bezirk10">
                                     <label class="form-check-label" for="Zoehrdorf">
-                                        Zöhrdorf
+                                        Zöhrdorf, 4030
                                     </label>
                                 </div>
                                 <div class="form-check col-6 py-1 filter">
@@ -554,21 +557,23 @@
                             <legend class="sr-only">Preis</legend>
                             <div class="row">
                                 <div data-role="page" id="page1">
-                                <legend class="col-form-label col-sm-12 px-0 text-uppercase"
-                                        aria-label="Minimalen und maximalen Preis angeben">Preis (in €)
-                                </legend>
+                                    <legend class="col-form-label col-sm-12 px-0 text-uppercase"
+                                            aria-label="Minimalen und maximalen Preis angeben">Preis (in €)
+                                    </legend>
 
-                                    <div data-role="rangeslider" data-mini="true" >
+                                    <div data-role="rangeslider" data-mini="true">
                                         <label for="minpreis" class="sr-only">Angabe für minimalen Preis </label>
-                                        <input name="minpreis" id="minpreis" min="100" max="5000" value="150" type="range">
+                                        <input name="minpreis" id="minpreis" min="100" max="5000" value="150"
+                                               type="range">
                                         <label for="maxpreis" class="sr-only">Angabe für maximalen Preis</label>
-                                        <input name="maxpreis" id="maxpreis" min="100" max="5000" value="3000" type="range">
+                                        <input name="maxpreis" id="maxpreis" min="100" max="5000" value="3000"
+                                               type="range">
                                     </div>
 
 
-                                <legend class="col-form-label col-sm-12 px-0 text-uppercase"
-                                        aria-label="Minimale und Maximale Fläche angeben">Fläche
-                                </legend>
+                                    <legend class="col-form-label col-sm-12 px-0 text-uppercase"
+                                            aria-label="Minimale und Maximale Fläche angeben">Fläche
+                                    </legend>
 
 
                                     <div data-role="rangeslider" data-mini="true" class="filter">
@@ -579,11 +584,10 @@
                                     </div>
 
 
-
-                                <legend class="col-form-label col-sm-12 px-0 text-uppercase"
-                                        aria-label="Minimale und Maximale Fläche angeben">Raumanzahl
-                                </legend>
-                                    <div data-role="rangeslider" data-mini="true" class="filter" >
+                                    <legend class="col-form-label col-sm-12 px-0 text-uppercase"
+                                            aria-label="Minimale und Maximale Fläche angeben">Raumanzahl
+                                    </legend>
+                                    <div data-role="rangeslider" data-mini="true" class="filter">
                                         <label for="range-2a" class="sr-only">Angabe für minimale Raumanzahl</label>
                                         <input name="range-1a" id="range-2a" min="0" max="10" value="2" type="range">
                                         <label for="range-2b" class="sr-only">Angabe für Maximale Raumanzahl</label>
@@ -713,7 +717,7 @@
                                         <input class="form-check-input" type="checkbox" name="ausstattung" id="Kueche"
                                                value="ausstattung4" aria-label="Küche">
                                         <label class="form-check-label" for="Kueche">
-                                            Küche möbliert
+                                            Küche möbliert / Wohnung teilmöbliert
                                         </label>
                                     </div>
                                 </div>
@@ -770,16 +774,16 @@
                     FAX: 07327613 33314 <br>
                     <!--gwginfo@gwg-linz.at-->
                 </p>
-                <a href="#" class="text-white font-weight-normal underline">Kontaktformular</a>
+                <a href="#" class="text-white underline letter-spacing ">Kontaktformular</a>
             </div>
             <div class="col mb-3">
                 <h3 class="pb-3">Unternehmen</h3>
                 <ul>
                     <li><a href="#">Über uns</a></li>
                     <li><a href="#">Karriere</a></li>
-                    <li><a href="news.html" onclick="window.location = 'news.html'">Neuigkeiten & Presse</a></li>
+                    <li><a href="news.html">Neuigkeiten & Presse</a></li>
                     <li><a href="#">Impressum</a></li>
-                    <li><a href="#">Geschäftsbedingungen</a></li>
+                    <li><a href="#">Geschäftsbedingung</a></li>
 
                 </ul>
             </div>
@@ -806,6 +810,17 @@
                 >
                 <p class="font-weight-bold">Unternehmensgruppe Stadt Linz <br>
                     innovationshauptplatz.linz.at
+                </p>
+                <br>
+                <img src="assets/gbv.png" width="auto" height="65px"
+                     alt="GBV"
+                     class="mb-3"
+                >
+                <p><b>Österreichischer Verband<br>
+                    Gemeinnütziger Bauvereinigungen</b>
+                    Revisionsverband
+                    <br>
+
                 </p>
             </div>
 

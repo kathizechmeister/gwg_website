@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/styles.css">
 
 
-    <title>Clickdummy ohne Design und Funktion</title>
+    <title>Suche</title>
 </head>
 
 
@@ -108,22 +108,22 @@
     <div class="container-fluid bg-white main-content mb-3">
         <div class="row mt-md-4 d-flex bg-light-gray ">
             <div class="col-lg-4"></div>
-            <div class="col-lg-8 mt-2 mx-auto">
-                <div class=" p-3 row mb-2">
+            <div class="col-lg-8 px-sm-5 px-sm-2  ">
+                <div class="py-3 row my-2 ">
 
                     <h1 >Immobilien suchen</h1>
-                    <form class="px-lg-0 col-lg-12">
+                    <form class="px-0 col-lg-12">
                         <div class="form-row d-flex">
                             <div class="form-group form-group-md col-lg-4 pl-lg-1">
                                 <div class="input-group-md">
                                     <label for="Suchbegriff" class="sr-only">Suchbegriff</label>
                                     <input type="search" class="form-control form-control-md" id="Suchbegriff"
-                                           placeholder="Ort, Plz, Projektname (Volltextsuche)"
-                                           aria-placeholder="Ort, Plz, Projektname (Volltextsuche)"
+                                           placeholder="Ort, PLZ, Projektname (Volltextsuche)"
+                                           aria-placeholder="Ort, PLZ, Projektname (Volltextsuche)"
                                            aria-label="Suchbegriff">
                                 </div>
                             </div>
-                            <div class="form-group col-lg-2" aria-label="Immobilien-Filter">
+                            <div class="form-group col-lg-3" aria-label="Immobilien-Filter">
                                 <div class="input-group-md">
                                     <label for="immobilien" class="sr-only">Immobilienfilter</label>
                                     <select class="custom-select " id="immobilien" name="immobilien"
@@ -140,7 +140,7 @@
                             </div>
 
 
-                            <div class="form-group form-group-md col-lg-2 col-md-3 col-sm-6">
+                            <div class="form-group form-group-md mb-0 col-lg-3 col-md-3 col-sm-6 m-0">
                                 <div class="input-group input-group-md mb-3">
                                     <button type="submit" class="btn btn-block btn-primary text-uppercase"
                                             aria-label="Suchen (5)">
@@ -157,15 +157,13 @@
 
     <div class="container-fluid bg-white pr-lg-5 pr-md-3 pl-0">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8 px-sm-5 px-sm-2 ">
 
-                <div class="row p-2">
-                    <div class="col-lg-12 px-md-3 d-lg-flex justify-content-between mb-3 order-first">
-                        <div class=" px-md-0 d-flex px-md-0">
-                            <h2><span>5</span> Immobilien gefunden</h2>
-                        </div>
-                        <div class=" ml-auto text-lg-right align-items-center d-flex justify-content-end">
-                            <form>
+                <div class="row pt-md-4 pt-lg-2">
+                    <div class="col-12 px-0 pr-lg-3 pr-lg-0 d-block d-md-flex justify-content-around mb-3 order-first">
+                        <div class=" px-md-0 px-md-0">
+                            <h2 class="pt-4 pt-lg-0"><span>5</span> Immobilien gefunden</h2>
+                            <form class="col-6 col-sm-4 col-md-6 p-0">
                                 <div class="form-group mb-0" aria-label="Ergebnis-Filter">
                                     <div class="input-group-sm ">
                                         <label for="filter" class="sr-only">Filter</label>
@@ -180,22 +178,48 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="px-md-0 ml-auto pr-lg-3  d-flex justify-content-end align-items-end">
-                            <a href="#" aria-label="ausgewählte Wohnungen vergleichen">
-                                <small class="underline small">ausgewählte Wohnungen vergleichen</small>
-                            </a>
+                        <!--<div class=" ml-auto text-lg-right align-items-center d-flex justify-content-end">
+                            <form>
+                                <div class="form-group mb-0" aria-label="Ergebnis-Filter">
+                                    <div class="input-group-sm ">
+                                        <label for="filter" class="sr-only">Filter</label>
+                                        <select class="custom-select " id="filter" name="filter"
+                                                aria-label="Ergebnisfilter">
+                                            <option selected class="dropdown-item" value="aktualitaet">Aktualität
+                                            </option>
+                                            <option value="preis">Preis</option>
+                                            <option value="bewertung">Bewertung</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>-->
+                        <div class="px-md-0 ml-auto my-auto text-md-right d-block">
+                            <div >
+                                <a href="#" aria-label="ausgewählte Wohnungen vergleichen">
+                                    <small class="underline small">ausgewählte Wohnungen vergleichen</small>
+                                </a>
+                            </div>
+
+                            <div>
+                                <a tabindex="0" onclick="toggleMaps()" id="toggleMaps" onkeydown="toggleMaps()" href="#"
+                                   aria-label="Karte ausblenden">
+                                    <small class="underline small">Karte ausblenden</small>
+                                </a>
+                            </div>
+
                         </div>
-                        <div class="px-md-0  d-flex justify-content-end align-items-end " id="toggleMaps">
-                            <!--    <a onclick="toggleMaps()" data-toggle="collapse" href="#maps" role="button" aria-expanded="false" aria-controls="maps">-->
+                     <!--   <div class="px-md-0  d-flex justify-content-end align-items-end " id="toggleMaps">
+                            <!--    <a onclick="toggleMaps()" data-toggle="collapse" href="#maps" role="button" aria-expanded="false" aria-controls="maps">
                             <a tabindex="0" onclick="toggleMaps()" onkeydown="toggleMaps()" href="#"
                                aria-label="Karte ausblenden">
                                 <small class="underline small">Karte ausblenden</small>
                             </a>
-                        </div>
+                        </div>-->
                     </div>
 
 
-                    <div class="col-lg-8 px-md-0 order-sm-last order-lg-2" id="filterergebnisse">
+                    <div class="col-lg-8 px-0 order-2" id="filterergebnisse">
                         <!--<div class="d-flex justify-content-between">
                             <h2><span>5</span> Immobilien gefunden</h2>
                             <div class="text-right">
@@ -218,7 +242,7 @@
                             </div>
                         </div>-->
                         <div class="row filterergebnisse">
-                            <div class="col-12 filterergebnis mb-4">
+                            <div class="col-12 filterergebnis mb-4 px-0 px-md-0 pr-lg-3">
                                 <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
                                      tabindex="0" aria-label="Filterergebnis">
                                     <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
@@ -253,7 +277,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 filterergebnis mb-4">
+                            <div class="col-12 filterergebnis mb-4 px-0 px-md-0 pr-lg-3">
                                 <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
                                      tabindex="0" aria-label="Filterergebnis">
                                     <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
@@ -287,7 +311,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 filterergebnis mb-4">
+                            <div class="col-12 filterergebnis mb-4 px-0 px-md-0 pr-lg-3">
                                 <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
                                      tabindex="0" aria-label="Filterergebnis">
                                     <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
@@ -321,7 +345,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 filterergebnis mb-4">
+                            <div class="col-12 filterergebnis mb-4 px-0 px-md-0 pr-lg-3">
                                 <div class="row no-gutters border rounded clickable overflow-hidden flex-md-row shadow-sm position-relative item"
                                      tabindex="0" aria-label="Filterergebnis Nr 4">
                                     <div class="col-md-8 p-3 d-flex flex-column position-static bg-white">
@@ -359,7 +383,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-4 pr-md-0 order-sm-2 order-lg-last mb-2" id="maps">
+                    <div class="col-lg-4 order-lg-last mb-2 px-0 px-md-0" id="maps">
                         <iframe title="Google Maps"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2656.5802205053287!2d14.28936961590652!3d48.25320767923286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773963c8b11b297%3A0x83566ada65ed96c6!2sDauphinestra%C3%9Fe%20194a%2C%204030%20Linz!5e0!3m2!1sde!2sat!4v1596449451427!5m2!1sde!2sat"
                                 width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
@@ -373,10 +397,10 @@
 
             <!--Suchfilter-->
 
-            <div class="col-lg-4 order-first pr-0 pr-lg-2 px-lg-2 pl-0">
+            <div class="col-lg-4 mt-sm-5 mt-md-1 px-md-0 px-sm-2 pb-5 sidebar bg-light-red order-first">
 
-                <div class="bg-light-red p-lg-5 p-4 mb-3 mt-md-3 mt-lg-0">
-                    <h2>Gewählte Filter</h2>
+                <div class="bg-light-red px-sm-5 px-sm-2 py-5 p-lg-5 mt-md-3 mt-lg-0">
+                    <h3 class="text-uppercase red">Gewählte Filter</h3>
                     <div class="row choosenfilter">
                         <!-- <div class="col-6 filter" tabindex="0" aria-label="gewählter Filter">
                              <p>
@@ -463,86 +487,85 @@
 
 
                 </div>
-                <div class="bg-light-red  filter-erweitert"><!--p-lg-5 p-4-->
+                <div class="bg-light-red  px-sm-5 px-sm-2  p-lg-5 filter-erweitert"><!--p-lg-5 p-4-->
                     <form id="erweiterteFilter">
-                        <legend class="sr-only">Bezirk</legend>
-                        <fieldset class="form-group py-1 px-2">
-                            <legend class=" sr-only">Bezirk / Viertel
-                            </legend>
+                        <legend class="sr-only">Filter</legend>
+                        <fieldset class="form-group ">
+
                             <div class="row">
-                                <legend class="col-form-label col-sm-12 px-lg-0 text-uppercase">Bezirk / Viertel
+                                <legend class="col-form-label col-sm-12 px-0 text-uppercase">Bezirk / Viertel
                                 </legend>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="alleStadtteile"
                                            value="bezirk1" checked>
                                     <label class="form-check-label" for="alleStadtteile">
                                         Alle Stadtteile
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Auwiesen"
                                            value="bezirk2">
                                     <label class="form-check-label" for="Auwiesen">
                                         Auwiesen, 4030
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Ebelsberg"
                                            value="bezirk3">
                                     <label class="form-check-label" for="Ebelsberg">
-                                        Ebelsberg, 4030
+                                        Ebels&shyberg, 4030
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Franckviertel"
                                            value="bezirk4">
                                     <label class="form-check-label" for="Franckviertel">
-                                        Franckviertel, 4020
+                                        Franck&shyviertel, 4020
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Kleinmuenchen"
                                            value="bezirk5">
                                     <label class="form-check-label" for="Kleinmuenchen">
-                                        Kleinmünchen, 4030
+                                        Klein&shymünchen, 4030
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Innenstadt"
                                            value="bezirk6">
                                     <label class="form-check-label" for="Innenstadt">
                                         Innenstadt, 4020
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Neue Heimat"
                                            value="bezirk7">
                                     <label class="form-check-label" for="Neue Heimat">
                                         Neue Heimat, 4030
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Pichling"
                                            value="bezirk8">
                                     <label class="form-check-label" for="Pichling">
                                         Pichling, 4030
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Urfahr"
                                            value="bezirk9">
                                     <label class="form-check-label" for="Urfahr">
                                         Urfahr, 4040
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="Zoehrdorf"
                                            value="bezirk10">
                                     <label class="form-check-label" for="Zoehrdorf">
-                                        Zöhrdorf, 4030
+                                        Zöhr&shydorf, 4030
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bezirke" id="auserhalb"
                                            value="bezirk10">
                                     <label class="form-check-label" for="auserhalb">
@@ -553,7 +576,7 @@
                             </div>
                         </fieldset>
 
-                        <fieldset class="form-group px-2">
+                        <fieldset class="form-group ">
                             <legend class="sr-only">Preis</legend>
                             <div class="row">
                                 <div data-role="page" id="page1">
@@ -597,53 +620,53 @@
 
                             </div>
                         </fieldset>
-                        <fieldset class="form-group px-2">
+                        <fieldset class="form-group ">
 
                             <legend class="col-form-label col-sm-12 px-0 text-uppercase">Bautyp</legend>
                             <div class="row">
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Altbau"
                                            value="bautyp1" aria-label="Altbau">
                                     <label class="form-check-label" for="Altbau">
                                         Altbau
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Neubau"
                                            value="bautyp2" aria-label="Neubau">
                                     <label class="form-check-label" for="Neubau">
                                         Neubau
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Erstbezug"
                                            value="bautyp3" aria-label="Erstbezug">
                                     <label class="form-check-label" for="Erstbezug">
                                         Erstbezug
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Reihenhaus"
                                            value="bautyp4">
                                     <label class="form-check-label" for="Reihenhaus">
                                         Reihenhaus
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Maisonette"
                                            value="bautyp5" aria-label="Maisonette">
                                     <label class="form-check-label" for="Maisonette">
                                         Maisonette
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Oberstesgeschoss"
                                            value="bautyp6" aria-label="Oberstes Geschoß">
                                     <label class="form-check-label" for="Oberstesgeschoss">
                                         Oberstes Geschoß
                                     </label>
                                 </div>
-                                <div class="form-check col-6 py-1 filter">
+                                <div class="form-check col-6  filter">
                                     <input class="form-check-input" type="checkbox" name="bautyp" id="Mansarde"
                                            value="bautyp7" aria-label="Mansarde oder Dachgeschoß">
                                     <label class="form-check-label" for="Mansarde">
@@ -655,7 +678,7 @@
                             </div>
                         </fieldset>
 
-                        <fieldset class="form-group px-2">
+                        <fieldset class="form-group ">
                             <legend class="col-form-label col-sm-12 px-0 text-uppercase">Freifläche</legend>
                             <div class="row">
                                 <div class="col-sm-12 px-0">
@@ -686,7 +709,7 @@
                             </div>
                         </fieldset>
 
-                        <fieldset class="form-group px-2">
+                        <fieldset class="form-group ">
                             <legend class="col-form-label col-sm-12 px-0 text-uppercase">Ausstattung</legend>
                             <div class="row">
                                 <div class="col-sm-12 px-0">
@@ -726,7 +749,7 @@
                             </div>
                         </fieldset>
 
-                        <fieldset class="form-group px-2">
+                        <fieldset class="form-group ">
                             <legend class="col-form-label col-sm-12 px-0 text-uppercase">Verfügbarkeit</legend>
                             <div class="row">
                                 <div class="col-sm-12 px-0">
@@ -759,12 +782,13 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-<footer class="bg-dark py-4 pt-6 px-sm-1 px-md-3 px-lg-5 text-white">
+
+<footer class="bg-dark px-sm-5 px-sm-2 p-3  p-lg-5 text-white">
     <div class="container-fluid">
 
-        <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-5 row-cols-md-3 mb-4">
-            <div class="col mb-3">
-                <h2 class="text-transform-none pb-3">GWG - Gemeinnützige Wohnungsgesellschaft <br> der Stadt Linz GmbH
+        <div class="row mx-0 row-cols-1 row-cols-sm-1 row-cols-lg-5 row-cols-md-3 mb-4">
+            <div class="col mb-3 mx-0 px-0">
+                <h2 class="text-transform-none pt-3">GWG - Gemeinnützige <br/>Wohnungs&shygesellschaft <br> der Stadt Linz GmbH
                 </h2>
                 <p>
                     Eisenhandstraße 30
@@ -776,34 +800,34 @@
                 </p>
                 <a href="#" class="text-white underline letter-spacing ">Kontaktformular</a>
             </div>
-            <div class="col mb-3">
-                <h3 class="pb-3">Unternehmen</h3>
+            <div class="col mb-3 mx-0 px-0">
+                <h3 class="pt-3">Unternehmen</h3>
                 <ul>
                     <li><a href="#">Über uns</a></li>
                     <li><a href="#">Karriere</a></li>
-                    <li><a href="news.html">Neuigkeiten & Presse</a></li>
+                    <li><a href="news.html" onclick="window.location = 'news.html'">Neuigkeiten & Presse</a></li>
                     <li><a href="#">Impressum</a></li>
-                    <li><a href="#">Geschäftsbedingung</a></li>
+                    <li><a href="#">Geschäftsbedingungen</a></li>
 
                 </ul>
             </div>
-            <div class="col mb-3">
-                <h3 class="pb-3">Baumanagement</h3>
+            <div class="col mb-3 mx-0 px-0">
+                <h3 class="pt-3">Baumanagement</h3>
                 <ul>
                     <li><a href="#">Baumanagement</a></li>
                     <li><a href="#">Architekten&shywettbewerb</a></li>
                     <li><a href="#">Ausschreibungen</a></li>
                 </ul>
             </div>
-            <div class="col mb-3">
-                <h3 class="pb-3">Kontakt</h3>
+            <div class="col mb-3 mx-0 px-0">
+                <h3 class="pt-3">Kontakt</h3>
                 <ul>
                     <li><a href="#">Anfahrt</a></li>
                     <li><a href="#">Ansprechpersonen</a></li>
                     <li><a href="#">Anmeldung für Wohnung</a></li>
                 </ul>
             </div>
-            <div class="col mb-3">
+            <div class="col mb-3 mx-0 px-0">
                 <img src="assets/LINZ_LOGO_NEU---2m_weiss_magenta_neu.png" width="auto" height="65px"
                      alt="Linz verändert"
                      class="mb-3"
@@ -816,7 +840,7 @@
                      alt="GBV"
                      class="mb-3"
                 >
-                <p><b>Österreichischer Verband<br>
+                <p ><b>Österreichischer Verband<br>
                     Gemeinnütziger Bauvereinigungen</b>
                     Revisionsverband
                     <br>
@@ -825,8 +849,11 @@
             </div>
 
         </div>
-        <div class="row">
-            <p>© GWG - Gemeinnützige Wohnungsgesellschaft der Stadt Linz GmbH</p>
+        <div class="row  mb-4">
+            <div class="col-12">
+                <p>© GWG - Gemeinnützige Wohnungsgesellschaft der Stadt Linz GmbH</p>
+            </div>
+
         </div>
     </div>
 </footer>

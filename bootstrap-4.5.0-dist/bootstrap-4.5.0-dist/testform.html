@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Ruheoase</title>
+</head>
+
+
+<body class="bg-light-gray">
+
+<div class="container-fluid sticky-top px-0">
+    <!--NAVIGATION-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white-fade mainnavigation fixed-top " aria-label="Main">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/Logo.png" height="110" alt="Logo" id="logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column align-items-end" id="navbarCollapse">
+                <!-- navbar1 -->
+                <ul class="navbar-nav pb-2 font-weight-bold">
+                    <li>
+                        <a class="nav-item nav-link px-3" href="search.html">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                      d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                <path fill-rule="evenodd"
+                                      d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                            </svg>
+                            Suche
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-item nav-link px-3" href="#">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-lock-fill"
+                                 fill="currentColor"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.5 9a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9z"/>
+                                <path fill-rule="evenodd"
+                                      d="M4.5 4a3.5 3.5 0 1 1 7 0v3h-1V4a2.5 2.5 0 0 0-5 0v3h-1V4z"/>
+                            </svg>
+                            Login
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-item nav-link px-3" href="#">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-key-fill" fill="currentColor"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                      d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                            </svg>
+                            Anmeldung für Wohnung
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-item nav-link px-3 text-primary" href="#">
+                            Wichtige Kontakte
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- navbar2 -->
+                <ul class="navbar-nav navbar-expand-sm pt-2">
+                    <li class="nav-item ">
+                        <a class="nav-item nav-link px-3" href="search.html">Immobiliensuche</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Bauprojekte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="info.html">Rund ums Wohnen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Team</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+    <div class="row bg-white px-4 pt-0 d-flex justify-content-end ">
+    </div>
+</div>
+<!--<style>.form-section {
+    padding-left: 15px;
+    border-left: 2px solid #FF851B;
+    display: none;
+}
+.form-section.current {
+    display: inherit;
+}
+.btn-info, .btn-default {
+    margin-top: 10px;
+}
+html.codepen body {
+    margin: 1em;
+}</style>-->
+
+<div role="main">
+    <div class="container main-content mb-md-3 ">
+        <div class="row d-flex mx-lg-4 px-sm-1 ">
+            <a href="#" class=" p-2 mr-auto" aria-label="zurück zum Suchergebnis">
+                <small>
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle"
+                         fill="currentColor"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path fill-rule="evenodd"
+                              d="M8.354 11.354a.5.5 0 0 0 0-.708L5.707 8l2.647-2.646a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708 0z"/>
+                        <path fill-rule="evenodd" d="M11.5 8a.5.5 0 0 0-.5-.5H6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5z"/>
+                    </svg>
+                    <span class="underline">zurück zum Suchergebnis</span>
+
+                </small>
+            </a>
+
+
+            <a href="#" class="p-2 " aria-label="vergleichen">
+                <small>
+                    <input type="checkbox" tabindex="0"
+                           aria-label="vergleichen" role="checkbox"
+                           aria-checked="false" id="vergleichen2">
+                    <label for="vergleichen2" class="underline">vergleichen</label>
+                </small>
+            </a>
+            <a class="p-2 " aria-label="teilen" href="#">
+                <small>
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-share" fill="currentColor"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                              d="M11.724 3.947l-7 3.5-.448-.894 7-3.5.448.894zm-.448 9l-7-3.5.448-.894 7 3.5-.448.894z"/>
+                        <path fill-rule="evenodd"
+                              d="M13.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 10a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm-11-6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                    </svg>
+                    <span class="underline">teilen</span>
+                </small>
+            </a>
+
+        </div>
+    </div>
+    <div class="container px-0">
+
+        <div class="container  px-sm-5 px-sm-2 p-3  p-lg-5">
+            <div class="row py-4 px-3">
+                <h1 class="text-transform-none smallh1">Formulare</h1>
+            </div>
+            <div class="row py-4 px-3">
+                <div class="container mt-5">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-md-6">
+                            <form class="needs-validation" novalidate>
+                                <div class="tab">
+                                    <div class="form-row">
+                                        <div class="col-md-4 mb-3">
+                                            <label for="validationCustom01">First name</label>
+                                            <input type="text" class="form-control" id="validationCustom01"
+                                                   placeholder="First name" value="Mark" required>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label for="validationCustom02">Last name</label>
+                                            <input type="text" class="form-control" id="validationCustom02"
+                                                   placeholder="Last name" value="Otto" required>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label for="validationCustomUsername">Username</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="validationCustomUsername"
+                                                       placeholder="Username" aria-describedby="inputGroupPrepend"
+                                                       required>
+                                                <div class="invalid-feedback">
+                                                    Please choose a username.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab">
+                                    <div class="form-row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="validationCustom03">City</label>
+                                            <input type="text" class="form-control" id="validationCustom03"
+                                                   placeholder="City" required>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid city.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <label for="validationCustom04">State</label>
+                                            <input type="text" class="form-control" id="validationCustom04"
+                                                   placeholder="State" required>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid state.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <label for="validationCustom05">Zip</label>
+                                            <input type="text" class="form-control" id="validationCustom05"
+                                                   placeholder="Zip" required>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid zip.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab">
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck"
+                                                   required>
+                                            <label class="form-check-label" for="invalidCheck">
+                                                Agree to terms and conditions
+                                            </label>
+                                            <div class="invalid-feedback">
+                                                You must agree before submitting.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="all-steps" style="text-align:center;margin-top:40px;">
+                                    <span class="step"></span>
+                                    <span class="step"></span>
+                                    <span class="step"></span>
+                                    <span class="step"></span>
+                                    <span class="step"></span>
+                                    <span class="step"></span>
+                                    <span class="step"></span>
+                                </div>
+                                <div style="overflow:auto;" id="nextprevious">
+                                    <div style="float:right;">
+                                        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                                        <button type="submit" id="nextBtn" >Next</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <script>
+                                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                                (function () {
+                                    'use strict';
+                                    window.addEventListener('load', function () {
+                                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                        var forms = document.getElementsByClassName('needs-validation');
+                                        var next = document.getElementById("nextBtn");
+                                        // Loop over them and prevent submission
+                                        var validation = Array.prototype.filter.call(forms, function (form) {
+
+                                            if(next) {
+                                                form.addEventListener('submit', function (event) {
+                                                    if (form.checkValidity() === false) {
+                                                        event.preventDefault();
+                                                        event.stopPropagation();
+                                                    }
+                                                    form.classList.add('was-validated');
+                                                    var invalid = document.getElementsByClassName("formcontrol:invalid");
+                                                    console.log(invalid)
+                                                    console.log("hallo");
+
+                                                }, false);
+                                            }
+                                        });
+                                    }, false);
+                                })();
+                            </script>
+
+
+                            <!--<form id="regForm">
+                                <h1 id="register">Register</h1>
+
+                                <div class="tab">
+                                    <div class="form-row">
+
+                                    </div>
+                                    <div class="form-row">
+
+                                        <div class="form-group form-group-lg col-md-12">
+
+                                            <label for="nr">SozialversicherungsNr TODO</label>
+                                            <input type="text" class="form-control form-control-lg validate" id="nr"
+                                                   placeholder="SozialversicherungsNr"
+                                                   aria-label="SozialversicherungsNr"
+                                                   autocomplete="off"
+                                                   oninput="this.className = 'form-control form-control-lg'"
+                                            >
+
+
+                                        </div>
+
+                                        <div class="form-group form-group-lg col-md-3">
+                                            <div class="form-check mt-sm-4">
+                                                <input class="form-check-input" type="radio" name="gender" id="female"
+                                                       value="female">
+                                                <label class="form-check-label" for="female">
+                                                    Frau
+                                                </label>
+                                            </div>
+                                            <div class="form-check ">
+                                                <input class="form-check-input" type="radio" name="gender" id="male"
+                                                       value="male">
+                                                <label class="form-check-label" for="male">
+                                                    Herr
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group form-group-lg col-md-4">
+                                            <label for="title">Titel</label>
+                                            <input type="text" class="form-control form-control-lg" id="title"
+                                                   placeholder="Titel"
+                                                   aria-label="Titel"
+                                                   name="honorific-prefix"
+                                                   oninput="this.className = 'form-control form-control-lg'"
+                                                   required>
+                                        </div>
+
+                                        <div class="form-group form-group-lg col-md-6">
+
+                                            <label for="vorname">Vorname</label>
+                                            <input type="text" class="form-control form-control-lg" id="vorname"
+                                                   placeholder="Vorname"
+                                                   aria-label="Vorname"
+                                                   name="fname"
+                                                   oninput="this.className = 'form-control form-control-lg'">
+
+
+                                        </div>
+
+                                        <div class="form-group form-group-lg col-md-6">
+                                            <label for="nachname">Nachname</label>
+                                            <input type="text" class="form-control form-control-lg" id="nachname"
+                                                   placeholder="Nachname"
+                                                   aria-label="Nachname"
+                                                   name="lname"
+                                                   oninput="this.className = 'form-control form-control-lg'">
+
+
+                                        </div>
+                                        <div class="form-group form-group-lg col-md-6">
+                                            <label for="geburtsdatum">Geburtsdatum</label>
+                                            <input type="date" class="form-control form-control-lg" id="geburtsdatum"
+                                                   placeholder="Geburtsdatum"
+                                                   aria-label="Geburtsdatum"
+                                                   name="bday"
+                                                   oninput="this.className = 'form-control form-control-lg'">
+                                        </div>
+
+
+                                        <div class="form-group form-group-lg col-md-6">
+                                            <label for="staatsbuergerschaft">Staatsbürgerschaft</label>
+                                            <input type="text" class="form-control form-control-lg" id="staatsbuergerschaft"
+                                                   placeholder="Staatsbürgerschaft"
+                                                   aria-label="Staatsbürgerschaft"
+                                                   name="country"
+                                                   oninput="this.className = 'form-control form-control-lg'">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group form-group-lg col-md-3">
+                                            <div class="form-check mt-sm-4">
+                                                <input class="form-check-input" type="radio" name="ewr" id="ewr"
+                                                       value="ewr">
+                                                <label class="form-check-label" for="ewr">
+                                                    EWR-Bürger
+                                                </label>
+                                            </div>
+                                            <div class="form-check ">
+                                                <input class="form-check-input" type="radio" name="ewr" id="notEwr"
+                                                       value="notEwr">
+                                                <label class="form-check-label" for="notEwr">
+                                                    Nicht EWR-Bürger
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-row ewr">
+                                        <div class="form-group col-md-6" aria-label="EWR-taaten">
+
+                                            <label for="ewrstaat" class="">Staat auswählen</label>
+                                            <select class="custom-select " id="ewrstaat" name="ewrstaat"
+                                                    aria-label="EWR-Staat">
+                                                <option selected class="dropdown-item disabled">Alle EWR-Staaten</option>
+                                                <option value="1">Belgien</option>
+                                                <option value="2">Deutschland</option>
+                                                <option value="3">Österreich</option>
+                                                <option value="4">Italien</option>
+                                                <option value="5">Kroatien</option>
+                                                <option value="6">Niederlande</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="exampleFormControlFile1">Reisepasskopie / Staatsbürgerschaftsnachweis</label>
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                        </div>
+                                    </div>
+                                    <!--<div class="form-row ewr">
+                                        <div class="form-group col-md-6" aria-label="EWR-taaten">
+
+                                            <label for="ewrstaat" class="">Staat auswählen</label>
+                                            <select class="custom-select " id="ewrstaat" name="ewrstaat"
+                                                    aria-label="EWR-Staat">
+                                                <option selected class="dropdown-item disabled">Alle EWR-Staaten</option>
+                                                <option value="1">Belgien</option>
+                                                <option value="2">Deutschland</option>
+                                                <option value="3">Österreich</option>
+                                                <option value="4">Italien</option>
+                                                <option value="5">Kroatien</option>
+                                                <option value="6">Niederlande</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="exampleFormControlFile1">Reisepasskopie / Staatsbürgerschaftsnachweis</label>
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                        </div>
+                                    </div>-->
+
+                            <!--
+                                                            </div>
+                                                            <div class="tab">
+                                                                <p><input placeholder="City" oninput="this.className = ''" name="dd"></p>
+                                                                <p><input placeholder="State" oninput="this.className = ''" name="nn"></p>
+                                                            </div>
+
+
+                                                            <!--/********/
+                                                            <div class="all-steps" style="text-align:center;margin-top:40px;">
+                                                                <span class="step"></span>
+                                                                <span class="step"></span>
+                                                                <span class="step"></span>
+                                                                <span class="step"></span>
+                                                                <span class="step"></span>
+                                                                <span class="step"></span>
+                                                                <span class="step"></span>
+                                                            </div>
+
+                                                            <!--/****Next****/
+                                                            <div style="overflow:auto;" id="nextprevious">
+                                                                <div style="float:right;">
+                                                                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                                                                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<form data-toggle="validator" role="form">
+    <div class="form-group">
+        <label for="inputName" class="control-label">Name</label>
+        <input type="text" class="form-control" id="inputName" placeholder="Cina Saffary" required>
+    </div>
+    <div class="form-group has-feedback">
+        <label for="inputTwitter" class="control-label">Twitter</label>
+        <div class="input-group">
+            <span class="input-group-addon">@</span>
+            <input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" id="inputTwitter" placeholder="1000hz" required>
+        </div>
+        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+        <div class="help-block with-errors">Hey look, this one has feedback icons!</div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail" class="control-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
+        <div class="help-block with-errors"></div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword" class="control-label">Password</label>
+        <div class="form-inline row">
+            <div class="form-group col-sm-6">
+                <input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" required>
+                <div class="help-block">Minimum of 6 characters</div>
+            </div>
+            <div class="form-group col-sm-6">
+                <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="radio">
+            <label>
+                <input type="radio" name="underwear" required>
+                Boxers
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="underwear" required>
+                Briefs
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
+                Check yourself
+            </label>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>-->
+
+<footer class="bg-dark px-sm-5 px-sm-2 p-3  p-lg-5 text-white">
+    <div class="container-fluid">
+
+        <div class="row mx-0 row-cols-1 row-cols-sm-1 row-cols-lg-5 row-cols-md-3 mb-4">
+            <div class="col mb-3 mx-0 px-0">
+                <h2 class="text-transform-none pt-3">GWG - Gemeinnützige <br/>Wohnungs&shygesellschaft <br> der Stadt
+                    Linz GmbH
+                </h2>
+                <p>
+                    Eisenhandstraße 30
+                    <br>
+                    4021 Linz <br>
+                    Telefon: 07327613 <br>
+                    FAX: 07327613 33314 <br>
+                    <!--gwginfo@gwg-linz.at-->
+                </p>
+                <a href="#" class="text-white underline letter-spacing ">Kontaktformular</a>
+            </div>
+            <div class="col mb-3 mx-0 px-0">
+                <h3 class="pt-3">Unternehmen</h3>
+                <ul>
+                    <li><a href="#">Über uns</a></li>
+                    <li><a href="#">Karriere</a></li>
+                    <li><a href="news.html" onclick="window.location = 'news.html'">Neuigkeiten & Presse</a></li>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Geschäftsbedingungen</a></li>
+
+                </ul>
+            </div>
+            <div class="col mb-3 mx-0 px-0">
+                <h3 class="pt-3">Baumanagement</h3>
+                <ul>
+                    <li><a href="#">Baumanagement</a></li>
+                    <li><a href="#">Architekten&shywettbewerb</a></li>
+                    <li><a href="#">Ausschreibungen</a></li>
+                </ul>
+            </div>
+            <div class="col mb-3 mx-0 px-0">
+                <h3 class="pt-3">Kontakt</h3>
+                <ul>
+                    <li><a href="#">Anfahrt</a></li>
+                    <li><a href="#">Ansprechpersonen</a></li>
+                    <li><a href="#">Anmeldung für Wohnung</a></li>
+                </ul>
+            </div>
+            <div class="col mb-3 mx-0 px-0">
+                <img src="assets/LINZ_LOGO_NEU---2m_weiss_magenta_neu.png" width="auto" height="65px"
+                     alt="Linz verändert"
+                     class="mb-3"
+                >
+                <p class="font-weight-bold">Unternehmensgruppe Stadt Linz <br>
+                    innovationshauptplatz.linz.at
+                </p>
+                <br>
+                <img src="assets/gbv.png" width="auto" height="65px"
+                     alt="GBV"
+                     class="mb-3"
+                >
+                <p><b>Österreichischer Verband<br>
+                    Gemeinnütziger Bauvereinigungen</b>
+                    Revisionsverband
+                    <br>
+
+                </p>
+            </div>
+
+        </div>
+        <div class="row  mb-4">
+            <div class="col-12 px-0">
+                <p>© GWG - Gemeinnützige Wohnungsgesellschaft der Stadt Linz GmbH</p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+</body>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+<script src="./js/function.js"></script>
+<script src="./js/validator.js"></script>
+
+
+</html>

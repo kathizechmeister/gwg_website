@@ -211,6 +211,10 @@ h1.shadow{
     .main-content{
         padding-top: 100px;
     }
+
+    #regForm .form-group{
+        scroll-margin-top: 100px;
+    }
     #newsergebnisse p{
         font-size: 14px;
     }
@@ -226,6 +230,9 @@ h1.shadow{
 @media (min-width: 800px) {
     .main-content{
         padding-top: 150px;
+    }
+    #regForm .form-group{
+        scroll-margin-top: 150px;
     }
     #newsergebnisse p{
         font-size: 16px;
@@ -1164,3 +1171,4 @@ input::-webkit-inner-spin-button {
 html{
     scroll-behavior: smooth;
 }
+

@@ -18,10 +18,11 @@ $(function () {
     var maxDate = todaysYear - 18 + '-' + todaysMonth + '-' + todaysDay;
     var minDate = todaysYear - 100 + '-' + todaysMonth + '-' + todaysDay;
 
-    $(".restrictedBirtDate").attr("max", maxDate);
-    $(".restrictedBirtDate").attr("min", minDate);
+    $(".restrictedBirthDate").attr("max", maxDate);
+    $(".restrictedBirthDate").attr("min", minDate);
 
     $(".todayIsMinDate").attr("min", todaysDate)
+    $(".todayIsMaxDate").attr("max", todaysDate)
 
 
 });
@@ -68,6 +69,7 @@ function nextPrev(n) {
 
     var x = document.getElementsByClassName("tab");
     var errorInputs = document.getElementsByClassName("invalid-feedback");
+
     // Exit the function if any field in the current tab is invalid:
 
     if (n == 1 && !validateForm()) {
@@ -90,10 +92,17 @@ function nextPrev(n) {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0;
         x[currentTab].classList.add("was-validated");
-        console.log(currentTab +" " +(x.length-1))
+        console.log(currentTab +" " +(x.length))
 
     }
-
+    if(n == (-1)){
+        x[currentTab].style.display = "none";
+        // Increase or decrease the current tab by 1:
+        currentTab = currentTab + n;
+        showTab(currentTab)
+        showErrors(-1);
+        return;
+    }
     if(document.getElementById("errors").innerHTML != ""){
        showErrors();
     }
@@ -103,16 +112,22 @@ function nextPrev(n) {
         x[currentTab].style.display = "none";
         // Increase or decrease the current tab by 1:
         currentTab = currentTab + n;
-        if (currentTab >=( x.length-1)) {
+        if (currentTab >=( x.length)) {
 
             // ... the form gets submitted:
             console.log("submit")
             document.getElementById("regForm").submit();
-            return false;
+            return ;
+
 
 
         }
 
+        if(currentTab >= x.length && validateForm()){
+            console.log("submit")
+            document.getElementById("regForm").submit();
+            return;
+        }
         if(n == (-1)){
             showTab(currentTab)
             showErrors(-1);
@@ -137,9 +152,12 @@ function validateForm() {
     var x, y, i, valid = true;
     var allValid = true;
     x = document.getElementsByClassName("tab");
+    console.log(x);
     if(x != undefined) {
         //y = x[currentTab].getElementsByTagName("input");
         y = x[currentTab].getElementsByClassName("validate");
+        console.log(x[currentTab]);
+        console.log(y);
 
         var files = x[currentTab].getElementsByClassName("form-control-file");
         if (files > 0) {
@@ -164,17 +182,18 @@ function validateForm() {
                 // If a field is empty...
 
                 if (y[i].value == "") {
-
                     // add an "invalid" class to the field:
-                    y[i].className += " invalid";
+                    y[i].classList.add("invalid");
                     // and set the current valid status to false
                     valid = false;
 
                     showErrors();
                 }
                 else if (y[i].value != "") {
+                    if(y[i].classList.contains("invalid")){
+                        y[i].classList.remove(" invalid");
+                    }
 
-                    y[i].className -= " invalid";
                     showErrors();
 
                     valid = true;
@@ -209,7 +228,7 @@ function validateForm() {
                      }*/
                 }
                 else {
-                    y[i].className += " invalid";
+                    y[i].classList.add("invalid");
                     // and set the current valid status to false
                     valid = false;
                     y[i].closest(".tab").classList.add("was-validated");
@@ -291,7 +310,7 @@ function loadEWR() {
         '<div class="form-group col-md-12" aria-label="Reisepasskopie" id="form-group-reisepasskopie">\n' +
         '\n' +
         '                            <div class="form-group">\n' +
-        '                                <label for="reisepasskopie">Reisepasskopie / Staatsbürgerschaftsnachweis</label>\n' +
+        '                                <label for="reisepasskopie">Reisepasskopie / Staatsbürgerschaftsnachweis <span class="red small">*</span></label>\n' +
         '                                <input type="file" class="form-control-file" id="reisepasskopie">\n' +
         '                            </div>'
     ;
@@ -303,10 +322,10 @@ function loadNoneEWR() {
     document.getElementById("ewr-form-group").innerHTML =
 
         '                            <div class="form-group col-md-12" id="form-group-reisepass">\n' +
-        '                                <label for="reisepass">Reisepasskopie hochladen</label>\n' +
+        '                                <label for="reisepass">Reisepasskopie hochladen <span class="red small">*</span></label>\n' +
         '                                <input type="file" class="form-control-file" id="reisepass">\n' +
         '                            </div>\n' +
-        '                            <p class="mt-3 mb-0">Haben Sie eine Aufenthaltskarte mit dem Titel „Daueraufenthalt EU“? </p>\n' +
+        '                            <p class="mt-3 mb-0">Haben Sie eine Aufenthaltskarte mit dem Titel „Daueraufenthalt EU“? <span class="red small">*</span></p>\n' +
         '                            <div class="form-group col-md-12" id="form-group-daueraufenthalt">\n' +
         '\n' +
         '                                <input type="radio" name="daueraufenthalt" id="daueraufenthaltJa" onclick="loadDauerAufenthalt()">\n' +
@@ -320,19 +339,20 @@ function loadNoneEWR() {
 function loadDauerAufenthalt() {
     document.getElementById("daueraufenthalt").classList.remove("d-none");
     document.getElementById("daueraufenthalt").innerHTML =
-        '<div class="form-row"> <div class="form-group col-md-12" id="form-group-daueraufenthaltskarte"><label for="daueraufenthaltskarte ">Daueraufenthaltskarte hochladen</label>' +
+        '<div class="form-row"> <div class="form-group col-md-12" id="form-group-daueraufenthaltskarte"><label for="daueraufenthaltskarte ">Daueraufenthaltskarte hochladen <span class="red small">*</span></label>' +
         '<input type="file" class="form-control-file" id="daueraufenthaltskarte "></div></div>';
 }
 
 function loadDauerAufenthaltNein() {
     document.getElementById("daueraufenthalt").classList.remove("d-none");
     document.getElementById("daueraufenthalt").innerHTML = ' <div class="form-row">\n' +
-        '                        <p class="">Ich Ihrem Fall sind folgende Nachweise unbedingt erforderlich – da wir Ihre Anmeldung ansonsten nicht entgegen nehmen können.</p>\n' +
+        '                        <p class="">In Ihrem Fall sind folgende Nachweise unbedingt erforderlich – da wir Ihre Anmeldung ansonsten nicht entgegen nehmen können.</p>\n' +
         '                        <div class="form-group col-md-12 my-4" id="form-group-versicherungsdatenauszug">\n' +
         '                            <p class=" small">Versicherungsdatenauszug über\n' +
         '                                sozialversicherungspflichtiges Einkommen für mindestens 54 Monate innerhalb der letzten\n' +
         '                                fünf Jahre oder insgesamt mindestens 240 Monate </p>\n' +
-        '                            <label class="mt-0 mb-2 small" for="versicherungsdatenauszug">Versicherungsdatenauszug</label>\n' +
+        '                            <label class="mt-0 mb-2 small" for="versicherungsdatenauszug">Versicherungsdatenauszug <span\n' +
+        '                                    class="red small">*</span></label>\n' +
         '<a tabindex="0" class="information " role="button" data-toggle="popover"\n' +
         '                                       data-placement="top" data-trigger="focus" title="Info"\n' +
         '                                       data-content="<p>Info</p>">i</a>\n' +
@@ -342,7 +362,8 @@ function loadDauerAufenthaltNein() {
         '                        </div>\n' +
         '                        <div class="form-group col-md-12 my-4" id="form-group-meldebestätigung">\n' +
         '                            <p class=" small">Meldebestätigung Auszug aus den Zentralen Melderegister über mind. 5 Jahre Hauptwohnsitz in Österreich</p>\n' +
-        '                            <label class="mt-0 small mb-2" for="meldebestätigung">Meldebestätigung</label>\n' +
+        '                            <label class="mt-0 small mb-2" for="meldebestätigung">Meldebestätigung<span\n' +
+        '                                    class="red small">*</span></label>\n' +
         '<a tabindex="0" class="information " role="button" data-toggle="popover"\n' +
         '                                       data-placement="top" data-trigger="focus" title="Info"\n' +
         '                                       data-content="<p>Info</p>">i</a>\n' +
@@ -350,7 +371,8 @@ function loadDauerAufenthaltNein() {
         '                        </div>\n' +
         '                        <div class="form-group col-md-12 my-4" id="form-group-sprachkenntnisse">\n' +
         '                            <p class=" small">Sprachkenntnisse mind. Niveau A2 </p>\n' +
-        '                            <label class="mt-0 small mb-2" for="sprachkenntnisse">Zeugnis</label>\n' +
+        '                            <label class="mt-0 small mb-2" for="sprachkenntnisse">Zeugnis <span\n' +
+        '                                    class="red small">*</span></label>\n' +
         '<a tabindex="0" class="information " role="button" data-toggle="popover"\n' +
         '                                       data-placement="top" data-trigger="focus" title="Info"\n' +
         '                                       data-content="<p>Info</p>">i</a>\n' +
@@ -576,12 +598,12 @@ function addPersonToMitinteressenten(element) {
             '                       aria-label="SozialversicherungsNr"\n' +
             '                       autocomplete="off"\n' +
             '                       oninput="this.className = \'form-control\'"\n' +
-            '                       pattern="[0-9]{8}"\n' +
+            '                       pattern="[0-9]{10}"\n' +
             '                       required\n' +
             '\n' +
             '                >\n' +
             '                <div class="invalid-feedback">Bitte geben Sie die Sozial-Versicherungs-Nr. ein. Sie\n' +
-            '                    muss 8 Ziffern enthalten.\n' +
+            '                    muss 10 Ziffern enthalten.\n' +
             '                </div>\n' +
             '\n' +
             '\n' +
@@ -675,6 +697,28 @@ function addPersonToMitinteressenten(element) {
             '                </div>\n' +
             '            </div>\n' +
             '        </div>\n' +
+            '        <div class="form-row">\n' +
+            '            <div class="form-group form-group-lg col-md-6" id="form-group-verwandschaft' + newId + '">\n' +
+            '                <label for="familienstand' + newId + '" class="small">Verwandschaftsverhältnis zur Person</label><span\n' +
+            '                    class="red small">*</span>\n' +
+            '                <select name="verwandschaftsverhältnis" class="custom-select validate" id="verwandschaft' + newId + '"\n' +
+            '                        oninput="this.className = \'custom-select\'"\n' +
+            '                        required>\n' +
+            '                    <option value="" disabled selected>Verwandschaftsverhältnis auswählen</option>\n' +
+            '                    <option value="partner">Ehe- oder LebenspartnerIn</option>\n' +
+            '                    <option value="vater">Vater</option>\n' +
+            '                    <option value="mutter">Mutter</option>\n' +
+            '                    <option value="tochter">Tochter</option>\n' +
+            '                    <option value="sohn">Sohn</option>\n' +
+            '                    <option value="geschwister">Geschwister</option>\n' +
+            '                    <option value="keinFamilienverhältnis">kein Familienverhältnis</option>\n' +
+            '\n' +
+            '                </select>\n' +
+            '                <div class="invalid-feedback">\n' +
+            '                    Bitte geben Sie das Verwandschaftsverhältnis an.\n' +
+            '                </div>\n' +
+            '            </div>\n' +
+            '        </div>' +
             '        <div class="form-row">\n' +
             '            <div class="form-group form-group-lg col-md-6" id="form-group-geburtsdatum' + newId + '">\n' +
             '                <label for="geburtsdatum' + newId + '" class="small">Geburtsdatum</label><span class="red small">*</span>\n' +
@@ -1038,7 +1082,7 @@ function addPersonToMitinteressenten(element) {
             '            <div class="form-group form-group-lg col-md-8">\n' +
             '                <label for="living-country' + newId + '" class="small">Land</label><span\n' +
             '                    class="red small">*</span>\n' +
-            '                <select name="living-country" class="custom-select" id="living-country' + newId + '">\n' +
+            '                <select name="living-country" class="custom-select" id="living-country' + newId + '" required>\n' +
             '                    <option value="" disabled selected>Land auswählen</option>\n' +
             '                    <option value="AT">Österreich</option>\n' +
             '                    <optgroup label="A">\n' +
@@ -1349,7 +1393,7 @@ function addPersonToMitinteressenten(element) {
             '            </div>\n' +
             '            <div class="form-group form-group-lg col-md-12" id="form-group-strasse' + newId + '">\n' +
             '\n' +
-            '                <label for="strasse" class="small">Straße + Hausnummer</label><span\n' +
+            '                <label for="strasse" class="small">Straße + Hausnummer + Stockwerk +  Türnummer</label><span\n' +
             '                    class="red small">*</span>\n' +
             '                <input type="text" class="form-control validate" id="strasse"\n' +
             '                       placeholder="Straße"\n' +
@@ -1358,7 +1402,7 @@ function addPersonToMitinteressenten(element) {
             '                       oninput="this.className = \'form-control\'"\n' +
             '                       required>\n' +
             '                <div class="invalid-feedback">\n' +
-            '                    Bitte geben Sie die Straße und Hausnummer an.\n' +
+            '                    Bitte geben Sie die Straße, Hausnummer Stockwerk und Türnummeran.\n' +
             '                </div>\n' +
             '\n' +
             '            </div>\n' +
@@ -1566,15 +1610,16 @@ function loadNonePersonEWR(personId) {
     document.getElementById("ewr-form-group" + personId).innerHTML =
 
         '                            <div class="form-group col-md-12">\n' +
-        '                                <label for="reisepass' + personId + '">Reisepasskopie hochladen</label>\n' +
+        '                                <label for="reisepass' + personId + '">Reisepasskopie hochladen <span class="red small">*</span></label>\n' +
         '                                <input type="file" class="form-control-file" id="reisepass' + personId + '">\n' +
         '                            </div>\n' +
-        '                            <p class="mt-3 mb-0">Haben Sie eine Aufenthaltskarte mit dem Titel „Daueraufenthalt EU“? </p>\n' +
+        '                            <p class="mt-3 mb-0">Haben Sie eine Aufenthaltskarte mit dem Titel „Daueraufenthalt EU“?' +
+        ' <span class="red small">*</span></p>\n' +
         '                            <div class="form-group col-md-12">\n' +
         '\n' +
-        '                                <input type="radio" name="daueraufenthalt" id="daueraufenthaltJa' + personId + '" onclick="loadDauerAufenthaltPerson()">\n' +
+        '                                <input type="radio" name="daueraufenthalt" id="daueraufenthaltJa' + personId + '" onclick="loadDauerAufenthaltPerson('+personId+')">\n' +
         '                                <label for="daueraufenthaltJa' + personId + '">Ja</label>\n' +
-        '                                <input type="radio" name="daueraufenthalt" id="daueraufenthaltNein' + personId + '" onclick="loadDauerAufenthaltPersonNein()">\n' +
+        '                                <input type="radio" name="daueraufenthalt" id="daueraufenthaltNein' + personId + '" onclick="loadDauerAufenthaltPersonNein('+personId+')">\n' +
         '                                <label for="daueraufenthaltNein' + personId + '">Nein</label>\n' +
         '\n' +
         '                            </div>';
@@ -1583,11 +1628,11 @@ function loadNonePersonEWR(personId) {
 function loadDauerAufenthaltPerson(personId) {
     document.getElementById("daueraufenthalt" + personId).classList.remove("d-none");
     document.getElementById("daueraufenthalt" + personId).innerHTML =
-        '<div class="form-row"> <div class="form-group col-md-12"><label for="daueraufenthaltskarte' + personId + '">Daueraufenthaltskarte hochladen</label>' +
+        '<div class="form-row"> <div class="form-group col-md-12"><label for="daueraufenthaltskarte' + personId + '">Daueraufenthaltskarte hochladen <span class="red small">*</span></label>' +
         '<input type="file" class="form-control-file" id="daueraufenthaltskarte' + personId + '"></div></div>';
 }
 
-function loadDauerAufenthaltPersonNein() {
+function loadDauerAufenthaltPersonNein(personId) {
     document.getElementById("daueraufenthalt" + personId).classList.remove("d-none");
     document.getElementById("daueraufenthalt" + personId).innerHTML = ' <div class="form-row">\n' +
         '                        <p class="">Ich Ihrem Fall sind folgende Nachweise unbedingt erforderlich – da wir Ihre Anmeldung ansonsten nicht entgegen nehmen können.</p>\n' +
@@ -1595,7 +1640,7 @@ function loadDauerAufenthaltPersonNein() {
         '                            <p class=" small">Versicherungsdatenauszug über\n' +
         '                                sozialversicherungspflichtiges Einkommen für mindestens 54 Monate innerhalb der letzten\n' +
         '                                fünf Jahre oder insgesamt mindestens 240 Monate </p>\n' +
-        '                            <label class="mt-0 mb-2 small" for="versicherungsdatenauszug' + personId + '">Versicherungsdatenauszug</label>\n' +
+        '                            <label class="mt-0 mb-2 small" for="versicherungsdatenauszug' + personId + '">Versicherungsdatenauszug <span class="red small">*</span></label>\n' +
         '<a tabindex="0" class="information " role="button" data-toggle="popover"\n' +
         '                                       data-placement="top" data-trigger="focus" title="Info"\n' +
         '                                       data-content="<p>Info</p>">i</a>\n' +
@@ -1605,7 +1650,7 @@ function loadDauerAufenthaltPersonNein() {
         '                        </div>\n' +
         '                        <div class="form-group col-md-12 my-4">\n' +
         '                            <p class=" small">Meldebestätigung Auszug aus den Zentralen Melderegister über mind. 5 Jahre Hauptwohnsitz in Österreich</p>\n' +
-        '                            <label class="mt-0 small mb-2" for="meldebestätigung' + personId + '">Meldebestätigung</label>\n' +
+        '                            <label class="mt-0 small mb-2" for="meldebestätigung' + personId + '">Meldebestätigung <span class="red small">*</span></label>\n' +
         '<a tabindex="0" class="information " role="button" data-toggle="popover"\n' +
         '                                       data-placement="top" data-trigger="focus" title="Info"\n' +
         '                                       data-content="<p>Info</p>">i</a>\n' +
@@ -1613,7 +1658,7 @@ function loadDauerAufenthaltPersonNein() {
         '                        </div>\n' +
         '                        <div class="form-group col-md-12 my-4">\n' +
         '                            <p class=" small">Sprachkenntnisse mind. Niveau A2 </p>\n' +
-        '                            <label class="mt-0 small mb-2" for="sprachkenntnisse' + personId + '">Zeugnis</label>\n' +
+        '                            <label class="mt-0 small mb-2" for="sprachkenntnisse' + personId + '">Zeugnis <span class="red small">*</span></label>\n' +
         '<a tabindex="0" class="information " role="button" data-toggle="popover"\n' +
         '                                       data-placement="top" data-trigger="focus" title="Info"\n' +
         '                                       data-content="<p>Info</p>">i</a>\n' +
@@ -1627,9 +1672,72 @@ function loadDauerAufenthaltPersonNein() {
  * check if specific radio button is checked and display input
  * @param e
  */
-function checkRechtsform(e) {
+function checkRechtsform(e, name) {
     var divForm = document.getElementById("monatlicheBelastung");
-    if (e.id != "") {
+    var elements = document.getElementsByName(name);
+    console.log(elements);
+
+    if(elements.length != 0){
+        for(var i = 0; i < elements.length; i++){
+            if(elements[i].checked == true){
+                if(elements[i].id == "miete"){
+                    elements[i].checked = "checked";
+
+                    divForm.innerHTML = "" +
+                        "<div class=\"form-group form-group-lg col-12\">\n" +
+                        "\n" +
+                        "                                <label for=\"maxMonatlicheBelastung\" class=\"small\">Maximale monatliche Belastung:\n" +
+                        "                                    (inkl. Betriebskosten ohne Heizung und Strom)</label><span\n" +
+                        "                                    class=\"red small\">*</span>\n" +
+                        "\n" +
+                        "                                <input type=\"number\" class=\"form-control validate\" id=\"maxMonatlicheBelastung\"\n" +
+                        "                                       placeholder=\"Maximale monatliche Belastung in €\"\n" +
+                        "                                       aria-label=\"Maximale monatliche Belastung\"\n" +
+                        "                                       name=\"maxMonatlicheBelastung\"\n" +
+                        "                                       oninput=\"this.className = 'form-control'\"\n" +
+                        "                                       required>\n" +
+                        "                                <div class=\"invalid-feedback\">\n" +
+                        "                                    Bitte geben Sie Ihre maximale monatliche Belastung an.\n" +
+                        "                                </div>\n" +
+                        "\n" +
+                        "                            </div>";
+
+                    return;
+                }
+                if(elements[i].id == "mietkauf"){
+                    elements[i].checked = true;
+
+                    divForm.innerHTML = "" +
+                        "<div class=\"form-group form-group-lg col-12\">\n" +
+                        "\n" +
+                        "                                <label for=\"maxMonatlicheBelastung\" class=\"small\">Maximale monatliche Belastung:\n" +
+                        "                                    (inkl. Betriebskosten ohne Heizung und Strom)</label><span\n" +
+                        "                                    class=\"red small\">*</span>\n" +
+                        "\n" +
+                        "                                <input type=\"number\" class=\"form-control validate\" id=\"maxMonatlicheBelastung\"\n" +
+                        "                                       placeholder=\"Maximale monatliche Belastung in €\"\n" +
+                        "                                       aria-label=\"Maximale monatliche Belastung\"\n" +
+                        "                                       name=\"maxMonatlicheBelastung\"\n" +
+                        "                                       oninput=\"this.className = 'form-control'\"\n" +
+                        "                                       required>\n" +
+                        "                                <div class=\"invalid-feedback\">\n" +
+                        "                                    Bitte geben Sie Ihre maximale monatliche Belastung an.\n" +
+                        "                                </div>\n" +
+                        "\n" +
+                        "                            </div>";
+
+                    return;
+                }
+
+                else{
+                    divForm.innerHTML = "";
+                }
+            }
+
+        }
+        divForm.innerHTML = "";
+    }
+  /*  if (e.id != "") {
         if (e.id != "eigentum") {
             divForm.innerHTML = "" +
                 "<div class=\"form-group form-group-lg col-12\">\n" +
@@ -1653,7 +1761,7 @@ function checkRechtsform(e) {
         if (e.id == "eigentum") {
             divForm.innerHTML = "";
         }
-    }
+    }*/
 }
 
 /**check if it is higher than 0
@@ -1683,6 +1791,55 @@ function checkEinkommen(e, newId) {
 
 /**if one specific checkbox is checked the others are not required anymore**/
 function checkCheckboxes(e) {
+    var formRowId = document.getElementById(e.id);
+    console.log(formRowId);
+    var countofStadtteil = 0;
+    if (formRowId) {
+        console.log(formRowId);
+        var inputs = formRowId.getElementsByClassName("form-check-input");
+        console.log(inputs);
+        if (inputs.length > 0) {
+
+            for (var i = 0; i < inputs.length; i++) {
+                console.log(inputs[i].required)
+
+                if (inputs[i].checked == true) {
+                    countofStadtteil++;
+                }
+
+
+            }
+
+            if (countofStadtteil > 0) {
+                for (var i = 0; i < inputs.length; i++) {
+                    //console.log(inputs[i]);
+                    inputs[i].removeAttribute("required");
+                    inputs[i].required == false;
+                    /*
+                                            inputs[i].validity.valid = true;
+                                            inputs[i].validity.valueMissing = false;
+                                            console.log(inputs[i].validity.valid);
+                                            console.log(inputs);*/
+
+                }
+            }
+            else if (countofStadtteil == 0) {
+
+                for (var i = 0; i < inputs.length; i++) {
+                    console.log(inputs[i]);
+                    inputs[i].setAttribute("required", true);
+                    inputs[i].required == true;
+                    /* inputs[i].validity.valid = "false";
+                     console.log(inputs[i].value);
+                     console.log(inputs[i].validity.valid);*/
+                }
+            }
+        }
+
+
+    }
+}
+function checkCheckboxesStadtteil(e) {
     var formRowId = document.getElementById(e.id);
     console.log(formRowId);
     var countofStadtteil = 0;

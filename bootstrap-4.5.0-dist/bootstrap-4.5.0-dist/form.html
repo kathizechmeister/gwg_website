@@ -109,7 +109,7 @@
             <div id="errors" class="red small bg-white border col-sm-12 col-lg-8 mx-auto d-none py-3 rounded"></div>
             <form id="regForm"
                   class="col-sm-12 col-lg-8 bg-white py-md-3 py-sm-1  py-lg-5 mx-auto needs-validation"
-                    onchange="updateErrors()" onclick="updateErrors()" oninput="updateErrors()">
+                  onchange="updateErrors()" onclick="updateErrors()" oninput="updateErrors()">
                 <!--<div class="all-steps d-sm-block d-md-none" style="text-align:center;">
                     <span class="step"></span>
                     <span class="step"></span>
@@ -170,7 +170,8 @@
                     <div class="row ">
                         <div class="col-12 text-center my-3">
 
-                            <img src="https://cdn.glitch.com/8414fa12-862c-4557-8c4e-87308121419f%2FiconUpload.png?v=1606237604520" alt="Icon" class="text-center" height="72px">
+                            <img src="https://cdn.glitch.com/8414fa12-862c-4557-8c4e-87308121419f%2FiconUpload.png?v=1606237604520"
+                                 alt="Icon" class="text-center" height="72px">
                             <hr class="custom-hr mb-5">
                         </div>
                         <div class="col-lg-4 ">
@@ -295,7 +296,7 @@
 
 
                 </div>
-                <div class="tab">
+                <div class="tab ">
 
                     <h2 class="px-sm-1 px-md-4 pt-4 pb-0"> 02. Allgemeine Angaben</h2>
                     <span class="small red px-4">* Feld muss ausgefüllt werden</span>
@@ -304,7 +305,8 @@
                         <div class="form-row">
 
                             <div class="form-group form-group-lg col-md-12" id="form-group-svnr">
-                                <label for="svnr" class="small ">Sozial-Versicherungs-Nr</label>
+                                <label for="svnr" class="small ">Sozial-Versicherungs-Nr</label><span
+                                    class="red small">*</span>
                                 <a tabindex="0" class="information " role="button" data-toggle="popover"
                                    data-placement="top" data-trigger="focus" title="Sozial-Versicherungs-Nr."
                                    data-content="<p>Sollten Sie über keine Sozialversicherungsnummer verfügen, so ersuchen wir Sie uns telefonisch unter<a href='tel:+43732 7613-981'> 0732 7613-981</a> oder per Email: <a href='mailto:kundencenter@gwg-linz.at'>kundencenter@gwg-linz.at</a> zu kontaktieren.</p>">i</a>
@@ -314,12 +316,12 @@
                                        aria-label="SozialversicherungsNr"
                                        autocomplete="off"
                                        oninput="this.className = 'form-control'"
-                                       pattern="[0-9]{8}"
+                                       pattern="[0-9]{10}"
                                        required
 
                                 >
                                 <div class="invalid-feedback">Bitte geben Sie Ihre Sozial-Versicherungs-Nr. ein. Sie
-                                    muss 8 Ziffern enthalten.
+                                    muss 10 Ziffern enthalten.
                                 </div>
 
 
@@ -342,8 +344,8 @@
                                     <label class="form-check-label" for="male">
                                         Herr
                                     </label>
-                                </div>
-                                <div class="invalid-feedback">Bitte geben Sie Ihre Anrede an
+                                    <div class="invalid-feedback">Bitte geben Sie Ihre Anrede an
+                                    </div>
                                 </div>
                                 <!--<div class="form-check ">
                                     <input class="form-check-input" type="radio" name="gender" id="divers"
@@ -423,9 +425,13 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group form-group-lg col-md-6" id="form-group-geburtsdatum">
-                                <label for="geburtsdatum" class="small">Geburtsdatum</label><span
-                                    class="red small">*</span>
-                                <input type="date" class="form-control validate birthDate restrictedBirtDate"
+                                <label for="geburtsdatum" class="small">Geburtsdatum<span
+                                        class="red small">*</span></label>
+                                <a tabindex="0" class="information " role="button" data-toggle="popover"
+                                   data-placement="top" data-trigger="focus" title="Geburtsdatum"
+                                   data-content="<p>Minderjährige Schwangere, minderjährige Eltern, vom Jugendamt betreute Jugendliche und minderjährige Bewohner von städtischen Jugendwohnheimen betreffend Prüfung möglicher Vormerkung bitte mit GWG Kundencenter telefonisch Kontakt aufnehmen</p>">i</a>
+
+                                <input type="date" class="form-control validate birthDate restrictedBirthDate"
                                        id="geburtsdatum"
                                        placeholder="Geburtsdatum"
                                        aria-label="Geburtsdatum"
@@ -442,7 +448,8 @@
                         <div class="form-row">
                             <div class="form-group col-md-12" aria-label="Geburtsland" id="form-group-geburtsland">
 
-                                <label for="ewr-country">Geburtsland auswählen</label>
+                                <label for="ewr-country">Geburtsland auswählen <span
+                                        class="red small">*</span></label>
                                 <select name="birth-country" class="custom-select validate" id="geburtsland"
                                         oninput="this.className = 'custom-select'"
                                         required>
@@ -761,7 +768,8 @@
                         <h3>Staatsbürgerschaft <span class="red small">*</span></h3>
                         <div class="form-row">
                             <div class="form-group col-md-12" aria-label="EWR-Staaten" onclick="checkEWR()">
-                                <label for="ewr-country">Staat auswählen</label>
+                                <label for="ewr-country">Staat auswählen <span
+                                        class="red small">*</span></label>
                                 <select name="birth-country" class="custom-select validate" id="ewr-country"
                                         oninput="this.className = 'custom-select'"
                                         required>
@@ -1466,7 +1474,7 @@
                             </div>
                             <div class="form-group form-group-lg col-md-12">
 
-                                <label for="strasse" class="small">Straße + Hausnummer</label><span
+                                <label for="strasse" class="small">Straße + Hausnummer + Stockwerk + Türnummer </label><span
                                     class="red small">*</span>
                                 <input type="text" class="form-control validate" id="strasse"
                                        placeholder="Straße"
@@ -1475,7 +1483,7 @@
                                        oninput="this.className = 'form-control'"
                                        required>
                                 <div class="invalid-feedback">
-                                    Bitte geben Sie Ihre Straße und Hausnummer an.
+                                    Bitte geben Sie Ihre Straße und Hausnummer mit Stockwerk und Türnummer an.
                                 </div>
 
                             </div>
@@ -1523,7 +1531,7 @@
                             </div>
                         </div>
                         <div class="form-row ">
-                            <div class="form-group form-group-lg mb-0" >
+                            <div class="form-group form-group-lg mb-0">
                                 <label for="mobile" class="small">Mobiltelefonnummer</label>
                             </div>
                         </div>
@@ -2321,7 +2329,7 @@
                 </div>
 
 
-                <div class="tab">
+                <div class="tab ">
                     <h2 class="px-sm-1 px-md-4 pt-4 pb-0">Angaben zu meiner gewünschten GWG Wohnung</h2>
                     <fieldset class=" fieldset   py-4 px-sm-1 px-md-4">
                         <div class="form-row">
@@ -2467,7 +2475,7 @@
                                     <input class="form-check-input" type="radio" name="stockwerk" id="nurletztesOG"
                                            value="nurletztesOG" required="required">
                                     <label class="form-check-label " for="nurletztesOG">
-                                        nurletztesOG
+                                        nur letztes OG
                                     </label>
                                 </div>
 
@@ -2494,21 +2502,24 @@
                                         class="red small">*</span>
                                 </h3>
                                 <div class="form-check mt-sm-4 ">
-                                    <input class="form-check-input" type="radio" name="objektwunsch" id="objektwunschNeubau"
-                                           value="neubau" required="required" >
+                                    <input class="form-check-input" type="radio" name="objektwunsch"
+                                           id="objektwunschNeubau"
+                                           value="neubau" required="required">
                                     <label class="form-check-label " for="objektwunschNeubau">
                                         Neubau
                                     </label>
                                 </div>
                                 <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="objektwunsch" id="objektwunschAltbau"
-                                           value="altbau" required="required" >
+                                    <input class="form-check-input" type="radio" name="objektwunsch"
+                                           id="objektwunschAltbau"
+                                           value="altbau" required="required">
                                     <label class="form-check-label " for="objektwunschAltbau">
                                         Altbau
                                     </label>
                                 </div>
                                 <div class="form-check  ">
-                                    <input class="form-check-input" type="radio" name="objektwunsch" id="objektwunschEgal"
+                                    <input class="form-check-input" type="radio" name="objektwunsch"
+                                           id="objektwunschEgal"
                                            value="egal" required="required">
                                     <label class="form-check-label " for="objektwunschEgal">
                                         Egal
@@ -2519,34 +2530,33 @@
                                 </div>
 
 
-
                             </div>
                         </div>
                     </fieldset>
                     <fieldset class=" fieldset   py-4 px-sm-1 px-md-4">
-                        <div class="form-row">
+                        <div class="form-row" onclick="checkCheckboxes(this)" id="rechtsform">
                             <div class="form-group form-group-lg col-sm-12">
                                 <h3>
                                     Rechtsform <span
                                         class="red small">*</span>
                                 </h3>
                                 <div class="form-check mt-sm-4 ">
-                                    <input class="form-check-input" type="radio" name="rechtsform" id="miete"
-                                           value="miete" required="required" onclick="checkRechtsform(this)">
+                                    <input class="form-check-input" type="checkbox" name="rechtsform" id="miete"
+                                           value="miete" required="required" onclick="checkRechtsform(this, 'rechtsform')">
                                     <label class="form-check-label " for="miete">
                                         Miete
                                     </label>
                                 </div>
                                 <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="rechtsform" id="eigentum"
-                                           value="eigentum" required="required" onclick="checkRechtsform(this)">
+                                    <input class="form-check-input" type="checkbox" name="rechtsform" id="eigentum"
+                                           value="eigentum" required="required" onclick="checkRechtsform(this, 'rechtsform')">
                                     <label class="form-check-label " for="eigentum">
                                         Eigentum
                                     </label>
                                 </div>
                                 <div class="form-check  ">
-                                    <input class="form-check-input" type="radio" name="rechtsform" id="mietkauf"
-                                           value="mietkauf" required="required" onclick="checkRechtsform(this)">
+                                    <input class="form-check-input" type="checkbox" name="rechtsform" id="mietkauf"
+                                           value="mietkauf" required="required" onclick="checkRechtsform(this, 'rechtsform')">
                                     <label class="form-check-label " for="mietkauf">
                                         Mietkauf
                                     </label>
@@ -2554,7 +2564,6 @@
                                         Bitte geben Sie die Rechtsform an.
                                     </div>
                                 </div>
-
 
 
                             </div>
@@ -2646,8 +2655,7 @@
                             <div class="form-group form-group-lg col-12" id="form-group-eigenmittel">
 
                                 <label for="eigenmittel" class="small">Eigenmittel (Baukostenzuschuss, Kaution,
-                                    Anzahlung) können erbracht werden bis (€):</label><span
-                                    class="red small">*</span>
+                                    Anzahlung) können erbracht werden bis (€):</label><span class="red small">*</span>
 
                                 <input type="number" class="form-control validate" id="eigenmittel"
                                        placeholder="Eigenmittel in €"
@@ -2666,7 +2674,7 @@
                         </div>
                     </fieldset>
                     <fieldset class=" fieldset   py-4 px-sm-1 px-md-4">
-                        <div class="form-row stadtteil" id="stadtteil" onclick="checkCheckboxes(this)" >
+                        <div class="form-row stadtteil" id="stadtteil" onclick="checkCheckboxesStadtteil(this)">
                             <div class="form-group form-group-lg col-sm-12" id="form-group-stadtteil">
                                 <h3>
                                     Mein bevorzugter Stadtteil: <span
@@ -2684,6 +2692,20 @@
                                            value="linzstadt" required>
                                     <label class="form-check-label " for="linzstadt">
                                         Linz-Stadt
+                                    </label>
+                                </div>
+                                <div class="form-check  ">
+                                    <input class="form-check-input" type="checkbox" name="stadtteil" id="kleinmuenchen"
+                                           value="kleinmuenchen" required>
+                                    <label class="form-check-label " for="kleinmuenchen">
+                                        Kleinmünchen
+                                    </label>
+                                </div>
+                                <div class="form-check  ">
+                                    <input class="form-check-input" type="checkbox" name="stadtteil" id="zoehdorf"
+                                           value="zoehdorf" required>
+                                    <label class="form-check-label " for="zoehdorf">
+                                        Zöhdorf
                                     </label>
                                 </div>
                                 <div class="form-check  ">
@@ -2877,130 +2899,150 @@
                     </fieldset>
                     <fieldset class=" fieldset   py-4 px-sm-1 px-md-4">
                         <h3>Angaben zum derzeitigen Wohnverhältnis / zur der derzeitigen Wohnung</h3>
-                        <div class="form-row">
-                            <div class="form-group form-group-lg col-12">
 
-                                <p class="small mb-0">Mein derzeitiges Wohnverhältnis entspricht:</p>
-                                <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="derzeitigesWohnverhältnis"
+                        <div class="form-row">
+                            <div class="form-group form-group-lg col-sm-12" id="form-group-wohnverhealtnis">
+
+                                <p class="small mb-0">Mein derzeitiges Wohnverhältnis entspricht: <span
+                                        class="red small">*</span></p>
+                                <div class="form-check">
+                                    <input class="form-check-input " type="radio" name="wohnverhealtnis"
                                            id="mitbewohner"
-                                           value="mitbewohner">
+                                           value="mitbewohner"
+                                           required = "required">
                                     <label class="form-check-label " for="mitbewohner">
                                         Mitbewohner
                                     </label>
                                 </div>
-                                <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="derzeitigesWohnverhältnis"
+                                <div class="form-check">
+                                    <input class="form-check-input " type="radio" name="wohnverhealtnis"
                                            id="hauptmieteBefristet"
-                                           value="hauptmieteBefristet">
+                                           value="hauptmieteBefristet"
+                                           required = "required">
                                     <label class="form-check-label" for="hauptmieteBefristet">
                                         Hauptmiete (befristet)
                                     </label>
                                 </div>
-                                <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="derzeitigesWohnverhältnis"
+                                <div class="form-check">
+                                    <input class="form-check-input " type="radio" name="wohnverhealtnis"
                                            id="hauptmieteUnbefristet"
-                                           value="hauptmieteUnbefristet">
+                                           value="hauptmieteUnbefristet"
+                                           required = "required">
                                     <label class="form-check-label" for="hauptmieteUnbefristet">
                                         Hauptmiete (unbefristet)
                                     </label>
                                 </div>
-                                <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="derzeitigesWohnverhältnis"
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="wohnverhealtnis"
                                            id="untermiete"
-                                           value="untermiete">
+                                           value="untermiete"
+                                           required = "required">
                                     <label class="form-check-label" for="untermiete">
                                         Untermiete
                                     </label>
                                 </div>
-
-                                <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="derzeitigesWohnverhältnis"
-                                           id="wohnungseigentum"
-                                           value="wohnungseigentum">
-                                    <label class="form-check-label" for="wohnungseigentum">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="wohnverhealtnis"
+                                           id="derzeitWohnungseigentum"
+                                           value="derzeitWohnungseigentum"
+                                           required = "required">
+                                    <label class="form-check-label" for="derzeitWohnungseigentum">
                                         Wohnungseigentum
                                     </label>
                                 </div>
-                                <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="derzeitigesWohnverhältnis"
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="wohnverhealtnis"
                                            id="hauseigentum"
-                                           value="hauseigentum">
+                                           value="hauseigentum"
+                                           required ="required">
                                     <label class="form-check-label" for="hauseigentum">
                                         Hauseigentum
                                     </label>
                                 </div>
-                                <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="derzeitigesWohnverhältnis"
+                                <div class="form-check">
+                                    <input class="form-check-input " type="radio" name="wohnverhealtnis"
                                            id="sozialverein"
-                                           value="sozialverein">
+                                           value="sozialverein"
+                                           required ="required">
                                     <label class="form-check-label" for="sozialverein">
                                         Bewohner in dem Sozialverein
                                     </label>
                                 </div>
                                 <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="derzeitigesWohnverhältnis"
+                                    <input class="form-check-input " type="radio" name="wohnverhealtnis"
                                            id="dienstwohnung"
-                                           value="dienstwohnung">
+                                           value="dienstwohnung"
+                                           required ="required">
                                     <label class="form-check-label" for="dienstwohnung">
                                         Dienstwohnung
                                     </label>
                                 </div>
                                 <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="derzeitigesWohnverhältnis"
+                                    <input class="form-check-input" type="radio" name="wohnverhealtnis"
                                            id="gwgHausbesorgerDienstwohnung"
-                                           value="gwgHausbesorgerDienstwohnung">
+                                           value="gwgHausbesorgerDienstwohnung"
+                                           required ="required">
                                     <label class="form-check-label" for="gwgHausbesorgerDienstwohnung">
                                         GWG-Hausbesorger-Dienstwohnung
                                     </label>
                                 </div>
-                                <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="derzeitigesWohnverhältnis"
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="wohnverhealtnis"
                                            id="obdachlos"
-                                           value="obdachlos">
+                                           value="obdachlos"
+                                           required ="required">
                                     <label class="form-check-label" for="obdachlos">
                                         Obdachlos
                                     </label>
+                                    <div class="invalid-feedback">Bitte geben Sie ihr derzeitiges Wohnverhältnis an
+                                    </div>
                                 </div>
 
                             </div>
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group form-group-lg col-12">
+                            <div class="form-group form-group-lg col-12 validate" id="form-group-derzeitigeAusstattung" >
 
-                                <p class="small mb-0">Meine derzeitige Wohnung verfügt über:</p>
+                                <p class="small mb-0">Meine derzeitige Wohnung verfügt über: <span class="red small">*</span></p>
                                 <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="derzeitigeAusstattung"
+                                    <input class="form-check-input " type="radio" name="derzeitigeAusstattung"
                                            id="zentralheizungBadDuscheWC"
-                                           value="zentralheizungBadDuscheWC">
+                                           value="zentralheizungBadDuscheWC"
+                                           required="required">
                                     <label class="form-check-label " for="zentralheizungBadDuscheWC">
                                         Zentralheizung, Bad, Dusche und WC
                                     </label>
                                 </div>
                                 <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="derzeitigeAusstattung"
+                                    <input class="form-check-input " type="radio" name="derzeitigeAusstattung"
                                            id="badOderDuscheUndWC"
-                                           value="badOderDuscheUndWC">
+                                           value="badOderDuscheUndWC"
+                                           required="required">
                                     <label class="form-check-label" for="badOderDuscheUndWC">
                                         Bad oder Dusche und WC
                                     </label>
                                 </div>
                                 <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="derzeitigeAusstattung"
+                                    <input class="form-check-input  " type="radio" name="derzeitigeAusstattung"
                                            id="wcWasserhahn"
-                                           value="wcWasserhahn">
+                                           value="wcWasserhahn"
+                                           required="required"
+                                           oninput="this.className = 'form-check-input'">
                                     <label class="form-check-label" for="wcWasserhahn">
                                         nur WC und Wasserentnahme in der Wohnung
                                     </label>
                                 </div>
                                 <div class="form-check ">
-                                    <input class="form-check-input" type="radio" name="derzeitigeAusstattung"
+                                    <input class="form-check-input  " type="radio" name="derzeitigeAusstattung"
                                            id="keinWC"
-                                           value="keinWC">
+                                           value="keinWC"
+                                           required="required">
                                     <label class="form-check-label" for="keinWC">
                                         kein WC oder keine Wasserentnahme in der Wohnung
                                     </label>
+                                    <div class="invalid-feedback">Bitte geben Sie Ihre Präferenz an
+                                    </div>
                                 </div>
 
 
@@ -3080,56 +3122,94 @@
                     <fieldset class=" fieldset   py-4 px-sm-1 px-md-4">
                         <h3>Detaillierte Angaben zum derzeitigen Wohnverhältnis</h3>
                         <div class="form-row">
-                            <div class="form-group form-group-lg col-12">
+                            <div class="form-group form-group-lg col-12" id="form-group-bruttomiete">
 
                                 <label for="monatlicheBruttoMiete" class="small">Monatliche Bruttomiete meiner
-                                    derzeitigen Wohnung<br> (inkl. Betriebskosten ohne Heizung und Strom)</label>
-                                <input type="number" class="form-control " id="monatlicheBruttoMiete"
+                                    derzeitigen Wohnung<br> (inkl. Betriebskosten ohne Heizung und Strom) <span class="red small">*</span></label>
+                                <input type="number" class="form-control validate" id="monatlicheBruttoMiete"
                                        min="0"
                                        placeholder="Monatliche Bruttomiete in €"
                                        aria-label="Monatliche Bruttomiete"
-                                       name="monatlicheBruttoMiete">
+                                       name="monatlicheBruttoMiete"
+                                       oninput="this.className = 'form-control'"
+                                       required
+                                >
+
+                                <div class="invalid-feedback">
+                                    Bitte geben Sie die derzeitige monatliche Bruttomiete an.
+                                </div>
 
 
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group form-inline col-12 small">
+                            <div class="form-group form-inline col-12" id="form-group-derzeitigeMitbewohner">
                                 <label for="mitbewohnerAnzahl" class="small">Insgesamt wohnen in meiner
                                     Wohnung: </label>
-                                <input type="number" class="form-control text-right small"
-                                       min="0"
-                                       id="mitbewohnerAnzahl"
-                                       placeholder="Mitbewohner-Anzahl"
-                                       aria-label="Mitbewohner-Anzahl"
-                                       name="mitbewohneranzahl">
-                                <span class="small labellike"> Personen</span>
+                                <input type="number" class="form-control validate number-border"
+                                        min="0"
+                                        id="mitbewohnerAnzahl"
+                                        placeholder="Mitbewohneranzahl"
+                                        aria-label="Mitbewohneranzahl"
+                                        name="mitbewohnerAnzahl"
+                                        oninput="this.className = 'form-control number-border'"
+                                        required>
+                                <span class="small labellike">Personen</span>
+                                <span class="red small">*</span>
+                                <div class="invalid-feedback">
+                                    Bitte geben Sie die Anzahl der Mitbewohner  an.
+                                </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group form-inline col-12 small">
+                            <div class="form-group form-inline col-12 " id="form-group-derzeitigeQuadratmeter">
                                 <label for="derzeitigeQuadratmeter" class="small">Quadratmeter meiner derzeitigen
                                     Wohnung: </label>
-                                <input type="number" class="form-control text-right small"
+                                <pre> </pre>
+                                <input type="number" class="form-control validate number-border"
                                        min="0"
                                        id="derzeitigeQuadratmeter"
                                        placeholder="Quadratmeter"
-                                       aria-label="Quadratmeter meiner derzeitigen Wohnung:"
-                                       name="derzeitigeQuadratmeter">
-                                <span class="small labellike"> m²</span>
+                                       aria-label="derzeitige Quadratmenter"
+                                       name="derzeitigeQuadratmeter"
+                                       oninput="this.className = 'form-control number-border'"
+                                       required>
+                                <span class="small labellike">m²     </span>
+                                <span class="red small">*</span>
+                                <div class="invalid-feedback">
+                                    Bitte geben Sie die derzeitigen Quadratmeter an.
+                                </div>
+
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group form-inline col-12 small">
+                            <!--<div class="form-group form-inline col-12 small">
                                 <label for="derzeitigeRaumanzahl" class="small">Raumanzahl (ohne Küche u.
                                     Nebenräume): </label>
-                                <input type="number" class="form-control text-right small"
+                                <input type="number" class="form-control text-right small number-border"
                                        min="0"
                                        id="derzeitigeRaumanzahl"
                                        placeholder="Raumanzahl"
                                        aria-label="Raumanzahl (ohne Küche u. Nebenräume):"
                                        name="derzeitigeRaumanzahl">
                                 <span class="small labellike"> Räume</span>
+                            </div>-->
+                            <div class="form-group form-inline form-group-lg col-12" id="form-group-derzeitigeRaumanzahl">
+                                <label for="derzeitigeRaumanzahl" class="small">Raumanzahl (ohne Küche u.
+                                    Nebenräume):</label>
+                                <pre> </pre>
+                                <input type="number" class="form-control validate number-border"
+                                       min="0"
+                                       id="derzeitigeRaumanzahl"
+                                       placeholder="derzeitige Raumanzahl"
+                                       aria-label="derzeitige Raumanzahl"
+                                       name="derzeitige"
+                                       oninput="this.className = 'form-control number-border'"
+                                       required>
+                                <span class="red small">*</span>
+                                <div class="invalid-feedback">
+                                    Bitte geben Sie die Raumanzahl an.
+                                </div>
                             </div>
                         </div>
                     </fieldset>
@@ -3175,9 +3255,11 @@
                             <h3>
                                 Erklärung des/der Wohnungsinteressent/innen
                             </h3>
-                            <div class="form-group form-group-lg col-12" id="form-group-erklaerungWohnungsinteressenten">
+                            <div class="form-group form-group-lg col-12"
+                                 id="form-group-erklaerungWohnungsinteressenten">
                                 <div class="form-check ">
-                                    <input class="form-check-input validate" type="checkbox" name="erklaerungWohnungsinteressenten"
+                                    <input class="form-check-input validate" type="checkbox"
+                                           name="erklaerungWohnungsinteressenten"
                                            id="erklaerungWohnungsinteressenten"
                                            value="" required="required">
                                     <label class="form-check-label" for="erklaerungWohnungsinteressenten">
@@ -3190,18 +3272,20 @@
                                         Wohnungsbewerbung wesentliche Umstände werde/n ich/wir der GWG unverzüglich
                                         bekanntgeben, ansonsten wird diese Bewerbung gegenstandslos.
                                     </label>
-                                    <div class="invalid-feedback">Sie müssen der Richtigkeit Ihrer Angaben zustimmen.</div>
+                                    <div class="invalid-feedback">Sie müssen der Richtigkeit Ihrer Angaben zustimmen.
+                                    </div>
                                 </div>
 
                             </div>
                         </div>
-                        <div class="form-row"  >
+                        <div class="form-row">
                             <h3>
                                 Ausdrückliche Einwilligungserklärung
                             </h3>
                             <div class="form-group form-group-lg col-12" id="form-group-datenschutzgrundverordnung">
                                 <div class="form-check ">
-                                    <input class="form-check-input validate" type="checkbox" name="datenschutzgrundverordnung"
+                                    <input class="form-check-input validate" type="checkbox"
+                                           name="datenschutzgrundverordnung"
                                            id="datenschutzgrundverordnung"
                                            value="" required="required">
                                     <label class="form-check-label" for="datenschutzgrundverordnung">
@@ -3217,7 +3301,7 @@
                                     <input class="form-check-input validate" type="checkbox" name="datenspeicherung"
                                            id="datenspeicherung"
                                            value=""
-                                            required="required">
+                                           required="required">
                                     <label class="form-check-label" for="datenspeicherung">
                                         Ich/wir erteile/n die ausdrückliche Zustimmung, dass die von mir/uns gemachten
                                         Angaben wie oben erläutert, verwendet gespeichert und verarbeitet werden dürfen.
@@ -3241,7 +3325,7 @@
                                     <input class="form-check-input" type="radio" name="zusendung"
                                            id="zusendungSms"
                                            value="zusendungSms"
-                                    required = "required">
+                                           required="required">
                                     <label class="form-check-label" for="zusendungSms">
                                         per SMS an umseits angeführte Handynummer
                                     </label>
@@ -3250,7 +3334,7 @@
                                     <input class="form-check-input" type="radio" name="zusendung"
                                            id="zusendungEmail"
                                            value="zusendungEmail"
-                                           required = "required">
+                                           required="required">
                                     <label class="form-check-label" for="zusendungEmail">
                                         per E-Mail an umseits angeführte E-Mailadresse
                                     </label>
@@ -3259,7 +3343,7 @@
                                     <input class="form-check-input" type="radio" name="zusendung"
                                            id="zusendungPostanschrift"
                                            value="zusendungPostanschrift"
-                                           required = "required">
+                                           required="required">
                                     <label class="form-check-label" for="zusendungPostanschrift">
                                         an folgende (abweichende) Postanschrift
                                     </label>

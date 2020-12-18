@@ -28,7 +28,6 @@ $(function () {
 });
 
 
-
 function showTab(n) {
     if (document.getElementById("regForm") != null) {
         // This function will display the specified tab of the form...
@@ -38,17 +37,23 @@ function showTab(n) {
             //... and fix the Previous/Next buttons:
             if (n == 0) {
                 document.getElementById("prevBtn").style.display = "none";
+                document.getElementById("prevBtn1").style.display = "none";
             } else {
                 document.getElementById("prevBtn").style.display = "inline";
+                document.getElementById("prevBtn1").style.display = "inline";
             }
             if (n == (x.length - 1)) {
                 document.getElementById("nextBtn").innerHTML = "Abschicken";
+                document.getElementById("nextBtn1").innerHTML = "Abschicken";
                 //document.getElementById("nextBtn").setAttribute("formaction", "/submit.html");
-                document.getElementById("nextBtn").classList.add("submit")
+                document.getElementById("nextBtn").classList.add("submit");
+                document.getElementById("nextBtn1").classList.add("submit");
 
             } else {
                 document.getElementById("nextBtn").innerHTML = "Nächste Seite";
+                document.getElementById("nextBtn1").innerHTML = "Nächste Seite";
                 document.getElementById("nextBtn").classList.remove("submit")
+                document.getElementById("nextBtn1").classList.remove("submit")
             }
             //... and run a function that will display the correct step indicator:
             fixStepIndicator(n);
@@ -63,16 +68,22 @@ function nextPrev(n) {
     document.documentElement.scrollTop = 0;
 
 
-  //  showErrors();
+    //  showErrors();
     // This function will figure out which tab to display
 
 
     var x = document.getElementsByClassName("tab");
     var errorInputs = document.getElementsByClassName("invalid-feedback");
+    if (n == 1 && validateForm() && document.getElementById("nextBtn").classList.contains("submit")) {
+        console.log("YEEY");
 
+        document.getElementById("regForm").submit();
+
+    }
     // Exit the function if any field in the current tab is invalid:
 
     if (n == 1 && !validateForm()) {
+        console.log("n == 1 && !validateForm()");
         validateForm();
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0;
@@ -88,14 +99,14 @@ function nextPrev(n) {
         }
         return false;
     }
-    else if(n==1 && validateForm()){
+    else if (n == 1 && validateForm()) {
+        console.log("n == 1 && validateForm()")
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0;
         x[currentTab].classList.add("was-validated");
-        console.log(currentTab +" " +(x.length))
-
     }
-    if(n == (-1)){
+    if (n == (-1)) {
+        console.log("n == (-1)");
         x[currentTab].style.display = "none";
         // Increase or decrease the current tab by 1:
         currentTab = currentTab + n;
@@ -103,46 +114,45 @@ function nextPrev(n) {
         showErrors(-1);
         return;
     }
-    if(document.getElementById("errors").innerHTML != ""){
-       showErrors();
+    if (document.getElementById("errors").innerHTML != "") {
+        console.log("document.getElementById(\"errors\").innerHTML != \"\"")
+        showErrors();
     }
-    else{
-
+    else {
+        console.log("else");
         // Hide the current tab:
         x[currentTab].style.display = "none";
         // Increase or decrease the current tab by 1:
         currentTab = currentTab + n;
-        if (currentTab >=( x.length)) {
+        if (currentTab >= (x.length)) {
+
 
             // ... the form gets submitted:
-            console.log("submit")
+            console.log("submit");
             document.getElementById("regForm").submit();
-            return ;
-
+            return;
 
 
         }
 
-        if(currentTab >= x.length && validateForm()){
-            console.log("submit")
+        if (currentTab >= x.length && validateForm()) {
+
             document.getElementById("regForm").submit();
             return;
         }
-        if(n == (-1)){
+        if (n == (-1)) {
             showTab(currentTab)
             showErrors(-1);
             return;
         }
         // if you have reached the end of the form...
 
-        console.log("step"+ currentTab);
 
         // Otherwise, display the correct tab:
 
         showTab(currentTab);
         showErrors();
     }
-
 
 
 }
@@ -152,16 +162,15 @@ function validateForm() {
     var x, y, i, valid = true;
     var allValid = true;
     x = document.getElementsByClassName("tab");
-    console.log(x);
-    if(x != undefined) {
+
+    if (x != undefined) {
         //y = x[currentTab].getElementsByTagName("input");
         y = x[currentTab].getElementsByClassName("validate");
-        console.log(x[currentTab]);
-        console.log(y);
+
 
         var files = x[currentTab].getElementsByClassName("form-control-file");
         if (files > 0) {
-            console.log(files[0].size);
+
             for (i = 0; i < files.length; i++) {
                 valid = false;
                 if (files[i].size > 3000) {
@@ -190,7 +199,7 @@ function validateForm() {
                     showErrors();
                 }
                 else if (y[i].value != "") {
-                    if(y[i].classList.contains("invalid")){
+                    if (y[i].classList.contains("invalid")) {
                         y[i].classList.remove(" invalid");
                     }
 
@@ -246,7 +255,7 @@ function validateForm() {
         }
         return valid; // return the valid status
     }
-    else if(x == undefined && currentTab == 5){
+    else if (x == undefined && currentTab == 5) {
         return true;
     }
 }
@@ -282,12 +291,11 @@ function showErrors(n) {
     else if (errorCounter > 0) {
         errorsection.classList.remove("d-none");
     }
-    if(n == (-1)){
+    if (n == (-1)) {
         newInnerHTML = "";
         errorsection.classList.add("d-none");
 
     }
-
 
 
     errorsection.innerHTML = newInnerHTML;
@@ -387,6 +395,7 @@ function loadDauerAufenthaltNein() {
 $(function () {
     initializePopover();
 });
+
 function initializePopover() {
 
 
@@ -458,7 +467,7 @@ function checkNachweise() {
 
     var addRequiredStar = "";
     var invalidFeedbackDiv = "";
-    console.log(allCheckedCheckboxes);
+
 
     for (actualCheckbox of allCheckedCheckboxes) {
         if ($(".nachweise." + actualCheckbox).length > 0) {
@@ -483,8 +492,7 @@ function checkNachweise() {
                     "                                        pdf)</label>" + addRequiredStar +
                     "                                    <input type=\"file\" class=\"form-control-file" + validateClass + " \" id=\"nachweis-" + actualCheckbox + "\" max-size=\"10\"\n" +
                     "</div>" + invalidFeedbackDiv);
-                console.log("load nachweis" + actualCheckbox);
-                console.log($(".nachweise." + actualCheckbox));
+
             }
         }
     }
@@ -492,7 +500,7 @@ function checkNachweise() {
     $.each($("input[name='dringlichkeit']:not(:checked)"), function () {
         allUncheckedCheckedCheckboxes.push($(this).val());
     });
-    console.log(allUncheckedCheckedCheckboxes);
+
     for (actualCheckbox of allUncheckedCheckedCheckboxes) {
         if ($(".nachweise." + actualCheckbox).length > 0) {
             $(".nachweise." + actualCheckbox).html("");
@@ -530,34 +538,34 @@ function addPersonToMitinteressenten(element) {
     var newId = 0;
     var maxId = 1;
     var mitinteressentenArr = $(".mitinteressent");
-    console.log("Anzahl gesamt =" + mitinteressentenArr.length );
+
     if (mitinteressentenArr.length == 8) {
-        console.log("maximale Mitinteressenten");
+
     }
 
     //add New Perosn
     else if (mitinteressentenArr.length < 9) {
-        console.log(mitinteressentenArr);
+
         var usedNumbers = [];
 
         var actualIdNumber = 0;
-        console.log(mitinteressentenArr);
-        if(mitinteressentenArr.length == 0){
+
+        if (mitinteressentenArr.length == 0) {
             actualIdNumber = 1;
             usedNumbers.push(actualIdNumber);
-            console.log(actualIdNumber);
+
         }
         else {
             for (actualMitinteressent of mitinteressentenArr) {
                 actualIdNumber = actualMitinteressent.id.replace("mitinteressentNr", "");
-                actualIdNumber = parseInt(mitinteressentenArr[mitinteressentenArr.length-1].id.replace("mitinteressentNr", ""))+1;
+                actualIdNumber = parseInt(mitinteressentenArr[mitinteressentenArr.length - 1].id.replace("mitinteressentNr", "")) + 1;
                 usedNumbers.push(actualIdNumber);
                 //actualIdNumber =mitinteressentenArr[mitinteressentenArr.length-1].id.replace("mitinteressentNr", "");
             }
 
 
         }
-        console.log(usedNumbers);
+
 
         if (usedNumbers.length == 0) {
 
@@ -568,11 +576,8 @@ function addPersonToMitinteressenten(element) {
             maxId = Math.max.apply(null, usedNumbers);
             newId = maxId;
 
-            console.log("Neue Id"+newId);
+
         }
-
-
-
 
 
         //$(".mitinteressenten").append("<div class='fieldset py-4 px-sm-1 px-md-4 mitinteressent' id='mitinteressentNr"+newId+"'>Person"+mitinteressentenArr.length+"</div>")
@@ -747,6 +752,7 @@ function addPersonToMitinteressenten(element) {
             '                        required>\n' +
             '                    <option value="" selected>Alle Staaten</option>\n' +
             '                    <option value="AT" onclick="checkPersonEWR(' + newId + ')">Österreich</option>\n' +
+            '                    <option value="Konventionsfluechtling" onclick="checkPersonEWR(' + newId + ')">Konventionsflüchtling</option>\n' +
             '                    <optgroup label="A">\n' +
             '                        <option value="AF" onclick="checkPersonEWR(' + newId + ')">Afghanistan</option>\n' +
             '                        <option value="EG" onclick="checkPersonEWR(' + newId + ')">Ägypten</option>\n' +
@@ -1520,9 +1526,9 @@ function addPersonToMitinteressenten(element) {
     var mainContent = document.getElementsByClassName("main-content");
 
     var scrollOffset;
-    for(elem of mainContent){
+    for (elem of mainContent) {
         scrollOffset = window.getComputedStyle(elem).getPropertyValue("padding-top");
-        scrollOffset = parseInt(scrollOffset.replace("px",""));
+        scrollOffset = parseInt(scrollOffset.replace("px", ""));
 
     }
 
@@ -1535,7 +1541,7 @@ function addPersonToMitinteressenten(element) {
 function deletePerson(button) {
     var id = button.id;
     var idNumber = id.replace("deletePerson", "");
-    console.log(idNumber);
+
     $("#mitinteressentNr" + idNumber).remove();
 
 
@@ -1543,7 +1549,6 @@ function deletePerson(button) {
 
 function checkPersonEWR(personId) {
     var ewr = document.getElementById("ewr-country" + personId);
-    console.log(personId)
 
     if (ewr.value != "") {
         if (ewr.value == "BE"
@@ -1613,60 +1618,17 @@ function loadNonePersonEWR(personId) {
         '                                <label for="reisepass' + personId + '">Reisepasskopie hochladen <span class="red small">*</span></label>\n' +
         '                                <input type="file" class="form-control-file" id="reisepass' + personId + '">\n' +
         '                            </div>\n' +
-        '                            <p class="mt-3 mb-0">Haben Sie eine Aufenthaltskarte mit dem Titel „Daueraufenthalt EU“?' +
-        ' <span class="red small">*</span></p>\n' +
         '                            <div class="form-group col-md-12">\n' +
-        '\n' +
-        '                                <input type="radio" name="daueraufenthalt" id="daueraufenthaltJa' + personId + '" onclick="loadDauerAufenthaltPerson('+personId+')">\n' +
-        '                                <label for="daueraufenthaltJa' + personId + '">Ja</label>\n' +
-        '                                <input type="radio" name="daueraufenthalt" id="daueraufenthaltNein' + personId + '" onclick="loadDauerAufenthaltPersonNein('+personId+')">\n' +
-        '                                <label for="daueraufenthaltNein' + personId + '">Nein</label>\n' +
-        '\n' +
-        '                            </div>';
-}
-
-function loadDauerAufenthaltPerson(personId) {
-    document.getElementById("daueraufenthalt" + personId).classList.remove("d-none");
-    document.getElementById("daueraufenthalt" + personId).innerHTML =
-        '<div class="form-row"> <div class="form-group col-md-12"><label for="daueraufenthaltskarte' + personId + '">Daueraufenthaltskarte hochladen <span class="red small">*</span></label>' +
-        '<input type="file" class="form-control-file" id="daueraufenthaltskarte' + personId + '"></div></div>';
-}
-
-function loadDauerAufenthaltPersonNein(personId) {
-    document.getElementById("daueraufenthalt" + personId).classList.remove("d-none");
-    document.getElementById("daueraufenthalt" + personId).innerHTML = ' <div class="form-row">\n' +
-        '                        <p class="">Ich Ihrem Fall sind folgende Nachweise unbedingt erforderlich – da wir Ihre Anmeldung ansonsten nicht entgegen nehmen können.</p>\n' +
-        '                        <div class="form-group col-md-12 my-4">\n' +
-        '                            <p class=" small">Versicherungsdatenauszug über\n' +
-        '                                sozialversicherungspflichtiges Einkommen für mindestens 54 Monate innerhalb der letzten\n' +
-        '                                fünf Jahre oder insgesamt mindestens 240 Monate </p>\n' +
-        '                            <label class="mt-0 mb-2 small" for="versicherungsdatenauszug' + personId + '">Versicherungsdatenauszug <span class="red small">*</span></label>\n' +
+        '                                <label for="reisepass' + personId + '">Aktuellen Aufenthaltstitel hochladen <span class="red small">*</span></label>\n' +
         '<a tabindex="0" class="information " role="button" data-toggle="popover"\n' +
-        '                                       data-placement="top" data-trigger="focus" title="Info"\n' +
-        '                                       data-content="<p>Info</p>">i</a>\n' +
-        '\n' +
-        ' ' +
-        '                            <input type="file" class="form-control-file" id="versicherungsdatenauszug' + personId + '">\n' +
-        '                        </div>\n' +
-        '                        <div class="form-group col-md-12 my-4">\n' +
-        '                            <p class=" small">Meldebestätigung Auszug aus den Zentralen Melderegister über mind. 5 Jahre Hauptwohnsitz in Österreich</p>\n' +
-        '                            <label class="mt-0 small mb-2" for="meldebestätigung' + personId + '">Meldebestätigung <span class="red small">*</span></label>\n' +
-        '<a tabindex="0" class="information " role="button" data-toggle="popover"\n' +
-        '                                       data-placement="top" data-trigger="focus" title="Info"\n' +
-        '                                       data-content="<p>Info</p>">i</a>\n' +
-        '                            <input type="file" class="form-control-file" id="meldebestätigung' + personId + '">\n' +
-        '                        </div>\n' +
-        '                        <div class="form-group col-md-12 my-4">\n' +
-        '                            <p class=" small">Sprachkenntnisse mind. Niveau A2 </p>\n' +
-        '                            <label class="mt-0 small mb-2" for="sprachkenntnisse' + personId + '">Zeugnis <span class="red small">*</span></label>\n' +
-        '<a tabindex="0" class="information " role="button" data-toggle="popover"\n' +
-        '                                       data-placement="top" data-trigger="focus" title="Info"\n' +
-        '                                       data-content="<p>Info</p>">i</a>\n' +
-        '                            <input type="file" class="form-control-file" id="sprachkenntnisse' + personId + '">\n' +
-        '                        </div>\n' +
-        '                    </div>';
+        '                                       data-placement="top" data-trigger="focus" title="Aufenthaltstitel"\n' +
+        '                                       data-content="<p>Aufenthaltstitel-Info</p>">i</a>\n' + '                                ' +
+        '<input type="file" class="form-control-file" id="aufenthaltstitel' + personId + '">\n' +
+        '                            </div>\n'
+    ;
     initializePopover();
 }
+
 
 /**
  * check if specific radio button is checked and display input
@@ -1675,12 +1637,11 @@ function loadDauerAufenthaltPersonNein(personId) {
 function checkRechtsform(e, name) {
     var divForm = document.getElementById("monatlicheBelastung");
     var elements = document.getElementsByName(name);
-    console.log(elements);
 
-    if(elements.length != 0){
-        for(var i = 0; i < elements.length; i++){
-            if(elements[i].checked == true){
-                if(elements[i].id == "miete"){
+    if (elements.length != 0) {
+        for (var i = 0; i < elements.length; i++) {
+            if (elements[i].checked == true) {
+                if (elements[i].id == "miete") {
                     elements[i].checked = "checked";
 
                     divForm.innerHTML = "" +
@@ -1704,7 +1665,7 @@ function checkRechtsform(e, name) {
 
                     return;
                 }
-                if(elements[i].id == "mietkauf"){
+                if (elements[i].id == "mietkauf") {
                     elements[i].checked = true;
 
                     divForm.innerHTML = "" +
@@ -1729,7 +1690,7 @@ function checkRechtsform(e, name) {
                     return;
                 }
 
-                else{
+                else {
                     divForm.innerHTML = "";
                 }
             }
@@ -1737,31 +1698,7 @@ function checkRechtsform(e, name) {
         }
         divForm.innerHTML = "";
     }
-  /*  if (e.id != "") {
-        if (e.id != "eigentum") {
-            divForm.innerHTML = "" +
-                "<div class=\"form-group form-group-lg col-12\">\n" +
-                "\n" +
-                "                                <label for=\"maxMonatlicheBelastung\" class=\"small\">Maximale monatliche Belastung:\n" +
-                "                                    (inkl. Betriebskosten ohne Heizung und Strom)</label><span\n" +
-                "                                    class=\"red small\">*</span>\n" +
-                "\n" +
-                "                                <input type=\"number\" class=\"form-control validate\" id=\"maxMonatlicheBelastung\"\n" +
-                "                                       placeholder=\"Maximale monatliche Belastung in €\"\n" +
-                "                                       aria-label=\"Maximale monatliche Belastung\"\n" +
-                "                                       name=\"maxMonatlicheBelastung\"\n" +
-                "                                       oninput=\"this.className = 'form-control'\"\n" +
-                "                                       required>\n" +
-                "                                <div class=\"invalid-feedback\">\n" +
-                "                                    Bitte geben Sie Ihre maximale monatliche Belastung an.\n" +
-                "                                </div>\n" +
-                "\n" +
-                "                            </div>";
-        }
-        if (e.id == "eigentum") {
-            divForm.innerHTML = "";
-        }
-    }*/
+
 }
 
 /**check if it is higher than 0
@@ -1774,7 +1711,7 @@ function checkEinkommen(e, newId) {
     if (e.value != null) {
         if (e.value > 0) {
             getMitinteressent.innerHTML = ' <div class="form-group">\n' +
-                '                <label class="small" for="jahreslohnzettel' + newId + '">Jahreslohnzettel/Monatslohnzettel\n' +
+                '                <label class="small" for="jahreslohnzettel' + newId + '">Jahreslohnzettel/Monatslohnzettel/Inskriptionsbestätigung\n' +
                 '                    hochladen</label><span\n' +
                 '                    class="red small">*</span>\n' +
                 '                <input type="file" class="form-control-file" id="jahreslohnzettel' + newId + '" multiple>\n' +
@@ -1784,7 +1721,11 @@ function checkEinkommen(e, newId) {
                 '            </div>\n';
         }
         else {
-            getMitinteressent.innerHTML = "";
+            getMitinteressent.innerHTML = ' <div class="form-group">\n' +
+                '                <label class="small" for="jahreslohnzettel' + newId + '">Jahreslohnzettel/Monatslohnzettel/Inskriptionsbestätigung\n' +
+                '                    hochladen</label>\n' +
+                '                <input type="file" class="form-control-file" id="jahreslohnzettel' + newId + '" multiple>\n' +
+                '            </div>\n';
         }
     }
 }
@@ -1792,16 +1733,16 @@ function checkEinkommen(e, newId) {
 /**if one specific checkbox is checked the others are not required anymore**/
 function checkCheckboxes(e) {
     var formRowId = document.getElementById(e.id);
-    console.log(formRowId);
+
     var countofStadtteil = 0;
     if (formRowId) {
-        console.log(formRowId);
+
         var inputs = formRowId.getElementsByClassName("form-check-input");
-        console.log(inputs);
+
         if (inputs.length > 0) {
 
             for (var i = 0; i < inputs.length; i++) {
-                console.log(inputs[i].required)
+
 
                 if (inputs[i].checked == true) {
                     countofStadtteil++;
@@ -1812,7 +1753,7 @@ function checkCheckboxes(e) {
 
             if (countofStadtteil > 0) {
                 for (var i = 0; i < inputs.length; i++) {
-                    //console.log(inputs[i]);
+
                     inputs[i].removeAttribute("required");
                     inputs[i].required == false;
                     /*
@@ -1826,7 +1767,7 @@ function checkCheckboxes(e) {
             else if (countofStadtteil == 0) {
 
                 for (var i = 0; i < inputs.length; i++) {
-                    console.log(inputs[i]);
+
                     inputs[i].setAttribute("required", true);
                     inputs[i].required == true;
                     /* inputs[i].validity.valid = "false";
@@ -1839,24 +1780,25 @@ function checkCheckboxes(e) {
 
     }
 }
+
 function checkCheckboxesStadtteil(e) {
     var formRowId = document.getElementById(e.id);
-    console.log(formRowId);
+
     var countofStadtteil = 0;
     if (formRowId) {
-        console.log(formRowId);
+
         var inputs = formRowId.getElementsByClassName("form-check-input");
-        console.log(inputs);
+
         if (inputs.length > 0) {
 
             for (var i = 0; i < inputs.length; i++) {
-                console.log(inputs[i].required)
+
 
                 if (inputs[i].checked == true) {
                     countofStadtteil++;
                 }
 
-                if(inputs[i].checked == false){
+                if (inputs[i].checked == false) {
                     inputs[0].checked = false;
                 }
             }
@@ -1877,7 +1819,7 @@ function checkCheckboxesStadtteil(e) {
             else if (countofStadtteil == 0) {
 
                 for (var i = 0; i < inputs.length; i++) {
-                    console.log(inputs[i]);
+
                     inputs[i].setAttribute("required", true);
                     inputs[i].required == true;
                     /* inputs[i].validity.valid = "false";
@@ -1890,6 +1832,7 @@ function checkCheckboxesStadtteil(e) {
 
     }
 }
+
 /***Select all if specific checkbox is checked**/
 function check_all(idOfParent) {
     var parent = document.getElementById(idOfParent);
@@ -1904,7 +1847,390 @@ function check_all(idOfParent) {
     }
 }
 
-//TODO
+/**Show address-field when specific radio is checked**/
+function checkZustimmung(name) {
+    var inputs = document.getElementsByName(name);
+    var html = document.getElementById("form-group-zusendungAbweichendePostanschrift")
+    for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].checked) {
+            if (inputs[i].value == "zusendungAbweichendePostanschrift") {
+                html.innerHTML = '' +
+                    '                        <div class="form-row">\n' +
+                    '                            <div class="form-group form-group-lg col-md-8" id="form-group-living-country-abweichend">\n' +
+                    '                                <label for="living-country-abweichend" class="small">Land</label><span\n' +
+                    '                                    class="red small">*</span>\n' +
+                    '                                <select name="living-country" class="custom-select validate" id="living-country-abweichend"\n' +
+                    '                                        required\n' +
+                    '                                        oninput="this.className = \'custom-select\'">\n' +
+                    '                                    <option value="" disabled selected>Land auswählen</option>\n' +
+                    '                                    <option value="AT">Österreich</option>\n' +
+                    '                                    <optgroup label="A">\n' +
+                    '                                        <option value="AF">Afghanistan</option>\n' +
+                    '                                        <option value="EG">Ägypten</option>\n' +
+                    '                                        <option value="AX">Åland</option>\n' +
+                    '                                        <option value="AL">Albanien</option>\n' +
+                    '                                        <option value="DZ">Algerien</option>\n' +
+                    '                                        <option value="AS">Amerikanisch-Samoa</option>\n' +
+                    '                                        <option value="VI">Amerikanische Jungferninseln</option>\n' +
+                    '                                        <option value="AD">Andorra</option>\n' +
+                    '                                        <option value="AO">Angola</option>\n' +
+                    '                                        <option value="AI">Anguilla</option>\n' +
+                    '                                        <option value="AQ">Antarktis</option>\n' +
+                    '                                        <option value="AG">Antigua und Barbuda</option>\n' +
+                    '                                        <option value="GQ">Äquatorialguinea</option>\n' +
+                    '                                        <option value="AR">Argentinien</option>\n' +
+                    '                                        <option value="AM">Armenien</option>\n' +
+                    '                                        <option value="AW">Aruba</option>\n' +
+                    '                                        <option value="AC">Ascension</option>\n' +
+                    '                                        <option value="AZ">Aserbaidschan</option>\n' +
+                    '                                        <option value="ET">Äthiopien</option>\n' +
+                    '                                        <option value="AU">Australien</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="B">\n' +
+                    '                                        <option value="BS">Bahamas</option>\n' +
+                    '                                        <option value="BH">Bahrain</option>\n' +
+                    '                                        <option value="BD">Bangladesch</option>\n' +
+                    '                                        <option value="BB">Barbados</option>\n' +
+                    '                                        <option value="BY">Belarus (Weißrussland)</option>\n' +
+                    '                                        <option value="BE">Belgien</option>\n' +
+                    '                                        <option value="BZ">Belize</option>\n' +
+                    '                                        <option value="BJ">Benin</option>\n' +
+                    '                                        <option value="BM">Bermuda</option>\n' +
+                    '                                        <option value="BT">Bhutan</option>\n' +
+                    '                                        <option value="BO">Bolivien</option>\n' +
+                    '                                        <option value="BA">Bosnien und Herzegowina</option>\n' +
+                    '                                        <option value="BW">Botswana</option>\n' +
+                    '                                        <option value="BV">Bouvetinsel</option>\n' +
+                    '                                        <option value="BR">Brasilien</option>\n' +
+                    '                                        <option value="VG">Britische Jungferninseln</option>\n' +
+                    '                                        <option value="IO">Britisches Territorium im Indischen Ozean</option>\n' +
+                    '                                        <option value="BN">Brunei Darussalam</option>\n' +
+                    '                                        <option value="BG">Bulgarien</option>\n' +
+                    '                                        <option value="BF">Burkina Faso</option>\n' +
+                    '                                        <option value="BI">Burundi</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="C">\n' +
+                    '                                        <option value="EA">Ceuta, Melilla</option>\n' +
+                    '                                        <option value="CL">Chile</option>\n' +
+                    '                                        <option value="CN">Volksrepublik China</option>\n' +
+                    '                                        <option value="CP">Clipperton</option>\n' +
+                    '                                        <option value="CK">Cookinseln</option>\n' +
+                    '                                        <option value="CR">Costa Rica</option>\n' +
+                    '                                        <option value="CI">Côte d\'Ivoire (Elfenbeinküste)</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="D">\n' +
+                    '                                        <option value="DK">Dänemark</option>\n' +
+                    '                                        <option value="DE">Deutschland</option>\n' +
+                    '                                        <option value="DG">Diego Garcia</option>\n' +
+                    '                                        <option value="DM">Dominica</option>\n' +
+                    '                                        <option value="DO">Dominikanische Republik</option>\n' +
+                    '                                        <option value="DJ">Dschibuti</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="E">\n' +
+                    '                                        <option value="EC">Ecuador</option>\n' +
+                    '                                        <option value="SV">El Salvador</option>\n' +
+                    '                                        <option value="ER">Eritrea</option>\n' +
+                    '                                        <option value="EE">Estland</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="F">\n' +
+                    '                                        <option value="FK">Falklandinseln</option>\n' +
+                    '                                        <option value="FO">Färöer</option>\n' +
+                    '                                        <option value="FJ">Fidschi</option>\n' +
+                    '                                        <option value="FI">Finnland</option>\n' +
+                    '                                        <option value="FR">Frankreich</option>\n' +
+                    '                                        <option value="GF">Französisch-Guayana</option>\n' +
+                    '                                        <option value="PF">Französisch-Polynesien</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="G">\n' +
+                    '                                        <option value="GA">Gabun</option>\n' +
+                    '                                        <option value="GM">Gambia</option>\n' +
+                    '                                        <option value="GE">Georgien</option>\n' +
+                    '                                        <option value="GH">Ghana</option>\n' +
+                    '                                        <option value="GI">Gibraltar</option>\n' +
+                    '                                        <option value="GD">Grenada</option>\n' +
+                    '                                        <option value="GR">Griechenland</option>\n' +
+                    '                                        <option value="GL">Grönland</option>\n' +
+                    '                                        <option value="GB">Großbritannien</option>\n' +
+                    '                                        <option value="GP">Guadeloupe</option>\n' +
+                    '                                        <option value="GU">Guam</option>\n' +
+                    '                                        <option value="GT">Guatemala</option>\n' +
+                    '                                        <option value="GG">Guernsey (Kanalinsel)</option>\n' +
+                    '                                        <option value="GN">Guinea</option>\n' +
+                    '                                        <option value="GW">Guinea-Bissau</option>\n' +
+                    '                                        <option value="GY">Guyana</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="H">\n' +
+                    '                                        <option value="HT">Haiti</option>\n' +
+                    '                                        <option value="HM">Heard- und McDonald-Inseln</option>\n' +
+                    '                                        <option value="HN">Honduras</option>\n' +
+                    '                                        <option value="HK">Hongkong</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="I">\n' +
+                    '                                        <option value="IN">Indien</option>\n' +
+                    '                                        <option value="ID">Indonesien</option>\n' +
+                    '                                        <option value="IM">Insel Man</option>\n' +
+                    '                                        <option value="IQ">Irak</option>\n' +
+                    '                                        <option value="IR">Iran</option>\n' +
+                    '                                        <option value="IE">Irland</option>\n' +
+                    '                                        <option value="IS">Island</option>\n' +
+                    '                                        <option value="IL">Israel</option>\n' +
+                    '                                        <option value="IT">Italien</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="J">\n' +
+                    '                                        <option value="JM">Jamaika</option>\n' +
+                    '                                        <option value="JP">Japan</option>\n' +
+                    '                                        <option value="YE">Jemen</option>\n' +
+                    '                                        <option value="JE">Jersey (Kanalinsel)</option>\n' +
+                    '                                        <option value="JO">Jordanien</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="K">\n' +
+                    '                                        <option value="KY">Kaimaninseln</option>\n' +
+                    '                                        <option value="KH">Kambodscha</option>\n' +
+                    '                                        <option value="CM">Kamerun</option>\n' +
+                    '                                        <option value="CA">Kanada</option>\n' +
+                    '                                        <option value="IC">Kanarische Inseln</option>\n' +
+                    '                                        <option value="CV">Kap Verde</option>\n' +
+                    '                                        <option value="KZ">Kasachstan</option>\n' +
+                    '                                        <option value="QA">Katar</option>\n' +
+                    '                                        <option value="KE">Kenia</option>\n' +
+                    '                                        <option value="KG">Kirgisistan</option>\n' +
+                    '                                        <option value="KI">Kiribati</option>\n' +
+                    '                                        <option value="CC">Kokosinseln</option>\n' +
+                    '                                        <option value="CO">Kolumbien</option>\n' +
+                    '                                        <option value="KM">Komoren</option>\n' +
+                    '                                        <option value="CD">Demokratische Republik Kongo</option>\n' +
+                    '                                        <option value="KP">Demokratische Volksrepublik Korea (Nordkorea)</option>\n' +
+                    '                                        <option value="KR">Republik Korea (Südkorea)</option>\n' +
+                    '                                        <option value="HR">Kroatien</option>\n' +
+                    '                                        <option value="CU">Kuba</option>\n' +
+                    '                                        <option value="KW">Kuwait</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="L">\n' +
+                    '                                        <option value="LA">Laos</option>\n' +
+                    '                                        <option value="LS">Lesotho</option>\n' +
+                    '                                        <option value="LV">Lettland</option>\n' +
+                    '                                        <option value="LB">Libanon</option>\n' +
+                    '                                        <option value="LR">Liberia</option>\n' +
+                    '                                        <option value="LY">Libyen</option>\n' +
+                    '                                        <option value="LI">Liechtenstein</option>\n' +
+                    '                                        <option value="LT">Litauen</option>\n' +
+                    '                                        <option value="LU">Luxemburg</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="M">\n' +
+                    '                                        <option value="MO">Macao</option>\n' +
+                    '                                        <option value="MG">Madagaskar</option>\n' +
+                    '                                        <option value="MW">Malawi</option>\n' +
+                    '                                        <option value="MY">Malaysia</option>\n' +
+                    '                                        <option value="MV">Malediven</option>\n' +
+                    '                                        <option value="ML">Mali</option>\n' +
+                    '                                        <option value="MT">Malta</option>\n' +
+                    '                                        <option value="MA">Marokko</option>\n' +
+                    '                                        <option value="MH">Marshallinseln</option>\n' +
+                    '                                        <option value="MQ">Martinique</option>\n' +
+                    '                                        <option value="MR">Mauretanien</option>\n' +
+                    '                                        <option value="MU">Mauritius</option>\n' +
+                    '                                        <option value="YT">Mayotte</option>\n' +
+                    '                                        <option value="MK">Mazedonien</option>\n' +
+                    '                                        <option value="MX">Mexiko</option>\n' +
+                    '                                        <option value="FM">Mikronesien</option>\n' +
+                    '                                        <option value="MD">Moldawien (Republik Moldau)</option>\n' +
+                    '                                        <option value="MC">Monaco</option>\n' +
+                    '                                        <option value="MN">Mongolei</option>\n' +
+                    '                                        <option value="ME">Montenegro</option>\n' +
+                    '                                        <option value="MS">Montserrat</option>\n' +
+                    '                                        <option value="MZ">Mosambik</option>\n' +
+                    '                                        <option value="MM">Myanmar (Burma)</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="N">\n' +
+                    '                                        <option value="NA">Namibia</option>\n' +
+                    '                                        <option value="NR">Nauru</option>\n' +
+                    '                                        <option value="NP">Nepal</option>\n' +
+                    '                                        <option value="NC">Neukaledonien</option>\n' +
+                    '                                        <option value="NZ">Neuseeland</option>\n' +
+                    '                                        <option value="NI">Nicaragua</option>\n' +
+                    '                                        <option value="NL">Niederlande</option>\n' +
+                    '                                        <option value="AN">Niederländische Antillen</option>\n' +
+                    '                                        <option value="NE">Niger</option>\n' +
+                    '                                        <option value="NG">Nigeria</option>\n' +
+                    '                                        <option value="NU">Niue</option>\n' +
+                    '                                        <option value="MP">Nördliche Marianen</option>\n' +
+                    '                                        <option value="NF">Norfolkinsel</option>\n' +
+                    '                                        <option value="NO">Norwegen</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="O">\n' +
+                    '                                        <option value="OM">Oman</option>\n' +
+                    '                                        <option value="XO">Orbit</option>\n' +
+                    '                                        <option value="AT">Österreich</option>\n' +
+                    '                                        <option value="TL">Osttimor (Timor-Leste)</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="P">\n' +
+                    '                                        <option value="PK">Pakistan</option>\n' +
+                    '                                        <option value="PS">Palästinensische Autonomiegebiete</option>\n' +
+                    '                                        <option value="PW">Palau</option>\n' +
+                    '                                        <option value="PA">Panama</option>\n' +
+                    '                                        <option value="PG">Papua-Neuguinea</option>\n' +
+                    '                                        <option value="PY">Paraguay</option>\n' +
+                    '                                        <option value="PE">Peru</option>\n' +
+                    '                                        <option value="PH">Philippinen</option>\n' +
+                    '                                        <option value="PN">Pitcairninseln</option>\n' +
+                    '                                        <option value="PL">Polen</option>\n' +
+                    '                                        <option value="PT">Portugal</option>\n' +
+                    '                                        <option value="PR">Puerto Rico</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="Q"></option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="R">\n' +
+                    '                                        <option value="TW">Republik China (Taiwan)</option>\n' +
+                    '                                        <option value="CG">Republik Kongo</option>\n' +
+                    '                                        <option value="RE">Réunion</option>\n' +
+                    '                                        <option value="RW">Ruanda</option>\n' +
+                    '                                        <option value="RO">Rumänien</option>\n' +
+                    '                                        <option value="RU">Russische Föderation</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="S">\n' +
+                    '                                        <option value="BL">Saint-Barthélemy</option>\n' +
+                    '                                        <option value="MF">Saint-Martin</option>\n' +
+                    '                                        <option value="SB">Salomonen</option>\n' +
+                    '                                        <option value="ZM">Sambia</option>\n' +
+                    '                                        <option value="WS">Samoa</option>\n' +
+                    '                                        <option value="SM">San Marino</option>\n' +
+                    '                                        <option value="ST">São Tomé und Príncipe</option>\n' +
+                    '                                        <option value="SA">Saudi-Arabien</option>\n' +
+                    '                                        <option value="SE">Schweden</option>\n' +
+                    '                                        <option value="CH">Schweiz</option>\n' +
+                    '                                        <option value="SN">Senegal</option>\n' +
+                    '                                        <option value="RS">Serbien</option>\n' +
+                    '                                        <option value="SC">Seychellen</option>\n' +
+                    '                                        <option value="SL">Sierra Leone</option>\n' +
+                    '                                        <option value="ZW">Simbabwe</option>\n' +
+                    '                                        <option value="SG">Singapur</option>\n' +
+                    '                                        <option value="SK">Slowakei</option>\n' +
+                    '                                        <option value="SI">Slowenien</option>\n' +
+                    '                                        <option value="SO">Somalia</option>\n' +
+                    '                                        <option value="ES">Spanien</option>\n' +
+                    '                                        <option value="LK">Sri Lanka</option>\n' +
+                    '                                        <option value="SH">St. Helena</option>\n' +
+                    '                                        <option value="KN">St. Kitts und Nevis</option>\n' +
+                    '                                        <option value="LC">St. Lucia</option>\n' +
+                    '                                        <option value="PM">Saint-Pierre und Miquelon</option>\n' +
+                    '                                        <option value="VC">St. Vincent und die Grenadinen</option>\n' +
+                    '                                        <option value="ZA">Südafrika</option>\n' +
+                    '                                        <option value="SD">Sudan</option>\n' +
+                    '                                        <option value="GS">Südgeorgien und die Südlichen Sandwichinseln</option>\n' +
+                    '                                        <option value="SR">Suriname</option>\n' +
+                    '                                        <option value="SJ">Svalbard und Jan Mayen</option>\n' +
+                    '                                        <option value="SZ">Swasiland</option>\n' +
+                    '                                        <option value="SY">Syrien</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="T">\n' +
+                    '                                        <option value="TJ">Tadschikistan</option>\n' +
+                    '                                        <option value="TZ">Tansania</option>\n' +
+                    '                                        <option value="TH">Thailand</option>\n' +
+                    '                                        <option value="TG">Togo</option>\n' +
+                    '                                        <option value="TK">Tokelau</option>\n' +
+                    '                                        <option value="TO">Tonga</option>\n' +
+                    '                                        <option value="TT">Trinidad und Tobago</option>\n' +
+                    '                                        <option value="TA">Tristan da Cunha</option>\n' +
+                    '                                        <option value="TD">Tschad</option>\n' +
+                    '                                        <option value="CZ">Tschechische Republik</option>\n' +
+                    '                                        <option value="TN">Tunesien</option>\n' +
+                    '                                        <option value="TR">Türkei</option>\n' +
+                    '                                        <option value="TM">Turkmenistan</option>\n' +
+                    '                                        <option value="TC">Turks- und Caicosinseln</option>\n' +
+                    '                                        <option value="TV">Tuvalu</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="U">\n' +
+                    '                                        <option value="UG">Uganda</option>\n' +
+                    '                                        <option value="UA">Ukraine</option>\n' +
+                    '                                        <option value="HU">Ungarn</option>\n' +
+                    '                                        <option value="UY">Uruguay</option>\n' +
+                    '                                        <option value="UZ">Usbekistan</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="V">\n' +
+                    '                                        <option value="VU">Vanuatu</option>\n' +
+                    '                                        <option value="VA">Vatikanstadt</option>\n' +
+                    '                                        <option value="VE">Venezuela</option>\n' +
+                    '                                        <option value="AE">Vereinigte Arabische Emirate</option>\n' +
+                    '                                        <option value="US">Vereinigte Staaten von Amerika (USA)</option>\n' +
+                    '                                        <option value="GB">Vereinigtes Königreich Großbritannien und Nordirland\n' +
+                    '                                        </option>\n' +
+                    '                                        <option value="VN">Vietnam</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="W">\n' +
+                    '                                        <option value="WF">Wallis und Futuna</option>\n' +
+                    '                                        <option value="CX">Weihnachtsinsel</option>\n' +
+                    '                                        <option value="EH">Westsahara</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                    <optgroup label="Z">\n' +
+                    '                                        <option value="CF">Zentralafrikanische Republik</option>\n' +
+                    '                                        <option value="CY">Zypern</option>\n' +
+                    '                                    </optgroup>\n' +
+                    '                                </select>\n' +
+                    '                                <div class="invalid-feedback">\n' +
+                    '                                    Bitte geben Sie Ihr Wohnland an.\n' +
+                    '                                </div>\n' +
+                    '                            </div>\n' +
+                    '                            <div class="form-group form-group-lg col-md-12">\n' +
+                    '\n' +
+                    '                                <label for="strasse-abweichend" class="small">Straße + Hausnummer + Stockwerk +\n' +
+                    '                                    Türnummer </label><span\n' +
+                    '                                    class="red small">*</span>\n' +
+                    '                                <input type="text" class="form-control validate" id="strasse-abweichend"\n' +
+                    '                                       placeholder="Straße"\n' +
+                    '                                       aria-label="Straße"\n' +
+                    '                                       name="street-address"\n' +
+                    '                                       oninput="this.className = \'form-control\'"\n' +
+                    '                                       required>\n' +
+                    '                                <div class="invalid-feedback">\n' +
+                    '                                    Bitte geben Sie Ihre Straße und Hausnummer mit Stockwerk und Türnummer an.\n' +
+                    '                                </div>\n' +
+                    '\n' +
+                    '                            </div>\n' +
+                    '\n' +
+                    '\n' +
+                    '                        </div>\n' +
+                    '                        <div class="form-row">\n' +
+                    '                            <div class="form-group form-group-lg col-md-4" id="form-group-plz">\n' +
+                    '\n' +
+                    '                                <label for="plz-abweichend" class="small">PLZ</label><span class="red small">*</span>\n' +
+                    '                                <input type="text" class="form-control validate" id="plz-abweichend"\n' +
+                    '                                       placeholder="PLZ"\n' +
+                    '                                       aria-label="PLZ"\n' +
+                    '                                       name="postal-address"\n' +
+                    '                                       oninput="this.className = \'form-control\'"\n' +
+                    '                                       required>\n' +
+                    '                                <div class="invalid-feedback">\n' +
+                    '                                    Bitte geben Sie Ihre Postleitzahl an.\n' +
+                    '                                </div>\n' +
+                    '\n' +
+                    '                            </div>\n' +
+                    '                            <div class="form-group form-group-lg col-md-8" id="form-group-ort-abweichend">\n' +
+                    '                                <label for="ort-abweichend" class="small">Ort</label><span class="red small">*</span>\n' +
+                    '                                <input type="text" class="form-control validate" id="ort-abweichend"\n' +
+                    '                                       placeholder="Ort"\n' +
+                    '                                       aria-label="Ort"\n' +
+                    '                                       name="city"\n' +
+                    '                                       oninput="this.className = \'form-control\'"\n' +
+                    '                                       required>\n' +
+                    '                                <div class="invalid-feedback">\n' +
+                    '                                    Bitte geben Sie Ihren Wohnort an.\n' +
+                    '                                </div>\n' +
+                    '                            </div>\n' +
+                    '\n' +
+                    '\n' +
+                    '                        </div>';
+
+            }
+            if(inputs[i].value != "zusendungAbweichendePostanschrift")
+            {
+                    html.innerHTML = '';
+            }
+        }
+    }
+
+}
+
+
 /**scroll to element with id**/
 function scrolling(id) {
     var elem = document.getElementById(id);
@@ -1913,17 +2239,40 @@ function scrolling(id) {
     elem.scrollIntoView(true);
     // now account for fixed header
     const scrolledY = window.scrollY;
-    console.log(window.scrollY);
-  /*  if (scrolledY) {
-        window.scroll(0, scrolledY - scrollOffset);
-    }
-*/
+
+    /*  if (scrolledY) {
+          window.scroll(0, scrolledY - scrollOffset);
+      }
+  */
 
 }
 
 function updateErrors() {
     $(".was-validated input").change(function () {
-        console.log("change")
+
         showErrors();
     });
+}
+
+function jahresnettoRequired(e) {
+    var fileUpload = document.getElementById("form-group-jahreslohnzettel");
+    if (e.value != null) {
+        if (e.value > 0) {
+
+            fileUpload.innerHTML = ' <label class="small" for="jahreslohnzettel">Jahreslohnzettel/Monatslohnzettel oder\n' +
+                '                                    Inskriptionsbestätigung\n' +
+                '                                    hochladen (mindestens 1 Dokument muss hocheladen werden)</label><span class="red small">*</span>\n' +
+                '                                <input type="file" class="form-control-file" id="jahreslohnzettel" multiple>\n' +
+                '                                <div class="invalid-feedback">Bitte laden Sie ihren Jahreslohnzettel oder\n' +
+                '                                    Monatslohnzettel hoch.\n' +
+                '                                </div>';
+        }
+        else{
+            fileUpload.innerHTML=' <label class="small" for="jahreslohnzettel">Jahreslohnzettel/Monatslohnzettel oder\n' +
+                '                                    Inskriptionsbestätigung\n' +
+                '                                    hochladen</label>\n' +
+                '                                <input type="file" class="form-control-file" id="jahreslohnzettel" multiple>\n';
+        }
+
+    }
 }

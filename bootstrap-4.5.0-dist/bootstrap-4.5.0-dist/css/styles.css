@@ -1005,7 +1005,7 @@ button:hover {
     opacity: 0.8;
 }
 
-#prevBtn {
+#prevBtn, #prevBtn1{
     background-color: #bbbbbb;
 }
 
@@ -1172,3 +1172,6 @@ html{
     scroll-behavior: smooth;
 }
 
+.form-group.number-border.form-inline{
+    width:30%;
+}

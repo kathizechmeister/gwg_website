@@ -110,6 +110,7 @@
             <form id="regForm"
                   class="col-sm-12 col-lg-8 bg-white py-md-3 py-sm-1  py-lg-5 mx-auto needs-validation"
                   onchange="updateErrors()" onclick="updateErrors()" oninput="updateErrors()">
+
                 <!--<div class="all-steps d-sm-block d-md-none" style="text-align:center;">
                     <span class="step"></span>
                     <span class="step"></span>
@@ -150,6 +151,15 @@
 
                     </div>
                 </div>
+                <div style="overflow:auto;" class="mt-3" id="nextprevious1">
+                    <div style="float:right;">
+                        <button type="button" class="btn" id="prevBtn1" onclick="nextPrev(-1)">Vorherige Seite
+                        </button>
+                        <button type="button" class="btn btn-primary" id="nextBtn1" onclick="nextPrev(1) ">Nächste
+                            Seite
+                        </button>
+                    </div>
+                </div>
                 <div class="tab styledList">
                     <div class="row">
                         <div class=" my-sm-3">
@@ -183,12 +193,12 @@
                                 <li>Aktueller Monatslohnzettel und</li>
                                 <li>Jahreslohnzettel des letzten Kalenderjahres (erhältlich beim Dienstgeber) oder
                                 </li>
-                                <li>Aktueller Renten- und Pensionsbescheide oder
-                                    <br>Bestätigungen über Wochen- und Karenzurlaub
+                                <li>Aktueller Renten- und Pensionsbescheid oder
+                                    <br>Bestätigung über Wochen- und Karenzurlaub
                                 </li>
                                 <li>Alimente</li>
-                                <li>Arbeitslosenunterstützung, Notstandshilfe oder Mindestsicherung,</li>
-                                <li>Einkommenssteuerbescheid (bei Selbstständigen)</li>
+                                <li>Arbeitslosenunterstützung, Notstandshilfe oder Mindestsicherung</li>
+                                <li>Einkommenssteuerbescheid (bei Selbstständigen) oder Inskriptionsbestätigung</li>
 
                             </ul>
                         </div>
@@ -767,330 +777,333 @@
                     <fieldset class=" fieldset   py-4 px-sm-1 px-md-4">
                         <h3>Staatsbürgerschaft <span class="red small">*</span></h3>
                         <div class="form-row">
-                            <div class="form-group col-md-12" aria-label="EWR-Staaten" onclick="checkEWR()">
+                            <div class="form-group col-md-12" aria-label="EWR-Staaten" onchange="checkEWR()">
                                 <label for="ewr-country">Staat auswählen <span
                                         class="red small">*</span></label>
                                 <select name="birth-country" class="custom-select validate" id="ewr-country"
                                         oninput="this.className = 'custom-select'"
                                         required>
                                     <option value="" selected>Alle Staaten</option>
-                                    <option value="AT" onclick="checkEWR()">Österreich</option>
+                                    <option value="AT" onchange="checkEWR()">Österreich</option>
+                                    <option value="Konventionsfluechtling" onchange="checkEWR()">Konventionsflüchtling
+                                    </option>
+
                                     <optgroup label="A">
-                                        <option value="AF" onclick="checkEWR()">Afghanistan</option>
-                                        <option value="EG" onclick="checkEWR()">Ägypten</option>
-                                        <option value="AX" onclick="checkEWR()">Åland</option>
-                                        <option value="AL" onclick="checkEWR()">Albanien</option>
-                                        <option value="DZ" onclick="checkEWR()">Algerien</option>
-                                        <option value="AS" onclick="checkEWR()">Amerikanisch-Samoa</option>
-                                        <option value="VI" onclick="checkEWR()">Amerikanische Jungferninseln
+                                        <option value="AF" onchange="checkEWR()">Afghanistan</option>
+                                        <option value="EG" onchange="checkEWR()">Ägypten</option>
+                                        <option value="AX" onchange="checkEWR()">Åland</option>
+                                        <option value="AL" onchange="checkEWR()">Albanien</option>
+                                        <option value="DZ" onchange="checkEWR()">Algerien</option>
+                                        <option value="AS" onchange="checkEWR()">Amerikanisch-Samoa</option>
+                                        <option value="VI" onchange="checkEWR()">Amerikanische Jungferninseln
                                         </option>
-                                        <option value="AD" onclick="checkEWR()">Andorra</option>
-                                        <option value="AO" onclick="checkEWR()">Angola</option>
-                                        <option value="AI" onclick="checkEWR()">Anguilla</option>
-                                        <option value="AQ" onclick="checkEWR()">Antarktis</option>
-                                        <option value="AG" onclick="checkEWR()">Antigua und Barbuda</option>
-                                        <option value="GQ" onclick="checkEWR()">Äquatorialguinea</option>
-                                        <option value="AR" onclick="checkEWR()">Argentinien</option>
-                                        <option value="AM" onclick="checkEWR()">Armenien</option>
-                                        <option value="AW" onclick="checkEWR()">Aruba</option>
-                                        <option value="AC" onclick="checkEWR()">Ascension</option>
-                                        <option value="AZ" onclick="checkEWR()">Aserbaidschan</option>
-                                        <option value="ET" onclick="checkEWR()">Äthiopien</option>
-                                        <option value="AU" onclick="checkEWR()">Australien</option>
+                                        <option value="AD" onchange="checkEWR()">Andorra</option>
+                                        <option value="AO" onchange="checkEWR()">Angola</option>
+                                        <option value="AI" onchange="checkEWR()">Anguilla</option>
+                                        <option value="AQ" onchange="checkEWR()">Antarktis</option>
+                                        <option value="AG" onchange="checkEWR()">Antigua und Barbuda</option>
+                                        <option value="GQ" onchange="checkEWR()">Äquatorialguinea</option>
+                                        <option value="AR" onchange="checkEWR()">Argentinien</option>
+                                        <option value="AM" onchange="checkEWR()">Armenien</option>
+                                        <option value="AW" onchange="checkEWR()">Aruba</option>
+                                        <option value="AC" onchange="checkEWR()">Ascension</option>
+                                        <option value="AZ" onchange="checkEWR()">Aserbaidschan</option>
+                                        <option value="ET" onchange="checkEWR()">Äthiopien</option>
+                                        <option value="AU" onchange="checkEWR()">Australien</option>
                                     </optgroup>
                                     <optgroup label="B">
-                                        <option value="BS" onclick="checkEWR()">Bahamas</option>
-                                        <option value="BH" onclick="checkEWR()">Bahrain</option>
-                                        <option value="BD" onclick="checkEWR()">Bangladesch</option>
-                                        <option value="BB" onclick="checkEWR()">Barbados</option>
-                                        <option value="BY" onclick="checkEWR()">Belarus (Weißrussland)</option>
-                                        <option value="BE" onclick="checkEWR()">Belgien</option>
-                                        <option value="BZ" onclick="checkEWR()">Belize</option>
-                                        <option value="BJ" onclick="checkEWR()">Benin</option>
-                                        <option value="BM" onclick="checkEWR()">Bermuda</option>
-                                        <option value="BT" onclick="checkEWR()">Bhutan</option>
-                                        <option value="BO" onclick="checkEWR()">Bolivien</option>
-                                        <option value="BA" onclick="checkEWR()">Bosnien und Herzegowina</option>
-                                        <option value="BW" onclick="checkEWR()">Botswana</option>
-                                        <option value="BV" onclick="checkEWR()">Bouvetinsel</option>
-                                        <option value="BR" onclick="checkEWR()">Brasilien</option>
-                                        <option value="VG" onclick="checkEWR()">Britische Jungferninseln</option>
-                                        <option value="IO" onclick="checkEWR()">Britisches Territorium im Indischen
+                                        <option value="BS" onchange="checkEWR()">Bahamas</option>
+                                        <option value="BH" onchange="checkEWR()">Bahrain</option>
+                                        <option value="BD" onchange="checkEWR()">Bangladesch</option>
+                                        <option value="BB" onchange="checkEWR()">Barbados</option>
+                                        <option value="BY" onchange="checkEWR()">Belarus (Weißrussland)</option>
+                                        <option value="BE" onchange="checkEWR()">Belgien</option>
+                                        <option value="BZ" onchange="checkEWR()">Belize</option>
+                                        <option value="BJ" onchange="checkEWR()">Benin</option>
+                                        <option value="BM" onchange="checkEWR()">Bermuda</option>
+                                        <option value="BT" onchange="checkEWR()">Bhutan</option>
+                                        <option value="BO" onchange="checkEWR()">Bolivien</option>
+                                        <option value="BA" onchange="checkEWR()">Bosnien und Herzegowina</option>
+                                        <option value="BW" onchange="checkEWR()">Botswana</option>
+                                        <option value="BV" onchange="checkEWR()">Bouvetinsel</option>
+                                        <option value="BR" onchange="checkEWR()">Brasilien</option>
+                                        <option value="VG" onchange="checkEWR()">Britische Jungferninseln</option>
+                                        <option value="IO" onchange="checkEWR()">Britisches Territorium im Indischen
                                             Ozean
                                         </option>
-                                        <option value="BN" onclick="checkEWR()">Brunei Darussalam</option>
-                                        <option value="BG" onclick="checkEWR()">Bulgarien</option>
-                                        <option value="BF" onclick="checkEWR()">Burkina Faso</option>
-                                        <option value="BI" onclick="checkEWR()">Burundi</option>
+                                        <option value="BN" onchange="checkEWR()">Brunei Darussalam</option>
+                                        <option value="BG" onchange="checkEWR()">Bulgarien</option>
+                                        <option value="BF" onchange="checkEWR()">Burkina Faso</option>
+                                        <option value="BI" onchange="checkEWR()">Burundi</option>
                                     </optgroup>
                                     <optgroup label="C">
-                                        <option value="EA" onclick="checkEWR()">Ceuta, Melilla</option>
-                                        <option value="CL" onclick="checkEWR()">Chile</option>
-                                        <option value="CN" onclick="checkEWR()">Volksrepublik China</option>
-                                        <option value="CP" onclick="checkEWR()">Clipperton</option>
-                                        <option value="CK" onclick="checkEWR()">Cookinseln</option>
-                                        <option value="CR" onclick="checkEWR()">Costa Rica</option>
-                                        <option value="CI" onclick="checkEWR()">Côte d'Ivoire (Elfenbeinküste)
+                                        <option value="EA" onchange="checkEWR()">Ceuta, Melilla</option>
+                                        <option value="CL" onchange="checkEWR()">Chile</option>
+                                        <option value="CN" onchange="checkEWR()">Volksrepublik China</option>
+                                        <option value="CP" onchange="checkEWR()">Clipperton</option>
+                                        <option value="CK" onchange="checkEWR()">Cookinseln</option>
+                                        <option value="CR" onchange="checkEWR()">Costa Rica</option>
+                                        <option value="CI" onchange="checkEWR()">Côte d'Ivoire (Elfenbeinküste)
                                         </option>
                                     </optgroup>
                                     <optgroup label="D">
-                                        <option value="DK" onclick="checkEWR()">Dänemark</option>
-                                        <option value="DE" onclick="checkEWR()">Deutschland</option>
-                                        <option value="DG" onclick="checkEWR()">Diego Garcia</option>
-                                        <option value="DM" onclick="checkEWR()">Dominica</option>
-                                        <option value="DO" onclick="checkEWR()">Dominikanische Republik</option>
-                                        <option value="DJ" onclick="checkEWR()">Dschibuti</option>
+                                        <option value="DK" onchange="checkEWR()">Dänemark</option>
+                                        <option value="DE" onchange="checkEWR()">Deutschland</option>
+                                        <option value="DG" onchange="checkEWR()">Diego Garcia</option>
+                                        <option value="DM" onchange="checkEWR()">Dominica</option>
+                                        <option value="DO" onchange="checkEWR()">Dominikanische Republik</option>
+                                        <option value="DJ" onchange="checkEWR()">Dschibuti</option>
                                     </optgroup>
                                     <optgroup label="E">
-                                        <option value="EC" onclick="checkEWR()">Ecuador</option>
-                                        <option value="SV" onclick="checkEWR()">El Salvador</option>
-                                        <option value="ER" onclick="checkEWR()">Eritrea</option>
-                                        <option value="EE" onclick="checkEWR()">Estland</option>
+                                        <option value="EC" onchange="checkEWR()">Ecuador</option>
+                                        <option value="SV" onchange="checkEWR()">El Salvador</option>
+                                        <option value="ER" onchange="checkEWR()">Eritrea</option>
+                                        <option value="EE" onchange="checkEWR()">Estland</option>
                                     </optgroup>
                                     <optgroup label="F">
-                                        <option value="FK" onclick="checkEWR()">Falklandinseln</option>
-                                        <option value="FO" onclick="checkEWR()">Färöer</option>
-                                        <option value="FJ" onclick="checkEWR()">Fidschi</option>
-                                        <option value="FI" onclick="checkEWR()">Finnland</option>
-                                        <option value="FR" onclick="checkEWR()">Frankreich</option>
-                                        <option value="GF" onclick="checkEWR()">Französisch-Guayana</option>
-                                        <option value="PF" onclick="checkEWR()">Französisch-Polynesien</option>
+                                        <option value="FK" onchange="checkEWR()">Falklandinseln</option>
+                                        <option value="FO" onchange="checkEWR()">Färöer</option>
+                                        <option value="FJ" onchange="checkEWR()">Fidschi</option>
+                                        <option value="FI" onchange="checkEWR()">Finnland</option>
+                                        <option value="FR" onchange="checkEWR()">Frankreich</option>
+                                        <option value="GF" onchange="checkEWR()">Französisch-Guayana</option>
+                                        <option value="PF" onchange="checkEWR()">Französisch-Polynesien</option>
                                     </optgroup>
                                     <optgroup label="G">
-                                        <option value="GA" onclick="checkEWR()">Gabun</option>
-                                        <option value="GM" onclick="checkEWR()">Gambia</option>
-                                        <option value="GE" onclick="checkEWR()">Georgien</option>
-                                        <option value="GH" onclick="checkEWR()">Ghana</option>
-                                        <option value="GI" onclick="checkEWR()">Gibraltar</option>
-                                        <option value="GD" onclick="checkEWR()">Grenada</option>
-                                        <option value="GR" onclick="checkEWR()">Griechenland</option>
-                                        <option value="GL" onclick="checkEWR()">Grönland</option>
-                                        <option value="GB" onclick="checkEWR()">Großbritannien</option>
-                                        <option value="GP" onclick="checkEWR()">Guadeloupe</option>
-                                        <option value="GU" onclick="checkEWR()">Guam</option>
-                                        <option value="GT" onclick="checkEWR()">Guatemala</option>
-                                        <option value="GG" onclick="checkEWR()">Guernsey (Kanalinsel)</option>
-                                        <option value="GN" onclick="checkEWR()">Guinea</option>
-                                        <option value="GW" onclick="checkEWR()">Guinea-Bissau</option>
-                                        <option value="GY" onclick="checkEWR()">Guyana</option>
+                                        <option value="GA" onchange="checkEWR()">Gabun</option>
+                                        <option value="GM" onchange="checkEWR()">Gambia</option>
+                                        <option value="GE" onchange="checkEWR()">Georgien</option>
+                                        <option value="GH" onchange="checkEWR()">Ghana</option>
+                                        <option value="GI" onchange="checkEWR()">Gibraltar</option>
+                                        <option value="GD" onchange="checkEWR()">Grenada</option>
+                                        <option value="GR" onchange="checkEWR()">Griechenland</option>
+                                        <option value="GL" onchange="checkEWR()">Grönland</option>
+                                        <option value="GB" onchange="checkEWR()">Großbritannien</option>
+                                        <option value="GP" onchange="checkEWR()">Guadeloupe</option>
+                                        <option value="GU" onchange="checkEWR()">Guam</option>
+                                        <option value="GT" onchange="checkEWR()">Guatemala</option>
+                                        <option value="GG" onchange="checkEWR()">Guernsey (Kanalinsel)</option>
+                                        <option value="GN" onchange="checkEWR()">Guinea</option>
+                                        <option value="GW" onchange="checkEWR()">Guinea-Bissau</option>
+                                        <option value="GY" onchange="checkEWR()">Guyana</option>
                                     </optgroup>
                                     <optgroup label="H">
-                                        <option value="HT" onclick="checkEWR()">Haiti</option>
-                                        <option value="HM" onclick="checkEWR()">Heard- und McDonald-Inseln</option>
-                                        <option value="HN" onclick="checkEWR()">Honduras</option>
-                                        <option value="HK" onclick="checkEWR()">Hongkong</option>
+                                        <option value="HT" onchange="checkEWR()">Haiti</option>
+                                        <option value="HM" onchange="checkEWR()">Heard- und McDonald-Inseln</option>
+                                        <option value="HN" onchange="checkEWR()">Honduras</option>
+                                        <option value="HK" onchange="checkEWR()">Hongkong</option>
                                     </optgroup>
                                     <optgroup label="I">
-                                        <option value="IN" onclick="checkEWR()">Indien</option>
-                                        <option value="ID" onclick="checkEWR()">Indonesien</option>
-                                        <option value="IM" onclick="checkEWR()">Insel Man</option>
-                                        <option value="IQ" onclick="checkEWR()">Irak</option>
-                                        <option value="IR" onclick="checkEWR()">Iran</option>
-                                        <option value="IE" onclick="checkEWR()">Irland</option>
-                                        <option value="IS" onclick="checkEWR()">Island</option>
-                                        <option value="IL" onclick="checkEWR()">Israel</option>
-                                        <option value="IT" onclick="checkEWR()">Italien</option>
+                                        <option value="IN" onchange="checkEWR()">Indien</option>
+                                        <option value="ID" onchange="checkEWR()">Indonesien</option>
+                                        <option value="IM" onchange="checkEWR()">Insel Man</option>
+                                        <option value="IQ" onchange="checkEWR()">Irak</option>
+                                        <option value="IR" onchange="checkEWR()">Iran</option>
+                                        <option value="IE" onchange="checkEWR()">Irland</option>
+                                        <option value="IS" onchange="checkEWR()">Island</option>
+                                        <option value="IL" onchange="checkEWR()">Israel</option>
+                                        <option value="IT" onchange="checkEWR()">Italien</option>
                                     </optgroup>
                                     <optgroup label="J">
-                                        <option value="JM" onclick="checkEWR()">Jamaika</option>
-                                        <option value="JP" onclick="checkEWR()">Japan</option>
-                                        <option value="YE" onclick="checkEWR()">Jemen</option>
-                                        <option value="JE" onclick="checkEWR()">Jersey (Kanalinsel)</option>
-                                        <option value="JO" onclick="checkEWR()">Jordanien</option>
+                                        <option value="JM" onchange="checkEWR()">Jamaika</option>
+                                        <option value="JP" onchange="checkEWR()">Japan</option>
+                                        <option value="YE" onchange="checkEWR()">Jemen</option>
+                                        <option value="JE" onchange="checkEWR()">Jersey (Kanalinsel)</option>
+                                        <option value="JO" onchange="checkEWR()">Jordanien</option>
                                     </optgroup>
                                     <optgroup label="K">
-                                        <option value="KY" onclick="checkEWR()">Kaimaninseln</option>
-                                        <option value="KH" onclick="checkEWR()">Kambodscha</option>
-                                        <option value="CM" onclick="checkEWR()">Kamerun</option>
-                                        <option value="CA" onclick="checkEWR()">Kanada</option>
-                                        <option value="IC" onclick="checkEWR()">Kanarische Inseln</option>
-                                        <option value="CV" onclick="checkEWR()">Kap Verde</option>
-                                        <option value="KZ" onclick="checkEWR()">Kasachstan</option>
-                                        <option value="QA" onclick="checkEWR()">Katar</option>
-                                        <option value="KE" onclick="checkEWR()">Kenia</option>
-                                        <option value="KG" onclick="checkEWR()">Kirgisistan</option>
-                                        <option value="KI" onclick="checkEWR()">Kiribati</option>
-                                        <option value="CC" onclick="checkEWR()">Kokosinseln</option>
-                                        <option value="CO" onclick="checkEWR()">Kolumbien</option>
-                                        <option value="KM" onclick="checkEWR()">Komoren</option>
-                                        <option value="CD" onclick="checkEWR()">Demokratische Republik Kongo
+                                        <option value="KY" onchange="checkEWR()">Kaimaninseln</option>
+                                        <option value="KH" onchange="checkEWR()">Kambodscha</option>
+                                        <option value="CM" onchange="checkEWR()">Kamerun</option>
+                                        <option value="CA" onchange="checkEWR()">Kanada</option>
+                                        <option value="IC" onchange="checkEWR()">Kanarische Inseln</option>
+                                        <option value="CV" onchange="checkEWR()">Kap Verde</option>
+                                        <option value="KZ" onchange="checkEWR()">Kasachstan</option>
+                                        <option value="QA" onchange="checkEWR()">Katar</option>
+                                        <option value="KE" onchange="checkEWR()">Kenia</option>
+                                        <option value="KG" onchange="checkEWR()">Kirgisistan</option>
+                                        <option value="KI" onchange="checkEWR()">Kiribati</option>
+                                        <option value="CC" onchange="checkEWR()">Kokosinseln</option>
+                                        <option value="CO" onchange="checkEWR()">Kolumbien</option>
+                                        <option value="KM" onchange="checkEWR()">Komoren</option>
+                                        <option value="CD" onchange="checkEWR()">Demokratische Republik Kongo
                                         </option>
-                                        <option value="KP" onclick="checkEWR()">Demokratische Volksrepublik Korea
+                                        <option value="KP" onchange="checkEWR()">Demokratische Volksrepublik Korea
                                             (Nordkorea)
                                         </option>
-                                        <option value="KR" onclick="checkEWR()">Republik Korea (Südkorea)</option>
-                                        <option value="HR" onclick="checkEWR()">Kroatien</option>
-                                        <option value="CU" onclick="checkEWR()">Kuba</option>
-                                        <option value="KW" onclick="checkEWR()">Kuwait</option>
+                                        <option value="KR" onchange="checkEWR()">Republik Korea (Südkorea)</option>
+                                        <option value="HR" onchange="checkEWR()">Kroatien</option>
+                                        <option value="CU" onchange="checkEWR()">Kuba</option>
+                                        <option value="KW" onchange="checkEWR()">Kuwait</option>
                                     </optgroup>
                                     <optgroup label="L">
-                                        <option value="LA" onclick="checkEWR()">Laos</option>
-                                        <option value="LS" onclick="checkEWR()">Lesotho</option>
-                                        <option value="LV" onclick="checkEWR()">Lettland</option>
-                                        <option value="LB" onclick="checkEWR()">Libanon</option>
-                                        <option value="LR" onclick="checkEWR()">Liberia</option>
-                                        <option value="LY" onclick="checkEWR()">Libyen</option>
-                                        <option value="LI" onclick="checkEWR()">Liechtenstein</option>
-                                        <option value="LT" onclick="checkEWR()">Litauen</option>
-                                        <option value="LU" onclick="checkEWR()">Luxemburg</option>
+                                        <option value="LA" onchange="checkEWR()">Laos</option>
+                                        <option value="LS" onchange="checkEWR()">Lesotho</option>
+                                        <option value="LV" onchange="checkEWR()">Lettland</option>
+                                        <option value="LB" onchange="checkEWR()">Libanon</option>
+                                        <option value="LR" onchange="checkEWR()">Liberia</option>
+                                        <option value="LY" onchange="checkEWR()">Libyen</option>
+                                        <option value="LI" onchange="checkEWR()">Liechtenstein</option>
+                                        <option value="LT" onchange="checkEWR()">Litauen</option>
+                                        <option value="LU" onchange="checkEWR()">Luxemburg</option>
                                     </optgroup>
                                     <optgroup label="M">
-                                        <option value="MO" onclick="checkEWR()">Macao</option>
-                                        <option value="MG" onclick="checkEWR()">Madagaskar</option>
-                                        <option value="MW" onclick="checkEWR()">Malawi</option>
-                                        <option value="MY" onclick="checkEWR()">Malaysia</option>
-                                        <option value="MV" onclick="checkEWR()">Malediven</option>
-                                        <option value="ML" onclick="checkEWR()">Mali</option>
-                                        <option value="MT" onclick="checkEWR()">Malta</option>
-                                        <option value="MA" onclick="checkEWR()">Marokko</option>
-                                        <option value="MH" onclick="checkEWR()">Marshallinseln</option>
-                                        <option value="MQ" onclick="checkEWR()">Martinique</option>
-                                        <option value="MR" onclick="checkEWR()">Mauretanien</option>
-                                        <option value="MU" onclick="checkEWR()">Mauritius</option>
-                                        <option value="YT" onclick="checkEWR()">Mayotte</option>
-                                        <option value="MK" onclick="checkEWR()">Mazedonien</option>
-                                        <option value="MX" onclick="checkEWR()">Mexiko</option>
-                                        <option value="FM" onclick="checkEWR()">Mikronesien</option>
-                                        <option value="MD" onclick="checkEWR()">Moldawien (Republik Moldau)</option>
-                                        <option value="MC" onclick="checkEWR()">Monaco</option>
-                                        <option value="MN" onclick="checkEWR()">Mongolei</option>
-                                        <option value="ME" onclick="checkEWR()">Montenegro</option>
-                                        <option value="MS" onclick="checkEWR()">Montserrat</option>
-                                        <option value="MZ" onclick="checkEWR()">Mosambik</option>
-                                        <option value="MM" onclick="checkEWR()">Myanmar (Burma)</option>
+                                        <option value="MO" onchange="checkEWR()">Macao</option>
+                                        <option value="MG" onchange="checkEWR()">Madagaskar</option>
+                                        <option value="MW" onchange="checkEWR()">Malawi</option>
+                                        <option value="MY" onchange="checkEWR()">Malaysia</option>
+                                        <option value="MV" onchange="checkEWR()">Malediven</option>
+                                        <option value="ML" onchange="checkEWR()">Mali</option>
+                                        <option value="MT" onchange="checkEWR()">Malta</option>
+                                        <option value="MA" onchange="checkEWR()">Marokko</option>
+                                        <option value="MH" onchange="checkEWR()">Marshallinseln</option>
+                                        <option value="MQ" onchange="checkEWR()">Martinique</option>
+                                        <option value="MR" onchange="checkEWR()">Mauretanien</option>
+                                        <option value="MU" onchange="checkEWR()">Mauritius</option>
+                                        <option value="YT" onchange="checkEWR()">Mayotte</option>
+                                        <option value="MK" onchange="checkEWR()">Mazedonien</option>
+                                        <option value="MX" onchange="checkEWR()">Mexiko</option>
+                                        <option value="FM" onchange="checkEWR()">Mikronesien</option>
+                                        <option value="MD" onchange="checkEWR()">Moldawien (Republik Moldau)</option>
+                                        <option value="MC" onchange="checkEWR()">Monaco</option>
+                                        <option value="MN" onchange="checkEWR()">Mongolei</option>
+                                        <option value="ME" onchange="checkEWR()">Montenegro</option>
+                                        <option value="MS" onchange="checkEWR()">Montserrat</option>
+                                        <option value="MZ" onchange="checkEWR()">Mosambik</option>
+                                        <option value="MM" onchange="checkEWR()">Myanmar (Burma)</option>
                                     </optgroup>
                                     <optgroup label="N">
-                                        <option value="NA" onclick="checkEWR()">Namibia</option>
-                                        <option value="NR" onclick="checkEWR()">Nauru</option>
-                                        <option value="NP" onclick="checkEWR()">Nepal</option>
-                                        <option value="NC" onclick="checkEWR()">Neukaledonien</option>
-                                        <option value="NZ" onclick="checkEWR()">Neuseeland</option>
-                                        <option value="NI" onclick="checkEWR()">Nicaragua</option>
-                                        <option value="NL" onclick="checkEWR()">Niederlande</option>
-                                        <option value="AN" onclick="checkEWR()">Niederländische Antillen</option>
-                                        <option value="NE" onclick="checkEWR()">Niger</option>
-                                        <option value="NG" onclick="checkEWR()">Nigeria</option>
-                                        <option value="NU" onclick="checkEWR()">Niue</option>
-                                        <option value="MP" onclick="checkEWR()">Nördliche Marianen</option>
-                                        <option value="NF" onclick="checkEWR()">Norfolkinsel</option>
-                                        <option value="NO" onclick="checkEWR()">Norwegen</option>
+                                        <option value="NA" onchange="checkEWR()">Namibia</option>
+                                        <option value="NR" onchange="checkEWR()">Nauru</option>
+                                        <option value="NP" onchange="checkEWR()">Nepal</option>
+                                        <option value="NC" onchange="checkEWR()">Neukaledonien</option>
+                                        <option value="NZ" onchange="checkEWR()">Neuseeland</option>
+                                        <option value="NI" onchange="checkEWR()">Nicaragua</option>
+                                        <option value="NL" onchange="checkEWR()">Niederlande</option>
+                                        <option value="AN" onchange="checkEWR()">Niederländische Antillen</option>
+                                        <option value="NE" onchange="checkEWR()">Niger</option>
+                                        <option value="NG" onchange="checkEWR()">Nigeria</option>
+                                        <option value="NU" onchange="checkEWR()">Niue</option>
+                                        <option value="MP" onchange="checkEWR()">Nördliche Marianen</option>
+                                        <option value="NF" onchange="checkEWR()">Norfolkinsel</option>
+                                        <option value="NO" onchange="checkEWR()">Norwegen</option>
                                     </optgroup>
                                     <optgroup label="O">
-                                        <option value="OM" onclick="checkEWR()">Oman</option>
-                                        <option value="XO" onclick="checkEWR()">Orbit</option>
-                                        <option value="AT" onclick="checkEWR()">Österreich</option>
-                                        <option value="TL" onclick="checkEWR()">Osttimor (Timor-Leste)</option>
+                                        <option value="OM" onchange="checkEWR()">Oman</option>
+                                        <option value="XO" onchange="checkEWR()">Orbit</option>
+                                        <option value="AT" onchange="checkEWR()">Österreich</option>
+                                        <option value="TL" onchange="checkEWR()">Osttimor (Timor-Leste)</option>
                                     </optgroup>
                                     <optgroup label="P">
-                                        <option value="PK" onclick="checkEWR()">Pakistan</option>
-                                        <option value="PS" onclick="checkEWR()">Palästinensische Autonomiegebiete
+                                        <option value="PK" onchange="checkEWR()">Pakistan</option>
+                                        <option value="PS" onchange="checkEWR()">Palästinensische Autonomiegebiete
                                         </option>
-                                        <option value="PW" onclick="checkEWR()">Palau</option>
-                                        <option value="PA" onclick="checkEWR()">Panama</option>
-                                        <option value="PG" onclick="checkEWR()">Papua-Neuguinea</option>
-                                        <option value="PY" onclick="checkEWR()">Paraguay</option>
-                                        <option value="PE" onclick="checkEWR()">Peru</option>
-                                        <option value="PH" onclick="checkEWR()">Philippinen</option>
-                                        <option value="PN" onclick="checkEWR()">Pitcairninseln</option>
-                                        <option value="PL" onclick="checkEWR()">Polen</option>
-                                        <option value="PT" onclick="checkEWR()">Portugal</option>
-                                        <option value="PR" onclick="checkEWR()">Puerto Rico</option>
+                                        <option value="PW" onchange="checkEWR()">Palau</option>
+                                        <option value="PA" onchange="checkEWR()">Panama</option>
+                                        <option value="PG" onchange="checkEWR()">Papua-Neuguinea</option>
+                                        <option value="PY" onchange="checkEWR()">Paraguay</option>
+                                        <option value="PE" onchange="checkEWR()">Peru</option>
+                                        <option value="PH" onchange="checkEWR()">Philippinen</option>
+                                        <option value="PN" onchange="checkEWR()">Pitcairninseln</option>
+                                        <option value="PL" onchange="checkEWR()">Polen</option>
+                                        <option value="PT" onchange="checkEWR()">Portugal</option>
+                                        <option value="PR" onchange="checkEWR()">Puerto Rico</option>
                                     </optgroup>
                                     <optgroup label="Q"></option>
                                     </optgroup>
                                     <optgroup label="R">
-                                        <option value="TW" onclick="checkEWR()">Republik China (Taiwan)</option>
-                                        <option value="CG" onclick="checkEWR()">Republik Kongo</option>
-                                        <option value="RE" onclick="checkEWR()">Réunion</option>
-                                        <option value="RW" onclick="checkEWR()">Ruanda</option>
-                                        <option value="RO" onclick="checkEWR()">Rumänien</option>
-                                        <option value="RU" onclick="checkEWR()">Russische Föderation</option>
+                                        <option value="TW" onchange="checkEWR()">Republik China (Taiwan)</option>
+                                        <option value="CG" onchange="checkEWR()">Republik Kongo</option>
+                                        <option value="RE" onchange="checkEWR()">Réunion</option>
+                                        <option value="RW" onchange="checkEWR()">Ruanda</option>
+                                        <option value="RO" onchange="checkEWR()">Rumänien</option>
+                                        <option value="RU" onchange="checkEWR()">Russische Föderation</option>
                                     </optgroup>
                                     <optgroup label="S">
-                                        <option value="BL" onclick="checkEWR()">Saint-Barthélemy</option>
-                                        <option value="MF" onclick="checkEWR()">Saint-Martin</option>
-                                        <option value="SB" onclick="checkEWR()">Salomonen</option>
-                                        <option value="ZM" onclick="checkEWR()">Sambia</option>
-                                        <option value="WS" onclick="checkEWR()">Samoa</option>
-                                        <option value="SM" onclick="checkEWR()">San Marino</option>
-                                        <option value="ST" onclick="checkEWR()">São Tomé und Príncipe</option>
-                                        <option value="SA" onclick="checkEWR()">Saudi-Arabien</option>
-                                        <option value="SE" onclick="checkEWR()">Schweden</option>
-                                        <option value="CH" onclick="checkEWR()">Schweiz</option>
-                                        <option value="SN" onclick="checkEWR()">Senegal</option>
-                                        <option value="RS" onclick="checkEWR()">Serbien</option>
-                                        <option value="SC" onclick="checkEWR()">Seychellen</option>
-                                        <option value="SL" onclick="checkEWR()">Sierra Leone</option>
-                                        <option value="ZW" onclick="checkEWR()">Simbabwe</option>
-                                        <option value="SG" onclick="checkEWR()">Singapur</option>
-                                        <option value="SK" onclick="checkEWR()">Slowakei</option>
-                                        <option value="SI" onclick="checkEWR()">Slowenien</option>
-                                        <option value="SO" onclick="checkEWR()">Somalia</option>
-                                        <option value="ES" onclick="checkEWR()">Spanien</option>
-                                        <option value="LK" onclick="checkEWR()">Sri Lanka</option>
-                                        <option value="SH" onclick="checkEWR()">St. Helena</option>
-                                        <option value="KN" onclick="checkEWR()">St. Kitts und Nevis</option>
-                                        <option value="LC" onclick="checkEWR()">St. Lucia</option>
-                                        <option value="PM" onclick="checkEWR()">Saint-Pierre und Miquelon</option>
-                                        <option value="VC" onclick="checkEWR()">St. Vincent und die Grenadinen
+                                        <option value="BL" onchange="checkEWR()">Saint-Barthélemy</option>
+                                        <option value="MF" onchange="checkEWR()">Saint-Martin</option>
+                                        <option value="SB" onchange="checkEWR()">Salomonen</option>
+                                        <option value="ZM" onchange="checkEWR()">Sambia</option>
+                                        <option value="WS" onchange="checkEWR()">Samoa</option>
+                                        <option value="SM" onchange="checkEWR()">San Marino</option>
+                                        <option value="ST" onchange="checkEWR()">São Tomé und Príncipe</option>
+                                        <option value="SA" onchange="checkEWR()">Saudi-Arabien</option>
+                                        <option value="SE" onchange="checkEWR()">Schweden</option>
+                                        <option value="CH" onchange="checkEWR()">Schweiz</option>
+                                        <option value="SN" onchange="checkEWR()">Senegal</option>
+                                        <option value="RS" onchange="checkEWR()">Serbien</option>
+                                        <option value="SC" onchange="checkEWR()">Seychellen</option>
+                                        <option value="SL" onchange="checkEWR()">Sierra Leone</option>
+                                        <option value="ZW" onchange="checkEWR()">Simbabwe</option>
+                                        <option value="SG" onchange="checkEWR()">Singapur</option>
+                                        <option value="SK" onchange="checkEWR()">Slowakei</option>
+                                        <option value="SI" onchange="checkEWR()">Slowenien</option>
+                                        <option value="SO" onchange="checkEWR()">Somalia</option>
+                                        <option value="ES" onchange="checkEWR()">Spanien</option>
+                                        <option value="LK" onchange="checkEWR()">Sri Lanka</option>
+                                        <option value="SH" onchange="checkEWR()">St. Helena</option>
+                                        <option value="KN" onchange="checkEWR()">St. Kitts und Nevis</option>
+                                        <option value="LC" onchange="checkEWR()">St. Lucia</option>
+                                        <option value="PM" onchange="checkEWR()">Saint-Pierre und Miquelon</option>
+                                        <option value="VC" onchange="checkEWR()">St. Vincent und die Grenadinen
                                         </option>
-                                        <option value="ZA" onclick="checkEWR()">Südafrika</option>
-                                        <option value="SD" onclick="checkEWR()">Sudan</option>
-                                        <option value="GS" onclick="checkEWR()">Südgeorgien und die Südlichen
+                                        <option value="ZA" onchange="checkEWR()">Südafrika</option>
+                                        <option value="SD" onchange="checkEWR()">Sudan</option>
+                                        <option value="GS" onchange="checkEWR()">Südgeorgien und die Südlichen
                                             Sandwichinseln
                                         </option>
-                                        <option value="SR" onclick="checkEWR()">Suriname</option>
-                                        <option value="SJ" onclick="checkEWR()">Svalbard und Jan Mayen</option>
-                                        <option value="SZ" onclick="checkEWR()">Swasiland</option>
-                                        <option value="SY" onclick="checkEWR()">Syrien</option>
+                                        <option value="SR" onchange="checkEWR()">Suriname</option>
+                                        <option value="SJ" onchange="checkEWR()">Svalbard und Jan Mayen</option>
+                                        <option value="SZ" onchange="checkEWR()">Swasiland</option>
+                                        <option value="SY" onchange="checkEWR()">Syrien</option>
                                     </optgroup>
                                     <optgroup label="T">
-                                        <option value="TJ" onclick="checkEWR()">Tadschikistan</option>
-                                        <option value="TZ" onclick="checkEWR()">Tansania</option>
-                                        <option value="TH" onclick="checkEWR()">Thailand</option>
-                                        <option value="TG" onclick="checkEWR()">Togo</option>
-                                        <option value="TK" onclick="checkEWR()">Tokelau</option>
-                                        <option value="TO" onclick="checkEWR()">Tonga</option>
-                                        <option value="TT" onclick="checkEWR()">Trinidad und Tobago</option>
-                                        <option value="TA" onclick="checkEWR()">Tristan da Cunha</option>
-                                        <option value="TD" onclick="checkEWR()">Tschad</option>
-                                        <option value="CZ" onclick="checkEWR()">Tschechische Republik</option>
-                                        <option value="TN" onclick="checkEWR()">Tunesien</option>
-                                        <option value="TR" onclick="checkEWR()">Türkei</option>
-                                        <option value="TM" onclick="checkEWR()">Turkmenistan</option>
-                                        <option value="TC" onclick="checkEWR()">Turks- und Caicosinseln</option>
-                                        <option value="TV" onclick="checkEWR()">Tuvalu</option>
+                                        <option value="TJ" onchange="checkEWR()">Tadschikistan</option>
+                                        <option value="TZ" onchange="checkEWR()">Tansania</option>
+                                        <option value="TH" onchange="checkEWR()">Thailand</option>
+                                        <option value="TG" onchange="checkEWR()">Togo</option>
+                                        <option value="TK" onchange="checkEWR()">Tokelau</option>
+                                        <option value="TO" onchange="checkEWR()">Tonga</option>
+                                        <option value="TT" onchange="checkEWR()">Trinidad und Tobago</option>
+                                        <option value="TA" onchange="checkEWR()">Tristan da Cunha</option>
+                                        <option value="TD" onchange="checkEWR()">Tschad</option>
+                                        <option value="CZ" onchange="checkEWR()">Tschechische Republik</option>
+                                        <option value="TN" onchange="checkEWR()">Tunesien</option>
+                                        <option value="TR" onchange="checkEWR()">Türkei</option>
+                                        <option value="TM" onchange="checkEWR()">Turkmenistan</option>
+                                        <option value="TC" onchange="checkEWR()">Turks- und Caicosinseln</option>
+                                        <option value="TV" onchange="checkEWR()">Tuvalu</option>
                                     </optgroup>
                                     <optgroup label="U">
-                                        <option value="UG" onclick="checkEWR()">Uganda</option>
-                                        <option value="UA" onclick="checkEWR()">Ukraine</option>
-                                        <option value="HU" onclick="checkEWR()">Ungarn</option>
-                                        <option value="UY" onclick="checkEWR()">Uruguay</option>
-                                        <option value="UZ" onclick="checkEWR()">Usbekistan</option>
+                                        <option value="UG" onchange="checkEWR()">Uganda</option>
+                                        <option value="UA" onchange="checkEWR()">Ukraine</option>
+                                        <option value="HU" onchange="checkEWR()">Ungarn</option>
+                                        <option value="UY" onchange="checkEWR()">Uruguay</option>
+                                        <option value="UZ" onchange="checkEWR()">Usbekistan</option>
                                     </optgroup>
                                     <optgroup label="V">
-                                        <option value="VU" onclick="checkEWR()">Vanuatu</option>
-                                        <option value="VA" onclick="checkEWR()">Vatikanstadt</option>
-                                        <option value="VE" onclick="checkEWR()">Venezuela</option>
-                                        <option value="AE" onclick="checkEWR()">Vereinigte Arabische Emirate
+                                        <option value="VU" onchange="checkEWR()">Vanuatu</option>
+                                        <option value="VA" onchange="checkEWR()">Vatikanstadt</option>
+                                        <option value="VE" onchange="checkEWR()">Venezuela</option>
+                                        <option value="AE" onchange="checkEWR()">Vereinigte Arabische Emirate
                                         </option>
-                                        <option value="US" onclick="checkEWR()">Vereinigte Staaten von Amerika
+                                        <option value="US" onchange="checkEWR()">Vereinigte Staaten von Amerika
                                             (USA)
                                         </option>
-                                        <option value="GB" onclick="checkEWR()">Vereinigtes Königreich
+                                        <option value="GB" onchange="checkEWR()">Vereinigtes Königreich
                                             Großbritannien und Nordirland
                                         </option>
-                                        <option value="VN" onclick="checkEWR()">Vietnam</option>
+                                        <option value="VN" onchange="checkEWR()">Vietnam</option>
                                     </optgroup>
                                     <optgroup label="W">
-                                        <option value="WF" onclick="checkEWR()">Wallis und Futuna</option>
-                                        <option value="CX" onclick="checkEWR()">Weihnachtsinsel</option>
-                                        <option value="EH" onclick="checkEWR()">Westsahara</option>
+                                        <option value="WF" onchange="checkEWR()">Wallis und Futuna</option>
+                                        <option value="CX" onchange="checkEWR()">Weihnachtsinsel</option>
+                                        <option value="EH" onchange="checkEWR()">Westsahara</option>
                                     </optgroup>
                                     <optgroup label="Z">
-                                        <option value="CF" onclick="checkEWR()">Zentralafrikanische Republik
+                                        <option value="CF" onchange="checkEWR()">Zentralafrikanische Republik
                                         </option>
-                                        <option value="CY" onclick="checkEWR()">Zypern</option>
+                                        <option value="CY" onchange="checkEWR()">Zypern</option>
                                     </optgroup>
                                 </select>
                             </div>
@@ -1474,7 +1487,8 @@
                             </div>
                             <div class="form-group form-group-lg col-md-12">
 
-                                <label for="strasse" class="small">Straße + Hausnummer + Stockwerk + Türnummer </label><span
+                                <label for="strasse" class="small">Straße + Hausnummer + Stockwerk +
+                                    Türnummer </label><span
                                     class="red small">*</span>
                                 <input type="text" class="form-control validate" id="strasse"
                                        placeholder="Straße"
@@ -2306,15 +2320,17 @@
                                        placeholder="Jahresnettoeinkommen"
                                        aria-label="Jahresnettoeinkommen"
                                        name="jahresnettoeinkommen"
-                                       oninput="this.className = 'form-control'"
-                                       required>
+                                       oninput="jahresnettoRequired(this)"
+                                       required
+                                        >
                                 <div class="invalid-feedback">
                                     Bitte geben Sie ihr Jahresnettoeinkommen an.
                                 </div>
 
                             </div>
                             <div class="form-group" id="form-group-jahreslohnzettel">
-                                <label class="small" for="jahreslohnzettel">Jahreslohnzettel/Monatslohnzettel
+                                <label class="small" for="jahreslohnzettel">Jahreslohnzettel/Monatslohnzettel oder
+                                    Inskriptionsbestätigung
                                     hochladen (mindestens 1 Dokument muss hocheladen werden)</label><span
                                     class="red small">*</span>
                                 <input type="file" class="form-control-file" id="jahreslohnzettel" multiple>
@@ -2412,7 +2428,7 @@
                         <div class="form-row">
                             <div class="form-group form-group-lg col-sm-12" id="form-group-stockwerk">
                                 <h3>
-                                    Gewünschtes Stockwerk (ohne Lift): <span class="red small">*</span>
+                                    Gewünschtes Stockwerk: <span class="red small">*</span>
                                 </h3>
                                 <div class="form-check mt-sm-4 ">
                                     <input class="form-check-input" type="radio" name="stockwerk" id="egal"
@@ -2542,21 +2558,24 @@
                                 </h3>
                                 <div class="form-check mt-sm-4 ">
                                     <input class="form-check-input" type="checkbox" name="rechtsform" id="miete"
-                                           value="miete" required="required" onclick="checkRechtsform(this, 'rechtsform')">
+                                           value="miete" required="required"
+                                           onclick="checkRechtsform(this, 'rechtsform')">
                                     <label class="form-check-label " for="miete">
                                         Miete
                                     </label>
                                 </div>
                                 <div class="form-check ">
                                     <input class="form-check-input" type="checkbox" name="rechtsform" id="eigentum"
-                                           value="eigentum" required="required" onclick="checkRechtsform(this, 'rechtsform')">
+                                           value="eigentum" required="required"
+                                           onclick="checkRechtsform(this, 'rechtsform')">
                                     <label class="form-check-label " for="eigentum">
                                         Eigentum
                                     </label>
                                 </div>
                                 <div class="form-check  ">
                                     <input class="form-check-input" type="checkbox" name="rechtsform" id="mietkauf"
-                                           value="mietkauf" required="required" onclick="checkRechtsform(this, 'rechtsform')">
+                                           value="mietkauf" required="required"
+                                           onclick="checkRechtsform(this, 'rechtsform')">
                                     <label class="form-check-label " for="mietkauf">
                                         Mietkauf
                                     </label>
@@ -2702,10 +2721,10 @@
                                     </label>
                                 </div>
                                 <div class="form-check  ">
-                                    <input class="form-check-input" type="checkbox" name="stadtteil" id="zoehdorf"
-                                           value="zoehdorf" required>
-                                    <label class="form-check-label " for="zoehdorf">
-                                        Zöhdorf
+                                    <input class="form-check-input" type="checkbox" name="stadtteil" id="zoehrdorf"
+                                           value="zoehrdorf" required>
+                                    <label class="form-check-label " for="zoehrdorf">
+                                        Zöhrdorf
                                     </label>
                                 </div>
                                 <div class="form-check  ">
@@ -2909,7 +2928,7 @@
                                     <input class="form-check-input " type="radio" name="wohnverhealtnis"
                                            id="mitbewohner"
                                            value="mitbewohner"
-                                           required = "required">
+                                           required="required">
                                     <label class="form-check-label " for="mitbewohner">
                                         Mitbewohner
                                     </label>
@@ -2918,7 +2937,7 @@
                                     <input class="form-check-input " type="radio" name="wohnverhealtnis"
                                            id="hauptmieteBefristet"
                                            value="hauptmieteBefristet"
-                                           required = "required">
+                                           required="required">
                                     <label class="form-check-label" for="hauptmieteBefristet">
                                         Hauptmiete (befristet)
                                     </label>
@@ -2927,7 +2946,7 @@
                                     <input class="form-check-input " type="radio" name="wohnverhealtnis"
                                            id="hauptmieteUnbefristet"
                                            value="hauptmieteUnbefristet"
-                                           required = "required">
+                                           required="required">
                                     <label class="form-check-label" for="hauptmieteUnbefristet">
                                         Hauptmiete (unbefristet)
                                     </label>
@@ -2936,7 +2955,7 @@
                                     <input class="form-check-input" type="radio" name="wohnverhealtnis"
                                            id="untermiete"
                                            value="untermiete"
-                                           required = "required">
+                                           required="required">
                                     <label class="form-check-label" for="untermiete">
                                         Untermiete
                                     </label>
@@ -2945,7 +2964,7 @@
                                     <input class="form-check-input" type="radio" name="wohnverhealtnis"
                                            id="derzeitWohnungseigentum"
                                            value="derzeitWohnungseigentum"
-                                           required = "required">
+                                           required="required">
                                     <label class="form-check-label" for="derzeitWohnungseigentum">
                                         Wohnungseigentum
                                     </label>
@@ -2954,7 +2973,7 @@
                                     <input class="form-check-input" type="radio" name="wohnverhealtnis"
                                            id="hauseigentum"
                                            value="hauseigentum"
-                                           required ="required">
+                                           required="required">
                                     <label class="form-check-label" for="hauseigentum">
                                         Hauseigentum
                                     </label>
@@ -2963,7 +2982,7 @@
                                     <input class="form-check-input " type="radio" name="wohnverhealtnis"
                                            id="sozialverein"
                                            value="sozialverein"
-                                           required ="required">
+                                           required="required">
                                     <label class="form-check-label" for="sozialverein">
                                         Bewohner in dem Sozialverein
                                     </label>
@@ -2972,7 +2991,7 @@
                                     <input class="form-check-input " type="radio" name="wohnverhealtnis"
                                            id="dienstwohnung"
                                            value="dienstwohnung"
-                                           required ="required">
+                                           required="required">
                                     <label class="form-check-label" for="dienstwohnung">
                                         Dienstwohnung
                                     </label>
@@ -2981,7 +3000,7 @@
                                     <input class="form-check-input" type="radio" name="wohnverhealtnis"
                                            id="gwgHausbesorgerDienstwohnung"
                                            value="gwgHausbesorgerDienstwohnung"
-                                           required ="required">
+                                           required="required">
                                     <label class="form-check-label" for="gwgHausbesorgerDienstwohnung">
                                         GWG-Hausbesorger-Dienstwohnung
                                     </label>
@@ -2990,7 +3009,7 @@
                                     <input class="form-check-input" type="radio" name="wohnverhealtnis"
                                            id="obdachlos"
                                            value="obdachlos"
-                                           required ="required">
+                                           required="required">
                                     <label class="form-check-label" for="obdachlos">
                                         Obdachlos
                                     </label>
@@ -3002,9 +3021,10 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group form-group-lg col-12 validate" id="form-group-derzeitigeAusstattung" >
+                            <div class="form-group form-group-lg col-12 validate" id="form-group-derzeitigeAusstattung">
 
-                                <p class="small mb-0">Meine derzeitige Wohnung verfügt über: <span class="red small">*</span></p>
+                                <p class="small mb-0">Meine derzeitige Wohnung verfügt über: <span
+                                        class="red small">*</span></p>
                                 <div class="form-check ">
                                     <input class="form-check-input " type="radio" name="derzeitigeAusstattung"
                                            id="zentralheizungBadDuscheWC"
@@ -3087,6 +3107,14 @@
                                         gemeinnützige Bauvereinigung/Gemeinde
                                     </label>
                                 </div>
+                                <div class="form-check ">
+                                    <input class="form-check-input" type="radio" name="eigentuemer"
+                                           id="ichSelbst"
+                                           value="ichselbst">
+                                    <label class="form-check-label" for="ichSelbst">
+                                        ich selbst
+                                    </label>
+                                </div>
 
                             </div>
                             <div class="gebaudeeigentuemerGemeinnuetzig">
@@ -3105,7 +3133,6 @@
                                         Ja
                                     </label>
                                 </div>
-
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="wirdWohnungFrei"
                                            id="neinFrei"
@@ -3114,7 +3141,13 @@
                                         Nein
                                     </label>
                                 </div>
-
+                                <div class="form-check ">
+                                    <input class="form-check-input" type="radio" name="wirdWohnungFrei" id="jaFreiGWG"
+                                           value="jaFreiGWG">
+                                    <label class="form-check-label " for="jaFreiGWG">
+                                        Ja, für GWG
+                                    </label>
+                                </div>
 
                             </div>
                         </div>
@@ -3125,7 +3158,8 @@
                             <div class="form-group form-group-lg col-12" id="form-group-bruttomiete">
 
                                 <label for="monatlicheBruttoMiete" class="small">Monatliche Bruttomiete meiner
-                                    derzeitigen Wohnung<br> (inkl. Betriebskosten ohne Heizung und Strom) <span class="red small">*</span></label>
+                                    derzeitigen Wohnung<br> (inkl. Betriebskosten ohne Heizung und Strom) <span
+                                            class="red small">*</span></label>
                                 <input type="number" class="form-control validate" id="monatlicheBruttoMiete"
                                        min="0"
                                        placeholder="Monatliche Bruttomiete in €"
@@ -3147,17 +3181,17 @@
                                 <label for="mitbewohnerAnzahl" class="small">Insgesamt wohnen in meiner
                                     Wohnung: </label>
                                 <input type="number" class="form-control validate number-border"
-                                        min="0"
-                                        id="mitbewohnerAnzahl"
-                                        placeholder="Mitbewohneranzahl"
-                                        aria-label="Mitbewohneranzahl"
-                                        name="mitbewohnerAnzahl"
-                                        oninput="this.className = 'form-control number-border'"
-                                        required>
+                                       min="0"
+                                       id="mitbewohnerAnzahl"
+                                       placeholder="Mitbewohneranzahl"
+                                       aria-label="Mitbewohneranzahl"
+                                       name="mitbewohnerAnzahl"
+                                       oninput="this.className = 'form-control number-border'"
+                                       required>
                                 <span class="small labellike">Personen</span>
                                 <span class="red small">*</span>
                                 <div class="invalid-feedback">
-                                    Bitte geben Sie die Anzahl der Mitbewohner  an.
+                                    Bitte geben Sie die Anzahl der Mitbewohner an.
                                 </div>
                             </div>
                         </div>
@@ -3194,7 +3228,8 @@
                                        name="derzeitigeRaumanzahl">
                                 <span class="small labellike"> Räume</span>
                             </div>-->
-                            <div class="form-group form-inline form-group-lg col-12" id="form-group-derzeitigeRaumanzahl">
+                            <div class="form-group form-inline form-group-lg col-12"
+                                 id="form-group-derzeitigeRaumanzahl">
                                 <label for="derzeitigeRaumanzahl" class="small">Raumanzahl (ohne Küche u.
                                     Nebenräume):</label>
                                 <pre> </pre>
@@ -3234,7 +3269,7 @@
 
                 </div>
                 <div class="tab">
-                    <h2 class="px-sm-1 px-md-4 pt-4 pb-0">Angaben zu meiner gewünschten GWG Wohnung</h2>
+                    <h2 class="px-sm-1 px-md-4 pt-4 pb-0">Anmeldung abschließen</h2>
                     <fieldset class=" fieldset   py-4 px-sm-1 px-md-4">
                         <p>Wir weisen Sie ausdrücklich darauf hin, dass durch die Entgegennahme dieser
                             Wohnungsbewerbung kein wie immer gearteter Rechtsanspruch gegenüber der Gemeinnützigen
@@ -3316,7 +3351,7 @@
                         </div>
 
                     </fieldset>
-                    <fieldset class=" fieldset   py-4 px-sm-1 px-md-4">
+                    <fieldset class="fieldset   py-4 px-sm-1 px-md-4 border-0">
                         <div class="form row">
                             <p class="small">Ich/wir erteile/n ausdrücklich meine/unsere Zustimmung, dass mir/uns die
                                 GWG Wohnungsangebote</p>
@@ -3325,7 +3360,8 @@
                                     <input class="form-check-input" type="radio" name="zusendung"
                                            id="zusendungSms"
                                            value="zusendungSms"
-                                           required="required">
+                                           required="required"
+                                           onchange="checkZustimmung('zusendung')">
                                     <label class="form-check-label" for="zusendungSms">
                                         per SMS an umseits angeführte Handynummer
                                     </label>
@@ -3334,36 +3370,45 @@
                                     <input class="form-check-input" type="radio" name="zusendung"
                                            id="zusendungEmail"
                                            value="zusendungEmail"
-                                           required="required">
+                                           required="required"
+                                           onchange="checkZustimmung('zusendung')">
                                     <label class="form-check-label" for="zusendungEmail">
                                         per E-Mail an umseits angeführte E-Mailadresse
                                     </label>
                                 </div>
                                 <div class="form-check ">
                                     <input class="form-check-input" type="radio" name="zusendung"
-                                           id="zusendungPostanschrift"
-                                           value="zusendungPostanschrift"
-                                           required="required">
-                                    <label class="form-check-label" for="zusendungPostanschrift">
+                                           id="zusendungaktuellePostanschrift"
+                                           value="zusendungaktuellePostanschrift"
+                                           required="required"
+                                           onchange="checkZustimmung('zusendung')">
+                                    <label class="form-check-label" for="zusendungaktuellePostanschrift">
+                                         an umseits angeführte Postanschrift
+                                    </label>
+                                </div>
+                                <div class="form-check ">
+                                    <input class="form-check-input" type="radio" name="zusendung"
+                                           id="zusendungAbweichendePostanschrift"
+                                           value="zusendungAbweichendePostanschrift"
+                                           required="required" onchange="checkZustimmung('zusendung')">
+                                    <label class="form-check-label" for="zusendungAbweichendePostanschrift">
                                         an folgende (abweichende) Postanschrift
                                     </label>
                                     <div class="invalid-feedback">Bitte wählen Sie eine Option
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group col-12 small">
-                                <label for="postanschriftFuerZusendung" class="small ">falls Postanschrift
-                                    gewählt:</label>
-                                <input type="text" class="form-control " id="postanschriftFuerZusendung"
-                                       placeholder="Postanschrift angeben"
-                                       aria-label="Postanschrift angeben"
-                                >
-                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset   py-4 px-sm-1 px-md-4 border-0">
+                        <div id="form-group-zusendungAbweichendePostanschrift">
+
                         </div>
                         <p class="small">gesendet werden darf.</p>
-                        <p>Erfolgt keine Angabe zu der gewünschten Zustellungsart, werden die Mietangebote an die
-                            auf Seite 1 angegebene Anschrift postalisch versendet.
-                            Jede einzelne Einwilligung kann jederzeit mittels Brief an GWG – Gemeinnützige
+
+                    </fieldset>
+                    <fieldset>
+                        <p>Jede einzelne Einwilligung kann jederzeit mittels Brief an GWG – Gemeinnützige
                             Wohnungsgesellschaft der Stadt Linz GmbH, Eisenhandstraße 30, 4021 Linz oder per E-Mail
                             an gwginfo@gwg-linz.at widerrufen werden. Durch den Widerruf der Einwilligung
                             wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten
